@@ -196,6 +196,23 @@ These ideas originated from the author's experience teaching operations manageme
 
 The ConfusionEngine was built and used in live classrooms twenty years ago. The ObservationTracker addresses problems reported by special education teachers who track IEP goals daily — a process that is simultaneously mandatory, high-stakes, and unreasonably time-consuming.
 
+### Lineage: A Deeper View Tracking System
+
+The ObservationTracker is a modern descendent of the **A Deeper View (ADV) Tracking System**, a web-based SaaS platform developed by the author circa 2010–2014. ADV was piloted in over 300 schools before a patent lawsuit forced it off the market. The original system documents are in the `reference/` directory.
+
+ADV was built on a foundational insight: education has **two places to measure** — you can *test the outputs* (standardized exams), or you can *observe the process* (teacher observations during instruction). Billions of dollars flow to output testing. The process observation side had virtually no tooling.
+
+The whitepaper identified **four compounding factors** that defeat every attempt to move beyond standardized testing toward more frequent, individualized assessment:
+
+1. **Teacher workload** — measuring more often means more work per teacher
+2. **Differing student needs** — individualization multiplies the measurement effort
+3. **Budgets** — schools can't afford new measurement infrastructure
+4. **Class size** — larger classes mean less time per student
+
+ADV's response — and the ObservationTracker's — is to fit measurement into naturally occurring observation intervals during normal instruction: "twenty seconds here, fifteen seconds there." One-touch technology captures structured data in intervals too short for traditional note-keeping but more than sufficient for a 4-tap structured recording.
+
+The system's design philosophy is captured in the whitepaper's closing line: *"With ADV Tracking, teachers can now afford to do data-driven teaching."*
+
 *"Confusion is a higher state of knowledge than ignorance."*
 
 ---

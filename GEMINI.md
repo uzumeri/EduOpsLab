@@ -20,6 +20,59 @@ The repo houses the **intellectual framework**, **working demo applications**, a
 
 ---
 
+## Lineage: A Deeper View (ADV) Tracking System
+
+The ObservationTracker is a spiritual successor to the **A Deeper View (ADV) Tracking System**, originally developed by the author (Vic Uzumeri) circa 2010–2014. ADV was a web-based, cloud-hosted SaaS platform that captured real-time classroom observations of student performance. It was piloted in 300+ public and private schools before a patent lawsuit forced it off the market for four years.
+
+### Key concepts inherited from ADV
+
+These principles, proven in the original ADV system, are the foundation of the ObservationTracker demo:
+
+| ADV Concept | ObservationTracker Implementation |
+|---|---|
+| **"One-touch technology"** — observations recorded with a single button press in naturally occurring time gaps | 4-tap Quick Log flow (Student → Goal → Rating → Note) designed for mid-class use on a phone |
+| **Multi-level rubrics** — customizable, target-specific criteria down to the individual student | Goal Templates (class-level defaults) + per-student rubric customization |
+| **Rubric hierarchy** — Skill Domain → Skill → Skill Objectives → Target → Reinforcers → Secondary Behaviors → Session Quality | Simplified to Goal Area → Goal Description → 4-level Rubric (suitable for a demo) |
+| **"Observations, not impressions"** — capturing teacher insights before they fade to memory | Timestamped, structured observations with notes, not end-of-week recollections |
+| **Stakeholder collaboration** — teachers, therapists, consultants, administrators sharing data in real time | Not yet implemented (demo is single-user); the data model supports it |
+| **Individualized targets** — measuring each student against their own criteria, not a standardized benchmark | Per-student goals with independent rubrics; goals can be customized after creation |
+| **"Spread it thinner and wider"** — more frequent micro-measurements reduce workload vs. fewer, heavier batch assessments | The micro-process design philosophy: transaction cost of the tool < cognitive cost of skipping it |
+| **RtI-compliant graphing** — visual progress data meeting Response-to-Intervention requirements | Mini progress bars, trend indicators, and generated progress reports |
+| **Disruptive positioning** — a counterweight to excessive standardized testing | "Test-Free Student Assessment" — process observation as a complement to output testing |
+
+### The "Two Places to Measure" framework
+
+From the ADV pitch deck: education has two measurement points — **test the outputs** (standardized exams) and **observe the process** (teacher observations during instruction). Billions of dollars and thousands of tools support output testing. Teacher process observation had, at the time, virtually no tooling. ADV (and now ObservationTracker) occupy the process observation space.
+
+### ADV's "Four Resistance Factors"
+
+The ADV whitepaper identified four compounding forces that defeat every attempt at more individualized, more frequent student assessment:
+
+1. **Teacher workload** — measuring more often ≈ more work per teacher
+2. **Differing student needs** — individualization multiplies the effort
+3. **Budgets** — schools can't afford new measurement infrastructure
+4. **Class size** — larger classes mean less time per student
+
+ADV's response was to spread measurement across naturally occurring observation intervals throughout the day — "twenty seconds here, fifteen seconds there" — and use one-touch technology to capture structured data in those intervals. The ObservationTracker demo carries this same design philosophy forward: the 4-tap flow fits into the same micro-intervals.
+
+### What ADV had that the demo does not (yet)
+
+- Multi-tiered stakeholder roles (teacher, therapist, consultant, administrator, parent/viewer)
+- Cloud-hosted SaaS with authentication and access control
+- Offline entry and video-coded observation support
+- Cross-student, cross-school data aggregation and custom report builder
+- Reinforcer and secondary behavior tracking per observation
+- Data export for external analysis
+
+These are excluded deliberately — the demo is a self-contained, zero-infrastructure illustration of the core workflow, not a production system.
+
+### Reference documents
+
+- `reference/ADEEPERVIEW Tracking System.pdf` — Pitch deck (Michael Darden as presenter, written by the author). 18-slide overview of the ADV platform, its market positioning, and its architecture. Dated November 2014.
+- `reference/Test-Free Student Assessment.pdf` — Technical whitepaper by Vic Uzumeri (Assoc. Prof. Emeritus, Auburn University). 12-page overview of the problem statement, system design, rubric architecture, reporting capabilities, and use cases (ASD, special needs, home schooling, at-risk populations, Common Core). Dated October 2014.
+
+---
+
 ## Directory Layout
 
 ```
@@ -42,6 +95,8 @@ EduOpsLab/
 │   └── published/
 │
 └── reference/                         ← research links, source material
+    ├── ADEEPERVIEW Tracking System.pdf ← ADV pitch deck (2014)
+    ├── Test-Free Student Assessment.pdf ← ADV whitepaper (2014)
     └── claude-discussion.md           ← the conversation that started this
 ```
 
@@ -61,26 +116,22 @@ The rubric:
 
 ### ObservationTracker
 
-A mobile-first tool for special needs teachers. Captures micro-observations (5-second tap flows) during normal classroom activity — no separate testing session. Tracks individual student progress toward IEP goals, surfaces trends, and flags attention-equity gaps (students not observed recently).
+A mobile-first tool for K–12 teachers, with particular relevance to special education. Captures micro-observations (5-second tap flows) during normal classroom activity — no separate testing session. Tracks individual student progress toward IEP goals, surfaces trends, and flags attention-equity gaps (students not observed recently).
+
+Key features:
+- **Goal Templates** — define rubric-equipped goals once, apply to all students or individually
+- **Per-student rubric customization** — templates are copies, not references; each student's goal is independently editable
+- **Rubric-guided rating** — during the Quick Log flow, the goal-specific rubric criteria appear at the point of decision
+- **Progress reports** — mock or AI-generated (via OpenRouter), citing rubric context and trend data
+- **Demo data** — pre-loaded with 8 students, 24 goals with realistic rubrics, and 3 weeks of observations
 
 ---
 
-## Hosting — Open Decision
+## Hosting
 
-Hosting strategy is not yet decided. Options under consideration:
+The applications are hosted via **GitHub Pages** at `https://uzumeri.github.io/EduOpsLab/`.
 
-- **GitHub Pages** — zero cost, simplest deployment, good for static demos
-- **AWS Elastic Beanstalk** — may piggyback on existing EC2 instance used for TeardownWorkbench
-- **Other** — TBD based on whether demos need a backend
-
-## Data Strategy — Open Decision
-
-Demo data approach is not yet decided. Options:
-
-- **Static seed data** — hardcoded sample students, responses, observations
-- **LLM-generated data** — use a free-tier OpenRouter model to generate realistic student responses, observations, and progress data dynamically
-
-The LLM approach would make demos more convincing and demonstrate the AI integration thesis directly.
+All apps are vanilla HTML/CSS/JS with no backend. Data persists in `localStorage` on the user's device. Nothing leaves the browser.
 
 ---
 
