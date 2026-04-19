@@ -365,6 +365,18 @@ const render = () => {
   app.innerHTML = (views[state.view] || viewSetup)();
 };
 
+const navTabs = () => {
+  const tabs = [
+    { id:'dashboard', icon:'🏠', label:'Students' },
+    { id:'log', icon:'➕', label:'Log' },
+    { id:'timeline', icon:'📊', label:'Timeline' },
+    { id:'manage', icon:'⚙️', label:'Manage' }
+  ];
+  return tabs.map(t => `<button class="nav-item ${state.view===t.id?'active':''}" data-action="nav" data-view="${t.id}">
+      <span class="nav-icon">${t.icon}</span>${t.label}
+    </button>`).join('');
+};
+
 const header = (title, leftAction='', rightAction='') => `
   <header class="app-header">
     <div style="display:flex;align-items:center;gap:8px;">
@@ -372,20 +384,10 @@ const header = (title, leftAction='', rightAction='') => `
       <h1>👁️ ${title}</h1>
     </div>
     <div class="header-actions">${rightAction}</div>
-  </header>`;
+  </header>
+  <nav class="desktop-nav">${navTabs()}</nav>`;
 
-const bottomNav = () => {
-  const tabs = [
-    { id:'dashboard', icon:'🏠', label:'Students' },
-    { id:'log', icon:'➕', label:'Log' },
-    { id:'timeline', icon:'📊', label:'Timeline' },
-    { id:'manage', icon:'⚙️', label:'Manage' }
-  ];
-  const navItems = tabs.map(t => `<button class="nav-item ${state.view===t.id?'active':''}" data-action="nav" data-view="${t.id}">
-      <span class="nav-icon">${t.icon}</span>${t.label}
-    </button>`).join('');
-  return `<nav class="desktop-nav">${navItems}</nav><nav class="bottom-nav">${navItems}</nav>`;
-};
+const bottomNav = () => `<nav class="bottom-nav">${navTabs()}</nav>`;
 
 // ============================================================
 // VIEW: SETUP
