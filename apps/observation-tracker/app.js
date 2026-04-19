@@ -41,7 +41,8 @@ const DB = {
   load() {
     if (!this._data) {
       const raw = localStorage.getItem(STORAGE_KEY);
-      this._data = raw ? JSON.parse(raw) : { teacher: null, students: [], goals: [], observations: [] };
+      this._data = raw ? JSON.parse(raw) : { teacher: null, students: [], goals: [], observations: [], templates: [] };
+      if (!this._data.templates) this._data.templates = [];
     }
     return this._data;
   },
@@ -90,7 +91,36 @@ const DB = {
     const obs = this.getObservations(studentId);
     return obs.length > 0 ? obs.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp))[0] : null;
   },
-  getGoalById(id) { return this.load().goals.find(g => g.id === id); }
+  getGoalById(id) { return this.load().goals.find(g => g.id === id); },
+
+  // Templates
+  addTemplate(area, description, rubric) {
+    const t = { id: genId(), area, description, rubric: rubric || null, createdAt: new Date().toISOString() };
+    this.load().templates.push(t); this.save(); return t;
+  },
+  getTemplates() { return this.load().templates; },
+  getTemplate(id) { return this.load().templates.find(t => t.id === id); },
+  removeTemplate(id) {
+    const d = this.load();
+    d.templates = d.templates.filter(t => t.id !== id);
+    this.save();
+  },
+  applyTemplateToStudent(templateId, studentId) {
+    const t = this.getTemplate(templateId);
+    if (!t) return null;
+    // Check if student already has this exact goal description
+    const existing = this.getGoals(studentId).find(g => g.description === t.description);
+    if (existing) return null;
+    return this.addGoal(studentId, t.area, t.description, t.rubric ? {...t.rubric} : null);
+  },
+  applyTemplateToAll(templateId) {
+    const students = this.load().students;
+    let count = 0;
+    students.forEach(s => {
+      if (this.applyTemplateToStudent(templateId, s.id)) count++;
+    });
+    return count;
+  }
 };
 
 // ============================================================
@@ -110,6 +140,16 @@ const DEMO = {
   load() {
     DB.reset();
     DB.setTeacher('Ms. Rodriguez');
+
+    // Create reusable goal templates first
+    DB.addTemplate('behavioral', 'Remain seated during instruction for 15+ minutes without prompting',
+      { 1:'Up and wandering 3+ times per lesson', 2:'Stays seated 5-10 min with prompting', 3:'Stays seated 10-15 min independently', 4:'Stays seated 15+ min, engaged and focused' });
+    DB.addTemplate('behavioral', 'Follow 3-step directions without repetition',
+      { 1:'Needs each step repeated individually', 2:'Completes 1-2 steps; forgets remainder', 3:'Completes 2-3 steps with one reminder', 4:'Follows all 3 steps after single instruction' });
+    DB.addTemplate('social', 'Take turns in structured games without adult prompting',
+      { 1:'Cannot wait for turn; leaves game', 2:'Waits with direct adult support beside them', 3:'Takes turns with occasional reminder', 4:'Takes turns independently; encourages peers' });
+    DB.addTemplate('communication', 'Express needs to adults using complete sentences',
+      { 1:'Points or uses single words only', 2:'Uses 2-3 word phrases', 3:'Uses simple complete sentences', 4:'Uses complete sentences with relevant detail' });
 
     const students = [
       { name: 'Jayden Carter', grade: '3rd' },
@@ -386,7 +426,7 @@ const render = () => {
     'setup': viewSetup, 'dashboard': viewDashboard, 'log': viewLog,
     'timeline': viewTimeline, 'student': viewStudent, 'report': viewReport,
     'manage': viewManage, 'add-student': viewAddStudent, 'add-goal': viewAddGoal,
-    'settings': viewSettings
+    'settings': viewSettings, 'templates': viewTemplates, 'add-template': viewAddTemplate
   };
   app.innerHTML = (views[state.view] || viewSetup)();
 };
@@ -695,10 +735,12 @@ const viewReport = () => {
 // VIEW: MANAGE
 // ============================================================
 const viewManage = () => {
+  const templateCount = DB.getTemplates().length;
   return header('Manage') + `
   <div class="main-content">
     <div class="dashboard">
       <button class="btn btn-primary btn-block" data-action="nav" data-view="add-student" style="margin-bottom:12px;">👥 Add Student</button>
+      <button class="btn btn-secondary btn-block" data-action="nav" data-view="templates" style="margin-bottom:12px;">📋 Goal Templates ${templateCount > 0 ? `<span style="opacity:0.6">(${templateCount})</span>` : ''}</button>
       <button class="btn btn-secondary btn-block" data-action="nav" data-view="settings" style="margin-bottom:12px;">⚙️ Settings</button>
       <button class="btn btn-danger btn-block" data-action="reset-data">🗑️ Reset All Data</button>
     </div>
@@ -730,9 +772,27 @@ const viewAddStudent = () => {
 const viewAddGoal = () => {
   const studentId = state.viewParams.studentId;
   const student = DB.getStudent(studentId);
+  const templates = DB.getTemplates();
+  const existingGoalDescs = DB.getGoals(studentId).map(g => g.description);
+  const availableTemplates = templates.filter(t => !existingGoalDescs.includes(t.description));
+
   return header(`Add Goal for ${student?.name||''}`, `<button class="btn btn-ghost btn-sm" data-action="view-student" data-id="${studentId}">←</button>`) + `
   <div class="main-content">
     <div class="dashboard" style="max-width:500px;">
+      ${availableTemplates.length > 0 ? `
+      <p class="section-title">From Template</p>
+      <div class="template-pick-list">
+        ${availableTemplates.map(t => `<button class="template-pick-card" data-action="apply-template-to-student" data-template="${t.id}" data-student="${studentId}">
+          <div class="template-pick-header">
+            <span class="goal-area-tag ${t.area}">${t.area}</span>
+          </div>
+          <div class="template-pick-desc">${t.description}</div>
+          ${t.rubric ? `<div class="template-pick-rubric">Rubric: ${t.rubric[1]?.slice(0,30)}… → ${t.rubric[4]?.slice(0,30)}…</div>` : ''}
+        </button>`).join('')}
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;margin:20px 0;color:var(--text-muted);font-size:0.8rem;">
+        <span style="flex:1;height:1px;background:var(--border)"></span>or create custom<span style="flex:1;height:1px;background:var(--border)"></span>
+      </div>` : ''}
       <form data-form="add-goal">
         <input type="hidden" name="studentId" value="${studentId}">
         <div class="form-group">
@@ -748,6 +808,66 @@ const viewAddGoal = () => {
         <div class="form-group"><label>🟦 Level 3 — Developing</label><input name="rubric3" placeholder="e.g. Stays seated 10-15 min independently"></div>
         <div class="form-group"><label>🟩 Level 4 — Mastered</label><input name="rubric4" placeholder="e.g. Stays seated 15+ min, engaged and focused"></div>
         <button class="btn btn-primary btn-block" type="submit">Add Goal</button>
+      </form>
+    </div>
+  </div>
+  ${bottomNav()}`;
+};
+
+// ============================================================
+// VIEW: GOAL TEMPLATES
+// ============================================================
+const viewTemplates = () => {
+  const templates = DB.getTemplates();
+  const studentCount = DB.load().students.length;
+  return header('Goal Templates', `<button class="btn btn-ghost btn-sm" data-action="nav" data-view="manage">←</button>`,
+    `<button class="btn btn-sm btn-primary" data-action="nav" data-view="add-template">+ New</button>`) + `
+  <div class="main-content">
+    <div class="dashboard">
+      <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:16px;">Define goals and rubrics once, then apply to individual students or the whole class.</p>
+      ${templates.length === 0 ? `<div class="empty-state"><div class="empty-icon">📋</div><p>No templates yet.</p>
+        <button class="btn btn-primary" data-action="nav" data-view="add-template">Create First Template</button></div>` : `
+      ${templates.map(t => `<div class="template-card">
+        <div class="template-card-header">
+          <div>
+            <span class="goal-area-tag ${t.area}">${t.area}</span>
+            <h4 style="margin-top:6px;font-size:0.92rem;">${t.description}</h4>
+          </div>
+        </div>
+        ${t.rubric ? `<details class="rubric-details"><summary>View Rubric</summary><div class="rubric-guide rubric-inline">
+          ${[1,2,3,4].map(r => `<div class="rubric-level"><span class="rubric-rating r${r}">${r}</span><span class="rubric-desc">${t.rubric[r]}</span></div>`).join('')}
+        </div></details>` : ''}
+        <div class="template-actions">
+          ${studentCount > 0 ? `<button class="btn btn-sm btn-primary" data-action="apply-template-all" data-template="${t.id}">Apply to All (${studentCount})</button>` : ''}
+          <button class="btn btn-sm btn-danger" data-action="delete-template" data-template="${t.id}">Delete</button>
+        </div>
+      </div>`).join('')}`}
+    </div>
+  </div>
+  ${bottomNav()}`;
+};
+
+// ============================================================
+// VIEW: ADD TEMPLATE
+// ============================================================
+const viewAddTemplate = () => {
+  return header('New Goal Template', `<button class="btn btn-ghost btn-sm" data-action="nav" data-view="templates">←</button>`) + `
+  <div class="main-content">
+    <div class="dashboard" style="max-width:500px;">
+      <form data-form="add-template">
+        <div class="form-group">
+          <label>Goal Area</label>
+          <select name="area" required>
+            ${GOAL_AREAS.map(a => `<option value="${a}">${a.charAt(0).toUpperCase()+a.slice(1)}</option>`).join('')}
+          </select>
+        </div>
+        <div class="form-group"><label>Goal Description</label><textarea name="description" placeholder="e.g. Remain seated during instruction for 15+ minutes without prompting" required></textarea></div>
+        <p class="section-title" style="margin-top:16px;">Rating Rubric <span style="font-weight:400;text-transform:none;letter-spacing:0;">(what each level looks like for this goal)</span></p>
+        <div class="form-group"><label>🟥 Level 1 — Struggling</label><input name="rubric1" placeholder="e.g. Cannot remain seated for 5 minutes"></div>
+        <div class="form-group"><label>🟧 Level 2 — Emerging</label><input name="rubric2" placeholder="e.g. Stays seated 5-10 min with prompting"></div>
+        <div class="form-group"><label>🟦 Level 3 — Developing</label><input name="rubric3" placeholder="e.g. Stays seated 10-15 min independently"></div>
+        <div class="form-group"><label>🟩 Level 4 — Mastered</label><input name="rubric4" placeholder="e.g. Stays seated 15+ min, engaged and focused"></div>
+        <button class="btn btn-primary btn-block" type="submit">Save Template</button>
       </form>
     </div>
   </div>
@@ -839,6 +959,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         break;
       }
+      case 'apply-template-to-student': {
+        const result = DB.applyTemplateToStudent(el.dataset.template, el.dataset.student);
+        if (result) {
+          toast('Goal added from template!');
+          navigate('student', { id: el.dataset.student });
+        } else {
+          toast('Student already has this goal.');
+        }
+        break;
+      }
+      case 'apply-template-all': {
+        const count = DB.applyTemplateToAll(el.dataset.template);
+        toast(`Goal applied to ${count} student${count!==1?'s':''}.`);
+        render();
+        break;
+      }
+      case 'delete-template': {
+        if (confirm('Delete this template? (Student goals already created from it will not be affected.)')) {
+          DB.removeTemplate(el.dataset.template);
+          toast('Template deleted.');
+          render();
+        }
+        break;
+      }
       case 'generate-ai-report': {
         const sid = el.dataset.student;
         const s = DB.getStudent(sid);
@@ -895,6 +1039,14 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'save-settings': {
         AIReport.setApiKey(fd.get('apiKey'));
         toast('Settings saved.');
+        break;
+      }
+      case 'add-template': {
+        const r1 = fd.get('rubric1'), r2 = fd.get('rubric2'), r3 = fd.get('rubric3'), r4 = fd.get('rubric4');
+        const rubric = (r1 || r2 || r3 || r4) ? { 1: r1||RATING_LABELS[1], 2: r2||RATING_LABELS[2], 3: r3||RATING_LABELS[3], 4: r4||RATING_LABELS[4] } : null;
+        DB.addTemplate(fd.get('area'), fd.get('description'), rubric);
+        toast('Template saved!');
+        navigate('templates');
         break;
       }
     }
