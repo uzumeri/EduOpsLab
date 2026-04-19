@@ -393,7 +393,6 @@ a:hover { color: var(--accent-hover); }
     border-bottom: 1px solid var(--border); padding: 0 20px;
     justify-content: center;
     position: sticky; top: 49px; z-index: 99;
-    order: -1;
   }
   .desktop-nav .nav-item {
     flex: 0; flex-direction: row; gap: 6px; padding: 10px 20px;
