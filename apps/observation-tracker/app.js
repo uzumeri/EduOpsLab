@@ -3,6 +3,7 @@
 
 const STORAGE_KEY = 'observationTracker';
 const RATING_LABELS = ['', 'Struggling', 'Emerging', 'Developing', 'Mastered'];
+const rubricLabel = (goal, rating) => (goal?.rubric && goal.rubric[rating]) ? goal.rubric[rating] : RATING_LABELS[rating];
 const RATING_EMOJI = ['', '🟥', '🟧', '🟦', '🟩'];
 const GOAL_AREAS = ['academic', 'social', 'behavioral', 'communication', 'motor'];
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
@@ -61,8 +62,8 @@ const DB = {
     this.save();
   },
 
-  addGoal(studentId, area, description) {
-    const g = { id: genId(), studentId, area, description, createdAt: new Date().toISOString() };
+  addGoal(studentId, area, description, rubric) {
+    const g = { id: genId(), studentId, area, description, rubric: rubric || null, createdAt: new Date().toISOString() };
     this.load().goals.push(g); this.save(); return g;
   },
   getGoals(studentId) { return this.load().goals.filter(g => g.studentId === studentId); },
@@ -124,43 +125,67 @@ const DEMO = {
     // Goals per student
     const goalSets = [
       // Jayden: behavioral + academic
-      [{ area:'behavioral', desc:'Remain seated during instruction for 15+ minutes without prompting' },
-       { area:'academic', desc:'Complete multi-step math word problems independently' },
-       { area:'social', desc:'Use appropriate voice volume in group settings' }],
+      [{ area:'behavioral', desc:'Remain seated during instruction for 15+ minutes without prompting',
+         rubric:{ 1:'Up and wandering 3+ times per lesson', 2:'Stays seated 5-10 min with prompting', 3:'Stays seated 10-15 min independently', 4:'Stays seated 15+ min, engaged and focused' }},
+       { area:'academic', desc:'Complete multi-step math word problems independently',
+         rubric:{ 1:'Cannot identify operation or first step', 2:'Identifies first step; errors in computation', 3:'Completes most steps with minor supports', 4:'Solves multi-step problems independently with 80%+ accuracy' }},
+       { area:'social', desc:'Use appropriate voice volume in group settings',
+         rubric:{ 1:'Consistently too loud/quiet; disrupts group', 2:'Adjusts volume with direct prompting', 3:'Usually appropriate; occasional reminders needed', 4:'Consistently uses appropriate volume without prompts' }}],
       // Amara: communication + academic
-      [{ area:'communication', desc:'Initiate conversation with peers during unstructured time' },
-       { area:'academic', desc:'Read grade-level passages with 90%+ accuracy' },
-       { area:'social', desc:'Participate in group activities without adult facilitation' }],
+      [{ area:'communication', desc:'Initiate conversation with peers during unstructured time',
+         rubric:{ 1:'No peer interaction; isolates during free time', 2:'Responds to peers but does not initiate', 3:'Initiates brief exchanges with 1-2 familiar peers', 4:'Initiates and sustains conversation with multiple peers' }},
+       { area:'academic', desc:'Read grade-level passages with 90%+ accuracy',
+         rubric:{ 1:'Below 70% accuracy; frequent decoding errors', 2:'70-80% accuracy; some self-correction', 3:'80-90% accuracy; good fluency', 4:'90%+ accuracy with expression and comprehension' }},
+       { area:'social', desc:'Participate in group activities without adult facilitation',
+         rubric:{ 1:'Will not join group; adult must remain present', 2:'Joins with adult support; minimal participation', 3:'Participates with occasional adult check-ins', 4:'Participates independently for full activity duration' }}],
       // Liam: motor + behavioral
-      [{ area:'motor', desc:'Write legibly on standard lined paper with proper letter sizing' },
-       { area:'behavioral', desc:'Transition between activities within 2 minutes' },
-       { area:'academic', desc:'Organize materials in desk/backpack without reminders' }],
+      [{ area:'motor', desc:'Write legibly on standard lined paper with proper letter sizing',
+         rubric:{ 1:'Letters inconsistent; most above/below lines', 2:'Uses guide; letters staying on lines somewhat', 3:'Mostly legible; consistent sizing through paragraphs', 4:'Legible handwriting with proper sizing and spacing throughout' }},
+       { area:'behavioral', desc:'Transition between activities within 2 minutes',
+         rubric:{ 1:'Takes 5+ min; needs multiple prompts', 2:'Transitions in 3-4 min with visual timer', 3:'Transitions in ~2 min with one reminder', 4:'Transitions independently within 2 minutes' }},
+       { area:'academic', desc:'Organize materials in desk/backpack without reminders',
+         rubric:{ 1:'Materials frequently lost; desk/backpack disorganized', 2:'Organizes with direct adult assistance', 3:'Maintains organization with visual checklist', 4:'Independently organized; retrieves materials quickly' }}],
       // Sophie: academic + social
-      [{ area:'academic', desc:'Solve two-digit multiplication problems with 80%+ accuracy' },
-       { area:'social', desc:'Resolve peer conflicts using taught strategies' },
-       { area:'communication', desc:'Express needs to adults using complete sentences' }],
+      [{ area:'academic', desc:'Solve two-digit multiplication problems with 80%+ accuracy',
+         rubric:{ 1:'Cannot perform carry-over; below 50%', 2:'Uses grid method; 50-65% accuracy', 3:'Grid method reliable; 65-80% accuracy', 4:'80%+ accuracy; can explain method to peers' }},
+       { area:'social', desc:'Resolve peer conflicts using taught strategies',
+         rubric:{ 1:'Escalates or withdraws; no strategy use', 2:'Identifies strategy with adult prompting', 3:'Attempts strategy independently; sometimes effective', 4:'Applies strategies independently with positive outcomes' }},
+       { area:'communication', desc:'Express needs to adults using complete sentences',
+         rubric:{ 1:'Points or uses single words only', 2:'Uses 2-3 word phrases', 3:'Uses simple complete sentences', 4:'Uses complete sentences with relevant detail' }}],
       // Marcus: behavioral + communication
-      [{ area:'behavioral', desc:'Follow 3-step directions without repetition' },
-       { area:'communication', desc:'Raise hand and wait to be called on before speaking' },
-       { area:'academic', desc:'Identify main idea in grade-level non-fiction text' }],
+      [{ area:'behavioral', desc:'Follow 3-step directions without repetition',
+         rubric:{ 1:'Needs each step repeated individually', 2:'Completes 1-2 steps; forgets remainder', 3:'Completes 2-3 steps with one reminder', 4:'Follows all 3 steps after single instruction' }},
+       { area:'communication', desc:'Raise hand and wait to be called on before speaking',
+         rubric:{ 1:'Blurts out consistently; does not raise hand', 2:'Raises hand but speaks before called on', 3:'Raises hand and waits most of the time', 4:'Consistently raises hand and waits to be called on' }},
+       { area:'academic', desc:'Identify main idea in grade-level non-fiction text',
+         rubric:{ 1:'Cannot distinguish main idea from details', 2:'Identifies topic but not main argument', 3:'Identifies main idea with supporting evidence', 4:'Articulates main idea and explains author purpose' }}],
       // Zara: social + academic
-      [{ area:'social', desc:'Engage in cooperative play with at least one peer for 10+ minutes' },
-       { area:'academic', desc:'Write 3+ sentence paragraphs with topic sentence and details' },
-       { area:'motor', desc:'Use scissors to cut along curved lines with accuracy' }],
+      [{ area:'social', desc:'Engage in cooperative play with at least one peer for 10+ minutes',
+         rubric:{ 1:'Parallel play only; no cooperative interaction', 2:'Side-by-side with some verbal exchange', 3:'Cooperative play for 5-10 minutes', 4:'Sustained cooperative play 10+ min; may lead activity' }},
+       { area:'academic', desc:'Write 3+ sentence paragraphs with topic sentence and details',
+         rubric:{ 1:'Writes single disconnected sentences', 2:'2-3 sentences; no clear topic sentence', 3:'3+ sentences with identifiable topic', 4:'Well-structured paragraph with topic, details, and conclusion' }},
+       { area:'motor', desc:'Use scissors to cut along curved lines with accuracy',
+         rubric:{ 1:'Cannot follow curved line; jagged cuts', 2:'Follows curve roughly; deviates >5mm', 3:'Follows curve with minor deviations', 4:'Smooth accurate cutting along curved lines' }}],
       // Ethan: behavioral + motor
-      [{ area:'behavioral', desc:'Accept changes in routine without escalation' },
-       { area:'motor', desc:'Hold pencil with appropriate tripod grip consistently' },
-       { area:'social', desc:'Take turns in structured games without adult prompting' }],
+      [{ area:'behavioral', desc:'Accept changes in routine without escalation',
+         rubric:{ 1:'Meltdown lasting 10+ minutes; cannot transition', 2:'Upset but calms with visual schedule support', 3:'Brief agitation; recovers with verbal prep only', 4:'Accepts changes calmly with minimal or no support' }},
+       { area:'motor', desc:'Hold pencil with appropriate tripod grip consistently',
+         rubric:{ 1:'Fist grip or inconsistent hold', 2:'Tripod grip with frequent slipping', 3:'Maintains tripod grip for short tasks', 4:'Consistent tripod grip throughout all writing tasks' }},
+       { area:'social', desc:'Take turns in structured games without adult prompting',
+         rubric:{ 1:'Cannot wait for turn; leaves game', 2:'Waits with direct adult support beside them', 3:'Takes turns with occasional reminder', 4:'Takes turns independently; encourages peers' }}],
       // Isabella: communication + academic
-      [{ area:'communication', desc:'Use age-appropriate vocabulary in oral responses' },
-       { area:'academic', desc:'Decode unfamiliar words using phonetic strategies' },
-       { area:'social', desc:'Maintain eye contact during conversation for 30+ seconds' }]
+      [{ area:'communication', desc:'Use age-appropriate vocabulary in oral responses',
+         rubric:{ 1:'Basic/immature vocabulary for grade level', 2:'Occasional age-appropriate words; mostly simple', 3:'Growing vocabulary; uses taught words in context', 4:'Consistently uses grade-level vocabulary with precision' }},
+       { area:'academic', desc:'Decode unfamiliar words using phonetic strategies',
+         rubric:{ 1:'Guesses or skips unfamiliar words', 2:'Attempts sounding out; inconsistent', 3:'Uses phonetic strategies with moderate success', 4:'Decodes unfamiliar words accurately using multiple strategies' }},
+       { area:'social', desc:'Maintain eye contact during conversation for 30+ seconds',
+         rubric:{ 1:'Avoids eye contact entirely', 2:'Brief glances; under 10 seconds', 3:'Maintains eye contact 10-30 seconds', 4:'Maintains appropriate eye contact 30+ seconds' }}]
     ];
 
     const allGoals = [];
     goalSets.forEach((goals, si) => {
       goals.forEach(g => {
-        allGoals.push(DB.addGoal(students[si].id, g.area, g.desc));
+        allGoals.push(DB.addGoal(students[si].id, g.area, g.desc, g.rubric));
       });
     });
 
@@ -278,7 +303,8 @@ const AIReport = {
       const first = gObs[0]; const last = gObs[gObs.length-1];
       const trend = last.rating > first.rating ? 'improving' : last.rating === first.rating ? 'stable' : 'declining';
       const avgRating = (gObs.reduce((s,o)=>s+o.rating,0)/gObs.length).toFixed(1);
-      return `**${g.description}** (${g.area})\nObservations: ${gObs.length} over ${Math.ceil((new Date(last.timestamp)-new Date(first.timestamp))/86400000)} days\nTrend: ${trend} (${RATING_LABELS[first.rating]} \u2192 ${RATING_LABELS[last.rating]})\nAverage rating: ${avgRating}/4\n\nRecent notes:\n${recent.map(o => `\u2022 ${dayKey(o.timestamp)}: ${o.note} [${RATING_LABELS[o.rating]}]`).join('\n')}`;
+      const rubricSection = g.rubric ? `\nRubric:\n${[1,2,3,4].map(r => `  ${r}. ${g.rubric[r]}`).join('\n')}\nCurrent level: ${rubricLabel(g, last.rating)}` : '';
+      return `**${g.description}** (${g.area})\nObservations: ${gObs.length} over ${Math.ceil((new Date(last.timestamp)-new Date(first.timestamp))/86400000)} days\nTrend: ${trend} (${rubricLabel(g, first.rating)} \u2192 ${rubricLabel(g, last.rating)})\nAverage rating: ${avgRating}/4${rubricSection}\n\nRecent notes:\n${recent.map(o => `\u2022 ${dayKey(o.timestamp)}: ${o.note} [${rubricLabel(g, o.rating)}]`).join('\n')}`;
     });
 
     return `# Progress Report: ${student.name}\nGrade: ${student.grade} | Generated: ${new Date().toLocaleDateString()}\nTeacher: ${DB.load().teacher?.name || 'Teacher'}\n\n---\n\n${goalReports.join('\n\n---\n\n')}`;
@@ -504,13 +530,24 @@ const logStepGoal = () => {
   </div>`;
 };
 
-const logStepRating = () => `
+const logStepRating = () => {
+  const goal = DB.getGoalById(state.logData.goalId);
+  const hasRubric = goal?.rubric;
+  return `
   <div class="rating-buttons">
     ${[1,2,3,4].map(r => `<button class="rating-btn ${state.logData.rating===r?'selected':''}" data-action="log-select-rating" data-rating="${r}">${RATING_EMOJI[r]}</button>`).join('')}
   </div>
   <div class="rating-labels">
     ${[1,2,3,4].map(r => `<span>${RATING_LABELS[r]}</span>`).join('')}
-  </div>`;
+  </div>
+  ${hasRubric ? `<div class="rubric-guide">
+    <p class="rubric-title">Rubric</p>
+    ${[1,2,3,4].map(r => `<div class="rubric-level ${state.logData.rating===r?'rubric-selected':''}">
+      <span class="rubric-rating r${r}">${r}</span>
+      <span class="rubric-desc">${goal.rubric[r]}</span>
+    </div>`).join('')}
+  </div>` : ''}`;
+};
 
 const logStepNote = () => {
   const student = DB.getStudent(state.logData.studentId);
@@ -599,7 +636,11 @@ const viewStudent = () => {
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <span class="goal-obs-count">${gObs.length} observations</span>
             <span class="goal-trend ${trend}">${trendLabel}</span>
-          </div>` : `<p style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">No observations yet</p>`}
+          </div>
+          ${g.rubric ? `<div class="rubric-current">Current: <strong>${rubricLabel(g, gObs[gObs.length-1].rating)}</strong></div>` : ''}` : `<p style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">No observations yet</p>`}
+          ${g.rubric ? `<details class="rubric-details"><summary>View Rubric</summary><div class="rubric-guide rubric-inline">
+            ${[1,2,3,4].map(r => `<div class="rubric-level"><span class="rubric-rating r${r}">${r}</span><span class="rubric-desc">${g.rubric[r]}</span></div>`).join('')}
+          </div></details>` : ''}
           <div style="margin-top:8px;"><button class="btn btn-sm btn-secondary" data-action="quick-log-goal" data-student="${s.id}" data-goal="${g.id}">Log Observation</button></div>
         </div>`;
       }).join('')}
@@ -701,6 +742,11 @@ const viewAddGoal = () => {
           </select>
         </div>
         <div class="form-group"><label>Goal Description</label><textarea name="description" placeholder="e.g. Remain seated during instruction for 15+ minutes without prompting" required></textarea></div>
+        <p class="section-title" style="margin-top:16px;">Rating Rubric <span style="font-weight:400;text-transform:none;letter-spacing:0;">(what each level looks like for this goal)</span></p>
+        <div class="form-group"><label>🟥 Level 1 — Struggling</label><input name="rubric1" placeholder="e.g. Cannot remain seated for 5 minutes"></div>
+        <div class="form-group"><label>🟧 Level 2 — Emerging</label><input name="rubric2" placeholder="e.g. Stays seated 5-10 min with prompting"></div>
+        <div class="form-group"><label>🟦 Level 3 — Developing</label><input name="rubric3" placeholder="e.g. Stays seated 10-15 min independently"></div>
+        <div class="form-group"><label>🟩 Level 4 — Mastered</label><input name="rubric4" placeholder="e.g. Stays seated 15+ min, engaged and focused"></div>
         <button class="btn btn-primary btn-block" type="submit">Add Goal</button>
       </form>
     </div>
@@ -832,7 +878,9 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       }
       case 'add-goal': {
-        DB.addGoal(fd.get('studentId'), fd.get('area'), fd.get('description'));
+        const r1 = fd.get('rubric1'), r2 = fd.get('rubric2'), r3 = fd.get('rubric3'), r4 = fd.get('rubric4');
+        const rubric = (r1 || r2 || r3 || r4) ? { 1: r1||RATING_LABELS[1], 2: r2||RATING_LABELS[2], 3: r3||RATING_LABELS[3], 4: r4||RATING_LABELS[4] } : null;
+        DB.addGoal(fd.get('studentId'), fd.get('area'), fd.get('description'), rubric);
         toast('Goal added!');
         navigate('student', { id: fd.get('studentId') });
         break;
