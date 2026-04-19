@@ -2,14 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=apps/confusion-engine/index.html">
-    <title>EduOpsLab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduOpsLab — Education as Operations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { background: #0b0b12; color: #e4e4f0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
-        a { color: #818cf8; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #0b0b12; color: #e4e4f0;
+            min-height: 100vh; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; padding: 32px;
+            background: radial-gradient(ellipse at 50% 20%, rgba(99,102,241,0.08) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 80%, rgba(16,185,129,0.06) 0%, transparent 50%),
+                        #0b0b12;
+        }
+        .container { max-width: 680px; width: 100%; text-align: center; }
+        h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
+        .tagline { color: #8892a8; font-size: 1.05rem; margin-bottom: 8px; line-height: 1.6; }
+        .subtitle { color: #525e74; font-size: 0.88rem; margin-bottom: 40px; }
+        .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+        @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+        .card {
+            background: #131721; border: 1px solid #1c2233;
+            border-radius: 14px; padding: 28px 20px;
+            text-decoration: none; color: #e4e4f0;
+            transition: all 250ms ease; text-align: left;
+        }
+        .card:hover { border-color: rgba(99,102,241,0.4); transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+        .card-icon { font-size: 2.2rem; margin-bottom: 12px; }
+        .card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+        .card p { font-size: 0.85rem; color: #8892a8; line-height: 1.5; }
+        .card .card-tag {
+            display: inline-block; margin-top: 12px; padding: 3px 10px;
+            border-radius: 10px; font-size: 0.72rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.4px;
+        }
+        .card:first-child .card-tag { background: rgba(99,102,241,0.15); color: #818cf8; }
+        .card:last-child .card-tag { background: rgba(16,185,129,0.15); color: #10b981; }
+        .footer { color: #525e74; font-size: 0.78rem; line-height: 1.8; }
+        .footer a { color: #818cf8; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <p>Redirecting to <a href="apps/confusion-engine/index.html">ConfusionEngine</a>...</p>
+    <div class="container">
+        <h1>🎓 EduOpsLab</h1>
+        <p class="tagline">Teaching is co-production. These demos show what happens when you design the process that way.</p>
+        <p class="subtitle">Two working proofs of concept — one from university, one from K-12 special education.</p>
+        <div class="cards">
+            <a class="card" href="apps/confusion-engine/index.html">
+                <div class="card-icon">🤔</div>
+                <h2>ConfusionEngine</h2>
+                <p>University homework system. Students reveal confusion; the teacher walks in knowing where to focus. AI-assisted grading closes the loop.</p>
+                <span class="card-tag">University · Co-Production</span>
+            </a>
+            <a class="card" href="apps/observation-tracker/index.html">
+                <div class="card-icon">👁️</div>
+                <h2>ObservationTracker</h2>
+                <p>IEP progress tracking in seconds. Capture observations on a phone during class. AI writes the progress reports from raw teacher insights.</p>
+                <span class="card-tag">K-12 Special Ed · Flow</span>
+            </a>
+        </div>
+        <div class="footer">
+            <p>Both apps run entirely in your browser — no backend, no account needed.</p>
+            <p>Click <strong>"Load Demo"</strong> inside either app to see realistic sample data.</p>
+            <p style="margin-top:12px;">© 2026 Mustafa Uzumeri · <a href="https://github.com/uzumeri/EduOpsLab">Source on GitHub</a></p>
+        </div>
+    </div>
 </body>
 </html>
