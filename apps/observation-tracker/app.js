@@ -381,11 +381,10 @@ const bottomNav = () => {
     { id:'timeline', icon:'📊', label:'Timeline' },
     { id:'manage', icon:'⚙️', label:'Manage' }
   ];
-  return `<nav class="bottom-nav">
-    ${tabs.map(t => `<button class="nav-item ${state.view===t.id?'active':''}" data-action="nav" data-view="${t.id}">
+  const navItems = tabs.map(t => `<button class="nav-item ${state.view===t.id?'active':''}" data-action="nav" data-view="${t.id}">
       <span class="nav-icon">${t.icon}</span>${t.label}
-    </button>`).join('')}
-  </nav>`;
+    </button>`).join('');
+  return `<nav class="desktop-nav">${navItems}</nav><nav class="bottom-nav">${navItems}</nav>`;
 };
 
 // ============================================================

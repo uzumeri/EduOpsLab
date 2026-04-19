@@ -385,8 +385,23 @@ a:hover { color: var(--accent-hover); }
 }
 .modal h2 { font-size: 1.1rem; margin-bottom: 16px; }
 
-/* RESPONSIVE */
+/* DESKTOP NAV (header inline) */
+.desktop-nav { display: none; }
 @media (min-width: 768px) {
+  .desktop-nav {
+    display: flex; gap: 4px; background: var(--bg-card);
+    border-bottom: 1px solid var(--border); padding: 0 20px;
+    justify-content: center;
+    position: sticky; top: 49px; z-index: 99;
+    order: -1;
+  }
+  .desktop-nav .nav-item {
+    flex: 0; flex-direction: row; gap: 6px; padding: 10px 20px;
+    font-size: 0.82rem; border-bottom: 2px solid transparent;
+    border-radius: 0;
+  }
+  .desktop-nav .nav-item.active { border-bottom-color: var(--accent); color: var(--accent); }
+  .desktop-nav .nav-item .nav-icon { font-size: 1rem; }
   .bottom-nav { display: none; }
   .main-content { padding-bottom: 20px; }
   .btn-fab { bottom: 24px; right: 24px; }
