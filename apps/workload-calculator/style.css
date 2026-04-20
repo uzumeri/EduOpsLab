@@ -84,6 +84,95 @@ body {
 }
 
 /* ============================================================
+   CLASSROOM SETUP CONFIG BAR
+   Persistent strip between the app header and the tab navigation.
+   Holds the four parameters shared across all calculator tabs.
+   ============================================================ */
+.config-bar {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1.5rem;
+}
+.config-bar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.config-bar-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.config-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem 1.25rem;
+  flex: 1;
+}
+.config-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.config-item label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  min-width: 80px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.config-item input[type="range"] {
+  flex: 1;
+  height: 3px;
+}
+.config-output {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text);
+  background: var(--bg-card-2);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  min-width: 56px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* In-panel context notes that echo the shared config value */
+.config-context {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-card-2);
+  border-radius: var(--radius);
+  border-left: 2px solid var(--accent);
+}
+.config-echo {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .config-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .config-bar-label { display: none; }
+  .config-grid { grid-template-columns: 1fr 1fr; }
+  .config-item label { min-width: 60px; font-size: 0.65rem; }
+}
+
+/* ============================================================
    TAB NAVIGATION
    ============================================================ */
 .tab-nav {

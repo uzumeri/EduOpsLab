@@ -20,6 +20,34 @@
     </div>
   </header>
 
+  <div class="config-bar" role="region" aria-label="Classroom Setup">
+    <div class="config-bar-inner">
+      <span class="config-bar-label">📐 Classroom Setup</span>
+      <div class="config-grid">
+        <div class="config-item">
+          <label for="cfg-class-size">Class size</label>
+          <input type="range" id="cfg-class-size" min="5" max="50" value="25" step="1" />
+          <output class="config-output" id="cfg-class-size-out">25 students</output>
+        </div>
+        <div class="config-item">
+          <label for="cfg-school-days">School days/yr</label>
+          <input type="range" id="cfg-school-days" min="100" max="200" value="180" step="5" />
+          <output class="config-output" id="cfg-school-days-out">180 days</output>
+        </div>
+        <div class="config-item">
+          <label for="cfg-teacher-hours">Teacher hrs/day</label>
+          <input type="range" id="cfg-teacher-hours" min="6" max="12" value="8" step="0.5" />
+          <output class="config-output" id="cfg-teacher-hours-out">8 hrs</output>
+        </div>
+        <div class="config-item">
+          <label for="cfg-topics">Topics/course</label>
+          <input type="range" id="cfg-topics" min="5" max="40" value="20" step="1" />
+          <output class="config-output" id="cfg-topics-out">20 topics</output>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <nav class="tab-nav" role="tablist">
     <button class="tab-btn active" data-tab="asymmetry" role="tab" aria-selected="true" id="tab-asymmetry">
       <span class="tab-icon">⚖️</span>
@@ -50,15 +78,8 @@
 
       <div class="calc-layout">
         <div class="inputs-card card">
-          <h2 class="card-title">Your Classroom</h2>
-
-          <div class="input-group">
-            <label for="class-size">Class size</label>
-            <div class="slider-row">
-              <input type="range" id="class-size" min="5" max="50" value="25" step="1" />
-              <output class="slider-output" id="class-size-out">25 students</output>
-            </div>
-          </div>
+          <h2 class="card-title">The Extra Burden</h2>
+          <p class="config-context">Using: <span id="asymm-config-summary">25 students · 180 days · 8 hrs/day</span><br>Adjust class size, calendar, and hours in Classroom Setup above.</p>
 
           <div class="input-group">
             <label for="extra-minutes">Extra minutes per student, per day</label>
@@ -67,22 +88,6 @@
               <output class="slider-output" id="extra-minutes-out">5 min</output>
             </div>
             <p class="input-hint">This could be individualized feedback, one-on-one check-ins, or active learning facilitation. Whatever the new method requires.</p>
-          </div>
-
-          <div class="input-group">
-            <label for="school-days">School days per year</label>
-            <div class="slider-row">
-              <input type="range" id="school-days" min="100" max="200" value="180" step="5" />
-              <output class="slider-output" id="school-days-out">180 days</output>
-            </div>
-          </div>
-
-          <div class="input-group">
-            <label for="teacher-hours">Teacher work hours per day</label>
-            <div class="slider-row">
-              <input type="range" id="teacher-hours" min="6" max="12" value="8" step="0.5" />
-              <output class="slider-output" id="teacher-hours-out">8 hrs</output>
-            </div>
           </div>
         </div>
 
@@ -245,13 +250,7 @@
         <div class="inputs-card card">
           <h2 class="card-title">Your Course Structure</h2>
 
-          <div class="input-group">
-            <label for="topics">Topics / units per course</label>
-            <div class="slider-row">
-              <input type="range" id="topics" min="5" max="40" value="20" step="1" />
-              <output class="slider-output" id="topics-out">20 topics</output>
-            </div>
-          </div>
+          <p class="config-context">Topics per course: <span id="topics-out" class="config-echo">20 topics</span> — adjust in Classroom Setup above.</p>
 
           <div class="divider-label">Batch Teaching Prep <span class="method-tag batch-tag">batch</span></div>
 
