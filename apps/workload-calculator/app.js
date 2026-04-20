@@ -318,13 +318,14 @@ const initPrepCalc = () => {
       microTotal   = microScratch; // actual cost (shared units are free to use)
     } else {
       // YEAR 2+ — batch refreshes a % of slides; micro refreshes a % of units
+      // For refreshed micro-units, the teacher can still pull from the library
       batchScratch = topics * batchHrs * batchRefPct;
       batchShared  = topics * batchHrs * (1 - batchRefPct); // reused from last year
       batchTotal   = batchScratch;
 
-      // Year 2: only refresh % of total micro-units (newly built ones + refreshed)
-      microScratch = totalMicro * microRefPct * microHrs;
-      microShared  = totalMicro * (1 - microRefPct) * microHrs; // fully reused
+      const refreshedUnits = totalMicro * microRefPct;
+      microScratch = refreshedUnits * (1 - shareRate) * microHrs; // refreshed, built from scratch
+      microShared  = refreshedUnits * shareRate * microHrs;       // refreshed, sourced from library
       microTotal   = microScratch;
     }
 
