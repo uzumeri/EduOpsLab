@@ -140,6 +140,18 @@ Structured criteria (rubrics) serve as the bridge between subjective teacher obs
 
 A batch lecture costs 2–4 hours to prepare, then delivers to 25 students at once. A microservice — a precise, bounded, reusable teaching interaction — costs more per unit to design, because it must work without the scaffolding of a surrounding lecture. Year 1 microservice prep is therefore more expensive than batch prep if every unit is built from scratch. The equalizer is sharing. Publisher-supplied PowerPoints and test banks already subsidize batch teaching by distributing prep cost across thousands of teachers. A shared microservice library does the same for individualized teaching: each unit is built once, shared across schools, and refined over time. At sufficient library depth, the per-teacher Year 1 cost falls below batch — and Year 2+ cost approaches zero for covered topics. The transition cost is real; the long-run cost structure favors the library model.
 
+### MP-6. The transition cost is one-time; the teacher-time cost of batch is forever
+
+The Year 1 cost of building a microservice library is a capital investment — it happens once, it amortizes, and it gets cheaper as the library deepens. The ongoing teacher-time cost of batch teaching recurs every year, every class, every student: same inefficiencies, same overloaded constraint, same defects carried forward. The comparison isn't Year 1 micro vs. Year 1 batch. It's a one-time transition cost vs. a permanent operational tax. Framing the library investment as "too expensive" confuses capital costs with operating costs. → MP-5, TC-1
+
+### MP-7. Specialization raises quality and lowers per-teacher cost simultaneously
+
+Textbooks, test banks, and publisher PowerPoints are not written by classroom teachers. They are written by subject-matter specialists, edited for pedagogical clarity, and tested across thousands of classrooms before a teacher opens the box. This is the specialization argument for batch content. The same argument applies to a microservice library: a specialist builds a high-quality micro-interaction once; a generalist classroom teacher deploys it thousands of times. The current model — expecting each classroom teacher to build their own individualized content from scratch — is the equivalent of expecting each teacher to write their own textbook. → MP-5
+
+### MP-8. The break-even library share rate is the key policy variable
+
+For any institution, the decision to adopt micro-process teaching reduces to a quantitative threshold: at what library depth does Year 1 adoption cost equal or fall below batch prep cost? This is calculable from four parameters: topics per course, hours per lecture, microservices per topic, and hours per microservice. The resulting break-even share rate — the fraction of micro-units that must come from a shared library before adoption is cost-neutral — converts a pedagogical debate into an infrastructure investment decision. Institutions that know their break-even rate can make rational library investment decisions. Institutions that don't frame it this way argue about pedagogy indefinitely. → MP-5, MP-6
+
 ---
 
 ## Where AI Belongs
@@ -162,4 +174,4 @@ AI transforms the teacher's allocation problem from one with no information to o
 
 ---
 
-*Last updated: 2026-04-20 — added MP-5*
+*Last updated: 2026-04-20 — added MP-5 through MP-8 (library economics and corollaries)*
