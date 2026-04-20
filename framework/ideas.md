@@ -4,6 +4,8 @@
 
 Mustafa Uzumeri's canonical collection of personal observations, design principles, and working hypotheses about teaching and learning, grounded in operations management. The author takes sole responsibility for all content — good or bad. Each entry is self-contained. New entries are appended at the end of the appropriate section. Cross-references use `→ [ID]` notation.
 
+*The author taught Industrial and Systems Engineering at Auburn University from 1991 to 2012, retiring Emeritus. Earlier classroom experience was accumulated as a doctoral student at Rensselaer Polytechnic Institute — probably badly, in retrospect. The observations here emerged from more than two decades operating the production system itself, not from the education research literature.*
+
 *For working software demonstrations of these concepts, see [demos.md](demos.md).*
 
 ---
