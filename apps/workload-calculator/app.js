@@ -236,10 +236,178 @@ const initObservationCalc = () => {
 };
 
 /* ============================================================
+   CALCULATOR 3 — PREP OVERHEAD
+   ============================================================ */
+const initPrepCalc = () => {
+  const inputs = {
+    topics:        document.getElementById('topics'),
+    batchPrepHrs:  document.getElementById('batch-prep-hrs'),
+    batchRefresh:  document.getElementById('batch-refresh'),
+    microPerTopic: document.getElementById('micro-per-topic'),
+    microCreateHrs:document.getElementById('micro-create-hrs'),
+    libraryShare:  document.getElementById('library-share'),
+    microRefresh:  document.getElementById('micro-refresh'),
+  };
+  const outputs = {
+    topicsOut:        document.getElementById('topics-out'),
+    batchPrepHrsOut:  document.getElementById('batch-prep-hrs-out'),
+    batchRefreshOut:  document.getElementById('batch-refresh-out'),
+    microPerTopicOut: document.getElementById('micro-per-topic-out'),
+    microCreateHrsOut:document.getElementById('micro-create-hrs-out'),
+    libraryShareOut:  document.getElementById('library-share-out'),
+    microRefreshOut:  document.getElementById('micro-refresh-out'),
+    batchTotal:       document.getElementById('prep-batch-total'),
+    microTotal:       document.getElementById('prep-micro-total'),
+    batchScratch:     document.getElementById('prep-batch-scratch'),
+    microScratch:     document.getElementById('prep-micro-scratch'),
+    batchShared:      document.getElementById('prep-batch-shared'),
+    microShared:      document.getElementById('prep-micro-shared'),
+    breakEven:        document.getElementById('prep-breakeven'),
+    breakEvenSub:     document.getElementById('prep-breakeven-sub'),
+    verdictLabel:     document.getElementById('prep-verdict-label'),
+    delta:            document.getElementById('prep-delta'),
+    deltaSub:         document.getElementById('prep-delta-sub'),
+    insight:          document.getElementById('prep-insight'),
+    microTotalCell:   document.getElementById('prep-micro-total'),
+    savingsBlock:     document.getElementById('prep-savings-block'),
+  };
+
+  let activeYear = 1;
+
+  // Year toggle buttons
+  document.querySelectorAll('.prep-year-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.prep-year-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeYear = +btn.dataset.year;
+      update();
+    });
+  });
+
+  const update = () => {
+    const topics        = +inputs.topics.value;
+    const batchHrs      = +inputs.batchPrepHrs.value;
+    const batchRefPct   = +inputs.batchRefresh.value / 100;
+    const microPerTopic = +inputs.microPerTopic.value;
+    const microHrs      = +inputs.microCreateHrs.value;
+    const shareRate     = +inputs.libraryShare.value / 100;
+    const microRefPct   = +inputs.microRefresh.value / 100;
+
+    // Labels
+    outputs.topicsOut.textContent        = `${topics} topics`;
+    outputs.batchPrepHrsOut.textContent  = `${batchHrs} hrs`;
+    outputs.batchRefreshOut.textContent  = `${+inputs.batchRefresh.value}%`;
+    outputs.microPerTopicOut.textContent = `${microPerTopic} units`;
+    outputs.microCreateHrsOut.textContent= `${microHrs} hrs`;
+    outputs.libraryShareOut.textContent  = `${+inputs.libraryShare.value}%`;
+    outputs.microRefreshOut.textContent  = `${+inputs.microRefresh.value}%`;
+
+    const totalMicro = topics * microPerTopic; // total micro-units in course
+
+    let batchTotal, batchScratch, batchShared;
+    let microTotal, microScratch, microShared;
+
+    if (activeYear === 1) {
+      // YEAR 1 — build everything new (batch), some sourced from library (micro)
+      batchScratch = topics * batchHrs;
+      batchShared  = 0;  // batch year 1 — no sharing, just build it
+      batchTotal   = batchScratch;
+
+      microScratch = totalMicro * (1 - shareRate) * microHrs;
+      microShared  = totalMicro * shareRate * microHrs; // time saved by using library
+      microTotal   = microScratch; // actual cost (shared units are free to use)
+    } else {
+      // YEAR 2+ — batch refreshes a % of slides; micro refreshes a % of units
+      batchScratch = topics * batchHrs * batchRefPct;
+      batchShared  = topics * batchHrs * (1 - batchRefPct); // reused from last year
+      batchTotal   = batchScratch;
+
+      // Year 2: only refresh % of total micro-units (newly built ones + refreshed)
+      microScratch = totalMicro * microRefPct * microHrs;
+      microShared  = totalMicro * (1 - microRefPct) * microHrs; // fully reused
+      microTotal   = microScratch;
+    }
+
+    // Break-even: at what library share rate does micro year-1 cost = batch year-1?
+    // microScratch = totalMicro * (1 - breakEven) * microHrs = batchTotal
+    // => (1 - breakEven) = batchTotal / (totalMicro * microHrs)
+    // => breakEven = 1 - batchTotal / (totalMicro * microHrs)
+    const batchY1 = topics * batchHrs;
+    const denominator = totalMicro * microHrs;
+    const beRate = denominator > 0
+      ? Math.max(0, Math.min(100, (1 - batchY1 / denominator) * 100))
+      : 0;
+
+    animateValue(outputs.batchTotal,   `${batchTotal.toFixed(1)} hrs`);
+    animateValue(outputs.microTotal,   `${microTotal.toFixed(1)} hrs`);
+    animateValue(outputs.batchScratch, `${batchScratch.toFixed(1)} hrs`);
+    animateValue(outputs.microScratch, `${microScratch.toFixed(1)} hrs`);
+    animateValue(outputs.batchShared,  batchShared > 0 ? `${batchShared.toFixed(1)} hrs reused` : '—');
+    animateValue(outputs.microShared,  microShared > 0 ? `${microShared.toFixed(1)} hrs saved` : '—');
+    animateValue(outputs.breakEven,    beRate < 0
+      ? 'Always cheaper'
+      : beRate > 95
+      ? 'Library unavailable'
+      : `${beRate.toFixed(0)}% from library`);
+
+    if (beRate <= 0) {
+      outputs.breakEvenSub.textContent = 'Even with no library, micro-process prep is cheaper at these rates.';
+    } else if (beRate > 90) {
+      outputs.breakEvenSub.textContent = `At current rates, micro-process only becomes cheaper with a very mature (${beRate.toFixed(0)}%+) shared library.`;
+    } else {
+      outputs.breakEvenSub.textContent = `Source ${beRate.toFixed(0)}% of micro-units from a shared library and Year 1 prep costs equal batch. Above that — it's cheaper.`;
+    }
+
+    // Delta block: micro vs batch
+    const delta = batchTotal - microTotal;
+    const cheaper = delta > 0; // batch is more expensive (micro is cheaper)
+    outputs.microTotalCell.className = `col-micro ${cheaper ? 'cheaper' : 'pricier'}`;
+
+    const label = activeYear === 1
+      ? (cheaper ? 'Micro-process saves (Year 1)' : 'Micro-process costs extra (Year 1)')
+      : (cheaper ? 'Micro-process saves (Year 2+)' : 'Micro-process costs extra (Year 2+)');
+
+    outputs.verdictLabel.textContent = label;
+    animateValue(outputs.delta, `${Math.abs(delta).toFixed(1)} hrs`);
+    outputs.deltaSub.textContent = cheaper
+      ? `At ${+inputs.libraryShare.value}% library share, micro-process uses ${Math.abs(delta).toFixed(1)} fewer prep hours.`
+      : `Source ${Math.max(0, beRate).toFixed(0)}%+ from a shared library to reach break-even.`;
+
+    outputs.savingsBlock.style.borderColor = cheaper
+      ? 'rgba(20,184,166,0.25)'
+      : 'rgba(249,115,22,0.25)';
+    outputs.savingsBlock.style.background = cheaper
+      ? 'var(--save-dim)'
+      : 'var(--burden-dim)';
+    outputs.delta.style.color = cheaper ? 'var(--save)' : 'var(--burden)';
+
+    // Contextual insight
+    let insight = '';
+    if (activeYear === 1 && !cheaper) {
+      insight = `Year 1 is the transition year. Micro-process costs ${Math.abs(delta).toFixed(1)} extra hours — the price of moving from a batch library (publisher decks) to a micro library (still being built). This is a one-time investment, not an ongoing cost.`;
+    } else if (activeYear === 1 && cheaper) {
+      insight = `With ${+inputs.libraryShare.value}% of units sourced from a shared library, even Year 1 micro-process prep is cheaper than building batch lectures from scratch.`;
+    } else if (activeYear === 2 && cheaper) {
+      insight = `Year 2+ and the library is earning its keep. ${Math.abs(delta).toFixed(1)} hours saved versus refreshing batch slides — and the micro-units are more precise learning interactions, not slides.`;
+    } else {
+      insight = `Year 2+ micro-process prep is still higher than batch refresh at current settings. Increase the library share rate or reduce per-unit creation time to close the gap.`;
+    }
+    outputs.insight.textContent = insight;
+  };
+
+  Object.values(inputs).forEach(input => {
+    input.addEventListener('input', update);
+  });
+
+  update();
+};
+
+/* ============================================================
    BOOT
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initAsymmetryCalc();
   initObservationCalc();
+  initPrepCalc();
 });

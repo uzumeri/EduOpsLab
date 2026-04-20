@@ -136,6 +136,10 @@ Education occurs as a flow process, not batch. Moving to flow without clobbering
 
 Structured criteria (rubrics) serve as the bridge between subjective teacher observation and analyzable data. They make observation replicable across observers, defensible in stakeholder meetings, and comparable across time. Define once at the class level, customize per student. → PO-4
 
+### MP-5. Microservice prep costs more per unit — but the library model changes the economics
+
+A batch lecture costs 2–4 hours to prepare, then delivers to 25 students at once. A microservice — a precise, bounded, reusable teaching interaction — costs more per unit to design, because it must work without the scaffolding of a surrounding lecture. Year 1 microservice prep is therefore more expensive than batch prep if every unit is built from scratch. The equalizer is sharing. Publisher-supplied PowerPoints and test banks already subsidize batch teaching by distributing prep cost across thousands of teachers. A shared microservice library does the same for individualized teaching: each unit is built once, shared across schools, and refined over time. At sufficient library depth, the per-teacher Year 1 cost falls below batch — and Year 2+ cost approaches zero for covered topics. The transition cost is real; the long-run cost structure favors the library model.
+
 ---
 
 ## Where AI Belongs
@@ -158,4 +162,4 @@ AI transforms the teacher's allocation problem from one with no information to o
 
 ---
 
-*Last updated: 2026-04-20*
+*Last updated: 2026-04-20 — added MP-5*
