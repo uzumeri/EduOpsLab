@@ -26,7 +26,18 @@ Csikszentmihalyi's flow state — challenge calibrated to ability, immediate fee
 
 ### HL-4. Confusion is a higher state of knowledge than ignorance
 
-A student who can identify and articulate their confusion has already done significant cognitive work. They've read the material, engaged with it deeply enough to find the hard part, and mapped their own understanding well enough to locate the gap. Confusion is evidence of engagement, not failure. The inverse: a student who feels no confusion in a genuinely difficult domain may not be at ease with the material — they may simply lack the competence to perceive their own incompetence. This is the Dunning-Kruger condition: the gap is invisible from the inside because recognizing a gap requires the very expertise you haven’t yet developed. → LP-4
+A student who can identify and articulate their confusion has already done significant cognitive work. They've read the material, engaged with it deeply enough to find the hard part, and mapped their own understanding well enough to locate the gap. Confusion is evidence of engagement, not failure. The inverse: a student who feels no confusion in a genuinely difficult domain may not be at ease with the material — they may simply lack the competence to perceive their own incompetence. This is the Dunning-Kruger condition: the gap is invisible from the inside because recognizing a gap requires the very expertise you haven’t yet developed. → LP-4, HL-8
+
+### HL-8. Concept acquisition follows a four-stage sequence — and can stall at stage two
+
+Constructing a working mental model of a phenomenon — the actual goal of learning in any domain — follows a recognizable sequence:
+
+1. **Ignorance**: the learner has no prior model of the phenomenon. Nothing to test, nothing to be wrong about.
+2. **False competence (DK zone)**: the learner has a model — typically absorbed from instruction — that produces correct outputs for familiar problems. The model may be wrong, shallow, or a translation strategy rather than a genuine mental structure. The learner cannot detect this because the model works well enough for available tests to generate confidence. This is the Dunning-Kruger stage.
+3. **Productive confusion**: the learner encounters a problem their current model cannot handle — and notices the failure. This is the exit event from the DK zone. Confusion is not a symptom of failure; it is evidence that a model boundary has been found and that the learner’s understanding is now more accurate than it was before. The DK student had no model boundary — everything felt fine. → HL-4
+4. **Reconstructed model and tested confidence**: the learner builds a better model and stress-tests it across varied and novel problems. Confidence that survives repeated novel challenges is earned rather than assumed. This is precisely what the apprenticeship model produces by default. → HL-1, HL-2
+
+The sequence can stall permanently at stage two. A course that assesses only familiar problem types, never delivers concept-forcing challenges, and provides no psychologically safe space for confusion expression may graduate a student who is still in the DK zone — fluent, confident, and wrong. This is the LP-4 failure mode, and it is not rare. The teacher’s job — and the function of AI-generated concept-forcing problems (→ AI-6) — is to deliberately engineer the stage-two-to-three transition: present a problem the DK model cannot translate, make the failure unmistakable, and support model reconstruction. This transition cannot be relied upon to happen spontaneously under standard batch assessment conditions. → HL-4, LP-4, CP-6, AI-6
 
 ### HL-5. Learning cuts across all ages and settings
 
@@ -92,7 +103,7 @@ When output cannot be inspected for conformance, ISO 9001 requires: qualified op
 
 A student who knows they have a gap will seek help, ask questions, and signal the teacher. A student who doesn’t know what they don’t know does none of these things — this is the Dunning-Kruger mechanism in an educational setting: the incompetence that produces the gap also produces the inability to perceive the gap. The student cannot seek help for a problem they cannot see. They proceed with confidence into more advanced work, where shallow encoding fails in ways that are now far more expensive to remediate. The confidence defect is the most common outcome of teaching that rewards correct answer production but never validates the quality of the underlying mental model. It is also, paradoxically, a signal that teaching appeared to succeed — the student is fluent, confident, and producing correct outputs. The defect is the belief. Conventional assessment cannot detect it.
 
-Teaching has a traditional countermeasure for this exact failure mode: requiring students to show their reasoning, not just their answer. A correct answer derived from a wrong mental model typically produces a distinctive reasoning chain — different moves, missing steps, implausible intermediate values. A skilled teacher who reads worked solutions can often identify the planted misconception that the correct final answer conceals. This works. It remains viable in small classes with capable, experienced instructors who have enough time to examine what students actually wrote. It is usually the first practice to go when classes grow large, instructors are adjuncts or newly-minted graduate students, and administrative demands crowd out assessment quality. The teacher-time constraint (→ TC-2), varying instructor preparation levels (→ ES-4), and class sizes that make individual feedback arithmetically impossible combine to make "show your work" a pedagogical aspiration rather than a reliable standard. What disappeared is not the understanding that it matters — it was always understood — but the operational conditions that made it feasible. → CP-4, CP-6, TC-2, ES-4, PO-3
+Teaching has a traditional countermeasure for this exact failure mode: requiring students to show their reasoning, not just their answer. A correct answer derived from a wrong mental model typically produces a distinctive reasoning chain — different moves, missing steps, implausible intermediate values. A skilled teacher who reads worked solutions can often identify the planted misconception that the correct final answer conceals. This works. It remains viable in small classes with capable, experienced instructors who have enough time to examine what students actually wrote. It is usually the first practice to go when classes grow large, instructors are adjuncts or newly-minted graduate students, and administrative demands crowd out assessment quality. The teacher-time constraint (→ TC-2), varying instructor preparation levels (→ ES-4), and class sizes that make individual feedback arithmetically impossible combine to make "show your work" a pedagogical aspiration rather than a reliable standard. What disappeared is not the understanding that it matters — it was always understood — but the operational conditions that made it feasible. → CP-4, CP-6, TC-2, ES-4, PO-3, HL-8
 
 
 ---
@@ -311,7 +322,7 @@ The LP section describes a class of educational failure that conventional inspec
 
 The Dunning-Kruger condition is uniquely resistant to self-report-dependent interventions: the student who doesn’t know what they don’t know cannot accurately fill out a confidence survey, raise their hand, or answer “how confident are you?” accurately. AI’s behavioral monitoring bypasses self-report entirely — detecting from patterns of timing, revision, and error distribution what the student is structurally unable to introspect. For Dunning-Kruger cases specifically, AI-based detection may be the only contemporaneous diagnostic signal available.
 
-→ LP-1, LP-2, LP-3, LP-4
+→ HL-8, LP-1, LP-2, LP-3, LP-4
 
 ### AI-7. AI captures expert knowledge before it walks out the door
 
@@ -336,4 +347,4 @@ The cumulative effect: the ES-3 solution — a methodology library that encodes 
 
 ---
 
-*Last updated: 2026-04-20 — added Prior Work appendix (JOM paper, ADV system); prior entries: HL-7, CM-5, DK references, author attribution*
+*Last updated: 2026-04-20 — added HL-8 (four-stage concept acquisition model, DK stall, confusion as exit mechanism); cross-referenced in HL-4, LP-4, AI-6*
