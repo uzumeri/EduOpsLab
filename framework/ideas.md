@@ -2,7 +2,7 @@
 
 # Ideas About Education
 
-A canonical collection of observations, design principles, and insights about teaching and learning, grounded in operations management. Each entry is self-contained. New entries are appended at the end of the appropriate section. Cross-references use `→ [ID]` notation.
+Mustafa Uzumeri's canonical collection of personal observations, design principles, and working hypotheses about teaching and learning, grounded in operations management. The author takes sole responsibility for all content — good or bad. Each entry is self-contained. New entries are appended at the end of the appropriate section. Cross-references use `→ [ID]` notation.
 
 *For working software demonstrations of these concepts, see [demos.md](demos.md).*
 
@@ -146,7 +146,7 @@ Teachers are more likely to interact with students they have interacted with bef
 
 ### PO-1. Two places to measure education
 
-Education has two measurement points: test the outputs (standardized exams) and observe the process (teacher observations during instruction). Billions of dollars and thousands of tools support output testing. Process observation has had virtually no tooling. (From the ADV Tracking System, 2014.)
+Education has two measurement points: test the outputs (standardized exams) and observe the process (teacher observations during instruction). Billions of dollars and thousands of tools support output testing. Process observation has had virtually no tooling. The imbalance is corroborated by the formative assessment research literature: Black and Wiliam's 1998 review found formative assessment to be among the most effective known interventions for student learning and among the most poorly resourced — a gap that has widened rather than closed in the decades since.
 
 ### PO-2. Observations degrade to impressions
 
@@ -154,11 +154,11 @@ A teacher observes a student struggling with fractions at 10:15 AM. By 3:00 PM, 
 
 ### PO-3. The four resistance factors
 
-Every attempt to move beyond standardized testing toward more frequent, individualized assessment is defeated by four compounding forces: (1) teacher workload — measuring more often means more work, (2) differing student needs — individualization multiplies the effort, (3) budgets — schools can't afford new infrastructure, (4) class size — larger classes mean less time per student. These combine to make the status quo the only viable option under current tools. (From the ADV whitepaper, 2014.)
+Every institutional attempt to move beyond standardized testing toward more frequent, individualized assessment runs into four compounding forces: (1) teacher workload — measuring more often means more work, (2) differing student needs — individualization multiplies the effort, (3) budgets — schools can't afford new infrastructure, (4) class size — larger classes mean less time per student. Each force is individually documented in the teacher-workload and assessment-barrier literature. The analysis of their compounding interaction — and the conclusion that they collectively make the status quo the only viable option under current tools — is the author's observation.
 
 ### PO-4. Spread it thinner and wider
 
-The ADV response to the four resistance factors: fit measurement into naturally occurring observation intervals during normal instruction — "twenty seconds here, fifteen seconds there." More frequent micro-measurements reduce workload vs. fewer, heavier batch assessments. The same insight as lean manufacturing's move from end-of-line inspection to in-process quality checks.
+The design response to the four resistance factors: fit measurement into naturally occurring observation intervals during normal instruction — "twenty seconds here, fifteen seconds there." More frequent micro-measurements reduce workload vs. fewer, heavier batch assessments. The same insight as lean manufacturing's move from end-of-line inspection to in-process quality checks.
 
 ---
 
@@ -311,4 +311,4 @@ The cumulative effect: the ES-3 solution — a methodology library that encodes 
 
 ---
 
-*Last updated: 2026-04-20 — added Dunning-Kruger references at HL-4 (DK warning signal), LP-4 (named mechanism), AI-6 (behavioral bypass as DK remediation)*
+*Last updated: 2026-04-20 — added author attribution; replaced ADV citations in PO-1/PO-3/PO-4 with literature corroboration (Black & Wiliam 1998) or author's own observation framing*
