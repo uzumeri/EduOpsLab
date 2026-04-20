@@ -17,8 +17,9 @@ The apps run entirely in the browser — no backend, no account needed.
 | [Workload Calculator](../apps/workload-calculator/) | Asymmetry | TC-1, TC-2 |
 | [Workload Calculator](../apps/workload-calculator/) | Observation Burden | PO-3, PO-4 |
 | [Workload Calculator](../apps/workload-calculator/) | Prep Overhead | CM-1, CM-2, CM-4 |
-| [ObservationTracker](../apps/observation-tracker/) | — | MP-1, MP-2, MP-3, MP-4, PO-2, PO-4 |
-| [ConfusionEngine](../apps/confusion-engine/) | — | CP-1, CP-3, HL-4 |
+| [ObservationTracker](../apps/observation-tracker/) | Observation | MP-1, MP-2, MP-3, MP-4, PO-2, PO-4 |
+| [ObservationTracker](../apps/observation-tracker/) | Goal Templates | CM-1, PM-2 |
+| [ConfusionEngine](../apps/confusion-engine/) | — | CP-1, CP-3, HL-4, AI-4 |
 
 ---
 
@@ -95,9 +96,13 @@ can be realized in software that fits inside a teacher's instructional flow.
 - **PO-4** (spread it thinner and wider): Each observation takes under 30 seconds and
   can happen in a natural pause during instruction.
 
-**Lineage:** ObservationTracker is a direct descendant of the ADV Tracking System (2014),
-which originated the core insight that process observation could be made low-friction
-enough to fit inside instruction rather than displacing it.
+**Lineage:** ObservationTracker is a direct descendant of ADEEPERVIEW, a classroom
+observation tracking system conceived and designed by Michael Darden (c. 2014) to
+support students with special needs. ADEEPERVIEW originated the core insight that
+process observation could be made low-friction enough to fit inside instruction rather
+than displacing it. See also: *Test-Free Student Assessment* (written to support
+Darden's ADV mission), which develops the complementary argument that process-level
+observation is the correct alternative to output-only scoring.
 
 **Goal Templates** (current feature): Pre-built goal and rubric designs that a teacher
 can adopt and customize — a rudimentary prototype of the CM/PM library concept in
@@ -130,4 +135,5 @@ teacher allocation information. → AI-4
 ---
 
 *For a complete list of ideas, see [ideas.md](ideas.md).*  
+*Also available as [demos.pdf](demos.pdf).*  
 *Last updated: 2026-04-20*
