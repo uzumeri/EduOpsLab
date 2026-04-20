@@ -30,6 +30,10 @@ A student who can identify and articulate their confusion has already done signi
 
 This is not a K-12 story or a university story. The principles apply to trades, professional development, adult self-directed learning, and hobby learning. Jo Mackiewicz — Iowa State professor, part-time welder at Howe's Welding and Fabrication — documents daily on LinkedIn what she learned, with photos. Over a hundred posts radiating pure joy. She doesn't need the money or prestige. She's experiencing flow learning in an apprenticeship. → HL-2
 
+### HL-6. The coherence of these principles across age and context suggests a universal model
+
+The observations in this document are drawn from K-12 classrooms, universities, apprenticeship trades, on-the-job training, and adult self-directed learning. They apply consistently across all of them. Flow learning (→ HL-1), the apprenticeship structure (→ HL-2), the co-production requirement (→ CP-1), the teacher-time constraint (→ TC-1), the defect-compounding of batch scheduling (→ BE-2) — none of these are specific to a grade level, an institution type, or a subject domain. The 50-year-old machinist learning CNC programming at a community college and the six-year-old learning to read are running the same process under the same principles. This cross-domain coherence is not accidental. These are observations about how humans learn — a process that predates schools by a very large distance. Schools impose batch scheduling on a process that runs in continuous flow by default. The universality of the principles is the strongest evidence that the dysfunction is in the container, not in the learner. → HL-1, HL-2, HL-5
+
 ---
 
 ## What's Wrong With Batch Education
@@ -53,6 +57,10 @@ The lecture persists not because it's effective (the evidence on that is close t
 ### BE-5. The commands of batch education
 
 The three-word commands that define batch education are more persuasive than any Theory of Constraints diagram: *"Hurry up." "Keep up." "You're falling behind." "Everybody open your workbooks." "Pencils down."* These are the evidence. The reader has heard them in their own head.
+
+### BE-6. The batch defect surfaces too late for affordable remediation
+
+In lean manufacturing, a defect discovered at end-of-line inspection is the most expensive defect to fix: the part has accumulated full production cost, and rework — if possible at all — is more expensive than early intervention would have been. Batch education produces the same failure mode at institutional scale. A teacher delivers a unit on fractions. Students sit the test on Friday. A significant portion fail. The remediation options at that moment are: (1) blow up the syllabus — stop the batch, address the gap, fall behind on curriculum, disrupt students who did master the material; (2) carry the defect forward — proceed to the next unit with students who lack the foundation, compounding the gap; (3) wait — accept that these students are now a year behind and hope next year's class goes differently. None of these is good. All of them are expensive. All of them are the direct consequence of measuring at the end of the batch instead of inline. The micro-process observation model is the educational equivalent of inline quality inspection: catch the confusion at origin, when intervention costs minutes rather than semesters. → BE-2, PO-1, PO-4
 
 ---
 
@@ -79,6 +87,10 @@ Assessment under product delivery measures what was received — did the student
 ### CP-5. Teacher evaluation is aimed at the wrong variable
 
 Student satisfaction surveys measure the customer experience of receiving a product — was the delivery pleasant, was the professor clear. They never measure whether the student was an effective co-producer. Teacher evaluation mirrors this: was the lecture well-organized? These are product delivery metrics applied to a co-production process.
+
+### CP-6. Confusion must be made socially rewarding, not just intellectually legitimate
+
+HL-4 establishes that confusion is a higher cognitive state than ignorance. That changes nothing if expressing confusion remains socially costly — an admission of failure in front of peers and evaluators. The design challenge is first to make confusion expression safe, and then to make it desirable. Known mechanisms: structured debate (taking a position forces you to find its limits); "best question" competitions (reframing confusion as insight-generation); peer teaching assignments (trying to teach reveals precisely where you are confused, in a context where not knowing is expected and normal); designated low-stakes confusion forums; confusion-capture tools that aggregate student questions before class so the teacher enters knowing where attention is needed (ConfusionEngine operates this principle). The deeper point: in a co-production model, a student who can articulate their confusion is performing at a high level. The evaluation system should signal that clearly. → HL-4, CP-2, CP-4
 
 ---
 
@@ -252,4 +264,4 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ---
 
-*Last updated: 2026-04-20 — added ES-5 (education staffing pyramid) and ES-6 (tacit expert knowledge loss); strengthened ES section with direct education evidence*
+*Last updated: 2026-04-20 — added HL-6 (universal learning model), BE-6 (batch defect timing), CP-6 (making confusion socially rewarding); TC pointer to ES; ES-5 and ES-6*
