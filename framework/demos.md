@@ -2,9 +2,10 @@
 
 # Working Demonstrations
 
-This document maps the conceptual framework in [ideas.md](ideas.md) to the working software
-demonstrations in the [`apps/`](../apps/) directory. Each app is described in terms of the
-framework ideas it makes tangible, its design rationale, and its current limitations.
+Working software demonstrations for the EduOpsLab framework. Each app is described
+in terms of the framework ideas it makes tangible, its design rationale, and its current
+limitations. For the conceptual framework, see
+[ideas.pdf](https://uzumeri.github.io/EduOpsLab/framework/ideas.pdf).
 
 The apps run entirely in the browser — no backend, no account needed.  
 **Public landing page:** [uzumeri.github.io/EduOpsLab](https://uzumeri.github.io/EduOpsLab/) — open any demo without cloning the repo.
@@ -135,6 +136,6 @@ teacher allocation information. → AI-4
 
 ---
 
-*For the conceptual framework, see [ideas.md](ideas.md) — PDF at [uzumeri.github.io/EduOpsLab/framework/ideas.pdf](https://uzumeri.github.io/EduOpsLab/framework/ideas.pdf).*  
-*This document is available as [demos.pdf](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf).*  
+*For the conceptual framework, see [ideas.pdf](https://uzumeri.github.io/EduOpsLab/framework/ideas.pdf).*  
+*This document: [demos.pdf](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf).*  
 *Last updated: 2026-04-20*
