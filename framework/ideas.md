@@ -16,7 +16,7 @@ Humans learn in continuous flow when left to their own devices. Watch a toddler 
 
 ### HL-2. The apprenticeship is the oldest and best teaching model
 
-One master, one apprentice. Challenge scaled to the learner's current level. Immediate, tangible feedback — the weld holds or it doesn't, the soufflé rises or it doesn't. Co-production is mandatory: you can't weld for someone. The master adjusts to the apprentice, not the other way around. No batching — you move when you're ready. Every apprenticeship, every master class, every residency, every flight lesson that has ever produced mastery operates in flow.
+One master, one apprentice. Challenge scaled to the learner's current level. Immediate, tangible feedback — the weld holds or it doesn't, the soufflé rises or it doesn't. Co-production is mandatory: you can't weld for someone. The master adjusts to the apprentice, not the other way around. No batching — you move when you're ready. Every apprenticeship, every master class, every residency, every flight lesson that has ever produced mastery operates in flow. → ES-2
 
 ### HL-3. The conditions for flow state are the conditions for learning
 
@@ -48,7 +48,7 @@ The student who decides they're "not a math person" or "not a reader" is experie
 
 ### BE-4. The batch isn't pedagogy — it's triage
 
-The lecture persists not because it's effective (the evidence on that is close to settled — it isn't) but because it's the only delivery format that doesn't collapse under the teacher-time constraint. Standardized testing persists because it's a batch measurement — operationally cheap, informationally poor. → TC-1
+The lecture persists not because it's effective (the evidence on that is close to settled — it isn't) but because it's the only delivery format that doesn't collapse under the teacher-time constraint. Standardized testing persists because it's a batch measurement — operationally cheap, informationally poor. → TC-1, ES-1
 
 ### BE-5. The commands of batch education
 
@@ -162,7 +162,7 @@ The Year 1 cost of building a content microservice library is a capital investme
 
 ### CM-3. Specialization raises quality and lowers per-teacher cost simultaneously
 
-Textbooks, test banks, and publisher PowerPoints are not written by classroom teachers. They are written by subject-matter specialists, edited for pedagogical clarity, and tested across thousands of classrooms before a teacher opens the box. The same argument applies to a content microservice library: a specialist builds a high-quality micro-interaction once; a generalist classroom teacher deploys it thousands of times. The current model — expecting each classroom teacher to build their own individualized content from scratch — is the equivalent of expecting each teacher to write their own textbook. → CM-1
+Textbooks, test banks, and publisher PowerPoints are not written by classroom teachers. They are written by subject-matter specialists, edited for pedagogical clarity, and tested across thousands of classrooms before a teacher opens the box. The same argument applies to a content microservice library: a specialist builds a high-quality micro-interaction once; a generalist classroom teacher deploys it thousands of times. The current model — expecting each classroom teacher to build their own individualized content from scratch — is the equivalent of expecting each teacher to write their own textbook. → CM-1, ES-3
 
 ### CM-4. The break-even library share rate is the key policy variable
 
@@ -200,7 +200,7 @@ AI designed under the co-production model does four things: (1) manages input qu
 
 ### AI-3. AI changes the production function
 
-The most powerful argument for AI in education is not "AI tutors students." It's that AI changes the production function of teaching — the relationship between inputs and outputs — unlocking methods previously ruled out by arithmetic. If AI handles 80% of routine interactions, the teacher's constrained time targets the 20% where human presence has the highest marginal value.
+The most powerful argument for AI in education is not "AI tutors students." It's that AI changes the production function of teaching — the relationship between inputs and outputs — unlocking methods previously ruled out by arithmetic. If AI handles 80% of routine interactions, the teacher's constrained time targets the 20% where human presence has the highest marginal value. → ES-4
 
 ### AI-4. AI solves the allocation problem
 
@@ -220,6 +220,26 @@ The library without AI is a filing cabinet. The library with AI is a living syst
 
 ---
 
-*Last updated: 2026-04-20 — restructured MP into CM/PM sections; added AI-5 (AI as library infrastructure)*
+## Expert Knowledge Scaling
 
+*The structural argument for why libraries and AI are necessary, not merely convenient. The consulting firm is the domain where expertise dilution is most visible and most measurable — and where the library solution was discovered organically, before education named the problem.*
 
+### ES-1. Expert knowledge doesn't scale linearly with headcount
+
+When a consulting firm grows from two partners to twenty consultants, it does not grow its expertise by a factor of ten. Average expertise per billable hour drops by roughly the ratio of non-experts to experts — a dilution that is mathematically unavoidable. The founders' judgment is not replicated by hiring; it is spread thinner. Every knowledge-based organization that has tried to scale by headcount has discovered this: law firms, hospitals, consulting practices, architecture studios, and school systems. The practitioner count grows; average quality per service hour does not. Rapid growth makes the dilution worse, not better — the more aggressively you hire, the faster the expertise ratio decays. The consulting firm makes this visible because client satisfaction and billable rates are measurable proxies for quality. In education, the equivalent degradation is structurally identical but effectively invisible, because quality per student-hour is never measured at all.
+
+### ES-2. The apprenticeship model breaks at scale for the same reason (→ HL-2)
+
+The apprenticeship produces mastery because the master adjusts to the apprentice continuously, with immediate feedback and challenge calibrated to current ability. The scaling limit is precise: the apprenticeship breaks when the master-to-apprentice ratio exceeds the master's capacity for meaningful individual guidance. At 1:30, the master is teaching a batch class. At 1:200 — one teacher across multiple sections — the apprenticeship is not being practised. It has become delivery. A consulting firm growing from two partners to twenty consultants experiences the same transition: the intense, individualized guidance that produced excellent junior work at small scale is replaced by periodic review meetings and templated briefings. What has been scaled is not the apprenticeship. The apprenticeship has been abandoned. School systems are in the same position, at vastly larger scale, with no language to name what they have lost. → HL-2
+
+### ES-3. The library decouples expert production from expert delivery (→ CM-1, CM-3)
+
+The known organizational solution to ES-1 is codified methodology: encoding expert judgment in a reusable form that practitioners with lower individual expertise can deploy reliably. McKinsey's structured problem-solving approach, hospital clinical protocols, law firm precedent libraries, accounting audit checklists — these are all attempts to answer the same question: how do you install a fragment of expert judgment in a practitioner who doesn't yet have it? The answer is always a library. Each entry in the library is a decision made once by an expert, deployed repeatedly by practitioners who do not need to remake the decision from scratch. The content and process microservice library is the educational equivalent. Each micro-unit is a research-validated instructional design decision — built by a specialist, deployed by a generalist. Consulting firms discovered this model by necessity, because the alternative — requiring every consultant to achieve partner-level judgment before client contact — doesn't scale. Education has not yet named its equivalent necessity, but the structure is identical. → CM-1, CM-3
+
+### ES-4. AI as the permanent senior partner (→ AI-3)
+
+In a growing consulting firm, quality is maintained — imperfectly — by the senior partner review: the moment where expert judgment is applied to junior work before it reaches the client. The review is rate-limiting. The senior partner can review only so much. This is TC-1 restated for consulting: the expert's time is the binding constraint on quality, not on throughput. AI that can evaluate student engagement in real time, flag emerging confusion, surface relevant library units, and recommend teacher interventions is the structural equivalent of a permanent senior partner review that never sleeps, never bills, and operates simultaneously across every practitioner. The supervision function — keeping practitioner quality above a threshold without requiring an expert to be present — is decoupled from human expert time. This is the precise mechanism underlying AI-3's claim that AI changes the production function: it changes which parts of the process require human expert judgment and which can be executed by an expert system trained on accumulated expert decisions. → AI-3, TC-1
+
+---
+
+*Last updated: 2026-04-20 — added ES section (Expert Knowledge Scaling, ES-1 through ES-4); added cross-references from HL-2, BE-4, CM-3, AI-3*
