@@ -4,6 +4,8 @@
 
 A canonical collection of observations, design principles, and insights about teaching and learning, grounded in operations management. Each entry is self-contained. New entries are appended at the end of the appropriate section. Cross-references use `→ [ID]` notation.
 
+*For working software demonstrations of these concepts, see [demos.md](demos.md).*
+
 ---
 
 ## How Humans Learn
@@ -56,6 +58,8 @@ The three-word commands that define batch education are more persuasive than any
 
 ## Teaching as Co-Production
 
+*The student is a necessary production input, not a passive recipient. [ConfusionEngine](../apps/confusion-engine/) is a working prototype of this model at the university level. → [demos.md](demos.md)*
+
 ### CP-1. Teaching is co-production, not delivery
 
 In product delivery, the producer controls the process and the customer receives the output passively. Teaching is not delivery. It is service co-production — the student is a necessary input to the production process. You cannot educate an unwilling or disengaged student any more than you can cut the hair of someone who won't sit still. The student's attention, effort, prior knowledge, honest confusion, and willingness to be wrong are direct inputs to the production process.
@@ -80,6 +84,8 @@ Student satisfaction surveys measure the customer experience of receiving a prod
 
 ## The Teacher Constraint
 
+*Teacher time is the binding constraint on every process improvement in education. The [Workload Calculator → Asymmetry tab](../apps/workload-calculator/) runs the arithmetic live. → [demos.md](demos.md)*
+
 ### TC-1. Teacher time is the binding constraint
 
 A classroom is a queuing system with one (or few) servers and many clients with heterogeneous, dynamically changing needs. Teacher time is the constrained resource. Every design decision about teaching methods, technology, and assessment should be evaluated against this constraint.
@@ -99,6 +105,8 @@ Teachers are more likely to interact with students they have interacted with bef
 ---
 
 ## Process Observation vs. Output Testing
+
+*The gap between what teachers observe and what they can record — and the tools that can close it. The [Workload Calculator → Observation Burden tab](../apps/workload-calculator/) quantifies the cost; [ObservationTracker](../apps/observation-tracker/) is a working solution. → [demos.md](demos.md)*
 
 ### PO-1. Two places to measure education
 
@@ -120,7 +128,7 @@ The ADV response to the four resistance factors: fit measurement into naturally 
 
 ## Micro-Process Design
 
-*Principles governing the design of any educational micro-tool — whether it carries content or manages classroom procedures.*
+*Principles governing the design of any educational micro-tool — whether it carries content or manages classroom procedures. [ObservationTracker](../apps/observation-tracker/) is the reference implementation. → [demos.md](demos.md)*
 
 ### MP-1. Transaction cost must be lower than cognitive cost
 
@@ -142,7 +150,7 @@ Structured criteria (rubrics) serve as the bridge between subjective teacher obs
 
 ## Content Microservices
 
-*Bounded learning interactions — mini-activities, prompts, check-ins, targeted assessments — that individualize instruction. These are the units of teaching content delivered in flow rather than batch.*
+*Bounded learning interactions — mini-activities, prompts, check-ins, targeted assessments — that individualize instruction. The [Workload Calculator → Prep Overhead tab](../apps/workload-calculator/) models the library economics. → [demos.md](demos.md)*
 
 ### CM-1. Content microservice prep costs more per unit — but the library model changes the economics
 
@@ -164,7 +172,7 @@ For any institution, the decision to adopt content microservice teaching reduces
 
 ## Process Microservices
 
-*Classroom operating procedures — group formation rules, discussion protocols, peer review structures, entry/exit routines — that govern how the learning environment runs. Distinct from content microservices (→ CM-1), but sharing the same library economics (→ PM-2).*
+*Classroom operating procedures — group formation rules, discussion protocols, peer review structures, entry/exit routines — that govern how the learning environment runs. Distinct from content microservices (→ CM-1), but sharing the same library economics (→ PM-2). No working demo yet; the Goal Templates feature in [ObservationTracker](../apps/observation-tracker/) is the closest analogue. → [demos.md](demos.md)*
 
 ### PM-1. Process procedures are also suitable for library accumulation
 
