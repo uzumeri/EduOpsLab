@@ -224,38 +224,6 @@ When a student encounters a familiar classroom procedure in a new class — "gro
 
 ---
 
-## Where AI Belongs
-
-### AI-1. Don't clone the teacher
-
-The dominant narrative positions AI as a better content delivery system — smarter lectures, more responsive tutoring. This operates inside the product delivery model. AI designed under co-production asks a different question: where in the production process does AI have the highest marginal value? → CP-1
-
-### AI-2. The four value points for AI in education
-
-AI designed under the co-production model does four things: (1) manages input quality — ensuring students arrive prepared, (2) reduces co-production friction — helping students articulate confusion they can't express, (3) recycles output as input — closing the feedback loop between student state and teacher adaptation, (4) monitors co-production quality — not student performance, but whether the joint process is running.
-
-### AI-3. AI changes the production function
-
-The most powerful argument for AI in education is not "AI tutors students." It's that AI changes the production function of teaching — the relationship between inputs and outputs — unlocking methods previously ruled out by arithmetic. If AI handles 80% of routine interactions, the teacher's constrained time targets the 20% where human presence has the highest marginal value. → ES-4
-
-### AI-4. AI solves the allocation problem
-
-AI transforms the teacher's allocation problem from one with no information to one with rich information. Continuous monitoring produces a real-time needs signal for each student. The teacher-facing interface should show a continuously updated priority queue: given everything the AI knows, where is your next minute most valuable? → TC-4
-
-### AI-5. AI manages the library infrastructure for both content and process microservices
-
-A shared library of content and process microservices only sustains its value if it is curated, recommended, and continuously improved. Without active management, any library degrades to a catalog — discovered by accident, adopted inconsistently, and eventually abandoned. AI provides the infrastructure that makes both libraries function at scale:
-
-- **Recommendation**: given a teacher's grade level, subject, learning objective, and student context, AI surfaces appropriate micro-units rather than requiring the teacher to search.
-- **Gap detection**: AI identifies where teachers are building from scratch — a signal that the library lacks coverage — and flags those domains as priority creation targets.
-- **Usage analytics → quality ranking**: units that get adopted, retained, and adapted rise; units that get ignored or immediately discarded fall. The library is continuously calibrated by revealed preference, not editorial opinion.
-- **Contribution processing**: AI helps a teacher formalize an effective informal procedure they've developed into a library-ready format — structured, documented, edge-cases anticipated.
-- **Cross-school pattern detection**: when the same informal practice is independently invented in multiple classrooms, AI can identify the convergence, confirm effectiveness across contexts, and accelerate library entry.
-
-The library without AI is a filing cabinet. The library with AI is a living system that improves with every adoption and every deviation. → CM-1, PM-1
-
----
-
 ## Expert Knowledge Scaling
 
 *The structural argument for why libraries and AI are necessary, not merely convenient. The consulting firm is the domain where expertise dilution is most visible and most measurable — and where the library solution was discovered organically, before education named the problem.*
@@ -286,4 +254,59 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ---
 
-*Last updated: 2026-04-20 — added LP section (Latent Defects, LP-1 through LP-4); HL-6, BE-6, CP-6; TC→ES pointer; ES-5, ES-6*
+## Where AI Belongs
+
+*Every section above this one describes a problem or a solution mechanism. This section addresses how AI fits into those mechanisms — not as a replacement for the teacher or the student, but as infrastructure that makes the co-production model, the library model, the process validation model, and the expert-scaling model operationally achievable at scale. → [demos.md](demos.md)*
+
+### AI-1. Don't clone the teacher
+
+The dominant narrative positions AI as a better content delivery system — smarter lectures, more responsive tutoring. This operates inside the product delivery model. AI designed under co-production asks a different question: where in the production process does AI have the highest marginal value? → CP-1
+
+### AI-2. The four value points for AI in education
+
+AI designed under the co-production model does four things: (1) manages input quality — ensuring students arrive prepared, (2) reduces co-production friction — helping students articulate confusion they can't express, (3) recycles output as input — closing the feedback loop between student state and teacher adaptation, (4) monitors co-production quality — not student performance, but whether the joint process is running.
+
+### AI-3. AI changes the production function
+
+The most powerful argument for AI in education is not "AI tutors students." It's that AI changes the production function of teaching — the relationship between inputs and outputs — unlocking methods previously ruled out by arithmetic. If AI handles 80% of routine interactions, the teacher's constrained time targets the 20% where human presence has the highest marginal value. The most precise expression of this: TC-2 identifies that every minute of teacher burden falls on one person undistributed — the asymmetry that kills individualised feedback, Socratic questioning, and active learning. AI is the mechanism that precisely inverts this asymmetry: monitoring all students simultaneously, delivering individualised responses to all simultaneously, without adding to teacher load. → TC-2, ES-4
+
+### AI-4. AI solves the allocation problem
+
+AI transforms the teacher's allocation problem from one with no information to one with rich information. Continuous monitoring produces a real-time needs signal for each student. The teacher-facing interface should show a continuously updated priority queue: given everything the AI knows, where is your next minute most valuable? → TC-4
+
+### AI-5. AI manages the library infrastructure for both content and process microservices
+
+A shared library of content and process microservices only sustains its value if it is curated, recommended, and continuously improved. Without active management, any library degrades to a catalog — discovered by accident, adopted inconsistently, and eventually abandoned. AI provides the infrastructure that makes both libraries function at scale:
+
+- **Recommendation**: given a teacher's grade level, subject, learning objective, and student context, AI surfaces appropriate micro-units rather than requiring the teacher to search.
+- **Gap detection**: AI identifies where teachers are building from scratch — a signal that the library lacks coverage — and flags those domains as priority creation targets.
+- **Usage analytics → quality ranking**: units that get adopted, retained, and adapted rise; units that get ignored or immediately discarded fall. The library is continuously calibrated by revealed preference, not editorial opinion.
+- **Contribution processing**: AI helps a teacher formalize an effective informal procedure they've developed into a library-ready format — structured, documented, edge-cases anticipated.
+- **Cross-school pattern detection**: when the same informal practice is independently invented in multiple classrooms, AI can identify the convergence, confirm effectiveness across contexts, and accelerate library entry.
+
+The library without AI is a filing cabinet. The library with AI is a living system that improves with every adoption and every deviation. → CM-1, PM-1
+
+### AI-6. AI as latent defect inspector
+
+The LP section describes a class of educational failure that conventional inspection cannot catch — the planted misconception, the confidence defect, the surface-imitation encoding that passes all available tests. AI offers a qualitatively different inspection mechanism specifically targeting this failure class:
+
+- **Pattern anomaly detection**: a student who consistently answers too quickly to have constructed a solution, or whose error distribution matches a specific wrong mental model rather than random noise, is generating a detectable signal. AI can identify the misconception from the error signature — not merely "student is struggling" but "student holds an Aristotelian force model and is translating."
+- **Confidence-without-revision signature**: genuine learning produces characteristic uncertainty signals — self-correction, follow-up questions, pauses between attempts, revision of earlier answers. Students who show fluency without these signals are candidates for the LP-4 confidence defect. The absence of normal struggle signals is itself a diagnostic signal.
+- **Concept-forcing problem generation**: AI can generate novel problem variants specifically designed to expose the gap between a robustly encoded concept and a translation strategy. A planted misconception can translate successfully from practiced examples; it cannot generalise to a genuinely novel framing. AI-generated concept-forcing problems are the computational equivalent of ISO process validation inspection — testing not whether the output conforms, but whether the process that produced it was sound.
+
+→ LP-1, LP-2, LP-3, LP-4
+
+### AI-7. AI captures expert knowledge before it walks out the door
+
+ES-6 names the problem: the senior professor's 30-year map of student confusion points is tacit, uncodified, and exits at retirement. AI-5's contribution processing bullet addresses library maintenance; the knowledge extraction problem is large enough to require its own treatment:
+
+- **Structured elicitation**: AI conducts expert knowledge-extraction conversations with experienced teachers: "Where do students most commonly form a wrong model of activation energy? What's the example that finally makes it click? Which prerequisite gap is most predictive of failure?" These conversations convert tacit expertise into structured library entries at a fraction of the cost of building from scratch.
+- **First-draft generation**: from an elicitation conversation, AI generates a draft content microservice unit — framing the target concept, anticipated misconceptions, a concept-forcing challenge, and the worked resolution — that the expert reviews and refines rather than authoring from zero.
+- **Convergent knowledge detection**: when multiple domain experts independently describe the same student misconception, the convergence is high-confidence evidence for a library entry. AI detects this convergence across interviews that human editorial curation would miss.
+- **Institutional knowledge risk monitoring**: AI tracks which experienced teachers and professors are approaching retirement, identifies subject areas where only one or two expert practitioners hold the domain knowledge, and flags high-priority extraction targets before the knowledge exits.
+
+The cumulative effect: the ES-3 solution — a methodology library that encodes senior judgment so less-experienced practitioners can deploy it — becomes achievable in education for the first time, because extraction cost drops from "retire and hope someone wrote it down" to a structured, AI-assisted conversation. → ES-6, ES-3, AI-5
+
+---
+
+*Last updated: 2026-04-20 — moved AI section to end (after ES); added scope note, AI-6 (latent defect inspector), AI-7 (expert knowledge extraction); updated AI-3 with TC-2 asymmetry inversion*
