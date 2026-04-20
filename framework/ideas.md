@@ -86,6 +86,8 @@ Student satisfaction surveys measure the customer experience of receiving a prod
 
 *Teacher time is the binding constraint on every process improvement in education. The [Workload Calculator → Asymmetry tab](../apps/workload-calculator/) runs the arithmetic live. → [demos.md](demos.md)*
 
+*Time scarcity is one binding constraint. The scarcity of qualified practitioners in key domains — STEM teachers, specialist instructors, research-active faculty — is a second, structurally related constraint. → ES-1, ES-5*
+
 ### TC-1. Teacher time is the binding constraint
 
 A classroom is a queuing system with one (or few) servers and many clients with heterogeneous, dynamically changing needs. Teacher time is the constrained resource. Every design decision about teaching methods, technology, and assessment should be evaluated against this constraint.
