@@ -116,7 +116,7 @@ Teaching has a traditional countermeasure for this exact failure mode: requiring
 
 ## Teaching as Co-Production
 
-*The student is a necessary production input, not a passive recipient. [ConfusionEngine](../apps/confusion-engine/) is a working prototype of this model at the university level. → [demos.md](demos.md)*
+*The student is a necessary production input, not a passive recipient. [ConfusionEngine](https://uzumeri.github.io/EduOpsLab/apps/confusion-engine/) is a working prototype of this model at the university level. → [demos.md](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf)*
 
 ### CP-1. Teaching is co-production, not delivery
 
@@ -158,7 +158,7 @@ Student satisfaction across the two semesters was the same or marginally above t
 
 ## The Teacher Constraint
 
-*Teacher time is the binding constraint on every process improvement in education. The [Workload Calculator → Asymmetry tab](../apps/workload-calculator/) runs the arithmetic live. → [demos.md](demos.md)*
+*Teacher time is the binding constraint on every process improvement in education. The [Workload Calculator → Asymmetry tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) runs the arithmetic live. → [demos.md](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf)*
 
 *Time scarcity is one binding constraint. The scarcity of qualified practitioners in key domains — STEM teachers, specialist instructors, research-active faculty — is a second, structurally related constraint. → ES-1, ES-5*
 
@@ -182,7 +182,7 @@ Teachers are more likely to interact with students they have interacted with bef
 
 ## Process Observation vs. Output Testing
 
-*The gap between what teachers observe and what they can record — and the tools that can close it. The [Workload Calculator → Observation Burden tab](../apps/workload-calculator/) quantifies the cost; [ObservationTracker](../apps/observation-tracker/) is a working solution. → [demos.md](demos.md)*
+*The gap between what teachers observe and what they can record — and the tools that can close it. The [Workload Calculator → Observation Burden tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) quantifies the cost; [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is a working solution. → [demos.md](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf)*
 
 ### PO-1. Two places to measure education
 
@@ -204,7 +204,7 @@ The design response to the four resistance factors: fit measurement into natural
 
 ## Micro-Process Design
 
-*Principles governing the design of any educational micro-tool — whether it carries content or manages classroom procedures. [ObservationTracker](../apps/observation-tracker/) is the reference implementation. → [demos.md](demos.md)*
+*Principles governing the design of any educational micro-tool — whether it carries content or manages classroom procedures. [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the reference implementation. → [demos.md](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf)*
 
 ### MP-1. Transaction cost must be lower than cognitive cost
 
@@ -226,7 +226,7 @@ Structured criteria (rubrics) serve as the bridge between subjective teacher obs
 
 ## Content Microservices
 
-*Bounded learning interactions — mini-activities, prompts, check-ins, targeted assessments — that individualize instruction. The [Workload Calculator → Prep Overhead tab](../apps/workload-calculator/) models the library economics. → [demos.md](demos.md)*
+*Bounded learning interactions — mini-activities, prompts, check-ins, targeted assessments — that individualize instruction. The [Workload Calculator → Prep Overhead tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) models the library economics. → [demos.md](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf)*
 
 ### CM-1. Content microservice prep costs more per unit — but the library model changes the economics
 
@@ -252,7 +252,7 @@ The multi-track learning architecture (→ HL-7) places a structural requirement
 
 ## Process Microservices
 
-*Classroom operating procedures — group formation rules, discussion protocols, peer review structures, entry/exit routines — that govern how the learning environment runs. Distinct from content microservices (→ CM-1), but sharing the same library economics (→ PM-2). No working demo yet; the Goal Templates feature in [ObservationTracker](../apps/observation-tracker/) is the closest analogue. → [demos.md](demos.md)*
+*Classroom operating procedures — group formation rules, discussion protocols, peer review structures, entry/exit routines — that govern how the learning environment runs. Distinct from content microservices (→ CM-1), but sharing the same library economics (→ PM-2). No working demo yet; the Goal Templates feature in [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the closest analogue. → [demos.md](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf)*
 
 ### PM-1. Process procedures are also suitable for library accumulation
 
@@ -300,7 +300,7 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ## Where AI Belongs
 
-*Every section above this one describes a problem or a solution mechanism. This section addresses how AI fits into those mechanisms — not as a replacement for the teacher or the student, but as infrastructure that makes the co-production model, the library model, the process validation model, and the expert-scaling model operationally achievable at scale. → [demos.md](demos.md)*
+*Every section above this one describes a problem or a solution mechanism. This section addresses how AI fits into those mechanisms — not as a replacement for the teacher or the student, but as infrastructure that makes the co-production model, the library model, the process validation model, and the expert-scaling model operationally achievable at scale. → [demos.md](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf)*
 
 ### AI-1. Don't clone the teacher
 
