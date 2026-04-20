@@ -24,7 +24,7 @@ Csikszentmihalyi's flow state — challenge calibrated to ability, immediate fee
 
 ### HL-4. Confusion is a higher state of knowledge than ignorance
 
-A student who can identify and articulate their confusion has already done significant cognitive work. They've read the material, engaged with it deeply enough to find the hard part, and mapped their own understanding well enough to locate the gap. Confusion is evidence of engagement, not failure.
+A student who can identify and articulate their confusion has already done significant cognitive work. They've read the material, engaged with it deeply enough to find the hard part, and mapped their own understanding well enough to locate the gap. Confusion is evidence of engagement, not failure. The inverse: a student who feels no confusion in a genuinely difficult domain may not be at ease with the material — they may simply lack the competence to perceive their own incompetence. This is the Dunning-Kruger condition: the gap is invisible from the inside because recognizing a gap requires the very expertise you haven’t yet developed. → LP-4
 
 ### HL-5. Learning cuts across all ages and settings
 
@@ -82,7 +82,7 @@ When output cannot be inspected for conformance, ISO 9001 requires: qualified op
 
 ### LP-4. The confidence defect is more dangerous than the identified gap
 
-A student who knows they have a gap will seek help, ask questions, and signal the teacher. A student who doesn’t know what they don’t know does none of these things. They proceed with confidence into more advanced work, where shallow encoding fails in ways that are now far more expensive to remediate. The confidence defect is the most common outcome of teaching that rewards correct answer production but never validates the quality of the underlying mental model. It is also, paradoxically, a signal that teaching appeared to succeed — the student is fluent, confident, and producing correct outputs. The defect is the belief. Conventional assessment cannot detect it. → CP-4, CP-6
+A student who knows they have a gap will seek help, ask questions, and signal the teacher. A student who doesn’t know what they don’t know does none of these things — this is the Dunning-Kruger mechanism in an educational setting: the incompetence that produces the gap also produces the inability to perceive the gap. The student cannot seek help for a problem they cannot see. They proceed with confidence into more advanced work, where shallow encoding fails in ways that are now far more expensive to remediate. The confidence defect is the most common outcome of teaching that rewards correct answer production but never validates the quality of the underlying mental model. It is also, paradoxically, a signal that teaching appeared to succeed — the student is fluent, confident, and producing correct outputs. The defect is the belief. Conventional assessment cannot detect it. → CP-4, CP-6
 
 ---
 
@@ -294,6 +294,8 @@ The LP section describes a class of educational failure that conventional inspec
 - **Confidence-without-revision signature**: genuine learning produces characteristic uncertainty signals — self-correction, follow-up questions, pauses between attempts, revision of earlier answers. Students who show fluency without these signals are candidates for the LP-4 confidence defect. The absence of normal struggle signals is itself a diagnostic signal.
 - **Concept-forcing problem generation**: AI can generate novel problem variants specifically designed to expose the gap between a robustly encoded concept and a translation strategy. A planted misconception can translate successfully from practiced examples; it cannot generalise to a genuinely novel framing. AI-generated concept-forcing problems are the computational equivalent of ISO process validation inspection — testing not whether the output conforms, but whether the process that produced it was sound.
 
+The Dunning-Kruger condition is uniquely resistant to self-report-dependent interventions: the student who doesn’t know what they don’t know cannot accurately fill out a confidence survey, raise their hand, or answer “how confident are you?” accurately. AI’s behavioral monitoring bypasses self-report entirely — detecting from patterns of timing, revision, and error distribution what the student is structurally unable to introspect. For Dunning-Kruger cases specifically, AI-based detection may be the only contemporaneous diagnostic signal available.
+
 → LP-1, LP-2, LP-3, LP-4
 
 ### AI-7. AI captures expert knowledge before it walks out the door
@@ -309,4 +311,4 @@ The cumulative effect: the ES-3 solution — a methodology library that encodes 
 
 ---
 
-*Last updated: 2026-04-20 — moved AI section to end (after ES); added scope note, AI-6 (latent defect inspector), AI-7 (expert knowledge extraction); updated AI-3 with TC-2 asymmetry inversion*
+*Last updated: 2026-04-20 — added Dunning-Kruger references at HL-4 (DK warning signal), LP-4 (named mechanism), AI-6 (behavioral bypass as DK remediation)*
