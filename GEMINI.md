@@ -145,6 +145,14 @@ Writing from this repo publishes to `vicuzumeri.substack.com` (personal Substack
 
 ---
 
+## Workflows
+
+| Command | File | Purpose |
+|---|---|---|
+| `/add-idea` | `.agents/workflows/add-idea.md` | Add a new idea entry to `framework/ideas.md`, or revise an existing one |
+
+---
+
 ## Global Instructions
 
 * **Code Style:** Use functional programming patterns where possible.
