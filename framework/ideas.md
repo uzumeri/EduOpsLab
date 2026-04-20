@@ -30,7 +30,13 @@ A student who can identify and articulate their confusion has already done signi
 
 ### HL-5. Learning cuts across all ages and settings
 
-This is not a K-12 story or a university story. The principles apply to trades, professional development, adult self-directed learning, and hobby learning. Jo Mackiewicz — Iowa State professor, part-time welder at Howe's Welding and Fabrication — documents daily on LinkedIn what she learned, with photos. Over a hundred posts radiating pure joy. She doesn't need the money or prestige. She's experiencing flow learning in an apprenticeship. → HL-2
+This is not a K-12 story or a university story. The principles apply to trades, professional development, adult self-directed learning, and hobby learning. Jo Mackiewicz — Iowa State professor, part-time welder at Howe's Welding and Fabrication — documents daily on LinkedIn what she learned, with photos. Over a hundred posts radiating pure joy. She doesn't need the money or prestige. She's experiencing flow learning in an apprenticeship. She also learns on multiple tracks simultaneously — bead consistency, electrode angle, material heat response — shifting between them as progress on one stalls or resumes. → HL-2, HL-7
+
+### HL-7. Learners advance on multiple tracks with rapid changeovers — not in single-file sequence
+
+Jo Mackiewicz does not learn one welding skill to mastery and then move to the next. She makes progress on bead consistency, gets stuck, shifts to electrode angle, makes progress there, shifts again. Multiple skill tracks advance in parallel — not because she is multitasking (humans cannot do that), but because the mental changeover between related skills is fast and cheap. When she stalls on one track, shifting to another costs almost nothing. She returns to the stuck skill later, often with fresh perspective gained from adjacent work.
+
+This is not a quirk of welding. It is how skill acquisition works whenever the learner controls the process. The design implication cuts directly against batch scheduling, which forces single-track, single-speed progression for all students simultaneously. A learner stuck on fraction division could advance on estimation, geometric intuition, or decimal equivalence — but the batch schedule holds the entire class on fraction division until Friday's test. The mismatch manufactures the stuck student. Content microservices must be designed to support this architecture: units that permit lateral entry and re-entry across skill tracks, not units that assume sequential consumption of the preceding unit. → HL-1, HL-5, BE-1, CM-5
 
 ### HL-6. The coherence of these principles across age and context suggests a universal model
 
@@ -206,6 +212,10 @@ Textbooks, test banks, and publisher PowerPoints are not written by classroom te
 
 For any institution, the decision to adopt content microservice teaching reduces to a quantitative threshold: at what library depth does Year 1 adoption cost equal or fall below batch prep cost? This is calculable from four parameters: topics per course, hours per lecture, microservices per topic, and hours per microservice. The resulting break-even share rate converts a pedagogical debate into an infrastructure investment decision. Institutions that know their break-even rate can make rational library investment decisions. Institutions that don't frame it this way argue about pedagogy indefinitely. → CM-1, CM-2
 
+### CM-5. Content microservices must support lateral entry and rapid re-entry
+
+The multi-track learning architecture (→ HL-7) places a structural requirement on microservice design. If learners naturally advance across multiple skill tracks with rapid changeovers, then a content library built for linear sequential consumption reimposes the batch constraint in a different form. Each unit must be designed for lateral entry — usable by a learner who has not completed the logically preceding unit — and for re-entry — usable by someone returning to a track after working elsewhere. "Bounded" in the microservice definition is not a stylistic preference; it is the structural requirement that makes lateral entry and re-entry possible without prior completion of the full sequence. A library of properly bounded units allows the teacher and the AI allocation system (→ AI-4) to match each learner to whichever unit best fits their current position across all simultaneous skill tracks — not just where the batch schedule says they should be. → HL-7, CM-1, AI-4
+
 ---
 
 ## Process Microservices
@@ -313,4 +323,4 @@ The cumulative effect: the ES-3 solution — a methodology library that encodes 
 
 ---
 
-*Last updated: 2026-04-20 — added author attribution; replaced ADV citations in PO-1/PO-3/PO-4 with literature corroboration (Black & Wiliam 1998) or author's own observation framing*
+*Last updated: 2026-04-20 — added HL-7 (multi-track rapid changeover), CM-5 (lateral entry/re-entry design requirement); extended HL-5 with Jo Mackiewicz multi-track observation*
