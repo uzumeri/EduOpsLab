@@ -1,0 +1,259 @@
+<!--Copyright (c) 2026 Mustafa Uzumeri. All rights reserved.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Workload Calculator — EduOpsLab</title>
+  <meta name="description" content="Calculate the real arithmetic of teacher workload — and what micro-process tools can do about it." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <a class="back-link" href="../../index.html">← EduOpsLab</a>
+    <div class="header-title">
+      <h1>Teacher Workload Calculator</h1>
+      <p class="header-sub">The arithmetic of teaching — made visible</p>
+    </div>
+  </header>
+
+  <nav class="tab-nav" role="tablist">
+    <button class="tab-btn active" data-tab="asymmetry" role="tab" aria-selected="true" id="tab-asymmetry">
+      <span class="tab-icon">⚖️</span>
+      <span class="tab-label">The Asymmetry Problem</span>
+    </button>
+    <button class="tab-btn" data-tab="observation" role="tab" aria-selected="false" id="tab-observation">
+      <span class="tab-icon">👁️</span>
+      <span class="tab-label">Observation Burden</span>
+    </button>
+    <button class="tab-btn coming-soon" disabled role="tab" aria-disabled="true" id="tab-batch">
+      <span class="tab-icon">🔜</span>
+      <span class="tab-label">Batch Simulator</span>
+      <span class="badge">Coming Soon</span>
+    </button>
+  </nav>
+
+  <main class="app-main">
+
+    <!-- ===== TAB 1: ASYMMETRY CALCULATOR ===== -->
+    <section class="tab-panel active" id="panel-asymmetry" role="tabpanel" aria-labelledby="tab-asymmetry">
+      <div class="panel-intro">
+        <p class="panel-lede">Adding 5 minutes of individualized feedback per student sounds reasonable. Run the math and see what it costs — and who pays.</p>
+      </div>
+
+      <div class="calc-layout">
+        <div class="inputs-card card">
+          <h2 class="card-title">Your Classroom</h2>
+
+          <div class="input-group">
+            <label for="class-size">Class size</label>
+            <div class="slider-row">
+              <input type="range" id="class-size" min="5" max="50" value="25" step="1" />
+              <output class="slider-output" id="class-size-out">25 students</output>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="extra-minutes">Extra minutes per student, per day</label>
+            <div class="slider-row">
+              <input type="range" id="extra-minutes" min="1" max="30" value="5" step="1" />
+              <output class="slider-output" id="extra-minutes-out">5 min</output>
+            </div>
+            <p class="input-hint">This could be individualized feedback, one-on-one check-ins, or active learning facilitation. Whatever the new method requires.</p>
+          </div>
+
+          <div class="input-group">
+            <label for="school-days">School days per year</label>
+            <div class="slider-row">
+              <input type="range" id="school-days" min="100" max="200" value="180" step="5" />
+              <output class="slider-output" id="school-days-out">180 days</output>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="teacher-hours">Teacher work hours per day</label>
+            <div class="slider-row">
+              <input type="range" id="teacher-hours" min="6" max="12" value="8" step="0.5" />
+              <output class="slider-output" id="teacher-hours-out">8 hrs</output>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-card card">
+          <h2 class="card-title">The Cost</h2>
+          <p class="cost-note">When you add burden to students, it distributes. When you add it to the teacher — it doesn't.</p>
+
+          <div class="metric-grid">
+            <div class="metric burden">
+              <div class="metric-label">Per student</div>
+              <div class="metric-value" id="cost-per-student">5 min</div>
+              <div class="metric-sub">easily dismissed</div>
+            </div>
+            <div class="metric burden highlight-metric">
+              <div class="metric-label">Per teacher, per day</div>
+              <div class="metric-value" id="cost-per-day">125 min</div>
+              <div class="metric-sub">falls on one person</div>
+            </div>
+            <div class="metric burden">
+              <div class="metric-label">Per teacher, per week</div>
+              <div class="metric-value" id="cost-per-week">10.4 hrs</div>
+              <div class="metric-sub">—</div>
+            </div>
+            <div class="metric burden">
+              <div class="metric-label">Per teacher, per year</div>
+              <div class="metric-value" id="cost-per-year">375 hrs</div>
+              <div class="metric-sub">—</div>
+            </div>
+          </div>
+
+          <div class="equivalence-block">
+            <div class="equiv-label">That's equivalent to…</div>
+            <div class="equiv-value" id="equiv-weeks">—</div>
+            <div class="equiv-explanation" id="equiv-explanation">—</div>
+          </div>
+
+          <p class="insight-callout" id="asymmetry-insight">—</p>
+        </div>
+      </div>
+
+      <div class="explainer card">
+        <h3>Why this matters</h3>
+        <p>This is why good teaching methods fail. Active learning, Socratic questioning, individualized feedback — the evidence that these work is overwhelming. But they all share one fatal property: they require teacher time that doesn't scale.</p>
+        <p>The lecture persists not because it's effective. It persists because it's the only format that doesn't blow up this calculation.</p>
+        <p class="explainer-source">From <em>constraint-analysis.md</em>, EduOpsLab framework</p>
+      </div>
+    </section>
+
+    <!-- ===== TAB 2: OBSERVATION BURDEN ===== -->
+    <section class="tab-panel" id="panel-observation" role="tabpanel" aria-labelledby="tab-observation">
+      <div class="panel-intro">
+        <p class="panel-lede">IEP documentation is mandatory, high-stakes, and unreasonably time-consuming. This calculator shows what it costs today — and what micro-process tools can recover.</p>
+      </div>
+
+      <div class="calc-layout">
+        <div class="inputs-card card">
+          <h2 class="card-title">Your Documentation Load</h2>
+
+          <div class="input-group">
+            <label for="obs-students">Number of students with IEP goals</label>
+            <div class="slider-row">
+              <input type="range" id="obs-students" min="1" max="30" value="8" step="1" />
+              <output class="slider-output" id="obs-students-out">8 students</output>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="goals-per-student">IEP goals per student (average)</label>
+            <div class="slider-row">
+              <input type="range" id="goals-per-student" min="1" max="10" value="3" step="1" />
+              <output class="slider-output" id="goals-per-student-out">3 goals</output>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="obs-per-goal">Observations needed per goal per week</label>
+            <div class="slider-row">
+              <input type="range" id="obs-per-goal" min="1" max="10" value="3" step="1" />
+              <output class="slider-output" id="obs-per-goal-out">3 observations</output>
+            </div>
+          </div>
+
+          <div class="divider-label">Time per observation</div>
+
+          <div class="input-group">
+            <label for="batch-obs-time">Traditional method <span class="method-tag batch-tag">batch</span></label>
+            <div class="slider-row">
+              <input type="range" id="batch-obs-time" min="2" max="20" value="10" step="1" />
+              <output class="slider-output" id="batch-obs-time-out">10 min</output>
+            </div>
+            <p class="input-hint">Find your binder, locate the student, fill in the form, write a note, file it.</p>
+          </div>
+
+          <div class="input-group">
+            <label for="micro-obs-time">Micro-process method <span class="method-tag micro-tag">flow</span></label>
+            <div class="slider-row">
+              <input type="range" id="micro-obs-time" min="0.5" max="5" value="1" step="0.5" />
+              <output class="slider-output" id="micro-obs-time-out">1 min</output>
+            </div>
+            <p class="input-hint">4-tap flow on a phone during a natural pause. Student → Goal → Rating → Note. Done.</p>
+          </div>
+        </div>
+
+        <div class="results-card card">
+          <h2 class="card-title">The Numbers</h2>
+
+          <div class="total-obs">
+            <span class="total-label">Total observations per week</span>
+            <span class="total-value" id="total-obs">72</span>
+          </div>
+
+          <div class="comparison-table">
+            <div class="comparison-row header-row">
+              <div></div>
+              <div class="col-batch">Batch Method</div>
+              <div class="col-micro">Micro-Process</div>
+            </div>
+            <div class="comparison-row">
+              <div class="row-label">Hours/week</div>
+              <div class="col-batch burden" id="batch-hrs-week">—</div>
+              <div class="col-micro saving" id="micro-hrs-week">—</div>
+            </div>
+            <div class="comparison-row">
+              <div class="row-label">Hours/month</div>
+              <div class="col-batch burden" id="batch-hrs-month">—</div>
+              <div class="col-micro saving" id="micro-hrs-month">—</div>
+            </div>
+            <div class="comparison-row">
+              <div class="row-label">Hours/year</div>
+              <div class="col-batch burden" id="batch-hrs-year">—</div>
+              <div class="col-micro saving" id="micro-hrs-year">—</div>
+            </div>
+          </div>
+
+          <div class="savings-block">
+            <div class="savings-label">Time recovered per year</div>
+            <div class="savings-value" id="hours-saved">—</div>
+            <div class="savings-sub" id="days-saved">—</div>
+          </div>
+
+          <p class="insight-callout" id="obs-insight">—</p>
+        </div>
+      </div>
+
+      <div class="explainer card">
+        <h3>The design principle</h3>
+        <p>The transaction cost of using the tool must be lower than the cognitive cost of not using it. If the tool demands a context switch — open laptop, navigate to app, fill out form — it's a batch interrupt. It steals time from the production process.</p>
+        <p>The tool must fit inside the teacher's natural workflow like a reflex. The teacher contributes the high-value micro-judgment. The machine handles everything downstream.</p>
+        <p class="explainer-source">From <em>micro-process design principles</em>, EduOpsLab framework</p>
+      </div>
+    </section>
+
+    <!-- ===== TAB 3: COMING SOON ===== -->
+    <section class="tab-panel" id="panel-batch" role="tabpanel" aria-labelledby="tab-batch">
+      <div class="coming-soon-panel">
+        <div class="cs-icon">📊</div>
+        <h2>Batch Variability Simulator</h2>
+        <p>An animated visualization showing what happens when students with different learning rates are forced through the same batch schedule.</p>
+        <ul class="cs-features">
+          <li>Configure N students with randomly distributed "processing times"</li>
+          <li>Watch the batch move — some students bored, some drowning</li>
+          <li>See WIP accumulation and defect compounding in real time</li>
+          <li>Compare side-by-side: batch schedule vs. individual-paced flow</li>
+        </ul>
+        <p class="cs-note">The asymmetry and observation calculators lay the quantitative foundation. The batch simulator adds the visual argument for <em>why</em> batching fails — not just how much it costs.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>Part of <a href="../../index.html">EduOpsLab</a> — operations management principles applied to education.</p>
+    <p class="footer-note">Numbers are illustrative. Real workloads vary significantly by school, district, and context.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
