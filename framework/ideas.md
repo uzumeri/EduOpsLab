@@ -198,8 +198,20 @@ The most powerful argument for AI in education is not "AI tutors students." It's
 
 AI transforms the teacher's allocation problem from one with no information to one with rich information. Continuous monitoring produces a real-time needs signal for each student. The teacher-facing interface should show a continuously updated priority queue: given everything the AI knows, where is your next minute most valuable? → TC-4
 
+### AI-5. AI manages the library infrastructure for both content and process microservices
+
+A shared library of content and process microservices only sustains its value if it is curated, recommended, and continuously improved. Without active management, any library degrades to a catalog — discovered by accident, adopted inconsistently, and eventually abandoned. AI provides the infrastructure that makes both libraries function at scale:
+
+- **Recommendation**: given a teacher's grade level, subject, learning objective, and student context, AI surfaces appropriate micro-units rather than requiring the teacher to search.
+- **Gap detection**: AI identifies where teachers are building from scratch — a signal that the library lacks coverage — and flags those domains as priority creation targets.
+- **Usage analytics → quality ranking**: units that get adopted, retained, and adapted rise; units that get ignored or immediately discarded fall. The library is continuously calibrated by revealed preference, not editorial opinion.
+- **Contribution processing**: AI helps a teacher formalize an effective informal procedure they've developed into a library-ready format — structured, documented, edge-cases anticipated.
+- **Cross-school pattern detection**: when the same informal practice is independently invented in multiple classrooms, AI can identify the convergence, confirm effectiveness across contexts, and accelerate library entry.
+
+The library without AI is a filing cabinet. The library with AI is a living system that improves with every adoption and every deviation. → CM-1, PM-1
+
 ---
 
-*Last updated: 2026-04-20 — restructured MP into three sections: Micro-Process Design (MP-1–4), Content Microservices (CM-1–4), Process Microservices (PM-1–3)*
+*Last updated: 2026-04-20 — restructured MP into CM/PM sections; added AI-5 (AI as library infrastructure)*
 
 
