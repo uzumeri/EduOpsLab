@@ -93,6 +93,9 @@ body {
   background: var(--bg-card);
   border-bottom: 1px solid var(--border);
   padding: 0.75rem 1.5rem;
+  overflow: hidden; /* never let this strip widen the page */
+  width: 100%;
+  box-sizing: border-box;
 }
 .config-bar-inner {
   max-width: 1100px;
@@ -132,7 +135,9 @@ body {
 }
 .config-item input[type="range"] {
   flex: 1;
+  min-width: 0; /* override browser default ~129px minimum */
   height: 3px;
+  width: 0;    /* let flex grow handle width, not intrinsic size */
 }
 .config-output {
   font-family: var(--mono);
@@ -177,6 +182,10 @@ body {
   .config-item label { min-width: 52px; font-size: 0.63rem; }
   .config-output { min-width: 44px; font-size: 0.68rem; padding: 0.1rem 0.3rem; }
 }
+@media (max-width: 480px) {
+  .config-grid { grid-template-columns: 1fr; }
+  .config-item label { min-width: 100px; width: 100px; font-size: 0.63rem; }
+}
 
 /* ============================================================
    TAB NAVIGATION
@@ -189,6 +198,9 @@ body {
   background: var(--bg);
   overflow-x: auto;
   scrollbar-width: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .tab-nav::-webkit-scrollbar { display: none; }
 
