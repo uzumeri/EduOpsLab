@@ -60,6 +60,7 @@ body {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(12px);
+  flex-wrap: wrap;
 }
 
 .back-link {
@@ -164,12 +165,17 @@ body {
 }
 
 @media (max-width: 860px) {
+  .config-bar-label { display: none; }
   .config-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 520px) {
-  .config-bar-label { display: none; }
-  .config-grid { grid-template-columns: 1fr 1fr; }
-  .config-item label { min-width: 60px; font-size: 0.65rem; }
+@media (max-width: 600px) {
+  .app-header { padding: 0.75rem 1rem; gap: 1rem; }
+  .header-title h1 { font-size: 0.95rem; }
+  .config-bar { padding: 0.6rem 1rem; }
+  .config-bar-inner { gap: 0.75rem; }
+  .config-grid { gap: 0.5rem 0.75rem; }
+  .config-item label { min-width: 52px; font-size: 0.63rem; }
+  .config-output { min-width: 44px; font-size: 0.68rem; padding: 0.1rem 0.3rem; }
 }
 
 /* ============================================================
