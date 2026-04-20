@@ -87,7 +87,11 @@ In lean manufacturing, a defect discovered at end-of-line inspection is the most
 
 ## Latent Defects — Teaching as a Special Process
 
-*ISO 9001 defines a "special process" as a production step whose defects cannot be detected by any inspection available at the time of delivery. Education has no equivalent concept — but it needs one. Foundational misconceptions, shallow encoding, and confidence defects all satisfy the ISO definition precisely: they pass all available contemporaneous inspection and only manifest under conditions that may not arise for years. The sections below name the failure modes and their implications.*
+*ISO 9001 is the most widely adopted quality management standard in the world. It specifies what a quality management system must do — not exactly how — which is what makes it auditable across every industry. The core logic operates at the process level, not the output level: define the processes that should produce quality outputs, document how they are supposed to run, demonstrate that they actually run that way, and correct when they don't. The governing cycle is Plan-Do-Check-Act: set an objective, define the process, monitor and measure, correct the gap, improve the process.*
+
+*ISO 9001 acknowledges, however, that some processes cannot be verified by inspecting the output after the fact. A welded joint that looks perfect may still fail under load. A heat treatment may be correct or wrong — you cannot tell from the surface. ISO calls these **special processes** and requires process validation instead of output inspection: certify the operator, document the procedure, monitor the process in real time, keep records of how the work was done — not just what came out.*
+
+*This document applies that logic to education. Teaching foundational concepts is a special process in the ISO sense: a student can produce answers that pass every available test while holding a wrong or shallow mental model. The defect is invisible at the point of production. The education system has quality objectives but no auditable standard equivalent to ISO 9001: no process validation requirements, no third-party conformance audits, no prescribed procedure for special processes. It operates at the pre-ISO level of manufacturing — inspect the output, ship the batch. The sections below name the specific failure modes this produces and their implications.*
 
 ### LP-1. Teaching foundational concepts is a special process
 
