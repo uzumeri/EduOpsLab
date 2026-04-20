@@ -152,6 +152,18 @@ Textbooks, test banks, and publisher PowerPoints are not written by classroom te
 
 For any institution, the decision to adopt micro-process teaching reduces to a quantitative threshold: at what library depth does Year 1 adoption cost equal or fall below batch prep cost? This is calculable from four parameters: topics per course, hours per lecture, microservices per topic, and hours per microservice. The resulting break-even share rate — the fraction of micro-units that must come from a shared library before adoption is cost-neutral — converts a pedagogical debate into an infrastructure investment decision. Institutions that know their break-even rate can make rational library investment decisions. Institutions that don't frame it this way argue about pedagogy indefinitely. → MP-5, MP-6
 
+### MP-9. The library concept extends to classroom procedures, not just content
+
+Content microservices — bounded learning interactions like mini-activities, prompts, or targeted checks — are the obvious library target. But the same logic applies to classroom *process* microservices: group formation rules, discussion protocols, peer review structures, turn-taking conventions, entry and exit routines. These are procedural, not content-specific, and they have a finite set of effective designs. Currently, each teacher writes their own from scratch, independently, without reference to what colleagues have proven works. An 80:20 pattern almost certainly exists: a small number of group formation designs covers the vast majority of instructional contexts. The compendium is not large; the redundant reinvention, however, is enormous. → MP-5
+
+### MP-10. The library is a service, not a dictate — adoption is voluntary, customization is expected
+
+A procedure or content library doesn't mandate conformity. Teachers adopt what fits their context, customize for their students, and contribute refinements back to the commons. The service model — not the compliance model — is what makes the library trustworthy and actually used. The analogy is design patterns in software engineering: practitioners adopt them because they've proven useful, not because management required them. A library that teachers don't want to use is not a library — it's a policy document. → MP-9
+
+### MP-11. Student familiarity with shared procedures compounds across the grade-level progression
+
+When a student encounters a familiar classroom procedure in a new class — "group method B," "discussion protocol A" — the teacher's setup cost drops to near-zero. The student already knows the drill. This is a positive externality that accrues to *future* teachers because of *past* teachers' choices, with no coordination required beyond library adoption. If two teachers in the same school both use a shared group formation design, the second teacher gets student pre-training for free. Aggregated across a grade-level progression and across a school, even modest adoption rates create a substantial cumulative reduction in teacher setup overhead. The network effect grows with adoption — and it is entirely absent from the batch model, where each teacher's procedures are private and non-transferable. → MP-9, MP-10
+
 ---
 
 ## Where AI Belongs
@@ -174,4 +186,4 @@ AI transforms the teacher's allocation problem from one with no information to o
 
 ---
 
-*Last updated: 2026-04-20 — added MP-5 through MP-8 (library economics and corollaries)*
+*Last updated: 2026-04-20 — added MP-5 through MP-11 (library economics, process microservices, grade-level compounding)*
