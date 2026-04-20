@@ -6,7 +6,8 @@ This document maps the conceptual framework in [ideas.md](ideas.md) to the worki
 demonstrations in the [`apps/`](../apps/) directory. Each app is described in terms of the
 framework ideas it makes tangible, its design rationale, and its current limitations.
 
-The apps run entirely in the browser — no backend, no account needed.
+The apps run entirely in the browser — no backend, no account needed.  
+**Public landing page:** [uzumeri.github.io/EduOpsLab](https://uzumeri.github.io/EduOpsLab/) — open any demo without cloning the repo.
 
 ---
 
@@ -14,18 +15,18 @@ The apps run entirely in the browser — no backend, no account needed.
 
 | App | Tab / Mode | Ideas demonstrated |
 |---|---|---|
-| [Workload Calculator](../apps/workload-calculator/) | Asymmetry | TC-1, TC-2 |
-| [Workload Calculator](../apps/workload-calculator/) | Observation Burden | PO-3, PO-4 |
-| [Workload Calculator](../apps/workload-calculator/) | Prep Overhead | CM-1, CM-2, CM-4 |
-| [ObservationTracker](../apps/observation-tracker/) | Observation | MP-1, MP-2, MP-3, MP-4, PO-2, PO-4 |
-| [ObservationTracker](../apps/observation-tracker/) | Goal Templates | CM-1, PM-2 |
-| [ConfusionEngine](../apps/confusion-engine/) | — | CP-1, CP-3, HL-4, AI-4 |
+| [Workload Calculator](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) | Asymmetry | TC-1, TC-2 |
+| [Workload Calculator](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) | Observation Burden | PO-3, PO-4 |
+| [Workload Calculator](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) | Prep Overhead | CM-1, CM-2, CM-4 |
+| [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) | Observation | MP-1, MP-2, MP-3, MP-4, PO-2, PO-4 |
+| [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) | Goal Templates | CM-1, PM-2 |
+| [ConfusionEngine](https://uzumeri.github.io/EduOpsLab/apps/confusion-engine/) | — | CP-1, CP-3, HL-4, AI-4 |
 
 ---
 
 ## Workload Calculator
 
-**Path:** `apps/workload-calculator/`  
+**Path:** `apps/workload-calculator/` · **Live:** [uzumeri.github.io/EduOpsLab/apps/workload-calculator/](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/)  
 **Purpose:** Make the arithmetic of teacher constraint visible and interactive. Each tab
 isolates one compounding cost that makes better teaching operationally impossible under
 current conditions — and shows what changes when you change the process design.
@@ -75,7 +76,7 @@ crossover visceral.
 
 ## ObservationTracker
 
-**Path:** `apps/observation-tracker/`  
+**Path:** `apps/observation-tracker/` · **Live:** [uzumeri.github.io/EduOpsLab/apps/observation-tracker/](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/)  
 **Purpose:** A working prototype of the micro-process observation tool design described
 in the MP section. Demonstrates that the core tool-design principles (MP-1 through MP-4)
 can be realized in software that fits inside a teacher's instructional flow.
@@ -112,7 +113,7 @@ practice. → CM-1, PM-2
 
 ## ConfusionEngine
 
-**Path:** `apps/confusion-engine/`  
+**Path:** `apps/confusion-engine/` · **Live:** [uzumeri.github.io/EduOpsLab/apps/confusion-engine/](https://uzumeri.github.io/EduOpsLab/apps/confusion-engine/)  
 **Purpose:** A university homework system that operationalizes the co-production model
 (CP section). Students submit a "confusion question" before class; the teacher sees
 an aggregated view of where confusion is concentrated before walking in.
@@ -134,6 +135,6 @@ teacher allocation information. → AI-4
 
 ---
 
-*For a complete list of ideas, see [ideas.md](ideas.md).*  
-*Also available as [demos.pdf](demos.pdf).*  
+*For the conceptual framework, see [ideas.md](ideas.md) — PDF at [uzumeri.github.io/EduOpsLab/framework/ideas.pdf](https://uzumeri.github.io/EduOpsLab/framework/ideas.pdf).*  
+*This document is available as [demos.pdf](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf).*  
 *Last updated: 2026-04-20*

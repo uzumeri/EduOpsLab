@@ -8,7 +8,7 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
 
 *The author taught management, operations management, and supply chain in the College of Business at Auburn University from 1991 to 2012, retiring Emeritus. Earlier classroom experience was accumulated as a doctoral student at Rensselaer Polytechnic Institute — probably badly, in retrospect. In parallel with that academic career, the author served as CEO of iPOV Inc. (Auburn, AL, 2000–2016), building eLearning software and producing approximately 500 video-based eLearning courses commissioned by Fortune 500 organizations — Siemens, Michelin, Chrysler, AT&T, and others — covering factory floor operations, cybersecurity, SAP systems, and global sales training. The corporate eLearning context — where learning is an explicit operational investment and its failure is measurable in dollars — provides a second lens on every principle in this document. Both bodies of experience are grounded in operating learning-production systems directly, not in the education research literature.*
 
-*For working software demonstrations of these concepts, see [demos.md](demos.md) ([PDF version](demos.pdf)).*
+*For working software demonstrations of these concepts, see [demos.md](demos.md) ([demos.pdf](https://uzumeri.github.io/EduOpsLab/framework/demos.pdf)) or visit [uzumeri.github.io/EduOpsLab](https://uzumeri.github.io/EduOpsLab/) to run the apps directly.*
 
 ---
 
