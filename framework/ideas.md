@@ -2,7 +2,7 @@
 
 # Ideas About Education
 
-Mustafa Uzumeri's canonical collection of personal observations, design principles, and working hypotheses about teaching and learning, grounded in operations management. The author takes sole responsibility for all content — good or bad. Each entry is self-contained. New entries are appended at the end of the appropriate section. Cross-references use `→ [ID]` notation.
+Mustafa Uzumeri's canonical collection of personal observations, design principles, and working hypotheses about teaching and learning, grounded in operations management. The author takes sole responsibility for all content — good or bad. Each entry is self-contained. New entries are appended at the end of the appropriate section. Cross-references use `→ [ID]` notation. The author's prior work and personal efforts that feed this collection are listed in the [Prior Work appendix](#prior-work) at the end of this document.
 
 *The author taught management, operations management, and supply chain in the College of Business at Auburn University from 1991 to 2012, retiring Emeritus. Earlier classroom experience was accumulated as a doctoral student at Rensselaer Polytechnic Institute — probably badly, in retrospect. The observations here emerged from more than two decades operating the production system itself, not from the education research literature.*
 
@@ -323,4 +323,14 @@ The cumulative effect: the ES-3 solution — a methodology library that encodes 
 
 ---
 
-*Last updated: 2026-04-20 — added HL-7 (multi-track rapid changeover), CM-5 (lateral entry/re-entry design requirement); extended HL-5 with Jo Mackiewicz multi-track observation*
+## Prior Work
+
+*The efforts listed below, together with twenty-one years of classroom experience at Auburn University's College of Business, constitute the personal background against which the claims in this document are made. The list will grow as additional materials are cataloged.*
+
+- **Population Learning in Manufacturing** (*Journal of Operations Management*, [year] — citation to be confirmed) — An empirical study documenting variation in learning performance across a group of plant-floor workers engaged in identical production tasks. Likely the first published empirical demonstration of this variation at the individual level for front-line workers. The paper is archived at `research/poplearnfinal.pdf`. Grounds the observation that learning rates vary substantially across individuals even under identical task conditions — a fact that batch scheduling ignores by design. → BE-1, BE-2, HL-6, HL-7
+
+- **ADV Tracking System** (design and field deployment, c. 2014) — A classroom process-observation tool built to address the near-total absence of real-time observation infrastructure described in PO-1. Provided the direct design experience behind the micro-observation approach (PO-4) and the four-factor institutional resistance analysis (PO-3). Not peer-reviewed or formally published; developed as a practical instrument.
+
+---
+
+*Last updated: 2026-04-20 — added Prior Work appendix (JOM paper, ADV system); prior entries: HL-7, CM-5, DK references, author attribution*
