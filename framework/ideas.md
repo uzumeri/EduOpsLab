@@ -44,7 +44,7 @@ Everyone starts Chapter 5 on Monday. Everyone takes the test on Friday. Everyone
 
 ### BE-2. Batching hides defects
 
-Manufacturing discovered that batching hides costs downstream — defects accumulate invisibly inside the batch. In education: students who didn't master foundational concepts get carried forward. The defect compounds. By the time it surfaces — a failed exam, a dropped course — remediation is vastly more expensive than early intervention would have been.
+Manufacturing discovered that batching hides costs downstream — defects accumulate invisibly inside the batch. In education: students who didn't master foundational concepts get carried forward. The defect compounds. By the time it surfaces — a failed exam, a dropped course — remediation is vastly more expensive than early intervention would have been. → LP-1
 
 ### BE-3. "I'm not a math person" is a batch scheduling failure
 
@@ -60,7 +60,29 @@ The three-word commands that define batch education are more persuasive than any
 
 ### BE-6. The batch defect surfaces too late for affordable remediation
 
-In lean manufacturing, a defect discovered at end-of-line inspection is the most expensive defect to fix: the part has accumulated full production cost, and rework — if possible at all — is more expensive than early intervention would have been. Batch education produces the same failure mode at institutional scale. A teacher delivers a unit on fractions. Students sit the test on Friday. A significant portion fail. The remediation options at that moment are: (1) blow up the syllabus — stop the batch, address the gap, fall behind on curriculum, disrupt students who did master the material; (2) carry the defect forward — proceed to the next unit with students who lack the foundation, compounding the gap; (3) wait — accept that these students are now a year behind and hope next year's class goes differently. None of these is good. All of them are expensive. All of them are the direct consequence of measuring at the end of the batch instead of inline. The micro-process observation model is the educational equivalent of inline quality inspection: catch the confusion at origin, when intervention costs minutes rather than semesters. → BE-2, PO-1, PO-4
+In lean manufacturing, a defect discovered at end-of-line inspection is the most expensive defect to fix: the part has accumulated full production cost, and rework — if possible at all — is more expensive than early intervention would have been. Batch education produces the same failure mode at institutional scale. A teacher delivers a unit on fractions. Students sit the test on Friday. A significant portion fail. The remediation options at that moment are: (1) blow up the syllabus — stop the batch, address the gap, fall behind on curriculum, disrupt students who did master the material; (2) carry the defect forward — proceed to the next unit with students who lack the foundation, compounding the gap; (3) wait — accept that these students are now a year behind and hope next year's class goes differently. None of these is good. All of them are expensive. All of them are the direct consequence of measuring at the end of the batch instead of inline. The micro-process observation model is the educational equivalent of inline quality inspection: catch the confusion at origin, when intervention costs minutes rather than semesters. → BE-2, PO-1, PO-4, LP-1
+
+---
+
+## Latent Defects — Teaching as a Special Process
+
+*ISO 9001 defines a "special process" as a production step whose defects cannot be detected by any inspection available at the time of delivery. Education has no equivalent concept — but it needs one. Foundational misconceptions, shallow encoding, and confidence defects all satisfy the ISO definition precisely: they pass all available contemporaneous inspection and only manifest under conditions that may not arise for years. The sections below name the failure modes and their implications.*
+
+### LP-1. Teaching foundational concepts is a special process
+
+ISO 9001 defines a special process as a production step whose output cannot be verified by subsequent monitoring or measurement at the time of delivery — defects only become apparent under conditions that may not arise until long after. Because output inspection cannot catch these defects, ISO requires process validation: certifying how the work is done, not just checking what came out. Teaching foundational concepts satisfies this definition precisely. A student who has been taught fractions, Newton's first law, or functional reading may produce answers that pass every available assessment — while holding a mental model that is subtly or systematically wrong. No contemporaneous inspection can distinguish a robustly encoded concept from a plausible surface imitation of it. The process appeared to succeed. The defect is invisible. → BE-2, BE-6
+
+### LP-2. The planted misconception passes all contemporaneous tests
+
+Physics education research has documented this failure mode with precision. Students who complete introductory mechanics courses often retain a pre-Newtonian (Aristotelian) mental model — force causes velocity, not acceleration; objects stop when their "impetus" runs out. They have learned to translate: to produce Newtonian answers from an intuitive wrong model. Translation works for standard problems. The misconception passes every test the course administers. It surfaces when a genuinely novel problem cannot be solved by translation — typically in an advanced course or an engineering application. The causal chain back to the introductory course is invisible. This failure mode is not rare or exotic. It is the normal outcome of teaching that assesses answer-production rather than mental-model construction. → CP-1, CP-6, LP-1
+
+### LP-3. ISO’s response to special processes is process validation, not output testing
+
+When output cannot be inspected for conformance, ISO 9001 requires: qualified operators certified to perform the process; defined procedures that must be followed; continuous process monitoring; records that the process was correctly performed. The educational equivalent: teachers who know where common misconceptions are planted (→ ES-6); pedagogical procedures designed to surface and correct wrong mental models in real time (→ CP-6); process observation that captures how students are constructing understanding, not just what answers they produce (→ PO-1, PO-4); and records of the co-production process itself, not only test scores. Standard education validates outputs on the assumption that passing implies quality encoding. For special processes, this assumption is false. → PO-1, ES-6
+
+### LP-4. The confidence defect is more dangerous than the identified gap
+
+A student who knows they have a gap will seek help, ask questions, and signal the teacher. A student who doesn’t know what they don’t know does none of these things. They proceed with confidence into more advanced work, where shallow encoding fails in ways that are now far more expensive to remediate. The confidence defect is the most common outcome of teaching that rewards correct answer production but never validates the quality of the underlying mental model. It is also, paradoxically, a signal that teaching appeared to succeed — the student is fluent, confident, and producing correct outputs. The defect is the belief. Conventional assessment cannot detect it. → CP-4, CP-6
 
 ---
 
@@ -264,4 +286,4 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ---
 
-*Last updated: 2026-04-20 — added HL-6 (universal learning model), BE-6 (batch defect timing), CP-6 (making confusion socially rewarding); TC pointer to ES; ES-5 and ES-6*
+*Last updated: 2026-04-20 — added LP section (Latent Defects, LP-1 through LP-4); HL-6, BE-6, CP-6; TC→ES pointer; ES-5, ES-6*
