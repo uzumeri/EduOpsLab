@@ -150,9 +150,9 @@ Technology restructures the economics of practitioner access. A campus visit fro
 
 The structural logic inverts the standard teaching sequence: reality is primary, theory annotates it. The VP describes how they actually approach supplier qualification; the theoretical framework is introduced as formal vocabulary for what the practitioner was doing intuitively. Students encounter theory at the moment they need it to make sense of something real, not as an abstraction they are told will matter later.
 
-AI can lower the logistics friction of practitioner access further — matching courses to appropriate practitioners, preparing students, aggregating practitioner perspectives at scale. The one thing AI cannot replicate is source credibility: a student who knows they are talking with a real practitioner receives the information differently than they receive AI-synthesized practitioner perspective, even with identical content. This defines AI’s role in this model: preparation and logistics infrastructure, not substitution for the human voice. The practitioner’s credibility is the irreducible element.
+The one thing AI cannot replicate is source credibility: a student who knows they are talking with a real practitioner receives the information differently than they receive AI-synthesized perspective, even with identical content. AI’s role here is logistics infrastructure, not substitution for the human voice. → AI-8
 
-Student satisfaction across the two semesters was the same or marginally above the author’s prior in-class sections of the same course; exam results were comparable or modestly better. The model did not trade academic quality for breadth of practitioner exposure. The subsequent administrative termination is therefore instructive: the constraint was not quality — it was institutional architecture. → CP-2, TC-1, ES-2, AI-1
+Student satisfaction across the two semesters was the same or marginally above the author’s prior in-class sections of the same course; exam results were comparable or modestly better. The model did not trade academic quality for breadth of practitioner exposure. The subsequent administrative termination is therefore instructive: the constraint was not quality — it was institutional architecture. → CP-2, TC-1, ES-2, AI-1, AI-8
 
 ---
 
@@ -352,6 +352,21 @@ ES-6 names the problem: the senior professor's 30-year map of student confusion 
 - **Institutional knowledge risk monitoring**: AI tracks which experienced teachers and professors are approaching retirement, identifies subject areas where only one or two expert practitioners hold the domain knowledge, and flags high-priority extraction targets before the knowledge exits.
 
 The cumulative effect: the ES-3 solution — a methodology library that encodes senior judgment so less-experienced practitioners can deploy it — becomes achievable in education for the first time, because extraction cost drops from "retire and hope someone wrote it down" to a structured, AI-assisted conversation. → ES-6, ES-3, AI-5
+
+### AI-8. AI as logistics infrastructure for practitioner access
+
+CP-7 establishes that practitioner authority is an irreducible co-production input (→ CP-7): source credibility changes how students receive identical information in a way that AI-synthesized perspective cannot replicate. What AI can do is restructure the economics of access.
+
+The friction that makes practitioner involvement rare is logistical: matching the right practitioner to the right course at the right conceptual moment, briefing them on where students currently are, preparing students to use the session productively, and following up afterward. Each of these steps is currently absorbed by the individual instructor — which is why practitioner involvement is rare. It depends on the instructor having a relevant personal network, the time to activate it, and the administrative capacity to manage the coordination.
+
+AI changes each of these:
+
+- **Matching**: AI can search practitioner databases, professional networks, and institutional repositories to identify practitioners whose experience maps to a specific course topic, student level, and conceptual moment — without requiring the instructor to personally know the right person. The same logistics that make a campus VP visit rare are irrelevant when the ask is a one-hour remote session identified by AI.
+- **Student preparation**: AI can generate briefing materials, background summaries, and preparatory questions so students arrive at a practitioner session capable of asking substantive questions rather than absorbing generic orientation — multiplying the productive density of the session.
+- **Aggregation at scale**: A single practitioner session, once recorded and processed, can be decomposed into structured library entries — specific claims, worked examples, credibility-grounded observations — that persist beyond the session and are retrievable for future courses. The practitioner’s contribution is captured rather than lost. (→ ES-6, AI-7)
+- **Follow-up synthesis**: AI can summarize practitioner perspectives across multiple sessions, detecting convergence and divergence, and flagging where practitioner experience departs from established theory — converting individual sessions into a running empirical record.
+
+The fixed limit remains: AI cannot transfer the practitioner’s credibility to the student. The change in receptivity that comes from knowing the speaker has skin in the game is not a synthesis problem — it is structural. What AI changes is the economic feasibility of getting real practitioners in front of real students at scale. → CP-7, TC-1, ES-1, ES-5
 
 ---
 
