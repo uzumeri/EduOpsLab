@@ -347,7 +347,15 @@ The margin flow holds over batch in responding to external change is not about t
 
 ### EP-5. These pressures define the threshold AI must help the system cross
 
-No operational improvement within the current institutional configuration closes the gap between the speed of external change and the speed of curriculum response. The gap is structural, not managerial — it cannot be managed away by better committees or faster approvals. AI enters this context not as a tool for making the existing system run at the same speed with less labor, but as a potential infrastructure for changing what speed is possible: from cohort-years to individual-months. That framing is both the most important thing to understand about AI in education and the most important thing to hold with caution, because the same technology that could accelerate the system's adaptive capacity is also accelerating the rate of external change. The system is trying to close a gap with a tool that may be widening the gap on the other side. → EP-4, EP-6, AI-3, AID-3, OI-1
+No operational improvement within the current institutional configuration closes the gap between the speed of external change and the speed of curriculum response. The gap is structural, not managerial — it cannot be managed away by better committees or faster approvals. AI enters this context as a potential infrastructure for changing what response speed is possible: from cohort-years to individual-months.
+
+But AI operates on this problem in two distinct, and sometimes opposing, directions.
+
+The first is **intrinsic**: AI deployed *within* the teaching system can accelerate the system's adaptive capacity — faster library contribution, faster content deployment, faster individual trajectory adjustment. The same AI, however, can also accelerate movement in the wrong direction: teaching faster toward an obsolete target, scaling misconceptions more efficiently, or making a bad curriculum cheaper to sustain. Speed without direction is not an advantage; the architectural gain of EP-6 does not help if the granular units being deployed are pointed the wrong way.
+
+The second is **extrinsic**: AI is not only a tool the teaching system might use — it is also one of the primary forces driving EP-1, EP-2, and EP-3 faster. AI is generating new knowledge domains, collapsing old ones, and accelerating economic realignment at a pace that was not imaginable a decade ago. The external environment the teaching system must track is moving faster partly because AI is moving it. The system is trying to close a gap with a tool that is simultaneously widening the gap from the other side.
+
+These two effects — intrinsic acceleration risk and extrinsic environmental acceleration — are analytically distinct and require different responses. The rest of this framework addresses both, but separately. → EP-4, EP-6, EP-7, AI-3, AID-3, OI-1
 
 ### EP-7. Physical infrastructure locks batch systems into the batch model
 
