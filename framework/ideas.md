@@ -12,7 +12,35 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
 
 ---
 
+## Contents
+
+1. [How Humans Learn](#1-how-humans-learn)
+2. [How Education Operates](#2-how-education-operates)
+   - [2a. Batch Education](#2a-batch-education)
+   - [2b. Flow Education](#2b-flow-education)
+3. [Existing Operational Constraints](#3-existing-operational-constraints)
+   - [3a. Teaching Workload Asymmetry](#3a-teaching-workload-asymmetry)
+   - [3b. Skills & Staffing](#3b-skills--staffing)
+   - [3c. Brick and Mortar](#3c-brick-and-mortar)
+   - [3d. The Quality and Measurement Problem](#3d-the-quality-and-measurement-problem)
+4. [An Imagined Flow Alternative](#4-an-imagined-flow-alternative)
+   - [4a. The Apprenticeship Model — and its Limits](#4a-the-apprenticeship-model--and-its-limits)
+   - [4b. Content Microservices](#4b-content-microservices)
+   - [4c. Process Microservices](#4c-process-microservices)
+   - [4d. Micro-Process Tool Design](#4d-micro-process-tool-design)
+5. [External Forces Adding Even More Stress](#5-external-forces-adding-even-more-stress)
+6. [AI Promises and Threats](#6-ai-promises-and-threats)
+   - [6a. Where AI Belongs](#6a-where-ai-belongs)
+   - [6b. Where AI Undermines Teaching](#6b-where-ai-undermines-teaching)
+7. [The Time to Pivot is Now](#7-the-time-to-pivot-is-now)
+   - [7a. Switch from a Pedagogical to an Operational Model](#7a-switch-from-a-pedagogical-to-an-operational-model)
+   - [7b. Become Relentless Active Designers and Redesigners](#7b-become-relentless-active-designers-and-redesigners)
+- [Prior Work](#prior-work)
+
+---
+
 ## 1. How Humans Learn
+
 
 *The foundational observations about learning as a human phenomenon — universal across age, institution, and subject domain. These principles predate schools by a very large distance. The dysfunction the rest of this document describes is in the container, not in the learner.*
 
