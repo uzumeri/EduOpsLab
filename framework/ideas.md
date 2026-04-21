@@ -2,7 +2,7 @@
 
 # Mechanics of Teaching and AI
 
-*Mustafa Uzumeri’s Lab Notes*
+*Mustafa Uzumeri's Lab Notes*
 
 Mustafa Uzumeri's canonical collection of personal observations, design principles, and working hypotheses about teaching and learning, grounded in operations management. The author takes sole responsibility for all content — good or bad. Each entry is self-contained. New entries are appended at the end of the appropriate section. Cross-references use `→ [ID]` notation. The author's prior work and personal efforts that feed this collection are listed in the [Prior Work appendix](#prior-work) at the end of this document.
 
@@ -12,8 +12,9 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
 
 ---
 
-## How Humans Learn
-*→ Ebook: Part I Ch 1, 3, 4 · Part II Ch 6*
+## 1. How Humans Learn
+
+*The foundational observations about learning as a human phenomenon — universal across age, institution, and subject domain. These principles predate schools by a very large distance. The dysfunction the rest of this document describes is in the container, not in the learner.*
 
 ### HL-1. Learning is flow by default
 
@@ -29,7 +30,7 @@ Csikszentmihalyi's flow state — challenge calibrated to ability, immediate fee
 
 ### HL-4. Confusion is a higher state of knowledge than ignorance
 
-A student who can identify and articulate their confusion has already done significant cognitive work. They've read the material, engaged with it deeply enough to find the hard part, and mapped their own understanding well enough to locate the gap. Confusion is evidence of engagement, not failure. The inverse: a student who feels no confusion in a genuinely difficult domain may not be at ease with the material — they may simply lack the competence to perceive their own incompetence. This is the Dunning-Kruger condition: the gap is invisible from the inside because recognizing a gap requires the very expertise you haven’t yet developed. → LP-4, HL-8
+A student who can identify and articulate their confusion has already done significant cognitive work. They've read the material, engaged with it deeply enough to find the hard part, and mapped their own understanding well enough to locate the gap. Confusion is evidence of engagement, not failure. The inverse: a student who feels no confusion in a genuinely difficult domain may not be at ease with the material — they may simply lack the competence to perceive their own incompetence. This is the Dunning-Kruger condition: the gap is invisible from the inside because recognizing a gap requires the very expertise you haven't yet developed. → LP-4, HL-8
 
 ### HL-8. Concept acquisition follows a four-stage sequence — and can stall at stage two
 
@@ -37,10 +38,10 @@ Constructing a working mental model of a phenomenon — the actual goal of learn
 
 1. **Ignorance**: the learner has no prior model of the phenomenon. Nothing to test, nothing to be wrong about.
 2. **False competence (DK zone)**: the learner has a model — typically absorbed from instruction — that produces correct outputs for familiar problems. The model may be wrong, shallow, or a translation strategy rather than a genuine mental structure. The learner cannot detect this because the model works well enough for available tests to generate confidence. This is the Dunning-Kruger stage.
-3. **Productive confusion**: the learner encounters a problem their current model cannot handle — and notices the failure. This is the exit event from the DK zone. Confusion is not a symptom of failure; it is evidence that a model boundary has been found and that the learner’s understanding is now more accurate than it was before. The DK student had no model boundary — everything felt fine. → HL-4
+3. **Productive confusion**: the learner encounters a problem their current model cannot handle — and notices the failure. This is the exit event from the DK zone. Confusion is not a symptom of failure; it is evidence that a model boundary has been found and that the learner's understanding is now more accurate than it was before. The DK student had no model boundary — everything felt fine. → HL-4
 4. **Reconstructed model and tested confidence**: the learner builds a better model and stress-tests it across varied and novel problems. Confidence that survives repeated novel challenges is earned rather than assumed. This is precisely what the apprenticeship model produces by default. → HL-1, HL-2
 
-The sequence can stall permanently at stage two. A course that assesses only familiar problem types, never delivers concept-forcing challenges, and provides no psychologically safe space for confusion expression may graduate a student who is still in the DK zone — fluent, confident, and wrong. This is the LP-4 failure mode, and it is not rare. The teacher’s job — and the function of AI-generated concept-forcing problems (→ AI-6) — is to deliberately engineer the stage-two-to-three transition: present a problem the DK model cannot translate, make the failure unmistakable, and support model reconstruction. This transition cannot be relied upon to happen spontaneously under standard batch assessment conditions. → HL-4, LP-4, CP-6, AI-6
+The sequence can stall permanently at stage two. A course that assesses only familiar problem types, never delivers concept-forcing challenges, and provides no psychologically safe space for confusion expression may graduate a student who is still in the DK zone — fluent, confident, and wrong. This is the LP-4 failure mode, and it is not rare. The teacher's job — and the function of AI-generated concept-forcing problems (→ AI-6) — is to deliberately engineer the stage-two-to-three transition: present a problem the DK model cannot translate, make the failure unmistakable, and support model reconstruction. This transition cannot be relied upon to happen spontaneously under standard batch assessment conditions. → HL-4, LP-4, CP-6, AI-6
 
 ### HL-5. Learning cuts across all ages and settings
 
@@ -64,71 +65,13 @@ The dominant institutional response to student disengagement is to add inputs �
 
 A teacher watching a student work can detect confusion forming before the student can name it: the pause that lengthens, the pen that stops moving, the head that tilts, the eye that tracks back to the start of a problem for the third time. These signals predate self-report. A student who cannot yet articulate their confusion is already broadcasting its presence behaviorally. The ADEEPERVIEW system was built around this observation: capture behavioral signal during naturally occurring instruction intervals, not self-reported state after the fact. AI behavioral monitoring extends this principle computationally: timing distributions, revision patterns, and error-signature clustering detect confusion states that precede and often contradict self-report. The failure mode most resistant to self-report-based interventions — LP-4's Dunning-Kruger student, who does not know what they do not know — produces a distinctive behavioral signature: fluency without revision, speed without self-correction, confidence without rechecking. AI detection of this signature may be the only contemporaneous diagnostic available for the DK case specifically, because direct questioning of a student in that state cannot surface what the student structurally cannot perceive. → HL-4, LP-4, PO-2, AI-6
 
----
+### LP-1. Teaching foundational concepts is a special process — the defect is delayed
 
-## What's Wrong With Batch Education
-*→ Ebook: Part I Ch 3*
-
-### BE-1. School is batch processing
-
-Everyone starts Chapter 5 on Monday. Everyone takes the test on Friday. Everyone moves to the next topic regardless of mastery. The batch hides enormous variability in learning rates — some students are bored, others are drowning, and the system responds to neither.
-
-### BE-2. Batching hides defects
-
-Manufacturing discovered that batching hides costs downstream — defects accumulate invisibly inside the batch. In education: students who didn't master foundational concepts get carried forward. The defect compounds. By the time it surfaces — a failed exam, a dropped course — remediation is vastly more expensive than early intervention would have been. → LP-1
-
-### BE-3. "I'm not a math person" is a batch scheduling failure
-
-The student who decides they're "not a math person" or "not a reader" is experiencing model failure, not personal limitation. They heard "everybody turn to page 47" on the day they were still stuck on page 31. The batch doesn't fail them — they experience it as failing the batch.
-
-### BE-4. The batch isn't pedagogy — it's triage
-
-The lecture persists not because it's effective (the evidence on that is close to settled — it isn't) but because it's the only delivery format that doesn't collapse under the teacher-time constraint. Standardized testing persists because it's a batch measurement — operationally cheap, informationally poor. The 250-seat lecture hall is part of the same story from the other direction: the physical plant was built for this format and will be used for this format until it is demolished or repurposed — which happens on a timescale measured in decades, not semesters. → TC-1, ES-1, EP-7
-
-### BE-5. The commands of batch education
-
-The three-word commands that define batch education are more persuasive than any Theory of Constraints diagram: *"Hurry up." "Keep up." "You're falling behind." "Everybody open your workbooks." "Pencils down."* These are the evidence. The reader has heard them in their own head.
-
-### BE-6. The batch defect surfaces too late for affordable remediation
-
-In lean manufacturing, a defect discovered at end-of-line inspection is the most expensive defect to fix: the part has accumulated full production cost, and rework — if possible at all — is more expensive than early intervention would have been. Batch education produces the same failure mode at institutional scale. A teacher delivers a unit on fractions. Students sit the test on Friday. A significant portion fail. The remediation options at that moment are: (1) blow up the syllabus — stop the batch, address the gap, fall behind on curriculum, disrupt students who did master the material; (2) carry the defect forward — proceed to the next unit with students who lack the foundation, compounding the gap; (3) wait — accept that these students are now a year behind and hope next year's class goes differently. None of these is good. All of them are expensive. All of them are the direct consequence of measuring at the end of the batch instead of inline. The micro-process observation model is the educational equivalent of inline quality inspection: catch the confusion at origin, when intervention costs minutes rather than semesters. → BE-2, PO-1, PO-4, LP-1
-
----
-
-## Latent Defects — Teaching as a Special Process
-*→ Ebook: Part I Ch 4*
-
-*ISO 9001 is the most widely adopted quality management standard in the world. It specifies what a quality management system must do — not exactly how — which is what makes it auditable across every industry. The core logic operates at the process level, not the output level: define the processes that should produce quality outputs, document how they are supposed to run, demonstrate that they actually run that way, and correct when they don't. The governing cycle is Plan-Do-Check-Act: set an objective, define the process, monitor and measure, correct the gap, improve the process.*
-
-*ISO 9001 acknowledges, however, that some processes cannot be verified by inspecting the output after the fact. A welded joint that looks perfect may still fail under load. A heat treatment may be correct or wrong — you cannot tell from the surface. ISO calls these **special processes** and requires process validation instead of output inspection: certify the operator, document the procedure, monitor the process in real time, keep records of how the work was done — not just what came out.*
-
-*This document applies that logic to education. Teaching foundational concepts is a special process in the ISO sense: a student can produce answers that pass every available test while holding a wrong or shallow mental model. The defect is invisible at the point of production. The education system has quality objectives but no auditable standard equivalent to ISO 9001: no process validation requirements, no third-party conformance audits, no prescribed procedure for special processes. It operates at the pre-ISO level of manufacturing — inspect the output, ship the batch. The sections below name the specific failure modes this produces and their implications.*
-
-### LP-1. Teaching foundational concepts is a special process
-
-ISO 9001 defines a special process as a production step whose output cannot be verified by subsequent monitoring or measurement at the time of delivery — defects only become apparent under conditions that may not arise until long after. Because output inspection cannot catch these defects, ISO requires process validation: certifying how the work is done, not just checking what came out. Teaching foundational concepts satisfies this definition precisely. A student who has been taught fractions, Newton's first law, or functional reading may produce answers that pass every available assessment — while holding a mental model that is subtly or systematically wrong. No contemporaneous inspection can distinguish a robustly encoded concept from a plausible surface imitation of it. The process appeared to succeed. The defect is invisible. → BE-2, BE-6
+ISO 9001 defines a special process as a production step whose output cannot be verified by subsequent monitoring or measurement at the time of delivery — defects only become apparent under conditions that may not arise until long after. Teaching foundational concepts satisfies this definition precisely. A student who has been taught fractions, Newton's first law, or functional reading may produce answers that pass every available assessment — while holding a mental model that is subtly or systematically wrong. No contemporaneous inspection can distinguish a robustly encoded concept from a plausible surface imitation of it. The defect is invisible at the point of production and surfaces only when the student encounters problems for which the wrong model fails — which may be years later, in an advanced course or a professional setting. → BE-2, BE-6
 
 ### LP-2. The planted misconception passes all contemporaneous tests
 
 Physics education research has documented this failure mode with precision. Students who complete introductory mechanics courses often retain a pre-Newtonian (Aristotelian) mental model — force causes velocity, not acceleration; objects stop when their "impetus" runs out. They have learned to translate: to produce Newtonian answers from an intuitive wrong model. Translation works for standard problems. The misconception passes every test the course administers. It surfaces when a genuinely novel problem cannot be solved by translation — typically in an advanced course or an engineering application. The causal chain back to the introductory course is invisible. This failure mode is not rare or exotic. It is the normal outcome of teaching that assesses answer-production rather than mental-model construction. → CP-1, CP-6, LP-1
-
-### LP-3. ISO’s response to special processes is process validation, not output testing
-
-When output cannot be inspected for conformance, ISO 9001 requires: qualified operators certified to perform the process; defined procedures that must be followed; continuous process monitoring; records that the process was correctly performed. The educational equivalent: teachers who know where common misconceptions are planted (→ ES-6); pedagogical procedures designed to surface and correct wrong mental models in real time (→ CP-6); process observation that captures how students are constructing understanding, not just what answers they produce (→ PO-1, PO-4); and records of the co-production process itself, not only test scores. Standard education validates outputs on the assumption that passing implies quality encoding. For special processes, this assumption is false. → PO-1, ES-6
-
-### LP-4. The confidence defect is more dangerous than the identified gap
-
-A student who knows they have a gap will seek help, ask questions, and signal the teacher. A student who doesn’t know what they don’t know does none of these things — this is the Dunning-Kruger mechanism in an educational setting: the incompetence that produces the gap also produces the inability to perceive the gap. The student cannot seek help for a problem they cannot see. They proceed with confidence into more advanced work, where shallow encoding fails in ways that are now far more expensive to remediate. The confidence defect is the most common outcome of teaching that rewards correct answer production but never validates the quality of the underlying mental model. It is also, paradoxically, a signal that teaching appeared to succeed — the student is fluent, confident, and producing correct outputs. The defect is the belief. Conventional assessment cannot detect it.
-
-Teaching has a traditional countermeasure for this exact failure mode: requiring students to show their reasoning, not just their answer. A correct answer derived from a wrong mental model typically produces a distinctive reasoning chain — different moves, missing steps, implausible intermediate values. A skilled teacher who reads worked solutions can often identify the planted misconception that the correct final answer conceals. This works. It remains viable in small classes with capable, experienced instructors who have enough time to examine what students actually wrote. It is usually the first practice to go when classes grow large, instructors are adjuncts or newly-minted graduate students, and administrative demands crowd out assessment quality. The teacher-time constraint (→ TC-2), varying instructor preparation levels (→ ES-4), and class sizes that make individual feedback arithmetically impossible combine to make "show your work" a pedagogical aspiration rather than a reliable standard. What disappeared is not the understanding that it matters — it was always understood — but the operational conditions that made it feasible. → CP-4, CP-6, TC-2, ES-4, PO-3, HL-8
-
-
----
-
-## Teaching as Co-Production
-*→ Ebook: Part I Ch 1 · Part V Ch 17*
-
-*The student is a necessary production input, not a passive recipient. [ConfusionEngine](https://uzumeri.github.io/EduOpsLab/apps/confusion-engine/) is a working prototype of this model at the university level.*
 
 ### CP-1. Teaching is co-production, not delivery
 
@@ -156,24 +99,79 @@ HL-4 establishes that confusion is a higher cognitive state than ignorance. That
 
 ### CP-7. Practitioner authority is an irreplaceable co-production input
 
-A professor telling supply chain students that statistical methods are critical in procurement makes a credible claim. A Fortune 100 VP saying the same thing in a live session lands differently — not because the content differs, but because the source’s credibility is structurally different. The VP has no professional incentive to oversell the relevance of statistics; they get paid to run supply chains. A student who knows this receives the identical claim with different receptivity. Source credibility is a co-production factor that directly affects student receptivity (→ CP-2) — a production input that is invisible to the standard delivery model because delivery doesn’t depend on student receptivity at all.
+A professor telling supply chain students that statistical methods are critical in procurement makes a credible claim. A Fortune 100 VP saying the same thing in a live session lands differently — not because the content differs, but because the source's credibility is structurally different. The VP has no professional incentive to oversell the relevance of statistics; they get paid to run supply chains. A student who knows this receives the identical claim with different receptivity. Source credibility is a co-production factor that directly affects student receptivity (→ CP-2) — a production input that is invisible to the standard delivery model because delivery doesn't depend on student receptivity at all.
 
 Technology restructures the economics of practitioner access. A campus visit from a VP 100 miles away is a high-friction ask: travel, scheduling, opportunity cost. Getting an hour on their Outlook calendar is a qualitatively different proposition. The model was operationally asymmetric: roughly 30% of sessions were conventional in-person lectures at Auburn; the rest split between the author traveling to expert locations and broadcasting back to students, and fully virtual sessions with remote practitioners. Students participated wherever they happened to be — classroom, computer lab, home — all during scheduled class time. Sessions were bidirectional: students could ask questions directly to the practitioner in real time, and did. In one session, the author broadcast from the MODEX trade show floor in Atlanta, moving between supply chain vendor booths while students watched remotely; class members who wanted to attend in person were invited to drive up. The density of practitioner contact achievable in two hours on a trade show floor has no classroom equivalent — not in content, not in credibility, and not in any realistic logistical scenario. (See Prior Work: Teaching Outside In.)
 
 The structural logic inverts the standard teaching sequence: reality is primary, theory annotates it. The VP describes how they actually approach supplier qualification; the theoretical framework is introduced as formal vocabulary for what the practitioner was doing intuitively. Students encounter theory at the moment they need it to make sense of something real, not as an abstraction they are told will matter later.
 
-The one thing AI cannot replicate is source credibility: a student who knows they are talking with a real practitioner receives the information differently than they receive AI-synthesized perspective, even with identical content. AI’s role here is logistics infrastructure, not substitution for the human voice. → AI-8
+The one thing AI cannot replicate is source credibility: a student who knows they are talking with a real practitioner receives the information differently than they receive AI-synthesized perspective, even with identical content. AI's role here is logistics infrastructure, not substitution for the human voice. → AI-8
 
-Student satisfaction across the two semesters was the same or marginally above the author’s prior in-class sections of the same course; exam results were comparable or modestly better. The model did not trade academic quality for breadth of practitioner exposure. The subsequent administrative termination is therefore instructive: the constraint was not quality — it was institutional architecture. → CP-2, TC-1, ES-2, AI-1, AI-8
+Student satisfaction across the two semesters was the same or marginally above the author's prior in-class sections of the same course; exam results were comparable or modestly better. The model did not trade academic quality for breadth of practitioner exposure. The subsequent administrative termination is therefore instructive: the constraint was not quality — it was institutional architecture. → CP-2, TC-1, ES-2, AI-1, AI-8
 
 ---
 
-## The Teacher Constraint
-*→ Ebook: Part I Ch 2 · Part V Ch 15–16*
+## 2. How Education Operates
+
+### 2a. Batch Education
+
+*School as it actually runs: a batch production system that imposes a single schedule on learners with radically different needs and rates. The following entries describe what that produces.*
+
+### BE-1. School is batch processing
+
+Everyone starts Chapter 5 on Monday. Everyone takes the test on Friday. Everyone moves to the next topic regardless of mastery. The batch hides enormous variability in learning rates — some students are bored, others are drowning, and the system responds to neither.
+
+### BE-2. Batching hides defects
+
+Manufacturing discovered that batching hides costs downstream — defects accumulate invisibly inside the batch. In education: students who didn't master foundational concepts get carried forward. The defect compounds. By the time it surfaces — a failed exam, a dropped course — remediation is vastly more expensive than early intervention would have been. → LP-1
+
+### BE-3. "I'm not a math person" is a batch scheduling failure
+
+The student who decides they're "not a math person" or "not a reader" is experiencing model failure, not personal limitation. They heard "everybody turn to page 47" on the day they were still stuck on page 31. The batch doesn't fail them — they experience it as failing the batch.
+
+### BE-4. The batch isn't pedagogy — it's triage
+
+The lecture persists not because it's effective (the evidence on that is close to settled — it isn't) but because it's the only delivery format that doesn't collapse under the teacher-time constraint. Standardized testing persists because it's a batch measurement — operationally cheap, informationally poor. The 250-seat lecture hall is part of the same story from the other direction: the physical plant was built for this format and will be used for this format until it is demolished or repurposed — which happens on a timescale measured in decades, not semesters. → TC-1, ES-1, EP-7
+
+### BE-5. The commands of batch education
+
+The three-word commands that define batch education are more persuasive than any Theory of Constraints diagram: *"Hurry up." "Keep up." "You're falling behind." "Everybody open your workbooks." "Pencils down."* These are the evidence. The reader has heard them in their own head.
+
+### BE-6. The batch defect surfaces too late for affordable remediation
+
+In lean manufacturing, a defect discovered at end-of-line inspection is the most expensive defect to fix: the part has accumulated full production cost, and rework — if possible at all — is more expensive than early intervention would have been. Batch education produces the same failure mode at institutional scale. A teacher delivers a unit on fractions. Students sit the test on Friday. A significant portion fail. The remediation options at that moment are: (1) blow up the syllabus — stop the batch, address the gap, fall behind on curriculum, disrupt students who did master the material; (2) carry the defect forward — proceed to the next unit with students who lack the foundation, compounding the gap; (3) wait — accept that these students are now a year behind and hope next year's class goes differently. None of these is good. All of them are expensive. All of them are the direct consequence of measuring at the end of the batch instead of inline. The micro-process observation model is the educational equivalent of inline quality inspection: catch the confusion at origin, when intervention costs minutes rather than semesters. → BE-2, PO-1, PO-4, LP-1
+
+---
+
+### 2b. Flow Education
+
+*What intentionally designed flow teaching looks like as a system — not just "batch without the batching," but a distinct operating model with its own design principles and infrastructure requirements.*
+
+### FE-1. Flow teaching is not batch teaching done faster
+
+The natural response to learning that "flow is better than batch" is to imagine accelerating the batch — moving faster through the same syllabus, giving more frequent quizzes, offering more office hours. None of that is flow. Flow teaching changes the unit of production: from cohort-syllabus to individual-trajectory. Every student has a current position on a learning map; the system's job is to move each student forward from their actual position, not to advance the batch clock. The infrastructure requirements are therefore different in kind, not just in degree: content organized for individual routing rather than class-wide delivery, allocation systems that match learner to unit rather than unit to schedule, observation tools that track individual trajectories rather than cohort progress. Flow is an operating model, not a pacing choice. → HL-1, HL-7, CM-1
+
+### FE-2. The learning map replaces the course syllabus as the organizing document
+
+In flow teaching, the fundamental design artifact changes. A syllabus is a schedule — it answers "what will we do on Week 4?" A learning map answers "what does a learner need to know, in what dependency structure, and what are the alternative paths through the material?" The learning map is not a rigid sequence: it identifies prerequisite relationships (concept A must precede concept B) and lateral connections (concepts C, D, E can be approached in any order after A). A student's current position on the map determines what is a good next step — a question the syllabus cannot ask because it is not tracking individual position at all. AI makes the learning map the operative instrument: real-time position tracking, dependency checking, and next-step recommendation are exactly what a well-designed AI allocation system does. → HL-7, CM-5, AI-4
+
+### FE-3. Challenge calibration is the teacher's highest-value real-time decision
+
+In both batch and flow settings, there is a teacher and a student. The difference is what the teacher is doing with their most constrained resource — attention. In batch, teacher attention is absorbed by delivery to the group: pacing the lecture, managing discussion, monitoring comprehension signals from 30 faces at once. In flow, the teacher's primary real-time decision is challenge calibration: is this student working at a challenge level that is productive — hard enough to require effort, accessible enough to permit success? The AI handles monitoring, routing, and aggregation; the teacher handles the judgment call that requires reading a specific human in a specific moment. This is the division of labor that makes TC-3's homeschooling insight scalable: the parent who naturally calibrates challenge to the individual child is doing the same thing, just without the AI infrastructure to extend it beyond one or two children. → TC-3, HL-3, AI-4
+
+### FE-4. Flow does not require eliminating group instruction — it requires making it optional
+
+A common objection to flow teaching is that it destroys the social and collaborative dimensions of learning — that individualizing routing means learners never interact. This is false. Group instruction, class discussion, collaborative problem-solving, and peer teaching are all compatible with a flow model; they become optional activities that learners are routed toward when appropriate, rather than mandatory time-slots that everyone occupies simultaneously regardless of fit. A student stuck on concept A does not benefit from a group seminar on concept D. A student who has mastered A through E is well-positioned to co-teach a peer still on B — and the act of teaching is itself a high-value learning activity (→ CP-6). The flow model does not eliminate collective learning; it eliminates the batch contract that couples every student's pace to every other student's position. → HL-1, CP-6, BE-1
+
+---
+
+## 3. Existing Operational Constraints
+
+*Why the current system is hard to fix — even before external pressure arrives. Each of the following represents a structural constraint that makes the improvements described in §2b genuinely difficult to achieve within the current institutional configuration.*
+
+### 3a. Teaching Workload Asymmetry
 
 *Teacher time is the binding constraint on every process improvement in education. The [Workload Calculator → Asymmetry tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) runs the arithmetic live.*
-
-*Time scarcity is one binding constraint. The scarcity of qualified practitioners in key domains — STEM teachers, specialist instructors, research-active faculty — is a second, structurally related constraint. → ES-1, ES-5*
 
 ### TC-1. Teacher time is the binding constraint
 
@@ -197,100 +195,7 @@ Left unmanaged, teacher attention follows social rather than need gradients (→
 
 ---
 
-## Process Observation vs. Output Testing
-*→ Ebook: Part IV Ch 12–13*
-
-*The gap between what teachers observe and what they can record — and the tools that can close it. The [Workload Calculator → Observation Burden tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) quantifies the cost; [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is a working solution.*
-
-### PO-1. Two places to measure education
-
-Education has two measurement points: test the outputs (standardized exams) and observe the process (teacher observations during instruction). Billions of dollars and thousands of tools support output testing. Process observation has had virtually no tooling. The imbalance is corroborated by the formative assessment research literature: Black and Wiliam's 1998 review found formative assessment to be among the most effective known interventions for student learning and among the most poorly resourced — a gap that has widened rather than closed in the decades since.
-
-### PO-2. Observations degrade to impressions
-
-A teacher observes a student struggling with fractions at 10:15 AM. By 3:00 PM, the insight has faded to an impression. By Friday, it's gone. Multiply by 25 students and 180 days. Teachers are expert observers whose insights degrade to noise because there is no capture mechanism that fits inside the production process.
-
-### PO-3. The four resistance factors
-
-Every institutional attempt to move beyond standardized testing toward more frequent, individualized assessment runs into four compounding forces: (1) teacher workload — measuring more often means more work, (2) differing student needs — individualization multiplies the effort, (3) budgets — schools can't afford new infrastructure, (4) class size — larger classes mean less time per student. Each force is individually documented in the teacher-workload and assessment-barrier literature. The analysis of their compounding interaction — and the conclusion that they collectively make the status quo the only viable option under current tools — is the author's observation.
-
-### PO-4. Spread it thinner and wider
-
-The design response to the four resistance factors: fit measurement into naturally occurring observation intervals during normal instruction — "twenty seconds here, fifteen seconds there." More frequent micro-measurements reduce workload vs. fewer, heavier batch assessments. The same insight as lean manufacturing's move from end-of-line inspection to in-process quality checks.
-
----
-
-## Micro-Process Design
-*→ Ebook: Part IV Ch 14*
-
-*Principles governing the design of any educational micro-tool — whether it carries content or manages classroom procedures. [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the reference implementation.*
-
-### MP-1. Transaction cost must be lower than cognitive cost
-
-The core design principle for educational micro-tools: the transaction cost of using the tool must be lower than the cognitive cost of not using it. If the tool demands a context switch — open laptop, navigate to app, fill out form — it's a batch interrupt that steals time from the production process. The tool must disappear into the workflow.
-
-### MP-2. Teachers contribute micro-judgments; machines aggregate
-
-The division of labor: the teacher provides the high-value micro-input (a 4-tap observation, a friction signal, a rubric rating) during a natural pause in instruction. The machine handles everything downstream — accumulation, trend analysis, report generation, attention equity monitoring. The teacher should never synthesize — that's the machine's job.
-
-### MP-3. Tools must fit inside the teacher's flow
-
-Education occurs as a flow process, not batch. Moving to flow without clobbering the instructor requires that teaching tools be reduced in scale to micro-processes — interactions a teacher can use wherever and whenever appropriate, without context-switching away from the act of teaching.
-
-### MP-4. The rubric as shared language
-
-Structured criteria (rubrics) serve as the bridge between subjective teacher observation and analyzable data. They make observation replicable across observers, defensible in stakeholder meetings, and comparable across time. Define once at the class level, customize per student. → PO-4
-
----
-
-## Content Microservices
-*→ Ebook: Part III Ch 9*
-
-*Bounded learning interactions — mini-activities, prompts, check-ins, targeted assessments — that individualize instruction. The [Workload Calculator → Prep Overhead tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) models the library economics.*
-
-### CM-1. Content microservice prep costs more per unit — but the library model changes the economics
-
-A batch lecture costs 2–4 hours to prepare, then delivers to all students at once. A content microservice — a precise, bounded, reusable teaching interaction — costs more per unit to design, because it must work standalone without the scaffolding of a surrounding lecture. Year 1 microservice prep is therefore more expensive than batch prep if every unit is built from scratch. The equalizer is sharing. Publisher-supplied PowerPoints and test banks already subsidize batch teaching by distributing prep cost across thousands of teachers. A shared content microservice library does the same for individualized teaching: each unit is built once, shared across schools, and refined over time. At sufficient library depth, the per-teacher Year 1 cost falls below batch — and Year 2+ cost approaches zero for covered topics.
-
-### CM-2. The transition cost is one-time; the teacher-time cost of batch is forever
-
-The Year 1 cost of building a content microservice library is a capital investment — it happens once, it amortizes, and it gets cheaper as the library deepens. The ongoing teacher-time cost of batch teaching recurs every year, every class, every student: same inefficiencies, same overloaded constraint, same defects carried forward. The comparison isn't Year 1 micro vs. Year 1 batch. It's a one-time transition cost vs. a permanent operational tax. Framing the library investment as "too expensive" confuses capital costs with operating costs. → CM-1, TC-1
-
-### CM-3. Specialization raises quality and lowers per-teacher cost simultaneously
-
-Textbooks, test banks, and publisher PowerPoints are not written by classroom teachers. They are written by subject-matter specialists, edited for pedagogical clarity, and tested across thousands of classrooms before a teacher opens the box. The same argument applies to a content microservice library: a specialist builds a high-quality micro-interaction once; a generalist classroom teacher deploys it thousands of times. The current model — expecting each classroom teacher to build their own individualized content from scratch — is the equivalent of expecting each teacher to write their own textbook. → CM-1, ES-3
-
-### CM-4. The break-even library share rate is the key policy variable
-
-For any institution, the decision to adopt content microservice teaching reduces to a quantitative threshold: at what library depth does Year 1 adoption cost equal or fall below batch prep cost? This is calculable from four parameters: topics per course, hours per lecture, microservices per topic, and hours per microservice. The resulting break-even share rate converts a pedagogical debate into an infrastructure investment decision. Institutions that know their break-even rate can make rational library investment decisions. Institutions that don't frame it this way argue about pedagogy indefinitely. → CM-1, CM-2
-
-### CM-5. Content microservices must support lateral entry and rapid re-entry
-
-The multi-track learning architecture (→ HL-7) places a structural requirement on microservice design. If learners naturally advance across multiple skill tracks with rapid changeovers, then a content library built for linear sequential consumption reimposes the batch constraint in a different form. Each unit must be designed for lateral entry — usable by a learner who has not completed the logically preceding unit — and for re-entry — usable by someone returning to a track after working elsewhere. "Bounded" in the microservice definition is not a stylistic preference; it is the structural requirement that makes lateral entry and re-entry possible without prior completion of the full sequence. A library of properly bounded units allows the teacher and the AI allocation system (→ AI-4) to match each learner to whichever unit best fits their current position across all simultaneous skill tracks — not just where the batch schedule says they should be. → HL-7, CM-1, AI-4
-
----
-
-## Process Microservices
-*→ Ebook: Part III Ch 10*
-
-*Classroom operating procedures — group formation rules, discussion protocols, peer review structures, entry/exit routines — that govern how the learning environment runs. Distinct from content microservices (→ CM-1), but sharing the same library economics (→ PM-2). No working demo yet; the Goal Templates feature in [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the closest analogue.*
-
-### PM-1. Process procedures are also suitable for library accumulation
-
-Many aspects of classroom operation have characteristics similar to content microservices: a finite number of effective designs, high redundant reinvention cost, and strong reusability across classrooms and grade levels. Group formation rules, discussion protocols, peer review structures, turn-taking conventions, and entry/exit routines are all examples. Currently, each teacher writes their own from scratch, independently, without reference to what colleagues have proven works. An 80:20 pattern almost certainly exists: a small number of group formation designs covers the vast majority of instructional contexts. The compendium is not large; the redundant reinvention, however, is enormous.
-
-### PM-2. The library is a service, not a dictate — adoption is voluntary, customization is expected
-
-A process or content library doesn't mandate conformity. Teachers adopt what fits their context, customize for their students, and contribute refinements back to the commons. The service model — not the compliance model — is what makes the library trustworthy and actually used. The analogy is design patterns in software engineering: practitioners adopt them because they've proven useful, not because management required them. A library that teachers don't want to use is not a library — it's a policy document. This principle applies equally to content microservices (→ CM-1) and process microservices (→ PM-1).
-
-### PM-3. Student familiarity with shared procedures compounds across the grade-level progression
-
-When a student encounters a familiar classroom procedure in a new class — "group method B," "discussion protocol A" — the teacher's setup cost drops to near-zero. The student already knows the drill. This is a positive externality that accrues to *future* teachers because of *past* teachers' choices, with no coordination required beyond library adoption. If two teachers in the same school both use a shared group formation design, the second teacher gets student pre-training for free. Aggregated across a grade-level progression, even modest adoption rates create a substantial cumulative reduction in teacher setup overhead. The network effect grows with adoption — and it is entirely absent from the batch model, where each teacher's procedures are private and non-transferable. → PM-1, PM-2
-
----
-
-## Expert Knowledge Scaling
-*→ Ebook: Part II Ch 5–7 · Part III Ch 8*
+### 3b. Skills & Staffing
 
 *The structural argument for why libraries and AI are necessary, not merely convenient. The consulting firm is the domain where expertise dilution is most visible and most measurable — and where the library solution was discovered organically, before education named the problem.*
 
@@ -320,10 +225,145 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ---
 
-## External Pressures on the Teaching System
-*→ Ebook: [to be placed — bridge chapter between ES and AI sections]*
+### 3c. Brick and Mortar
 
-*The sections above describe the mechanics of teaching as a production process — how it works, where it fails, and what tools can improve it. Those mechanics do not exist in a vacuum. The external environment that defines what a teaching system must deliver has been under growing pressure, independent of AI, for decades. These entries describe that pressure. They are the pivot from the description of teaching mechanics into the problem of AI-powered operations.*
+### EP-7. Physical infrastructure locks batch systems into the batch model
+
+The curriculum is the most visible constraint on a batch system's ability to respond to external change — but it is not the most binding one. Physical infrastructure is. A 250-seat lecture hall is a capital investment amortized over fifty years, designed around a specific delivery format — one expert broadcasting to a large passive audience — that is batch education's purest physical expression. The building does not care what is taught in it; it actively shapes how teaching can happen. Individualized flow instruction requires fundamentally different affordances: small-group spaces, one-on-one interaction zones, variable configurations, mobile workstations. A university can revise a syllabus in a faculty meeting. It cannot tear down a building because the pedagogy it was built for has become obsolete. The infrastructure investment is a commitment to the batch model cast in concrete, made decades before anyone knew what would need to be taught in it, and it outlasts every curriculum cycle and every pedagogical reform. → EP-4, EP-6, BE-4
+
+---
+
+### 3d. The Quality and Measurement Problem
+
+*ISO 9001 is the most widely adopted quality management standard in the world. It specifies what a quality management system must do — not exactly how — which is what makes it auditable across every industry. The core logic operates at the process level, not the output level: define the processes that should produce quality outputs, document how they are supposed to run, demonstrate that they actually run that way, and correct when they don't. The governing cycle is Plan-Do-Check-Act: set an objective, define the process, monitor and measure, correct the gap, improve the process.*
+
+*ISO 9001 acknowledges, however, that some processes cannot be verified by inspecting the output after the fact. A welded joint that looks perfect may still fail under load. A heat treatment may be correct or wrong — you cannot tell from the surface. ISO calls these **special processes** and requires process validation instead of output inspection: certify the operator, document the procedure, monitor the process in real time, keep records of how the work was done — not just what came out.*
+
+*The mechanical implication of LP-1 and LP-2 — visible in §1 — is that teaching foundational concepts is a special process in the ISO sense. The following entries name the operational consequences of that classification and what a properly designed quality system would require.*
+
+### LP-3. ISO's response to special processes is process validation, not output testing
+
+When output cannot be inspected for conformance, ISO 9001 requires: qualified operators certified to perform the process; defined procedures that must be followed; continuous process monitoring; records that the process was correctly performed. The educational equivalent: teachers who know where common misconceptions are planted (→ ES-6); pedagogical procedures designed to surface and correct wrong mental models in real time (→ CP-6); process observation that captures how students are constructing understanding, not just what answers they produce (→ PO-1, PO-4); and records of the co-production process itself, not only test scores. Standard education validates outputs on the assumption that passing implies quality encoding. For special processes, this assumption is false. → PO-1, ES-6
+
+### LP-4. The confidence defect is more dangerous than the identified gap
+
+A student who knows they have a gap will seek help, ask questions, and signal the teacher. A student who doesn't know what they don't know does none of these things — this is the Dunning-Kruger mechanism in an educational setting: the incompetence that produces the gap also produces the inability to perceive the gap. The student cannot seek help for a problem they cannot see. They proceed with confidence into more advanced work, where shallow encoding fails in ways that are now far more expensive to remediate. The confidence defect is the most common outcome of teaching that rewards correct answer production but never validates the quality of the underlying mental model. It is also, paradoxically, a signal that teaching appeared to succeed — the student is fluent, confident, and producing correct outputs. The defect is the belief. Conventional assessment cannot detect it.
+
+Teaching has a traditional countermeasure for this exact failure mode: requiring students to show their reasoning, not just their answer. A correct answer derived from a wrong mental model typically produces a distinctive reasoning chain — different moves, missing steps, implausible intermediate values. A skilled teacher who reads worked solutions can often identify the planted misconception that the correct final answer conceals. This works. It remains viable in small classes with capable, experienced instructors who have enough time to examine what students actually wrote. It is usually the first practice to go when classes grow large, instructors are adjuncts or newly-minted graduate students, and administrative demands crowd out assessment quality. The teacher-time constraint (→ TC-2), varying instructor preparation levels (→ ES-4), and class sizes that make individual feedback arithmetically impossible combine to make "show your work" a pedagogical aspiration rather than a reliable standard. What disappeared is not the understanding that it matters — it was always understood — but the operational conditions that made it feasible. → CP-4, CP-6, TC-2, ES-4, PO-3, HL-8
+
+### PO-1. Two places to measure education
+
+Education has two measurement points: test the outputs (standardized exams) and observe the process (teacher observations during instruction). Billions of dollars and thousands of tools support output testing. Process observation has had virtually no tooling. The imbalance is corroborated by the formative assessment research literature: Black and Wiliam's 1998 review found formative assessment to be among the most effective known interventions for student learning and among the most poorly resourced — a gap that has widened rather than closed in the decades since.
+
+### PO-2. Observations degrade to impressions
+
+A teacher observes a student struggling with fractions at 10:15 AM. By 3:00 PM, the insight has faded to an impression. By Friday, it's gone. Multiply by 25 students and 180 days. Teachers are expert observers whose insights degrade to noise because there is no capture mechanism that fits inside the production process.
+
+### PO-3. The four resistance factors
+
+Every institutional attempt to move beyond standardized testing toward more frequent, individualized assessment runs into four compounding forces: (1) teacher workload — measuring more often means more work, (2) differing student needs — individualization multiplies the effort, (3) budgets — schools can't afford new infrastructure, (4) class size — larger classes mean less time per student. Each force is individually documented in the teacher-workload and assessment-barrier literature. The analysis of their compounding interaction — and the conclusion that they collectively make the status quo the only viable option under current tools — is the author's observation.
+
+### PO-4. Spread it thinner and wider
+
+The design response to the four resistance factors: fit measurement into naturally occurring observation intervals during normal instruction — "twenty seconds here, fifteen seconds there." More frequent micro-measurements reduce workload vs. fewer, heavier batch assessments. The same insight as lean manufacturing's move from end-of-line inspection to in-process quality checks.
+
+---
+
+## 4. An Imagined Flow Alternative
+
+*The sections above diagnose the failure modes of the current system and the constraints that hold it in place. This section sketches the alternative — what a deliberately designed flow-based teaching system would require. It is imagined in the sense that it does not yet exist at scale. The apprenticeship exists, and has always existed, as a proof of principle. The question is whether its operating logic can be scaled without being destroyed.*
+
+### 4a. The Apprenticeship Model — and its Limits
+
+*The apprenticeship is humanity's oldest and most effective teaching technology. Understanding why it works — and precisely why it breaks at scale — is the foundation for understanding what a scalable alternative must provide.*
+
+### AP-1. The apprenticeship works because it is structurally co-productive
+
+In an apprenticeship, co-production is not a pedagogical choice — it is a physical requirement. You cannot weld for someone. You cannot fly for them. You cannot cook for them. The apprentice must perform the work; the master can only guide the performance. This means every apprenticeship is automatically running the correct production model: the student is a necessary factor input. The defect of the delivery model — that it can be completed without the student's active cognitive participation — is structurally impossible in an apprenticeship. What makes the apprenticeship the baseline for any theory of effective teaching is not that it is old, but that it cannot be corrupted in the specific way that classroom delivery is routinely corrupted. → CP-1, HL-2
+
+### AP-2. The apprenticeship's feedback loop is immediate and real
+
+The weld holds or it doesn't. The soufflé rises or it doesn't. The landing was smooth or it wasn't. Apprenticeship feedback is generated by the work itself, not by a test administered weeks after production. This means the signal arrives at the moment the learner can use it: the confusion is still active, the physical memory of the process is still present, the emotional connection to the outcome is still fresh. LP-1's planted misconception is close to structurally impossible in a well-run apprenticeship: the wrong model fails visibly, in real time, before it can be consolidated as a habit. → HL-3, LP-1, LP-2
+
+### AP-3. The apprenticeship fails at scale because the master-to-apprentice ratio collapses
+
+The mechanism that produces mastery in an apprenticeship — continuous individual adjustment by an expert who reads the specific learner in real time — requires that the expert have enough bandwidth to do that reading. At a 1:1 or 1:3 ratio, this is possible. At 1:30, it is not. The expert can deliver to the group; they cannot simultaneously read and adjust to 30 individual positions. The moment the ratio exceeds the master's capacity for meaningful individual guidance, the apprenticeship has become a batch class wearing an apprenticeship's name. This is not a criticism of any teacher — it is a geometric constraint. The institutional response to the geometric constraint has been to increase the ratio, reduce the individual contact, and rename what remains. → ES-2, TC-1
+
+### AP-4. The goal is not to replicate the master — it is to replicate the conditions
+
+The natural institutional response to "the apprenticeship works" is "we need more master teachers." This is the wrong response. The scarcity of master teachers is precisely the constraint the system cannot relax — ES-1 describes why expertise does not scale with headcount. The right question is not how to produce more masters but how to replicate the *conditions* the apprenticeship creates: challenge calibrated to individual current ability; immediate and real feedback; visible progress on a meaningful task; co-production as a structural requirement; the master's attention directed at the individual position rather than the group average. Each of these conditions can be approximated — imperfectly, in different ways — by content microservices, process microservices, AI allocation and monitoring, and process observation tools. The content microservice library is not an attempt to replace the master teacher; it is an attempt to replicate the condition of having the right worked example available at the moment the learner needs it. → ES-1, ES-3, CM-1, AI-4
+
+---
+
+### 4b. Content Microservices
+
+*Bounded learning interactions — mini-activities, prompts, check-ins, targeted assessments — that individualize instruction. The [Workload Calculator → Prep Overhead tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) models the library economics.*
+
+### CM-1. Content microservice prep costs more per unit — but the library model changes the economics
+
+A batch lecture costs 2–4 hours to prepare, then delivers to all students at once. A content microservice — a precise, bounded, reusable teaching interaction — costs more per unit to design, because it must work standalone without the scaffolding of a surrounding lecture. Year 1 microservice prep is therefore more expensive than batch prep if every unit is built from scratch. The equalizer is sharing. Publisher-supplied PowerPoints and test banks already subsidize batch teaching by distributing prep cost across thousands of teachers. A shared content microservice library does the same for individualized teaching: each unit is built once, shared across schools, and refined over time. At sufficient library depth, the per-teacher Year 1 cost falls below batch — and Year 2+ cost approaches zero for covered topics.
+
+### CM-2. The transition cost is one-time; the teacher-time cost of batch is forever
+
+The Year 1 cost of building a content microservice library is a capital investment — it happens once, it amortizes, and it gets cheaper as the library deepens. The ongoing teacher-time cost of batch teaching recurs every year, every class, every student: same inefficiencies, same overloaded constraint, same defects carried forward. The comparison isn't Year 1 micro vs. Year 1 batch. It's a one-time transition cost vs. a permanent operational tax. Framing the library investment as "too expensive" confuses capital costs with operating costs. → CM-1, TC-1
+
+### CM-3. Specialization raises quality and lowers per-teacher cost simultaneously
+
+Textbooks, test banks, and publisher PowerPoints are not written by classroom teachers. They are written by subject-matter specialists, edited for pedagogical clarity, and tested across thousands of classrooms before a teacher opens the box. The same argument applies to a content microservice library: a specialist builds a high-quality micro-interaction once; a generalist classroom teacher deploys it thousands of times. The current model — expecting each classroom teacher to build their own individualized content from scratch — is the equivalent of expecting each teacher to write their own textbook. → CM-1, ES-3
+
+### CM-4. The break-even library share rate is the key policy variable
+
+For any institution, the decision to adopt content microservice teaching reduces to a quantitative threshold: at what library depth does Year 1 adoption cost equal or fall below batch prep cost? This is calculable from four parameters: topics per course, hours per lecture, microservices per topic, and hours per microservice. The resulting break-even share rate converts a pedagogical debate into an infrastructure investment decision. Institutions that know their break-even rate can make rational library investment decisions. Institutions that don't frame it this way argue about pedagogy indefinitely. → CM-1, CM-2
+
+### CM-5. Content microservices must support lateral entry and rapid re-entry
+
+The multi-track learning architecture (→ HL-7) places a structural requirement on microservice design. If learners naturally advance across multiple skill tracks with rapid changeovers, then a content library built for linear sequential consumption reimposes the batch constraint in a different form. Each unit must be designed for lateral entry — usable by a learner who has not completed the logically preceding unit — and for re-entry — usable by someone returning to a track after working elsewhere. "Bounded" in the microservice definition is not a stylistic preference; it is the structural requirement that makes lateral entry and re-entry possible without prior completion of the full sequence. A library of properly bounded units allows the teacher and the AI allocation system (→ AI-4) to match each learner to whichever unit best fits their current position across all simultaneous skill tracks — not just where the batch schedule says they should be. → HL-7, CM-1, AI-4
+
+---
+
+### 4c. Process Microservices
+
+*Classroom operating procedures — group formation rules, discussion protocols, peer review structures, entry/exit routines — that govern how the learning environment runs. Distinct from content microservices (→ CM-1), but sharing the same library economics (→ PM-2). No working demo yet; the Goal Templates feature in [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the closest analogue.*
+
+### PM-1. Process procedures are also suitable for library accumulation
+
+Many aspects of classroom operation have characteristics similar to content microservices: a finite number of effective designs, high redundant reinvention cost, and strong reusability across classrooms and grade levels. Group formation rules, discussion protocols, peer review structures, turn-taking conventions, and entry/exit routines are all examples. Currently, each teacher writes their own from scratch, independently, without reference to what colleagues have proven works. An 80:20 pattern almost certainly exists: a small number of group formation designs covers the vast majority of instructional contexts. The compendium is not large; the redundant reinvention, however, is enormous.
+
+### PM-2. The library is a service, not a dictate — adoption is voluntary, customization is expected
+
+A process or content library doesn't mandate conformity. Teachers adopt what fits their context, customize for their students, and contribute refinements back to the commons. The service model — not the compliance model — is what makes the library trustworthy and actually used. The analogy is design patterns in software engineering: practitioners adopt them because they've proven useful, not because management required them. A library that teachers don't want to use is not a library — it's a policy document. This principle applies equally to content microservices (→ CM-1) and process microservices (→ PM-1).
+
+### PM-3. Student familiarity with shared procedures compounds across the grade-level progression
+
+When a student encounters a familiar classroom procedure in a new class — "group method B," "discussion protocol A" — the teacher's setup cost drops to near-zero. The student already knows the drill. This is a positive externality that accrues to *future* teachers because of *past* teachers' choices, with no coordination required beyond library adoption. If two teachers in the same school both use a shared group formation design, the second teacher gets student pre-training for free. Aggregated across a grade-level progression, even modest adoption rates create a substantial cumulative reduction in teacher setup overhead. The network effect grows with adoption — and it is entirely absent from the batch model, where each teacher's procedures are private and non-transferable. → PM-1, PM-2
+
+---
+
+### 4d. Micro-Process Tool Design
+
+*Principles governing the design of any educational micro-tool — whether it carries content or manages classroom procedures. [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the reference implementation.*
+
+### MP-1. Transaction cost must be lower than cognitive cost
+
+The core design principle for educational micro-tools: the transaction cost of using the tool must be lower than the cognitive cost of not using it. If the tool demands a context switch — open laptop, navigate to app, fill out form — it's a batch interrupt that steals time from the production process. The tool must disappear into the workflow.
+
+### MP-2. Teachers contribute micro-judgments; machines aggregate
+
+The division of labor: the teacher provides the high-value micro-input (a 4-tap observation, a friction signal, a rubric rating) during a natural pause in instruction. The machine handles everything downstream — accumulation, trend analysis, report generation, attention equity monitoring. The teacher should never synthesize — that's the machine's job.
+
+### MP-3. Tools must fit inside the teacher's flow
+
+Education occurs as a flow process, not batch. Moving to flow without clobbering the instructor requires that teaching tools be reduced in scale to micro-processes — interactions a teacher can use wherever and whenever appropriate, without context-switching away from the act of teaching.
+
+### MP-4. The rubric as shared language
+
+Structured criteria (rubrics) serve as the bridge between subjective teacher observation and analyzable data. They make observation replicable across observers, defensible in stakeholder meetings, and comparable across time. Define once at the class level, customize per student. → PO-4
+
+---
+
+## 5. External Forces Adding Even More Stress
+
+*The sections above describe the mechanics of teaching as a production process — how it works, where it fails, what tools can improve it, and why the current configuration is hard to change. Those mechanics do not exist in a vacuum. The external environment that defines what a teaching system must deliver has been under growing pressure, independent of AI, for decades. These entries describe that pressure — the forces that make an already-strained system harder to run and harder to reform.*
 
 ### EP-1. Knowledge is exploding and balkanizing simultaneously
 
@@ -357,16 +397,15 @@ The second is **extrinsic**: AI is not only a tool the teaching system might use
 
 These two effects — intrinsic acceleration risk and extrinsic environmental acceleration — are analytically distinct and require different responses. The rest of this framework addresses both, but separately. → EP-4, EP-6, EP-7, AI-3, AID-3, OI-1
 
-### EP-7. Physical infrastructure locks batch systems into the batch model
-
-The curriculum is the most visible constraint on a batch system's ability to respond to external change — but it is not the most binding one. Physical infrastructure is. A 250-seat lecture hall is a capital investment amortized over fifty years, designed around a specific delivery format — one expert broadcasting to a large passive audience — that is batch education’s purest physical expression. The building does not care what is taught in it; it actively shapes how teaching can happen. Individualized flow instruction requires fundamentally different affordances: small-group spaces, one-on-one interaction zones, variable configurations, mobile workstations. A university can revise a syllabus in a faculty meeting. It cannot tear down a building because the pedagogy it was built for has become obsolete. The infrastructure investment is a commitment to the batch model cast in concrete, made decades before anyone knew what would need to be taught in it, and it outlasts every curriculum cycle and every pedagogical reform. → EP-4, EP-6, BE-4
-
 ---
 
-## Where AI Belongs
-*→ Ebook: Part III Ch 11 · Part V Ch 16*
+## 6. AI Promises and Threats
 
-*Every section above this one describes a problem or a solution mechanism. This section addresses how AI fits into those mechanisms — not as a replacement for the teacher or the student, but as infrastructure that makes the co-production model, the library model, the process validation model, and the expert-scaling model operationally achievable at scale.*
+*Every section above this one describes a problem or a solution mechanism. This section addresses how AI fits into those mechanisms — and how it undermines them. The relationship between the two subsections is not a balanced pro-and-con. It is an arms race with an asymmetric cost structure. Offensive uses of AI — students outsourcing cognitive work, institutions paving the batch model with AI efficiency gains, vendors filling libraries with plausible-but-shallow content — are cheap, decentralized, and require no institutional coordination. Defensive uses — concept-forcing problem generation, behavioral signature monitoring, library quality control, process validation — are more expensive, require institutional design, and depend on active curation. Left to drift, offense wins. Not from malice: from the gradient of least resistance.*
+
+### 6a. Where AI Belongs
+
+*AI as infrastructure that makes the co-production model, the library model, the process validation model, and the expert-scaling model operationally achievable at scale.*
 
 ### AI-1. Don't clone the teacher
 
@@ -404,7 +443,7 @@ The LP section describes a class of educational failure that conventional inspec
 - **Confidence-without-revision signature**: genuine learning produces characteristic uncertainty signals — self-correction, follow-up questions, pauses between attempts, revision of earlier answers. Students who show fluency without these signals are candidates for the LP-4 confidence defect. The absence of normal struggle signals is itself a diagnostic signal.
 - **Concept-forcing problem generation**: AI can generate novel problem variants specifically designed to expose the gap between a robustly encoded concept and a translation strategy. A planted misconception can translate successfully from practiced examples; it cannot generalise to a genuinely novel framing. AI-generated concept-forcing problems are the computational equivalent of ISO process validation inspection — testing not whether the output conforms, but whether the process that produced it was sound.
 
-The Dunning-Kruger condition is uniquely resistant to self-report-dependent interventions: the student who doesn’t know what they don’t know cannot accurately fill out a confidence survey, raise their hand, or answer “how confident are you?” accurately. AI’s behavioral monitoring bypasses self-report entirely — detecting from patterns of timing, revision, and error distribution what the student is structurally unable to introspect. For Dunning-Kruger cases specifically, AI-based detection may be the only contemporaneous diagnostic signal available.
+The Dunning-Kruger condition is uniquely resistant to self-report-dependent interventions: the student who doesn't know what they don't know cannot accurately fill out a confidence survey, raise their hand, or answer "how confident are you?" accurately. AI's behavioral monitoring bypasses self-report entirely — detecting from patterns of timing, revision, and error distribution what the student is structurally unable to introspect. For Dunning-Kruger cases specifically, AI-based detection may be the only contemporaneous diagnostic signal available.
 
 → HL-8, LP-1, LP-2, LP-3, LP-4
 
@@ -429,19 +468,16 @@ AI changes each of these:
 
 - **Matching**: AI can search practitioner databases, professional networks, and institutional repositories to identify practitioners whose experience maps to a specific course topic, student level, and conceptual moment — without requiring the instructor to personally know the right person. The same logistics that make a campus VP visit rare are irrelevant when the ask is a one-hour remote session identified by AI.
 - **Student preparation**: AI can generate briefing materials, background summaries, and preparatory questions so students arrive at a practitioner session capable of asking substantive questions rather than absorbing generic orientation — multiplying the productive density of the session.
-- **Aggregation at scale**: A single practitioner session, once recorded and processed, can be decomposed into structured library entries — specific claims, worked examples, credibility-grounded observations — that persist beyond the session and are retrievable for future courses. The practitioner’s contribution is captured rather than lost. (→ ES-6, AI-7)
+- **Aggregation at scale**: A single practitioner session, once recorded and processed, can be decomposed into structured library entries — specific claims, worked examples, credibility-grounded observations — that persist beyond the session and are retrievable for future courses. The practitioner's contribution is captured rather than lost. (→ ES-6, AI-7)
 - **Follow-up synthesis**: AI can summarize practitioner perspectives across multiple sessions, detecting convergence and divergence, and flagging where practitioner experience departs from established theory — converting individual sessions into a running empirical record.
 
-The fixed limit remains: AI cannot transfer the practitioner’s credibility to the student. The change in receptivity that comes from knowing the speaker has skin in the game is not a synthesis problem — it is structural. What AI changes is the economic feasibility of getting real practitioners in front of real students at scale. → CP-7, TC-1, ES-1, ES-5
+The fixed limit remains: AI cannot transfer the practitioner's credibility to the student. The change in receptivity that comes from knowing the speaker has skin in the game is not a synthesis problem — it is structural. What AI changes is the economic feasibility of getting real practitioners in front of real students at scale. → CP-7, TC-1, ES-1, ES-5
 
 ---
 
-## Where AI Undermines Teaching
-*→ Ebook: Part VI Ch 18–19*
+### 6b. Where AI Undermines Teaching
 
-*The entries above describe AI used to strengthen co-production, flow, and library accumulation. The same technology, deployed without that framing — or deployed under economic pressure that rewards cheaper operation over better learning — inverts most of the mechanisms the document argues for. Each entry below maps to a specific section it undoes.*
-
-*The relationship between the two AI sections is not a balanced pro-and-con. It is an arms race with an asymmetric cost structure. Offensive uses of AI — students outsourcing cognitive work, institutions paving the batch model with AI efficiency gains, vendors filling libraries with plausible-but-shallow content — are cheap, decentralized, and require no institutional coordination. Defensive uses — concept-forcing problem generation, behavioral signature monitoring, library quality control, process validation — are more expensive, require institutional design, and depend on active curation. Left to drift, offense wins. Not from malice: from the gradient of least resistance. The countermeasure architecture must be explicitly designed and actively maintained, or it will not exist. Some countermeasures described below are well-specified and achievable; some are expensive; and AID-5 (teacher expertise atrophy) may not yet have a cost-effective countermeasure at all. Naming this asymmetry honestly is more useful than implying that every harm has a matching solution.*
+*The entries above describe AI used to strengthen co-production, flow, and library accumulation. The same technology, deployed without that framing — or deployed under economic pressure that rewards cheaper operation over better learning — inverts most of the mechanisms the document argues for. Each entry below maps to a specific section it undoes. The countermeasure architecture must be explicitly designed and actively maintained, or it will not exist. Some countermeasures described below are well-specified and achievable; some are expensive; and AID-5 (teacher expertise atrophy) may not yet have a cost-effective countermeasure at all. Naming this asymmetry honestly is more useful than implying that every harm has a matching solution.*
 
 ### AID-1. AI can perform the student's co-production input
 
@@ -477,10 +513,11 @@ Two failure modes converge here. First, even flow-based teaching is vulnerable: 
 
 ---
 
-## The Operational Imperative
-*→ Ebook: Part VII Ch 20–21*
+## 7. The Time to Pivot is Now
 
 *The sections above describe failure modes, mechanisms, and tool responses. This section names the conclusion the document has been building toward: that the response to the convergent pressures on education is not a richer cognitive theory — it is operational maturity. The same discipline applied to manufacturing quality a half-century ago, applied now to learning.*
+
+### 7a. Switch from a Pedagogical to an Operational Model
 
 ### OI-1. The tacit mechanisms are expiring
 
@@ -489,6 +526,10 @@ The structures described throughout this document — batch scheduling, output-o
 ### OI-2. The response is operational maturity, not richer cognitive theory
 
 Pedagogical theory is necessary and insufficient. This document has laid the case that what teaching lacks is not a better model of how humans learn — those models are well-developed and broadly agreed — but the operational machinery to reliably deploy any model under realistic conditions, at scale, against active counter-pressure. Library infrastructure. Process validation for special processes. Expert knowledge extraction before retirement. Attention-allocation systems. Incoming-quality verification. Countermeasure design against dual-use failure modes. These are operations problems, not cognitive science problems. The fields that have historically dominated the teaching-improvement conversation — cognitive psychology, learning sciences, curriculum design — have real contributions to make and do not own this problem. A world-class learning scientist embedded in a school district that lacks the operational machinery produces a world-class learning scientist with no lever to pull. The lever is operations. → LP-3, CM-1, ES-3, AI-4, AI-5
+
+---
+
+### 7b. Become Relentless Active Designers and Redesigners
 
 ### OI-3. The institutions that build operational infrastructure will survive
 
@@ -514,11 +555,10 @@ This is not a prediction about which pedagogy will prevail. It is a structural c
 
 - **Management System Metastandards** — A published article explaining the concept of auditable standards for management control systems: what structural properties a management standard must possess to be independently verifiable by a third party. The control-system framework — setpoint, measurement of current state, comparator, actuator, feedback loop — is a distinct and underutilized lens for thinking about learning. The LP-3 special-process analogy draws directly from this work. More broadly, control theory applies at the student level: batch scheduling breaks the feedback loop by making measurement infrequent and output-only; the process-observation argument (→ PO-1) and the AI allocation mechanism (→ AI-4) can both be understood as control-system elements. → LP-3, PO-1, AI-4
 
-- **Teaching Outside In** (Auburn University, College of Business, 2011–2012) — A two-semester supply chain course redesign using practitioner-facing sessions as the primary instructional frame, delivered using laptop, 4G, and video conferencing with no institutional IT support. Roughly 30% of sessions were conventional in-person lectures at Auburn. The remainder split between the author traveling to expert locations (Fortune 100 companies, logistics operations) and broadcasting back to students, and fully virtual sessions with remote practitioners. Students attended from the classroom, from campus computer labs, or from home — all during scheduled class time. In one session, the author broadcast from the MODEX supply chain trade show floor in Atlanta, working through vendor booths; students who wanted to attend in person were invited to drive up. Theory was taught as annotation to practitioner experience, not as the primary content. Sessions were bidirectional — students asked questions directly to practitioners in real time. Student satisfaction was the same or modestly higher than the author’s prior in-class sections of the same course; exam performance was comparable or slightly better. The model did not degrade academic outcomes. After two semesters it was terminated by administrative decision, nominally on accreditation grounds. → CP-7
+- **Teaching Outside In** (Auburn University, College of Business, 2011–2012) — A two-semester supply chain course redesign using practitioner-facing sessions as the primary instructional frame, delivered using laptop, 4G, and video conferencing with no institutional IT support. Roughly 30% of sessions were conventional in-person lectures at Auburn. The remainder split between the author traveling to expert locations (Fortune 100 companies, logistics operations) and broadcasting back to students, and fully virtual sessions with remote practitioners. Students attended from the classroom, from campus computer labs, or from home — all during scheduled class time. In one session, the author broadcast from the MODEX supply chain trade show floor in Atlanta, working through vendor booths; students who wanted to attend in person were invited to drive up. Theory was taught as annotation to practitioner experience, not as the primary content. Sessions were bidirectional — students asked questions directly to practitioners in real time. Student satisfaction was the same or modestly higher than the author's prior in-class sections of the same course; exam performance was comparable or slightly better. The model did not degrade academic outcomes. After two semesters it was terminated by administrative decision, nominally on accreditation grounds. → CP-7
 
 - **DeeperPoint Inc. — Education Thin Markets** (ongoing, deeperpoint.com) — DeeperPoint's primary work is thin market automation - specifically, building AI-powered infrastructure for trustworthy semantic matching of willing parties who have complex, specialized information, products, or services to transfer or transact, but who cannot find each other through conventional search or personal networks. The education-sector applications described in this entry are proposed scenarios, not deployed systems: illustrated arguments for what this infrastructure could make possible that was not achievable with pre-AI matching technology. The connection to this document is a direct line of thought from Teaching Outside In (above) to a formal market design application. The Teaching Outside In experiment succeeded — students performed as well or better, practitioners were willing — but it required the author to personally absorb all the discovery, scheduling, and logistics friction that would normally prevent such sessions from happening. The insight that followed: that friction is a thin market problem, not an inherent feature of practitioner-led teaching. The blog post "The Virtual Guest Lecture Dating Service" (2025, deeperpoint.com) formalizes this as a proposed marketplace: a platform that matches willing industry experts with university instructors across geographic and time-zone barriers, using semantic matching to align specific practitioner knowledge with specific curricular needs, and AI-assisted scheduling to collapse the coordination cost. The scenario illustrates the direct application of the ES principles (ES-1, ES-3, ES-6) — encoding and delivering specialist knowledge to learners who cannot otherwise access it — at a scale and geographic reach that no individual instructor can achieve alone. A second catalog entry - "Internationally Trained Professionals as STEM Guest Instructors" - adds a dimension not yet in this document: the supply side of the expert-learner market is partially constituted by underutilized immigrant professionals whose domain knowledge is deep but whose visibility within educational networks is near zero. Consider a high school German teacher who needs a native-speaking conversation partner to hold live practice sessions with students and help grade written homework - and a German university student (possibly an international student enrolled at a German-language university outside Germany) who could commit a few hours a week to supplemental online teaching. Each is exactly what the other needs. Neither can find the other through conventional channels: the teacher's school network doesn't reach German university students, and the student has no mechanism to surface themselves to foreign secondary schools. The match requires semantic alignment not just on language but on grade level, curriculum style, time zone availability, and the specific combination of live session support and homework grading the teacher actually needs. This is a co-production dynamic in the precise sense the framework uses: the student gains documented international teaching experience and, depending on their program, may receive academic credit for supervised teaching hours. The arrangement changes both parties - the students get authentic language interaction with a near-native speaker; the university student develops pedagogical competence in a real teaching context. Separately, the catalog includes further education thin market entries (cross-border classroom partnerships, global career shadowing, heritage language instruction) that establish education as a category of thin market rather than as individual pedagogical arguments. → CP-7, ES-1, ES-3, ES-6, CM-2, AI-6
 
 ---
 
-
-*Last updated: 2026-04-21 — added EP-7 (physical infrastructure lock-in); BE-4 updated with back-ref; prior: EP-1–EP-6, HL-9, HL-10, TC-5, AID-1–8, OI-1–3*
+*Last updated: 2026-04-21 — full structural reorganization into 7 major sections; added §1 LP-1/LP-2 (latent defect concept); §2b Flow Education (FE-1–FE-4); §4a Apprenticeship Model (AP-1–AP-4); EP-7 moved to §3c; Arms-Race bridge text integrated into §6 intro*
