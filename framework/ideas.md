@@ -191,7 +191,7 @@ Teachers are more likely to interact with students they have interacted with bef
 
 ### TC-5. Attention equity is not spontaneous — it requires designed allocation
 
-Left unmanaged, teacher attention follows social rather than need gradients (→ TC-4): previously helped students are more likely to be helped again; physically proximate or visually prominent students receive disproportionate contact; students who signal distress conventionally — raised hands, direct questions — receive priority over students who signal it behaviorally. The students most likely to be in the DK zone (→ HL-8) — fluent, confident, apparently fine — are the least likely to trigger conventional attention-allocation. The attention equity problem is not a failure of teacher intention; it is a structural consequence of operating a queuing system without queue management. The students who most need the server are systematically least likely to reach the front of the queue. A managed allocation system — priority-queue driven by real-time AI monitoring (→ AI-4) — is not a supplement to good teaching. It is the operational prerequisite for fair teaching. Without it, equity is accidental at best. → TC-4, AI-4, LP-4, HL-8
+Left unmanaged, teacher attention follows social rather than need gradients (→ TC-4): previously helped students are more likely to be helped again; physically proximate or visually prominent students receive disproportionate contact; students who signal distress conventionally — raised hands, direct questions — receive priority over students who signal it behaviorally. The students most likely to be in the DK zone (→ HL-8) — fluent, confident, apparently fine — are the least likely to trigger conventional attention-allocation. The attention equity problem is not a failure of teacher intention; it is a structural consequence of operating a queuing system without queue management. The students who most need the server are systematically least likely to reach the front of the queue. A managed allocation system — priority-queue driven by real-time AI monitoring (→ AI-4) — is not a supplement to good teaching. It is the operational prerequisite for fair teaching. Without it, equity is accidental at best. → TC-4, AI-4, LP-4, HL-8, FC-1
 
 ---
 
@@ -241,7 +241,22 @@ The curriculum is the most visible constraint on a batch system's ability to res
 
 *The mechanical implication of LP-1 and LP-2 — visible in §1 — is that teaching foundational concepts is a special process in the ISO sense. The following entries name the operational consequences of that classification and what a properly designed quality system would require.*
 
+### FC-1. Teaching is a dead-reckoning system — and dead reckoning is failing
+
+Every production system requires some means of knowing whether it is producing what it is supposed to produce, and correcting course when it isn't. Engineering calls this a feedback architecture. The term "control" is what engineers use and organizational humans distrust — rightly, because in organizational life "control" usually means authority over another person, not a navigation instrument. The navigation metaphor is more accurate and more useful.
+
+Dead reckoning: the navigator applies a known heading at a known speed from a known starting point and infers position without direct observation. It works when conditions are stable and starting assumptions are correct. It fails quietly and catastrophically when either breaks — the ship arrives where the chart predicted only if the current was what the navigator assumed and the compass was true. The error is discovered at the destination, when correction is expensive or impossible.
+
+Instrument navigation: position is confirmed continuously against ground truth. Drift is caught early, when correction costs a small heading adjustment rather than a shipwreck.
+
+Historically, teaching operated as a dead-reckoning system — and this was tolerable, for a specific reason. The teacher was the unit of both production and feedback. Whatever feedback loop existed was internalized in the teacher's craft: reading the room, noticing which students were lost, remembering that last year's fraction explanation failed and this year's works, easing the pace when the class stalls. The loop was real; it was simply invisible to anyone outside the teacher's head. And the institution had little reason to question whether what the teacher was pointing toward was still the right destination — because for most of education's institutional history, the destination was stable.
+
+That era is closing. The pressures described in §5 mean that individual teachers can no longer be the sole stewards of navigational accuracy. A skilled teacher running an excellent classroom feedback loop can detect that students aren't learning what is being taught. Only a system-level feedback architecture can detect whether what is being taught points toward a target that is still there.
+
+That architecture is not surveillance. It is collective situational awareness that protects two parties simultaneously. The teacher who is executing faithfully toward a target that has moved is not failing — they are instrumented incorrectly, and the instrument is what needs correction. System-level feedback is not a threat to teacher autonomy; it is the infrastructure that makes teacher autonomy defensible. A teacher flying by instruments can be trusted to navigate. A system flying blind cannot be trusted at all. This document calls this **navigational feedback** — feedback that tells the system where it is, not feedback that judges the pilot. Wherever later sections describe monitoring, observation, or AI-generated signals that might read as personal surveillance, the intent is navigational feedback in this sense. → LP-1, LP-3, EP-3, EP-5, PO-1, OI-2
+
 ### LP-3. ISO's response to special processes is process validation, not output testing
+
 
 When output cannot be inspected for conformance, ISO 9001 requires: qualified operators certified to perform the process; defined procedures that must be followed; continuous process monitoring; records that the process was correctly performed. The educational equivalent: teachers who know where common misconceptions are planted (→ ES-6); pedagogical procedures designed to surface and correct wrong mental models in real time (→ CP-6); process observation that captures how students are constructing understanding, not just what answers they produce (→ PO-1, PO-4); and records of the co-production process itself, not only test scores. Standard education validates outputs on the assumption that passing implies quality encoding. For special processes, this assumption is false. → PO-1, ES-6
 
@@ -257,7 +272,7 @@ Education has two measurement points: test the outputs (standardized exams) and 
 
 ### PO-2. Observations degrade to impressions
 
-A teacher observes a student struggling with fractions at 10:15 AM. By 3:00 PM, the insight has faded to an impression. By Friday, it's gone. Multiply by 25 students and 180 days. Teachers are expert observers whose insights degrade to noise because there is no capture mechanism that fits inside the production process.
+A teacher observes a student struggling with fractions at 10:15 AM. By 3:00 PM, the insight has faded to an impression. By Friday, it's gone. Multiply by 25 students and 180 days. Teachers are expert observers whose insights degrade to noise because there is no capture mechanism that fits inside the production process. → FC-1
 
 ### PO-3. The four resistance factors
 
@@ -421,7 +436,7 @@ The most powerful argument for AI in education is not "AI tutors students." It's
 
 ### AI-4. AI solves the allocation problem
 
-AI transforms the teacher's allocation problem from one with no information to one with rich information. Continuous monitoring produces a real-time needs signal for each student. The teacher-facing interface should show a continuously updated priority queue: given everything the AI knows, where is your next minute most valuable? → TC-4
+AI transforms the teacher's allocation problem from one with no information to one with rich information. Continuous monitoring produces a real-time needs signal for each student. The teacher-facing interface should show a continuously updated priority queue: given everything the AI knows, where is your next minute most valuable? → TC-4, FC-1
 
 ### AI-5. AI manages the library infrastructure for both content and process microservices
 
@@ -445,7 +460,7 @@ The LP section describes a class of educational failure that conventional inspec
 
 The Dunning-Kruger condition is uniquely resistant to self-report-dependent interventions: the student who doesn't know what they don't know cannot accurately fill out a confidence survey, raise their hand, or answer "how confident are you?" accurately. AI's behavioral monitoring bypasses self-report entirely — detecting from patterns of timing, revision, and error distribution what the student is structurally unable to introspect. For Dunning-Kruger cases specifically, AI-based detection may be the only contemporaneous diagnostic signal available.
 
-→ HL-8, LP-1, LP-2, LP-3, LP-4
+→ HL-8, LP-1, LP-2, LP-3, LP-4, FC-1
 
 ### AI-7. AI captures expert knowledge before it walks out the door
 
