@@ -83,7 +83,7 @@ The student who decides they're "not a math person" or "not a reader" is experie
 
 ### BE-4. The batch isn't pedagogy — it's triage
 
-The lecture persists not because it's effective (the evidence on that is close to settled — it isn't) but because it's the only delivery format that doesn't collapse under the teacher-time constraint. Standardized testing persists because it's a batch measurement — operationally cheap, informationally poor. → TC-1, ES-1
+The lecture persists not because it's effective (the evidence on that is close to settled — it isn't) but because it's the only delivery format that doesn't collapse under the teacher-time constraint. Standardized testing persists because it's a batch measurement — operationally cheap, informationally poor. The 250-seat lecture hall is part of the same story from the other direction: the physical plant was built for this format and will be used for this format until it is demolished or repurposed — which happens on a timescale measured in decades, not semesters. → TC-1, ES-1, EP-7
 
 ### BE-5. The commands of batch education
 
@@ -349,6 +349,10 @@ The margin flow holds over batch in responding to external change is not about t
 
 No operational improvement within the current institutional configuration closes the gap between the speed of external change and the speed of curriculum response. The gap is structural, not managerial — it cannot be managed away by better committees or faster approvals. AI enters this context not as a tool for making the existing system run at the same speed with less labor, but as a potential infrastructure for changing what speed is possible: from cohort-years to individual-months. That framing is both the most important thing to understand about AI in education and the most important thing to hold with caution, because the same technology that could accelerate the system's adaptive capacity is also accelerating the rate of external change. The system is trying to close a gap with a tool that may be widening the gap on the other side. → EP-4, EP-6, AI-3, AID-3, OI-1
 
+### EP-7. Physical infrastructure locks batch systems into the batch model
+
+The curriculum is the most visible constraint on a batch system's ability to respond to external change — but it is not the most binding one. Physical infrastructure is. A 250-seat lecture hall is a capital investment amortized over fifty years, designed around a specific delivery format — one expert broadcasting to a large passive audience — that is batch education’s purest physical expression. The building does not care what is taught in it; it actively shapes how teaching can happen. Individualized flow instruction requires fundamentally different affordances: small-group spaces, one-on-one interaction zones, variable configurations, mobile workstations. A university can revise a syllabus in a faculty meeting. It cannot tear down a building because the pedagogy it was built for has become obsolete. The infrastructure investment is a commitment to the batch model cast in concrete, made decades before anyone knew what would need to be taught in it, and it outlasts every curriculum cycle and every pedagogical reform. → EP-4, EP-6, BE-4
+
 ---
 
 ## Where AI Belongs
@@ -509,4 +513,4 @@ This is not a prediction about which pedagogy will prevail. It is a structural c
 ---
 
 
-*Last updated: 2026-04-21 — added EP section (EP-1 through EP-6): External Pressures on the Teaching System; prior: HL-9, HL-10, TC-5, AID-1–8, OI-1–3*
+*Last updated: 2026-04-21 — added EP-7 (physical infrastructure lock-in); BE-4 updated with back-ref; prior: EP-1–EP-6, HL-9, HL-10, TC-5, AID-1–8, OI-1–3*
