@@ -320,6 +320,37 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ---
 
+## External Pressures on the Teaching System
+*→ Ebook: [to be placed — bridge chapter between ES and AI sections]*
+
+*The sections above describe the mechanics of teaching as a production process — how it works, where it fails, and what tools can improve it. Those mechanics do not exist in a vacuum. The external environment that defines what a teaching system must deliver has been under growing pressure, independent of AI, for decades. These entries describe that pressure. They are the pivot from the description of teaching mechanics into the problem of AI-powered operations.*
+
+### EP-1. Knowledge is exploding and balkanizing simultaneously
+
+The total volume of human knowledge grows faster than any individual can track — that much is commonly observed. The more consequential pressure is structural: as knowledge grows, it fractures into narrower and deeper silos. The polymath who ranged confidently across domains was already a historical oddity by the mid-twentieth century; today, adjacent subspecialties within a single field have diverged so far that neighboring researchers often cannot evaluate each other's work. What this means for curriculum design is specific: there is no stable "body of knowledge" from which a committee can draft a defensible program. There is a collection of contested, rapidly evolving fragments, each with its own community of practice, its own credential, and its own half-life.
+
+### EP-2. Society and the economy are realigning at accelerating pace
+
+Old disciplines lose economic relevance; new ones emerge faster than institutions can credential them. The lag between a skill becoming valuable and a university curriculum recognizing it was historically measured in decades. It is now measured in years and shrinking. Entire fields — cybersecurity, machine learning operations, synthetic biology — went from nonexistent to critical infrastructure faster than any institution designed for decade-span planning cycles could respond. The reverse is equally true: disciplines that were once core to graduate and professional programs have contracted or disappeared entirely. The labor market has not waited for the education system to catch up, and there is no reason to expect it to start. → EP-1
+
+### EP-3. Topic importance is buffeted by both forces simultaneously
+
+The volatility of any given topic's importance is the compound effect of knowledge balkanization and economic realignment operating at the same time in different directions. A discipline can be internally rich — deep specialist community, active research front — while economically marginal; or technically shallow while economically critical right now. The intersection is unstable by construction. A curriculum calibrated for the intersection at one point in time drifts away from it — not because the curriculum deteriorated, but because the target moved. This creates a structural variant of the planted-misconception problem at the institutional level: a degree program teaching the right things for the world of five years ago is not wrong in any narrow sense. It is teaching toward a target that is no longer there. → LP-1, EP-1, EP-2
+
+### EP-4. Batch systems cannot keep pace; flow systems have a structural advantage
+
+Batch education requires curriculum committees, approval cycles, faculty hiring, textbook publication, and course redesign — a governance architecture calibrated to a world where the right thing to teach was stable for a generation. Responding to a clear labor market signal at year one, a batch institution may not produce graduates trained in the new discipline until year seven or eight. Flow systems respond faster because the unit of change is a learner's trajectory, not a cohort syllabus — a new content microservice can be deployed in weeks, not years. Flow does not guarantee the system keeps pace; the velocity of external change may exceed even the fastest institutional response. But flow always has a structural advantage over batch in this race, because it eliminates the batch lag entirely. The question is not whether flow beats batch at this — it does, categorically. The question is whether anything can close the gap at all. → BE-1, HL-1, CM-1, EP-2, EP-3
+
+### EP-6. Flow's advantage is architectural, not merely operational
+
+The margin flow holds over batch in responding to external change is not about teachers working harder or administrators reacting faster. It is architectural. In a batch system, the smallest unit that can be changed is the course or the syllabus — a committee decision requiring faculty assignment, textbook selection, and scheduling coordination. In a flow system built on content microservices, the smallest unit that can be changed is a single bounded interaction — a worked example, an assessment item, a guided exercise — which can be deployed, revised, or retired without touching anything else in the program. This difference in granularity creates a radically different *system learning rate*: how fast the institution can incorporate new knowledge into what it teaches. When a new skill becomes urgently valuable, a batch institution waits until an entire course is redesigned; a flow institution can put a first microservice in front of learners in weeks and expand coverage as the field matures. The architecture doesn't guarantee the system keeps pace — but it removes the structural floor that prevents batch from going faster, no matter how much goodwill exists. → EP-4, CM-1, CM-2, BE-4
+
+### EP-5. These pressures define the threshold AI must help the system cross
+
+No operational improvement within the current institutional configuration closes the gap between the speed of external change and the speed of curriculum response. The gap is structural, not managerial — it cannot be managed away by better committees or faster approvals. AI enters this context not as a tool for making the existing system run at the same speed with less labor, but as a potential infrastructure for changing what speed is possible: from cohort-years to individual-months. That framing is both the most important thing to understand about AI in education and the most important thing to hold with caution, because the same technology that could accelerate the system's adaptive capacity is also accelerating the rate of external change. The system is trying to close a gap with a tool that may be widening the gap on the other side. → EP-4, EP-6, AI-3, AID-3, OI-1
+
+---
+
 ## Where AI Belongs
 *→ Ebook: Part III Ch 11 · Part V Ch 16*
 
@@ -478,4 +509,4 @@ This is not a prediction about which pedagogy will prevail. It is a structural c
 ---
 
 
-*Last updated: 2026-04-21 — added HL-9, HL-10, TC-5; added bridge section "The Arms-Race Frame" between AI-N and AID-N; added AID-1 through AID-8 (migrated from ideas2.md); added OI section (OI-1 through OI-3); prior: expanded Prior Work appendix (6 entries); CP-7, HL-8, HL-7, CM-5*
+*Last updated: 2026-04-21 — added EP section (EP-1 through EP-6): External Pressures on the Teaching System; prior: HL-9, HL-10, TC-5, AID-1–8, OI-1–3*

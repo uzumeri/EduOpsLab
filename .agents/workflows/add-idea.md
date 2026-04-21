@@ -152,6 +152,7 @@ Current sections, prefixes, ebook chapter targets, and scope:
 | CM | Content Microservices | Part III Ch 9 | Bounded library units — economics, structure, lateral entry |
 | PM | Process Microservices | Part III Ch 10 | Classroom operating procedures as libraryable assets |
 | ES | Expert Knowledge Scaling | Part II Ch 5–7 · Part III Ch 8 | Expertise dilution, tacit knowledge at retirement, library as solution |
+| EP | External Pressures on the Teaching System | [bridge chapter — to be placed] | Knowledge balkanization, economic realignment velocity, batch vs. flow response capacity |
 | AI | Where AI Belongs | Part III Ch 11 · Part V Ch 16 | AI as production infrastructure under the co-production model |
 | AID | Where AI Undermines Teaching | Part VI Ch 18–19 | AI failure modes; arms-race asymmetry; countermeasure design |
 | OI | The Operational Imperative | Part VII Ch 20–21 | The closing argument: operational maturity, not richer theory |
