@@ -16,25 +16,27 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
 
 1. [How Humans Learn](#1-how-humans-learn)
 2. [How Education Operates](#2-how-education-operates)
-   - [2a. Batch Education](#2a-batch-education)
-   - [2b. Flow Education](#2b-flow-education)
-3. [Existing Operational Constraints](#3-existing-operational-constraints)
-   - [3a. Teaching Workload Asymmetry](#3a-teaching-workload-asymmetry)
-   - [3b. Skills & Staffing](#3b-skills--staffing)
-   - [3c. Brick and Mortar](#3c-brick-and-mortar)
-   - [3d. The Quality and Measurement Problem](#3d-the-quality-and-measurement-problem)
-4. [An Imagined Flow Alternative](#4-an-imagined-flow-alternative)
-   - [4a. The Apprenticeship Model — and its Limits](#4a-the-apprenticeship-model--and-its-limits)
-   - [4b. Content Microservices](#4b-content-microservices)
-   - [4c. Process Microservices](#4c-process-microservices)
-   - [4d. Micro-Process Tool Design](#4d-micro-process-tool-design)
-5. [External Forces Adding Even More Stress](#5-external-forces-adding-even-more-stress)
-6. [AI Promises and Threats](#6-ai-promises-and-threats)
-   - [6a. Where AI Belongs](#6a-where-ai-belongs)
-   - [6b. Where AI Undermines Teaching](#6b-where-ai-undermines-teaching)
-7. [The Time to Pivot is Now](#7-the-time-to-pivot-is-now)
-   - [7a. Switch from a Pedagogical to an Operational Model](#7a-switch-from-a-pedagogical-to-an-operational-model)
-   - [7b. Become Relentless Active Designers and Redesigners](#7b-become-relentless-active-designers-and-redesigners)
+   - [2a. Co-Production](#2a-co-production)
+   - [2b. Batch Education](#2b-batch-education)
+   - [2c. Flow Education](#2c-flow-education)
+3. [How Education is Managed](#3-how-education-is-managed)
+   - [3a. The Quality and Control Problem](#3a-the-quality-and-control-problem)
+4. [Existing Operational Constraints](#4-existing-operational-constraints)
+   - [4a. Teaching Workload Asymmetry](#4a-teaching-workload-asymmetry)
+   - [4b. Skills & Staffing](#4b-skills--staffing)
+   - [4c. Brick and Mortar](#4c-brick-and-mortar)
+5. [An Imagined Flow Alternative](#5-an-imagined-flow-alternative)
+   - [5a. The Apprenticeship Model — and its Limits](#5a-the-apprenticeship-model--and-its-limits)
+   - [5b. Content Microservices](#5b-content-microservices)
+   - [5c. Process Microservices](#5c-process-microservices)
+   - [5d. Micro-Process Tool Design](#5d-micro-process-tool-design)
+6. [External Forces Adding Even More Stress](#6-external-forces-adding-even-more-stress)
+7. [AI Promises and Threats](#7-ai-promises-and-threats)
+   - [7a. Where AI Belongs](#7a-where-ai-belongs)
+   - [7b. Where AI Undermines Teaching](#7b-where-ai-undermines-teaching)
+8. [The Time to Pivot is Now](#8-the-time-to-pivot-is-now)
+   - [8a. Switch from a Pedagogical to an Operational Model](#8a-switch-from-a-pedagogical-to-an-operational-model)
+   - [8b. Become Relentless Active Designers and Redesigners](#8b-become-relentless-active-designers-and-redesigners)
 - [Prior Work](#prior-work)
 
 ---
@@ -101,6 +103,14 @@ ISO 9001 defines a special process as a production step whose output cannot be v
 
 Physics education research has documented this failure mode with precision. Students who complete introductory mechanics courses often retain a pre-Newtonian (Aristotelian) mental model — force causes velocity, not acceleration; objects stop when their "impetus" runs out. They have learned to translate: to produce Newtonian answers from an intuitive wrong model. Translation works for standard problems. The misconception passes every test the course administers. It surfaces when a genuinely novel problem cannot be solved by translation — typically in an advanced course or an engineering application. The causal chain back to the introductory course is invisible. This failure mode is not rare or exotic. It is the normal outcome of teaching that assesses answer-production rather than mental-model construction. → CP-1, CP-6, LP-1
 
+---
+
+## 2. How Education Operates
+
+### 2a. Co-Production
+
+*Teaching is not delivery — it is a joint production process in which the student is a necessary factor input. The entries below establish the co-production model as the correct operating frame for understanding what teachers and students each contribute, why engagement cannot be treated as optional, and how assessment must change when the student is a co-producer rather than a recipient.*
+
 ### CP-1. Teaching is co-production, not delivery
 
 In product delivery, the producer controls the process and the customer receives the output passively. Teaching is not delivery. It is service co-production — the student is a necessary input to the production process. You cannot educate an unwilling or disengaged student any more than you can cut the hair of someone who won't sit still. The student's attention, effort, prior knowledge, honest confusion, and willingness to be wrong are direct inputs to the production process.
@@ -139,9 +149,7 @@ Student satisfaction across the two semesters was the same or marginally above t
 
 ---
 
-## 2. How Education Operates
-
-### 2a. Batch Education
+### 2b. Batch Education
 
 *School as it actually runs: a batch production system that imposes a single schedule on learners with radically different needs and rates. The following entries describe what that produces.*
 
@@ -171,7 +179,7 @@ In lean manufacturing, a defect discovered at end-of-line inspection is the most
 
 ---
 
-### 2b. Flow Education
+### 2c. Flow Education
 
 *What intentionally designed flow teaching looks like as a system — not just "batch without the batching," but a distinct operating model with its own design principles and infrastructure requirements.*
 
@@ -193,71 +201,11 @@ A common objection to flow teaching is that it destroys the social and collabora
 
 ---
 
-## 3. Existing Operational Constraints
+## 3. How Education is Managed
 
-*Why the current system is hard to fix — even before external pressure arrives. Each of the following represents a structural constraint that makes the improvements described in §2b genuinely difficult to achieve within the current institutional configuration.*
+*Every production system requires a means of knowing whether it is producing what it is supposed to produce, and correcting course when it isn't. Engineers call this a feedback architecture; the simpler word is control. This section collects the entries that treat education as a managed system: how performance is observed, how quality is verified in a special process, and what a properly designed control architecture for teaching looks like. The entries here are a home for discussions of control — navigational feedback, process validation, and the mechanisms that distinguish a system that can detect and correct its own drift from one that cannot.*
 
-### 3a. Teaching Workload Asymmetry
-
-*Teacher time is the binding constraint on every process improvement in education. The [Workload Calculator → Asymmetry tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) runs the arithmetic live.*
-
-### TC-1. Teacher time is the binding constraint
-
-A classroom is a queuing system with one (or few) servers and many clients with heterogeneous, dynamically changing needs. Teacher time is the constrained resource. Every design decision about teaching methods, technology, and assessment should be evaluated against this constraint.
-
-### TC-2. The asymmetry that kills good teaching
-
-When an innovation adds burden to students, it distributes across N people — the per-person cost is small. When it adds burden to the teacher, it falls on one person undistributed. Five extra minutes per student is over 10 hours of additional work for one teacher. This asymmetry systematically kills active learning, Socratic questioning, individualized feedback — everything research says works — because they require teacher time that doesn't scale.
-
-### TC-3. Homeschooling works because the constraint doesn't bind
-
-Homeschooling parents are on average less trained than credentialed teachers, with fewer resources and no institutional infrastructure. Yet homeschooled students consistently perform at or above grade level. Why? Because one parent with one to three children naturally teaches in flow — adjusting pace, spending more time where the child is stuck, moving on when ready. The parent is accidentally operating in the production model that works best. → HL-2
-
-### TC-4. Teacher attention follows social gradients, not need gradients
-
-Teachers are more likely to interact with students they have interacted with before — help is "sticky" and recurs for previously supported students (NC State, 2026). Without explicit allocation support, attention follows social patterns rather than need patterns. This is the queuing problem, empirically confirmed.
-
-### TC-5. Attention equity is not spontaneous — it requires designed allocation
-
-Left unmanaged, teacher attention follows social rather than need gradients (→ TC-4): previously helped students are more likely to be helped again; physically proximate or visually prominent students receive disproportionate contact; students who signal distress conventionally — raised hands, direct questions — receive priority over students who signal it behaviorally. The students most likely to be in the DK zone (→ HL-8) — fluent, confident, apparently fine — are the least likely to trigger conventional attention-allocation. The attention equity problem is not a failure of teacher intention; it is a structural consequence of operating a queuing system without queue management. The students who most need the server are systematically least likely to reach the front of the queue. A managed allocation system — priority-queue driven by real-time AI monitoring (→ AI-4) — is not a supplement to good teaching. It is the operational prerequisite for fair teaching. Without it, equity is accidental at best. → TC-4, AI-4, LP-4, HL-8, FC-1
-
----
-
-### 3b. Skills & Staffing
-
-*The structural argument for why libraries and AI are necessary, not merely convenient. The consulting firm is the domain where expertise dilution is most visible and most measurable — and where the library solution was discovered organically, before education named the problem.*
-
-### ES-1. Expert knowledge doesn't scale linearly with headcount
-
-When a consulting firm grows from two partners to twenty consultants, it does not grow its expertise by a factor of ten. Average expertise per billable hour drops by roughly the ratio of non-experts to experts — a dilution that is mathematically unavoidable. The founders' judgment is not replicated by hiring; it is spread thinner. Every knowledge-based organization that has tried to scale by headcount has discovered this: law firms, hospitals, consulting practices, architecture studios, and school systems. The practitioner count grows; average quality per service hour does not. Rapid growth makes the dilution worse, not better — the more aggressively you hire, the faster the expertise ratio decays. The consulting firm makes this visible because client satisfaction and billable rates are measurable proxies for quality. In education, the equivalent degradation is structurally identical but effectively invisible, because quality per student-hour is never measured at all.
-
-### ES-2. The apprenticeship model breaks at scale for the same reason (→ HL-2)
-
-The apprenticeship produces mastery because the master adjusts to the apprentice continuously, with immediate feedback and challenge calibrated to current ability. The scaling limit is precise: the apprenticeship breaks when the master-to-apprentice ratio exceeds the master's capacity for meaningful individual guidance. At 1:30, the master is teaching a batch class. At 1:200 — one teacher across multiple sections — the apprenticeship is not being practised. It has become delivery. A consulting firm growing from two partners to twenty consultants experiences the same transition: the intense, individualized guidance that produced excellent junior work at small scale is replaced by periodic review meetings and templated briefings. What has been scaled is not the apprenticeship. The apprenticeship has been abandoned. School systems are in the same position, at vastly larger scale, with no language to name what they have lost. → HL-2
-
-### ES-3. The library decouples expert production from expert delivery (→ CM-1, CM-3)
-
-The known organizational solution to ES-1 is codified methodology: encoding expert judgment in a reusable form that practitioners with lower individual expertise can deploy reliably. McKinsey's structured problem-solving approach, hospital clinical protocols, law firm precedent libraries, accounting audit checklists — these are all attempts to answer the same question: how do you install a fragment of expert judgment in a practitioner who doesn't yet have it? The answer is always a library. Each entry in the library is a decision made once by an expert, deployed repeatedly by practitioners who do not need to remake the decision from scratch. The content and process microservice library is the educational equivalent. Each micro-unit is a research-validated instructional design decision — built by a specialist, deployed by a generalist. Consulting firms discovered this model by necessity, because the alternative — requiring every consultant to achieve partner-level judgment before client contact — doesn't scale. Education has not yet named its equivalent necessity, but the structure is identical. → CM-1, CM-3
-
-### ES-5. The education staffing pyramid is not a metaphor for the consulting firm problem — it is the consulting firm problem
-
-K-12 school districts across North America struggle chronically to staff STEM courses, specialist positions, and coaching roles with fully qualified instructors. The response is structurally identical to the consulting firm's rapid-growth mode: fill positions with emergency-certified teachers, out-of-certificate instructors, long-term substitutes, or drop the course offering entirely. At the university level, the staffing pyramid is explicit and institutionalized. A department hires — if it is fortunate — one or two senior professors who are genuine domain experts. The remainder of the course schedule is filled by assistant professors building their research careers, newly minted PhDs who have studied their field more recently but had little time to develop pedagogy, ABD students teaching for the first time, and adjunct instructors holding the highest teaching loads with the least institutional support. The consulting firm analogy is not a comparison — it is a description. The tenured senior professors are the founding partners — except they increasingly buy out their teaching load to focus on research. The adjuncts are the contract staff: teaching four sections for poverty wages, with no supervision, no mentorship, and no quality infrastructure. The organizational response to expertise scarcity is the same in both domains: dilute and distribute. The outcome is the same: average quality per service hour drops. → ES-1, TC-1, BE-4
-
-### ES-6. The expert's accumulated pedagogical knowledge is tacit, non-transferable, and chronically lost
-
-A consulting firm that builds a methodology library partially encodes the senior partner's judgment so it survives the partner's departure. Universities have built no parallel system. The senior professor who has taught Organic Chemistry for thirty years holds an extraordinarily precise map of student confusion: exactly where the activation energy concept breaks down on first exposure, which problem types produce systematic errors, which worked example unlocks the concept for most students, which prerequisite gaps are most predictive of failure. None of this is written anywhere accessible to the next instructor. When the senior professor retires or moves, the accumulated knowledge retires with them. The adjunct or new assistant professor assigned the course starts from zero — making the same discoveries, in the same students, over one or more semesters of suboptimal teaching. This is ES-1's quality dilution compounded by turnover: not only is average quality lower at any moment, but the system has no institutional memory, so it does not improve over time even at the department level. The library of content and process microservices, combined with AI-managed contribution processing (→ AI-5), is the direct answer to this failure: the expert's hard-won knowledge of student confusion points becomes a library entry, not a retirement gift. → ES-1, CM-3, AI-5
-
----
-
-### 3c. Brick and Mortar
-
-### EP-7. Physical infrastructure locks batch systems into the batch model
-
-The curriculum is the most visible constraint on a batch system's ability to respond to external change — but it is not the most binding one. Physical infrastructure is. A 250-seat lecture hall is a capital investment amortized over fifty years, designed around a specific delivery format — one expert broadcasting to a large passive audience — that is batch education's purest physical expression. The building does not care what is taught in it; it actively shapes how teaching can happen. Individualized flow instruction requires fundamentally different affordances: small-group spaces, one-on-one interaction zones, variable configurations, mobile workstations. A university can revise a syllabus in a faculty meeting. It cannot tear down a building because the pedagogy it was built for has become obsolete. The infrastructure investment is a commitment to the batch model cast in concrete, made decades before anyone knew what would need to be taught in it, and it outlasts every curriculum cycle and every pedagogical reform. → EP-4, EP-6, BE-4
-
----
-
-### 3d. The Quality and Measurement Problem
+### 3a. The Quality and Control Problem
 
 *ISO 9001 is the most widely adopted quality management standard in the world. It specifies what a quality management system must do — not exactly how — which is what makes it auditable across every industry. The core logic operates at the process level, not the output level: define the processes that should produce quality outputs, document how they are supposed to run, demonstrate that they actually run that way, and correct when they don't. The governing cycle is Plan-Do-Check-Act: set an objective, define the process, monitor and measure, correct the gap, improve the process.*
 
@@ -275,7 +223,7 @@ Instrument navigation: position is confirmed continuously against ground truth. 
 
 Historically, teaching operated as a dead-reckoning system — and this was tolerable, for a specific reason. The teacher was the unit of both production and feedback. Whatever feedback loop existed was internalized in the teacher's craft: reading the room, noticing which students were lost, remembering that last year's fraction explanation failed and this year's works, easing the pace when the class stalls. The loop was real; it was simply invisible to anyone outside the teacher's head. And the institution had little reason to question whether what the teacher was pointing toward was still the right destination — because for most of education's institutional history, the destination was stable.
 
-That era is closing. The pressures described in §5 mean that individual teachers can no longer be the sole stewards of navigational accuracy. A skilled teacher running an excellent classroom feedback loop can detect that students aren't learning what is being taught. Only a system-level feedback architecture can detect whether what is being taught points toward a target that is still there.
+That era is closing. The pressures described in §6 mean that individual teachers can no longer be the sole stewards of navigational accuracy. A skilled teacher running an excellent classroom feedback loop can detect that students aren't learning what is being taught. Only a system-level feedback architecture can detect whether what is being taught points toward a target that is still there.
 
 That architecture is not surveillance. It is collective situational awareness that protects two parties simultaneously. The teacher who is executing faithfully toward a target that has moved is not failing — they are instrumented incorrectly, and the instrument is what needs correction. System-level feedback is not a threat to teacher autonomy; it is the infrastructure that makes teacher autonomy defensible. A teacher flying by instruments can be trusted to navigate. A system flying blind cannot be trusted at all. This document calls this **navigational feedback** — feedback that tells the system where it is, not feedback that judges the pilot. Wherever later sections describe monitoring, observation, or AI-generated signals that might read as personal surveillance, the intent is navigational feedback in this sense. → LP-1, LP-3, EP-3, EP-5, PO-1, OI-2
 
@@ -308,11 +256,77 @@ The design response to the four resistance factors: fit measurement into natural
 
 ---
 
-## 4. An Imagined Flow Alternative
+## 4. Existing Operational Constraints
+
+*Why the current system is hard to fix — even before external pressure arrives. Each of the following represents a structural constraint that makes the improvements described in §2c genuinely difficult to achieve within the current institutional configuration.*
+
+### 4a. Teaching Workload Asymmetry
+
+*Teacher time is the binding constraint on every process improvement in education. The [Workload Calculator → Asymmetry tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) runs the arithmetic live.*
+
+### TC-1. Teacher time is the binding constraint
+
+A classroom is a queuing system with one (or few) servers and many clients with heterogeneous, dynamically changing needs. Teacher time is the constrained resource. Every design decision about teaching methods, technology, and assessment should be evaluated against this constraint.
+
+### TC-2. The asymmetry that kills good teaching
+
+When an innovation adds burden to students, it distributes across N people — the per-person cost is small. When it adds burden to the teacher, it falls on one person undistributed. Five extra minutes per student is over 10 hours of additional work for one teacher. This asymmetry systematically kills active learning, Socratic questioning, individualized feedback — everything research says works — because they require teacher time that doesn't scale.
+
+### TC-3. Homeschooling works because the constraint doesn't bind
+
+Homeschooling parents are on average less trained than credentialed teachers, with fewer resources and no institutional infrastructure. Yet homeschooled students consistently perform at or above grade level. Why? Because one parent with one to three children naturally teaches in flow — adjusting pace, spending more time where the child is stuck, moving on when ready. The parent is accidentally operating in the production model that works best. → HL-2
+
+### TC-4. Teacher attention follows social gradients, not need gradients
+
+Teachers are more likely to interact with students they have interacted with before — help is "sticky" and recurs for previously supported students (NC State, 2026). Without explicit allocation support, attention follows social patterns rather than need patterns. This is the queuing problem, empirically confirmed.
+
+### TC-5. Attention equity is not spontaneous — it requires designed allocation
+
+Left unmanaged, teacher attention follows social rather than need gradients (→ TC-4): previously helped students are more likely to be helped again; physically proximate or visually prominent students receive disproportionate contact; students who signal distress conventionally — raised hands, direct questions — receive priority over students who signal it behaviorally. The students most likely to be in the DK zone (→ HL-8) — fluent, confident, apparently fine — are the least likely to trigger conventional attention-allocation. The attention equity problem is not a failure of teacher intention; it is a structural consequence of operating a queuing system without queue management. The students who most need the server are systematically least likely to reach the front of the queue. A managed allocation system — priority-queue driven by real-time AI monitoring (→ AI-4) — is not a supplement to good teaching. It is the operational prerequisite for fair teaching. Without it, equity is accidental at best. → TC-4, AI-4, LP-4, HL-8, FC-1
+
+---
+
+### 4b. Skills & Staffing
+
+*The structural argument for why libraries and AI are necessary, not merely convenient. The consulting firm is the domain where expertise dilution is most visible and most measurable — and where the library solution was discovered organically, before education named the problem.*
+
+### ES-1. Expert knowledge doesn't scale linearly with headcount
+
+When a consulting firm grows from two partners to twenty consultants, it does not grow its expertise by a factor of ten. Average expertise per billable hour drops by roughly the ratio of non-experts to experts — a dilution that is mathematically unavoidable. The founders' judgment is not replicated by hiring; it is spread thinner. Every knowledge-based organization that has tried to scale by headcount has discovered this: law firms, hospitals, consulting practices, architecture studios, and school systems. The practitioner count grows; average quality per service hour does not. Rapid growth makes the dilution worse, not better — the more aggressively you hire, the faster the expertise ratio decays. The consulting firm makes this visible because client satisfaction and billable rates are measurable proxies for quality. In education, the equivalent degradation is structurally identical but effectively invisible, because quality per student-hour is never measured at all.
+
+### ES-2. The apprenticeship model breaks at scale for the same reason (→ HL-2)
+
+The apprenticeship produces mastery because the master adjusts to the apprentice continuously, with immediate feedback and challenge calibrated to current ability. The scaling limit is precise: the apprenticeship breaks when the master-to-apprentice ratio exceeds the master's capacity for meaningful individual guidance. At 1:30, the master is teaching a batch class. At 1:200 — one teacher across multiple sections — the apprenticeship is not being practised. It has become delivery. A consulting firm growing from two partners to twenty consultants experiences the same transition: the intense, individualized guidance that produced excellent junior work at small scale is replaced by periodic review meetings and templated briefings. What has been scaled is not the apprenticeship. The apprenticeship has been abandoned. School systems are in the same position, at vastly larger scale, with no language to name what they have lost. → HL-2
+
+### ES-3. The library decouples expert production from expert delivery (→ CM-1, CM-3)
+
+The known organizational solution to ES-1 is codified methodology: encoding expert judgment in a reusable form that practitioners with lower individual expertise can deploy reliably. McKinsey's structured problem-solving approach, hospital clinical protocols, law firm precedent libraries, accounting audit checklists — these are all attempts to answer the same question: how do you install a fragment of expert judgment in a practitioner who doesn't yet have it? The answer is always a library. Each entry in the library is a decision made once by an expert, deployed repeatedly by practitioners who do not need to remake the decision from scratch. The content and process microservice library is the educational equivalent. Each micro-unit is a research-validated instructional design decision — built by a specialist, deployed by a generalist. Consulting firms discovered this model by necessity, because the alternative — requiring every consultant to achieve partner-level judgment before client contact — doesn't scale. Education has not yet named its equivalent necessity, but the structure is identical. → CM-1, CM-3
+
+### ES-5. The education staffing pyramid is not a metaphor for the consulting firm problem — it is the consulting firm problem
+
+K-12 school districts across North America struggle chronically to staff STEM courses, specialist positions, and coaching roles with fully qualified instructors. The response is structurally identical to the consulting firm's rapid-growth mode: fill positions with emergency-certified teachers, out-of-certificate instructors, long-term substitutes, or drop the course offering entirely. At the university level, the staffing pyramid is explicit and institutionalized. A department hires — if it is fortunate — one or two senior professors who are genuine domain experts. The remainder of the course schedule is filled by assistant professors building their research careers, newly minted PhDs who have studied their field more recently but had little time to develop pedagogy, ABD students teaching for the first time, and adjunct instructors holding the highest teaching loads with the least institutional support. The consulting firm analogy is not a comparison — it is a description. The tenured senior professors are the founding partners — except they increasingly buy out their teaching load to focus on research. The adjuncts are the contract staff: teaching four sections for poverty wages, with no supervision, no mentorship, and no quality infrastructure. The organizational response to expertise scarcity is the same in both domains: dilute and distribute. The outcome is the same: average quality per service hour drops. → ES-1, TC-1, BE-4
+
+### ES-6. The expert's accumulated pedagogical knowledge is tacit, non-transferable, and chronically lost
+
+A consulting firm that builds a methodology library partially encodes the senior partner's judgment so it survives the partner's departure. Universities have built no parallel system. The senior professor who has taught Organic Chemistry for thirty years holds an extraordinarily precise map of student confusion: exactly where the activation energy concept breaks down on first exposure, which problem types produce systematic errors, which worked example unlocks the concept for most students, which prerequisite gaps are most predictive of failure. None of this is written anywhere accessible to the next instructor. When the senior professor retires or moves, the accumulated knowledge retires with them. The adjunct or new assistant professor assigned the course starts from zero — making the same discoveries, in the same students, over one or more semesters of suboptimal teaching. This is ES-1's quality dilution compounded by turnover: not only is average quality lower at any moment, but the system has no institutional memory, so it does not improve over time even at the department level. The library of content and process microservices, combined with AI-managed contribution processing (→ AI-5), is the direct answer to this failure: the expert's hard-won knowledge of student confusion points becomes a library entry, not a retirement gift. → ES-1, CM-3, AI-5
+
+---
+
+### 4c. Brick and Mortar
+
+### EP-7. Physical infrastructure locks batch systems into the batch model
+
+The curriculum is the most visible constraint on a batch system's ability to respond to external change — but it is not the most binding one. Physical infrastructure is. A 250-seat lecture hall is a capital investment amortized over fifty years, designed around a specific delivery format — one expert broadcasting to a large passive audience — that is batch education's purest physical expression. The building does not care what is taught in it; it actively shapes how teaching can happen. Individualized flow instruction requires fundamentally different affordances: small-group spaces, one-on-one interaction zones, variable configurations, mobile workstations. A university can revise a syllabus in a faculty meeting. It cannot tear down a building because the pedagogy it was built for has become obsolete. The infrastructure investment is a commitment to the batch model cast in concrete, made decades before anyone knew what would need to be taught in it, and it outlasts every curriculum cycle and every pedagogical reform. → EP-4, EP-6, BE-4
+
+---
+
+---
+
+## 5. An Imagined Flow Alternative
 
 *The sections above diagnose the failure modes of the current system and the constraints that hold it in place. This section sketches the alternative — what a deliberately designed flow-based teaching system would require. It is imagined in the sense that it does not yet exist at scale. The apprenticeship exists, and has always existed, as a proof of principle. The question is whether its operating logic can be scaled without being destroyed.*
 
-### 4a. The Apprenticeship Model — and its Limits
+### 5a. The Apprenticeship Model — and its Limits
 
 *The apprenticeship is humanity's oldest and most effective teaching technology. Understanding why it works — and precisely why it breaks at scale — is the foundation for understanding what a scalable alternative must provide.*
 
@@ -334,7 +348,7 @@ The natural institutional response to "the apprenticeship works" is "we need mor
 
 ---
 
-### 4b. Content Microservices
+### 5b. Content Microservices
 
 *Bounded learning interactions — mini-activities, prompts, check-ins, targeted assessments — that individualize instruction. The [Workload Calculator → Prep Overhead tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) models the library economics.*
 
@@ -360,7 +374,7 @@ The multi-track learning architecture (→ HL-7) places a structural requirement
 
 ---
 
-### 4c. Process Microservices
+### 5c. Process Microservices
 
 *Classroom operating procedures — group formation rules, discussion protocols, peer review structures, entry/exit routines — that govern how the learning environment runs. Distinct from content microservices (→ CM-1), but sharing the same library economics (→ PM-2). No working demo yet; the Goal Templates feature in [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the closest analogue.*
 
@@ -378,7 +392,7 @@ When a student encounters a familiar classroom procedure in a new class — "gro
 
 ---
 
-### 4d. Micro-Process Tool Design
+### 5d. Micro-Process Tool Design
 
 *Principles governing the design of any educational micro-tool — whether it carries content or manages classroom procedures. [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the reference implementation.*
 
@@ -400,7 +414,7 @@ Structured criteria (rubrics) serve as the bridge between subjective teacher obs
 
 ---
 
-## 5. External Forces Adding Even More Stress
+## 6. External Forces Adding Even More Stress
 
 *The sections above describe the mechanics of teaching as a production process — how it works, where it fails, what tools can improve it, and why the current configuration is hard to change. Those mechanics do not exist in a vacuum. The external environment that defines what a teaching system must deliver has been under growing pressure, independent of AI, for decades. These entries describe that pressure — the forces that make an already-strained system harder to run and harder to reform.*
 
@@ -438,11 +452,11 @@ These two effects — intrinsic acceleration risk and extrinsic environmental ac
 
 ---
 
-## 6. AI Promises and Threats
+## 7. AI Promises and Threats
 
 *Every section above this one describes a problem or a solution mechanism. This section addresses how AI fits into those mechanisms — and how it undermines them. The relationship between the two subsections is not a balanced pro-and-con. It is an arms race with an asymmetric cost structure. Offensive uses of AI — students outsourcing cognitive work, institutions paving the batch model with AI efficiency gains, vendors filling libraries with plausible-but-shallow content — are cheap, decentralized, and require no institutional coordination. Defensive uses — concept-forcing problem generation, behavioral signature monitoring, library quality control, process validation — are more expensive, require institutional design, and depend on active curation. Left to drift, offense wins. Not from malice: from the gradient of least resistance.*
 
-### 6a. Where AI Belongs
+### 7a. Where AI Belongs
 
 *AI as infrastructure that makes the co-production model, the library model, the process validation model, and the expert-scaling model operationally achievable at scale.*
 
@@ -518,7 +532,7 @@ The fixed limit remains: AI cannot transfer the practitioner's credibility to th
 
 ---
 
-### 6b. Where AI Undermines Teaching
+### 7b. Where AI Undermines Teaching
 
 *The entries above describe AI used to strengthen co-production, flow, and library accumulation. The same technology, deployed without that framing — or deployed under economic pressure that rewards cheaper operation over better learning — inverts most of the mechanisms the document argues for. Each entry below maps to a specific section it undoes. The countermeasure architecture must be explicitly designed and actively maintained, or it will not exist. Some countermeasures described below are well-specified and achievable; some are expensive; and AID-5 (teacher expertise atrophy) may not yet have a cost-effective countermeasure at all. Naming this asymmetry honestly is more useful than implying that every harm has a matching solution.*
 
@@ -556,11 +570,11 @@ Two failure modes converge here. First, even flow-based teaching is vulnerable: 
 
 ---
 
-## 7. The Time to Pivot is Now
+## 8. The Time to Pivot is Now
 
 *The sections above describe failure modes, mechanisms, and tool responses. This section names the conclusion the document has been building toward: that the response to the convergent pressures on education is not a richer cognitive theory — it is operational maturity. The same discipline applied to manufacturing quality a half-century ago, applied now to learning.*
 
-### 7a. Switch from a Pedagogical to an Operational Model
+### 8a. Switch from a Pedagogical to an Operational Model
 
 ### OI-1. The tacit mechanisms are expiring
 
@@ -572,7 +586,7 @@ Pedagogical theory is necessary and insufficient. This document has laid the cas
 
 ---
 
-### 7b. Become Relentless Active Designers and Redesigners
+### 8b. Become Relentless Active Designers and Redesigners
 
 ### OI-3. The institutions that build operational infrastructure will survive
 
@@ -604,4 +618,4 @@ This is not a prediction about which pedagogy will prevail. It is a structural c
 
 ---
 
-*Last updated: 2026-04-21 — full structural reorganization into 7 major sections; added §1 LP-1/LP-2 (latent defect concept); §2b Flow Education (FE-1–FE-4); §4a Apprenticeship Model (AP-1–AP-4); EP-7 moved to §3c; Arms-Race bridge text integrated into §6 intro*
+*Last updated: 2026-04-21 — restructured to 8 major sections; CP-1–CP-7 moved to §2a Co-Production; §3d Quality/Control content elevated to new §2 How Education is Managed (§3); all subsequent sections renumbered §4–§8*
