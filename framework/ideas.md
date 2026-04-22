@@ -24,7 +24,6 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [3b. Teaching Workload Asymmetry](#3b-teaching-workload-asymmetry)
    - [3c. Skills & Staffing](#3c-skills--staffing)
 4. [Teaching in a Flow](#4-teaching-in-a-flow)
-   - [AP-5. Scaling flow requires two layers of shareable modular infrastructure](#ap-5-scaling-flow-requires-two-layers-of-shareable-modular-infrastructure)
 5. [External Forces Adding Even More Stress](#5-external-forces-adding-even-more-stress)
 6. [AI Promises and Threats](#6-ai-promises-and-threats)
    - [6a. Where AI Belongs](#6a-where-ai-belongs)
