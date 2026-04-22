@@ -245,7 +245,7 @@ The curriculum is the most visible constraint on a batch system's ability to res
 
 ### 2c. When Education Flows More Smoothly
 
-*What intentionally designed flow teaching looks like as a system — not just "batch without the batching," but a distinct operating model with its own design principles and infrastructure requirements.*
+*Flow-based teaching already exists — in tutorials, studio critiques, flight instruction, apprenticeships, and one-on-one coaching. This subsection describes its operating logic as a contrast case: what distinguishes it from batch in kind rather than just in tempo, and what it requires at the system level. The diagnostic value is establishing the target before §3 names what stands in the way of reaching it at scale, and before §4 works through the design logic for getting there.*
 
 ### FE-1. Flow teaching is not batch teaching done faster
 
