@@ -40,7 +40,7 @@
 | CP-8 | The co-production defect is delayed — and invisible at the point of production |
 | CP-9 | The student who passed the test has rational grounds for concluding they understood |
 
-### 2b. Batch Education
+### 2b. A Legacy of Batch Education
 
 | ID | Title |
 |---|---|
@@ -53,7 +53,7 @@
 | BE-7 | The batch model delegates total management authority to the classroom teacher |
 | BE-8 | Physical infrastructure locks batch systems into the batch model |
 
-### 2c. Flow Education
+### 2c. When Education Flows More Smoothly
 
 | ID | Title |
 |---|---|
@@ -102,9 +102,9 @@
 
 
 
-## 4. An Imagined Flow Alternative
+## 4. Teaching in a Flow
 
-### 4a. The Apprenticeship Model — and its Limits
+### 4a. Apprenticeship Model is Ideal — And Hard
 
 | ID | Title |
 |---|---|
@@ -191,8 +191,6 @@
 ---
 
 ## 7. The Time to Pivot is Now
-
-### 7a. Switch from a Pedagogical to an Operational Model
 
 | ID | Title |
 |---|---|

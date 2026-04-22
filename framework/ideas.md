@@ -24,8 +24,8 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [3b. Teaching Workload Asymmetry](#3b-teaching-workload-asymmetry)
    - [3c. Skills & Staffing](#3c-skills--staffing)
 
-4. [An Imagined Flow Alternative](#4-an-imagined-flow-alternative)
-   - [4a. The Apprenticeship Model — and its Limits](#4a-the-apprenticeship-model--and-its-limits)
+4. [Teaching in a Flow](#4-teaching-in-a-flow)
+   - [4a. Apprenticeship Model is Ideal — And Hard](#4a-apprenticeship-model-is-ideal--and-hard)
    - [4b. Content Microservices](#4b-content-microservices)
    - [4c. Process Microservices](#4c-process-microservices)
    - [4d. Micro-Process Tool Design](#4d-micro-process-tool-design)
@@ -376,11 +376,11 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ---
 
-## 4. An Imagined Flow Alternative
+## 4. Teaching in a Flow
 
 *The sections above diagnose the failure modes of the current system and the constraints that hold it in place. This section sketches the alternative — what a deliberately designed flow-based teaching system would require. It is imagined in the sense that it does not yet exist at scale. The apprenticeship exists, and has always existed, as a proof of principle. The question is whether its operating logic can be scaled without being destroyed.*
 
-### 4a. The Apprenticeship Model — and its Limits
+### 4a. Apprenticeship Model is Ideal — And Hard
 
 *The apprenticeship is humanity's oldest and most effective teaching technology. Understanding why it works — and precisely why it breaks at scale — is the foundation for understanding what a scalable alternative must provide.*
 
