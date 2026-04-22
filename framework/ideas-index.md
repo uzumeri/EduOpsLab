@@ -115,31 +115,15 @@
 
 ### 4b. Content Microservices
 
-| ID | Title |
-|---|---|
-| CM-1 | Content microservice prep costs more per unit — but the library model changes the economics |
-| CM-2 | The transition cost is one-time; the teacher-time cost of batch is forever |
-| CM-3 | Specialization raises quality and lowers per-teacher cost simultaneously |
-| CM-4 | The break-even library share rate is the key policy variable |
-| CM-5 | Content microservices must support lateral entry and rapid re-entry |
-| CM-6 | Curate the library conservatively around the 80:20 pattern — one source of truth per covered interaction |
+*Preface only — CM entries moved to Appendix I.*
 
 ### 4c. Process Microservices
 
-| ID | Title |
-|---|---|
-| PM-1 | Process procedures are also suitable for library accumulation |
-| PM-2 | The library is a service, not a dictate — adoption is voluntary, customization is expected |
-| PM-3 | Student familiarity with shared procedures compounds across the grade-level progression |
+*Preface only — PM entries moved to Appendix I.*
 
 ### 4d. Micro-Process Tool Design
 
-| ID | Title |
-|---|---|
-| MP-1 | Transaction cost must be lower than cognitive cost |
-| MP-2 | Teachers contribute micro-judgments; machines aggregate |
-| MP-3 | Tools must fit inside the teacher's flow |
-| MP-4 | The rubric as shared language |
+*Preface only — MP entries moved to Appendix I.*
 
 ---
 
@@ -215,11 +199,31 @@
 
 ## Appendix I — Tool and Method Compendium
 
+### Deployed Tools
+
 | ID | Tool | Tier | Stakeholder |
 |---|---|---|---|
 | WC-1 | Workload Calculator | [H] | Institution, Teacher |
 | CE-1 | ConfusionEngine | [H] | Teacher, Student |
 | OT-1 | ObservationTracker | [H] | Teacher |
+
+### Design Frameworks
+
+| ID | Title | Section |
+|---|---|---|
+| CM-1 | Content microservice prep costs more per unit — but the library model changes the economics | Content Microservices |
+| CM-2 | Microservices enable expert knowledge capture without expert presence | Content Microservices |
+| CM-3 | The most valuable library units cover the highest-friction instructional moments | Content Microservices |
+| CM-4 | Bounded means self-contained — not short | Content Microservices |
+| CM-5 | Content microservices must support lateral entry and rapid re-entry | Content Microservices |
+| CM-6 | Curate the library conservatively around the 80:20 pattern | Content Microservices |
+| PM-1 | Process procedures are also suitable for library accumulation | Process Microservices |
+| PM-2 | The library is a service, not a dictate | Process Microservices |
+| PM-3 | Student familiarity with shared procedures compounds across the grade-level progression | Process Microservices |
+| MP-1 | Transaction cost must be lower than cognitive cost | Micro-Process Tool Design |
+| MP-2 | Teachers contribute micro-judgments; machines aggregate | Micro-Process Tool Design |
+| MP-3 | Tools must fit inside the teacher's flow | Micro-Process Tool Design |
+| MP-4 | The rubric as shared language | Micro-Process Tool Design |
 
 ---
 
