@@ -17,8 +17,8 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
 1. [How Humans Learn](#1-how-humans-learn)
 2. [How Education Operates](#2-how-education-operates)
    - [2a. Co-Production](#2a-co-production)
-   - [2b. Batch Education](#2b-batch-education)
-   - [2c. Flow Education](#2c-flow-education)
+   - [2b. A Legacy of Batch Education](#2b-a-legacy-of-batch-education)
+   - [2c. When Education Flows More Smoothly](#2c-when-education-flows-more-smoothly)
 3. [How Education is Managed](#3-how-education-is-managed)
    - [3a. The Quality and Control Problem](#3a-the-quality-and-control-problem)
    - [3b. Teaching Workload Asymmetry](#3b-teaching-workload-asymmetry)
@@ -34,8 +34,7 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [6a. Where AI Belongs](#6a-where-ai-belongs)
    - [6b. Where AI Undermines Teaching](#6b-where-ai-undermines-teaching)
 7. [The Time to Pivot is Now](#7-the-time-to-pivot-is-now)
-   - [7a. Switch from a Pedagogical to an Operational Model](#7a-switch-from-a-pedagogical-to-an-operational-model)
-   - [7b. Become Relentless Active Designers and Redesigners](#7b-become-relentless-active-designers-and-redesigners)
+
 - [Appendix I — Prior Work](#appendix-i--prior-work)
 
 ---
@@ -85,19 +84,19 @@ The dominant institutional response to student disengagement is to add inputs �
 
 ### HL-8. Learners advance on multiple tracks with rapid changeovers — not in single-file sequence
 
-Jo Mackiewicz — Iowa State professor, part-time welder at Howe's Welding and Fabrication — documents daily on LinkedIn what she learned, with photos. Over a hundred posts radiating pure joy. She doesn't need the money or prestige. She's experiencing flow learning in an apprenticeship — and she learns on multiple tracks simultaneously.
+Jo Mackiewicz — Iowa State professor, part-time welder at Howe's Welding and Fabrication — documents daily on LinkedIn what she learned, with photos. Many posts, all radiating pure joy. She doesn't need the money or prestige. She's experiencing flow learning in an apprenticeship — and she learns on multiple tracks simultaneously.
 
 She does not learn one welding skill to mastery and then move to the next. She makes progress on bead consistency, gets stuck, shifts to electrode angle, makes progress there, shifts again. Multiple skill tracks advance in parallel — not because she is multitasking (humans cannot do that), but because the mental changeover between related skills is fast and cheap. When she stalls on one track, shifting to another costs almost nothing. She returns to the stuck skill later, often with fresh perspective gained from adjacent work.
 
 This is not a quirk of welding. It is how skill acquisition works whenever the learner controls the process — and it applies across all ages and settings, from trades to universities to self-directed adult learning. The design implication cuts directly against batch scheduling, which forces single-track, single-speed progression for all students simultaneously. A learner stuck on fraction division could advance on estimation, geometric intuition, or decimal equivalence — but the batch schedule holds the entire class on fraction division until Friday's test. The mismatch manufactures the stuck student. Content microservices must be designed to support this architecture: units that permit lateral entry and re-entry across skill tracks, not units that assume sequential consumption of the preceding unit. → HL-1, HL-2, BE-1, CM-5
 
-### HL-9. Retention decays without retrieval — and the rate is measurable
+### HL-9. Retention decays without retrieval
 
-A concept or skill that is learned once and never revisited decays. Every student who has crammed for an exam and forgotten the material two weeks later has experienced this directly. The spacing effect — that distributed retrieval practice over time produces dramatically stronger retention than a single massed exposure — is one of the most robust and replicated findings in the science of learning.
+A concept or skill that is learned once and never revisited decays. Every student who has crammed for an exam and forgotten the material two weeks later has experienced this directly. The pattern is familiar enough to have a name — the forgetting curve — though how fast it moves depends on the material, the person, and how well it was encoded in the first place. What the research does show clearly is that distributed retrieval practice over time produces dramatically stronger retention than a single massed exposure — the spacing effect, one of the most robust and replicated findings in the science of learning.
 
 Batch scheduling violates this systematically: cover a topic in Week 3, test it in Week 3, move on. The material is not revisited unless a future course happens to require it — by which point the gap may be invisible (the student remembers having passed the test and concludes they know the material — a CP-9 false-confidence condition). Flow-based systems with AI support can manage individualized retrieval schedules: resurfacing specific concepts at optimized intervals for each student, a logistics problem that batch scheduling cannot even attempt.
 
-The forgetting function is not merely anecdotal — it is quantitatively measurable. The author's published research on plant-floor learning at Chrysler modeled individual workers' performance as learning functions with an explicit forgetting parameter tied to hiatus length: time away from a task produced measurable performance decay on return. The study found an optimal rotation interval that maximized cross-training breadth while minimizing forgetting cost — a direct operational tradeoff between skill diversity and skill retention. The same tradeoff governs curriculum scheduling: how long can a student be away from a topic before the retrieval cost exceeds the benefit of having covered other material in the interim? This is a scheduling optimization problem, and it has a quantitative answer. → CP-8, CP-9, BE-1
+The forgetting effect shows up empirically in settings beyond the classroom. The author's published research on plant-floor learning at Chrysler modeled individual workers' performance as learning functions with an explicit forgetting parameter tied to hiatus length: time away from a task produced detectable performance decay on return. The study identified a rotation interval that appeared to balance cross-training breadth against forgetting cost — a direct operational tradeoff between skill diversity and skill retention. The same tradeoff governs curriculum scheduling: how long can a student be away from a topic before the retrieval cost exceeds the benefit of having covered other material in the interim? This is a scheduling design problem worth taking seriously, even if no clean formula resolves it. → CP-8, CP-9, BE-1
 
 ### HL-10. Difficulty signals are readable before they become articulable
 
@@ -199,7 +198,7 @@ The limit is the same as CP-10's: some peer environments — particularly those 
 
 ---
 
-### 2b. Batch Education
+### 2b. A Legacy of Batch Education
 
 *School as it actually runs: a batch production system that imposes a single schedule on learners with radically different needs and rates. The following entries describe what that produces.*
 
@@ -237,7 +236,7 @@ The curriculum is the most visible constraint on a batch system's ability to res
 
 ---
 
-### 2c. Flow Education
+### 2c. When Education Flows More Smoothly
 
 *What intentionally designed flow teaching looks like as a system — not just "batch without the batching," but a distinct operating model with its own design principles and infrastructure requirements.*
 
@@ -261,7 +260,7 @@ A common objection to flow teaching is that it destroys the social and collabora
 
 ## 3. How Education is Managed
 
-*Every production system requires two things: a means of knowing whether it is producing what it should, and the operational capacity to act on that knowledge. This section addresses both dimensions. §3a is the control architecture — the feedback mechanisms, quality processes, and observation tools that let a teaching system detect whether it is working and correct course when it isn't. §3b through §3d name the structural constraints that limit the system's capacity to act on what its control mechanisms reveal: teacher time, expertise availability, and physical infrastructure. Understanding those constraints is not a counsel of despair — it is the prerequisite for designing interventions that can actually work inside them.*
+*Every production system requires two things: a means of knowing whether it is producing what it should, and the operational capacity to act on that knowledge. This section addresses both dimensions. §3a is the control architecture — the feedback mechanisms, quality processes, and observation tools that let a teaching system detect whether it is working and correct course when it isn't. §3b and §3c name the structural constraints that limit the system's capacity to act on what its control mechanisms reveal: teacher time, expertise availability, and physical infrastructure. Understanding those constraints is not a counsel of despair — it is the prerequisite for designing interventions that can actually work inside them.*
 
 ### 3a. The Quality and Control Problem
 
@@ -327,7 +326,7 @@ A classroom is a queuing system with one (or few) servers and many clients with 
 
 ### TC-2. The asymmetry that kills good teaching
 
-When an innovation adds burden to students, it distributes across N people — the per-person cost is small. When it adds burden to the teacher, it falls on one person undistributed. Five extra minutes per student is over 10 hours of additional work for one teacher. This asymmetry systematically kills active learning, Socratic questioning, individualized feedback — everything research says works — because they require teacher time that doesn't scale.
+The arithmetic is asymmetric in a specific way. A task that takes five minutes, assigned to each of forty students, costs each student five minutes — the total time consumed is forty times five minutes, but it is distributed across forty people; no single person absorbs it all. The same task assigned to the teacher — five minutes of individualized attention per student — costs the teacher forty times five minutes, delivered sequentially by one person. That is over three hours of undivided work from a single constrained resource. This is not a metaphor for teacher overload. It is the load calculation. Every innovation that adds individualized teacher time — Socratic questioning, written feedback, personal check-ins — scales linearly with class size. The teacher's available time does not. This structural mismatch is what kills active learning, individualized feedback, and everything research says works, in every classroom, everywhere, reliably.
 
 ### TC-3. Homeschooling works because the constraint doesn't bind
 
@@ -343,7 +342,7 @@ Left unmanaged, teacher attention follows social rather than need gradients (→
 
 ### TC-6. Institutional change demands compound the workload asymmetry
 
-TC-2 establishes that every burden added to the teacher falls on one person undistributed, while every burden added to students distributes across N. This asymmetry is most destructive precisely when the institution demands adaptation. When a new policy, tool, or pedagogical approach arrives from above, three separate burdens land on the teacher simultaneously: learning and adopting the new practice themselves; redesigning courses and materials around it; and managing the transition for all N students, who have established habits, expectations, and behavioral patterns oriented to the old approach. The first two burdens fall on one person. The third is nominally distributed across N students — but it is not self-executing. Students do not change their behavior because an institution issued a directive. The teacher must actively re-norm each student: field resistance, answer questions, model the new expectation, and sustain the requirement long enough for it to become habitual. That re-norming work also lands entirely on the teacher.
+TC-2 establishes that teacher-facing tasks scale with class size while remaining concentrated on one person: a five-minute task per student becomes five-times-twenty minutes — over an hour and a half — for the teacher, not five minutes shared across twenty students. This asymmetry is most destructive precisely when the institution demands adaptation. When a new policy, tool, or pedagogical approach arrives from above, three separate burdens land on the teacher simultaneously: learning and adopting the new practice themselves; redesigning courses and materials around it; and managing the transition for all N students, who have established habits, expectations, and behavioral patterns oriented to the old approach. The first two burdens fall on one person. The third is nominally distributed across N students — but it is not self-executing. Students do not change their behavior because an institution issued a directive. The teacher must actively re-norm each student: field resistance, answer questions, model the new expectation, and sustain the requirement long enough for it to become habitual. That re-norming work also lands entirely on the teacher.
 
 Before AI, institutional change demands arrived infrequently enough to be absorbed in recoverable bursts. The same management model that kept supervision at the exception level (→ BE-7) also kept change demands at a pace that allowed recovery between cycles. AI has broken this assumption: the pace of required institutional response has accelerated beyond the buffer between change cycles, so teachers are now absorbing change demands as a continuous load rather than a periodic shock. The binding constraint (→ TC-1) is simultaneously asked to absorb personal learning, course redesign, and student re-norming — without structural relief from any part of the process. → TC-1, TC-2, BE-7, QC-8
 
@@ -531,7 +530,7 @@ AI designed under the co-production model does four things: (1) manages input qu
 
 ### AI-3. AI changes the production function
 
-The most powerful argument for AI in education is not "AI tutors students." It's that AI changes the production function of teaching — the relationship between inputs and outputs — unlocking methods previously ruled out by arithmetic. If AI handles 80% of routine interactions, the teacher's constrained time targets the 20% where human presence has the highest marginal value. The most precise expression of this: TC-2 identifies that every minute of teacher burden falls on one person undistributed — the asymmetry that kills individualised feedback, Socratic questioning, and active learning. AI is the mechanism that precisely inverts this asymmetry: monitoring all students simultaneously, delivering individualised responses to all simultaneously, without adding to teacher load. → TC-2
+The most powerful argument for AI in education is not "AI tutors students." It's that AI changes the production function of teaching — the relationship between inputs and outputs — unlocking methods previously ruled out by arithmetic. If AI handles 80% of routine interactions, the teacher's constrained time targets the 20% where human presence has the highest marginal value. The most precise expression of this: TC-2 shows that five minutes of individualized attention per student is two and a half hours of teacher time with thirty students — and that arithmetic is what makes individualized teaching impossible at scale under the current model. AI is the mechanism that inverts this: monitoring all students simultaneously, delivering individualized responses to all simultaneously, without adding to teacher load. → TC-2
 
 ### AI-4. AI as the permanent senior partner
 
@@ -657,7 +656,7 @@ This infrastructure cannot be built reactively. Each component requires design, 
 
 *The sections above describe failure modes, mechanisms, and tool responses. This section names the conclusion the document has been building toward: that the response to the convergent pressures on education is not a richer cognitive theory — it is operational maturity. The same discipline applied to manufacturing quality a half-century ago, applied now to learning.*
 
-### 7a. Switch from a Pedagogical to an Operational Model
+*Two imperatives follow from the case above. The first is a switch in frame: stop treating teaching as a pedagogical art to be refined by theory, and start treating it as a production system to be designed, measured, and improved operationally. The second is a commitment to posture: become relentless active designers and redesigners of that system — not once, not in a reform cycle, but continuously, as the external environment that defines what must be taught keeps moving faster than any static curriculum can track.*
 
 ### OI-1. The tacit mechanisms are expiring
 
@@ -668,8 +667,6 @@ The structures described throughout this document — batch scheduling, output-o
 Pedagogical theory is necessary and insufficient. This document has laid the case that what teaching lacks is not a better model of how humans learn — those models are well-developed and broadly agreed — but the operational machinery to reliably deploy any model under realistic conditions, at scale, against active counter-pressure. Library infrastructure. Process validation for special processes. Expert knowledge extraction before retirement. Attention-allocation systems. Incoming-quality verification. Countermeasure design against dual-use failure modes. These are operations problems, not cognitive science problems. The fields that have historically dominated the teaching-improvement conversation — cognitive psychology, learning sciences, curriculum design — have real contributions to make and do not own this problem. A world-class learning scientist embedded in a school district that lacks the operational machinery produces a world-class learning scientist with no lever to pull. The lever is operations. → QC-2, CM-1, ES-3, AI-5, AI-6
 
 ---
-
-### 7b. Become Relentless Active Designers and Redesigners
 
 ### OI-3. The institutions that build operational infrastructure will survive
 
@@ -711,4 +708,4 @@ The model does not need to be sophisticated. A spreadsheet that estimates time a
 
 ---
 
-*Last updated: 2026-04-21 — Added CP-10 (parents as upstream co-production suppliers) and CP-11 (peer groups as co-production modulators). Prior: Full ID renumbering: HL resequenced; FC/LP/PO unified to QC; EP split to EF (§5) and BM (§3d); ES-4 moved to AI-4; AI-4–8 cascaded to AI-5–9; ES-5–6 closed to ES-4–5*
+*Last updated: 2026-04-21 — Added CP-10 (parents as upstream co-production suppliers) and CP-11 (peer groups as co-production modulators). Prior: Full ID renumbering: HL resequenced; FC/LP/PO unified to QC; EP split to EF (§5) and BE-8 (§2b); ES-4 moved to AI-4; AI-4–8 cascaded to AI-5–9; ES-5–6 closed to ES-4–5*
