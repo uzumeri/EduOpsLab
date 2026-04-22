@@ -629,87 +629,49 @@ The model does not need to be sophisticated. A spreadsheet that estimates time a
 
 ## 8. What Can Be Done Now
 
-
-
-*The operational imperative named in §7 is not a distant aspiration — it is a design program that can begin immediately, within existing institutional structures, without waiting for the structural reorganization that would be ideal but is unlikely at scale. This section closes the analytical arc by naming the two available responses, introducing the tool and method compendium in Appendix I, and explaining how to read it.*
-
-
+*The operational imperative named in §7 is not a distant aspiration — it is a design program that can begin immediately, within existing institutional structures, without waiting for the structural reorganization that would be ideal but is unlikely at scale. This section closes the analytical arc by naming the two available responses. The practical toolkit for Option B is in Appendix I.*
 
 ### Two Categories of Response
 
-
-
 Faced with the convergent pressures described in §5 and the AI risks named in §6, institutions have two categories of response available to them. Neither is sufficient alone; both are necessary.
-
-
 
 **Option A — Structural reorganization.** Replace the batch model with a genuinely flow-based institutional architecture: individualized pacing, mastery-based progression, shared content libraries, AI-managed scheduling. This is the right long-run direction. It requires simultaneous changes to staffing models, union contracts, physical infrastructure, assessment systems, accreditation requirements, and parent expectations. Most institutions cannot execute this transformation in the near term. Those that can should.
 
-
-
 **Option B — Operational improvement within the current envelope.** Apply the tools and methods of operations management — workload modelling, process observation, quality control, expert knowledge capture, content library infrastructure — to improve whatever can be improved without structural transformation. This does not require permission from an accreditor. It requires treating teaching as a production process serious enough to warrant professional operational design. Most institutions will operate here for most of the foreseeable future. Option B, done well, is substantially better than neither option.
 
-
-
-The tools in Appendix I are primarily Option B tools. Some are conventional methods with no AI dependency. Most can be substantially enhanced with AI. A few are AI-native. The distinction matters less than the problem each tool addresses and who has the authority to adopt it.
-
-
-
-### How to Read the Compendium
-
-
-
-Each tool entry in Appendix I is tagged with:
-
-
-
-- **[C]** — Conventional: no AI required; can be implemented with standard tools and practices
-
-- **[H]** — Hybrid: a conventional method that can be substantially enhanced by adding AI
-
-- **[A]** — AI-native: requires AI to function; does not have a meaningful conventional equivalent
-
-
-
-Entries are organized by stakeholder — who has the authority to adopt and operate the tool: the **institution**, the **teacher**, or the **student**. A tool that serves multiple stakeholders is placed at the level where the adoption decision sits.
-
-
-
-The table below provides a lookup view across all entries. It is a navigation aid, not the content; full descriptions are in Appendix I.
-
-
-
-| Tool | [C/H/A] | Institution | Teacher | Student | Primary ref |
-
-|---|---|:---:|:---:|:---:|---|
-
-| WC-1 Workload Calculator | [H] | ✓ | ✓ | | TC-1, TC-2 |
-
-| CE-1 ConfusionEngine | [H] | | ✓ | ✓ | HL-5, QC-3 |
-
-| OT-1 ObservationTracker | [H] | | ✓ | | QC-4, QC-5, QC-7 |
-
-
-
-*This table will expand as entries are added to Appendix I.*
-
-
+The tools and design frameworks for Option B are catalogued in Appendix I, organized by stakeholder and tagged by technology type. A tool that an institution can adopt today with a spreadsheet carries a different adoption path than one that requires an AI integration. Appendix I makes that distinction explicit.
 
 ---
-
 
 
 ## Appendix I — Tool and Method Compendium
 
+*A self-contained practical reference of tools, methods, and design frameworks that support the operational improvement of teaching systems. All entries are Option B responses (§8): implementable within the current institutional envelope, without requiring structural reorganization.*
 
+### How to Read This Compendium
 
-*A practical reference of tools and methods that support the operational improvement of teaching systems. Entries are organized by stakeholder level. Each entry identifies the problem addressed, describes the conventional and AI-enhanced versions of the approach, and cross-references the analytical entries in the main document that motivate it.*
+Each entry is tagged with one of three technology tiers:
 
+- **[C]** — Conventional: no AI required; can be implemented with standard tools and practices
+- **[H]** — Hybrid: a conventional method that can be substantially enhanced by adding AI
+- **[A]** — AI-native: requires AI to function; does not have a meaningful conventional equivalent
 
+Entries are organized by stakeholder — who has the authority to adopt and operate the tool: the **institution**, the **teacher**, or the **student**. A tool that serves multiple stakeholders is placed at the level where the adoption decision sits. Design frameworks (CM, PM, MP) are in a separate subsection; they are specifications for building tools, not deployed tools themselves.
+
+**Quick-reference lookup:**
+
+| Tool / Framework | [C/H/A] | Institution | Teacher | Student | Primary ref |
+|---|---|:---:|:---:|:---:|---|
+| WC-1 Workload Calculator | [H] | ✓ | ✓ | | TC-1, TC-2 |
+| CE-1 ConfusionEngine | [H] | | ✓ | ✓ | HL-5, QC-3 |
+| OT-1 ObservationTracker | [H] | | ✓ | | QC-4, QC-5, QC-7 |
+| CM-1–CM-6 Content Microservice Design | [C/H] | ✓ | ✓ | | §4b |
+| PM-1–PM-3 Process Microservice Design | [C] | ✓ | ✓ | | §4c |
+| MP-1–MP-4 Micro-Process Tool Design | [C/H] | | ✓ | | §4d |
+
+*This table will expand as entries are added.*
 
 ---
-
-
 
 ### Institution-Level Tools
 
