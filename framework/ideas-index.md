@@ -196,17 +196,34 @@
 |---|---|
 | OI-1 | The tacit mechanisms are expiring |
 | OI-2 | The response is operational maturity, not richer cognitive theory |
-
-### 7b. Become Relentless Active Designers and Redesigners
-
-| ID | Title |
-|---|---|
 | OI-3 | The institutions that build operational infrastructure will survive |
 | OI-4 | You cannot design a teaching system without a workload model |
 
 ---
 
-## Appendix I — Prior Work
+## 8. What Can Be Done Now
+
+*Bridge section — closes the analytical arc and introduces the tool compendium.*
+
+| Tool | [C/H/A] | Institution | Teacher | Student | Primary ref |
+|---|---|:---:|:---:|:---:|---|
+| WC-1 Workload Calculator | [H] | ✓ | ✓ | | TC-1, TC-2 |
+| CE-1 ConfusionEngine | [H] | | ✓ | ✓ | HL-5, QC-3 |
+| OT-1 ObservationTracker | [H] | | ✓ | | QC-4, QC-5, QC-7 |
+
+---
+
+## Appendix I — Tool and Method Compendium
+
+| ID | Tool | Tier | Stakeholder |
+|---|---|---|---|
+| WC-1 | Workload Calculator | [H] | Institution, Teacher |
+| CE-1 | ConfusionEngine | [H] | Teacher, Student |
+| OT-1 | ObservationTracker | [H] | Teacher |
+
+---
+
+## Appendix II — Prior Work
 
 - ISO 9000 Research Program
 - Individual-to-Group Learning Behavior (with David Nembhard)

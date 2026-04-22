@@ -35,7 +35,9 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [6b. Where AI Undermines Teaching](#6b-where-ai-undermines-teaching)
 7. [The Time to Pivot is Now](#7-the-time-to-pivot-is-now)
 
-- [Appendix I — Prior Work](#appendix-i--prior-work)
+8. [What Can Be Done Now](#8-what-can-be-done-now)
+- [Appendix I — Tool and Method Compendium](#appendix-i--tool-and-method-compendium)
+- [Appendix II — Prior Work](#appendix-ii--prior-work)
 
 ---
 
@@ -680,9 +682,110 @@ The first concrete step toward operational maturity is therefore not a technolog
 
 The model does not need to be sophisticated. A spreadsheet that estimates time allocation across major activity categories — direct instruction, prep, assessment, observation, administrative compliance — is better than no model at all. AI-assisted tools can build a more capable estimator in a few hours. (The [Workload Calculator](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) in this project is a crude illustration of the concept — it demonstrates the structure, not the precision.) The ideal outcome, and the stretch goal, is a shared, validated estimation tool — collaboratively developed and jointly sponsored by an education department and a teachers' union — that gives both sides a common quantitative language for discussing workload tradeoffs. A union that can demonstrate, numerically, that a proposed initiative will exceed available teacher capacity has a stronger argument than one that can only say "teachers are already overwhelmed." An administration that can show, numerically, that a microservice library investment reduces net teacher workload in Year 2 has a stronger case than one that can only promise "it will get better." The model is the lever. → TC-1, TC-2, TC-6, OI-2
 
----
+---
+
+## 8. What Can Be Done Now
+
+*The operational imperative named in §7 is not a distant aspiration — it is a design program that can begin immediately, within existing institutional structures, without waiting for the structural reorganization that would be ideal but is unlikely at scale. This section closes the analytical arc by naming the two available responses, introducing the tool and method compendium in Appendix I, and explaining how to read it.*
+
+### Two Categories of Response
+
+Faced with the convergent pressures described in §5 and the AI risks named in §6, institutions have two categories of response available to them. Neither is sufficient alone; both are necessary.
+
+**Option A — Structural reorganization.** Replace the batch model with a genuinely flow-based institutional architecture: individualized pacing, mastery-based progression, shared content libraries, AI-managed scheduling. This is the right long-run direction. It requires simultaneous changes to staffing models, union contracts, physical infrastructure, assessment systems, accreditation requirements, and parent expectations. Most institutions cannot execute this transformation in the near term. Those that can should.
+
+**Option B — Operational improvement within the current envelope.** Apply the tools and methods of operations management — workload modelling, process observation, quality control, expert knowledge capture, content library infrastructure — to improve whatever can be improved without structural transformation. This does not require permission from an accreditor. It requires treating teaching as a production process serious enough to warrant professional operational design. Most institutions will operate here for most of the foreseeable future. Option B, done well, is substantially better than neither option.
+
+The tools in Appendix I are primarily Option B tools. Some are conventional methods with no AI dependency. Most can be substantially enhanced with AI. A few are AI-native. The distinction matters less than the problem each tool addresses and who has the authority to adopt it.
+
+### How to Read the Compendium
+
+Each tool entry in Appendix I is tagged with:
+
+- **[C]** — Conventional: no AI required; can be implemented with standard tools and practices
+- **[H]** — Hybrid: a conventional method that can be substantially enhanced by adding AI
+- **[A]** — AI-native: requires AI to function; does not have a meaningful conventional equivalent
+
+Entries are organized by stakeholder — who has the authority to adopt and operate the tool: the **institution**, the **teacher**, or the **student**. A tool that serves multiple stakeholders is placed at the level where the adoption decision sits.
+
+The table below provides a lookup view across all entries. It is a navigation aid, not the content; full descriptions are in Appendix I.
+
+| Tool | [C/H/A] | Institution | Teacher | Student | Primary ref |
+|---|---|:---:|:---:|:---:|---|
+| WC-1 Workload Calculator | [H] | ✓ | ✓ | | TC-1, TC-2 |
+| CE-1 ConfusionEngine | [H] | | ✓ | ✓ | HL-5, QC-3 |
+| OT-1 ObservationTracker | [H] | | ✓ | | QC-4, QC-5, QC-7 |
+
+*This table will expand as entries are added to Appendix I.*
+
+---
+
+## Appendix I — Tool and Method Compendium
+
+*A practical reference of tools and methods that support the operational improvement of teaching systems. Entries are organized by stakeholder level. Each entry identifies the problem addressed, describes the conventional and AI-enhanced versions of the approach, and cross-references the analytical entries in the main document that motivate it.*
+
+---
+
+### Institution-Level Tools
+
+*Tools adopted and operated at the institutional level — by administrators, department heads, or school leadership. The institution sets conditions; these tools affect the environment in which teachers and students operate.*
+
+#### WC-1. Workload Calculator `[H]`
+
+**Problem addressed:** Teacher time is the binding constraint on every process improvement in education (TC-1). Administrators who cannot estimate teacher workload cannot make intelligent decisions about which interventions to adopt, which to defer, and which to abandon. They are designing a production system without knowing the capacity of their binding constraint.
+
+**Conventional form:** A structured spreadsheet that estimates teacher time allocation across major activity categories — direct instruction, preparation, assessment, observation, administrative compliance, professional development. Even a crude model gives both administrators and teacher unions a common quantitative language for discussing workload tradeoffs. A union that can demonstrate numerically that a proposed initiative exceeds available teacher capacity has a stronger argument than one that can only say "teachers are already overwhelmed." An administration that can show numerically that a microservice library investment reduces net teacher workload in Year 2 has a stronger case than one that can only promise it will get better.
+
+**AI enhancement:** AI-assisted tools can build a more capable estimator that auto-populates from observation data, flags constraint violations in real time, and models the workload impact of proposed interventions before they are adopted. A fully AI-enhanced version integrates with scheduling systems to provide a live workload dashboard, not a periodic estimate.
+
+**Demo:** A working illustration of the concept (not the full capability) is available at the [Workload Calculator](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) demo application in this project.
+
+**Cross-references:** → TC-1, TC-2, TC-6, OI-4
+
+---
+
+### Teacher-Level Tools
+
+*Tools adopted and operated by individual teachers, or by departments as shared practice. The teacher runs the co-production process; these tools improve their visibility, efficiency, or responsiveness within that process.*
+
+#### CE-1. ConfusionEngine `[H]`
+
+**Problem addressed:** Productive confusion is the exit event from the Dunning-Kruger zone (HL-5, HL-6). But confusion that is not expressed is invisible to the teacher. A teacher who walks into class without knowing where student confusion is concentrated is flying blind — they will spend scarce instructional time covering material students already understand and gloss over the material that is actually stuck. The batch feedback loop (QC-1) guarantees this information does not arrive until the exam — too late.
+
+**Conventional form:** Students answer a single structured question per reading or assignment before class: *"What in this reading confused you?"* The teacher reviews responses and grades them 0–3 on cognitive depth (0 = no answer; 1 = named something; 2 = explained what was confusing; 3 = juxtaposed two ideas). The aggregate distribution of responses provides a pre-class briefing on where confusion is concentrated. A teacher who knows that 60% of students are confused about a specific concept and 20% about a different one walks into class with a plan.
+
+**AI enhancement:** AI can pre-sort and cluster responses, identify common confusion themes, flag the highest cognitive-depth responses (level 3) for teacher attention, and generate a pre-class briefing summary. It can also flag students whose confusion has a recurring pattern across multiple assignments — early-warning detection of a student repeatedly stuck at the same conceptual level.
+
+**Demo:** A working illustration of the concept is available at the [ConfusionEngine](https://uzumeri.github.io/EduOpsLab/apps/confusion-engine/) demo application in this project.
+
+**Cross-references:** → HL-5, HL-6, QC-1, QC-3, CP-8, CP-9
+
+---
+
+#### OT-1. ObservationTracker `[H]`
+
+**Problem addressed:** Teaching is a dead-reckoning system (QC-1) — the teacher navigates on accumulated judgment rather than real-time measurement. The observations that feed that judgment are continuous during instruction but almost never captured: they fade to impressions within hours (QC-5). Process observation is the alternative to output-only measurement (QC-4), but it requires infrastructure for capturing micro-judgments during the natural flow of instruction rather than in a separate assessment session. The four resistance factors (QC-6) — workload, differing student needs, budgets, class size — defeat every heavyweight observation approach. The solution is to make the transaction cost of recording an observation lower than the cognitive cost of skipping it (MP-1).
+
+**Conventional form:** A structured micro-observation log: for a selected student and a selected learning goal, the teacher records a 4-level rubric rating and an optional brief note in a single 4-tap interaction during a naturally occurring pause in instruction. No separate session. No clipboard. The observation is timestamped and linked to a specific student and goal. Over time, the log surfaces trend data: which students are not being observed (attention equity), which goals are stalling, which students are advancing faster than expected.
+
+**AI enhancement:** AI can generate progress reports for individual students from the observation record, citing rubric criteria and trend data in language suitable for sharing with parents, specialists, or administrators. It can flag attention-equity gaps in real time — a student not observed in three sessions appears on the teacher's dashboard before class begins. It can also surface early-warning patterns — a student whose rubric ratings are declining on a specific skill cluster — before the decline becomes a compounded defect.
+
+**Demo:** A working illustration of the concept is available at the [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) demo application in this project. The demo is pre-loaded with eight students, 24 goals with realistic rubrics, and three weeks of simulated observations.
+
+**Cross-references:** → QC-1, QC-4, QC-5, QC-6, QC-7, MP-1, MP-2, MP-3, HL-10, AI-7, AI-8
+
+---
+
+### Student-Level Tools
+
+*Tools that operate at the student level — shaping the student's co-production input, managing their retrieval practice, or supporting their self-awareness as a learner. The student is the co-producer; these tools affect the quality and consistency of what they bring to the production process.*
+
+*No entries yet. The student level is the highest-risk zone for AI misuse (see AID-1 through AID-4) and requires the most careful design. Entries will be added as approaches are developed.*
+
+---
+
+## Appendix II — Prior Work
 
-## Appendix I — Prior Work
 
 *The following are the principal activities, research programs, and projects from which the claims in this document draw. They represent long-term personal engagements with questions about learning, teaching, quality, and knowledge transfer — not an academic bibliography.*
 
