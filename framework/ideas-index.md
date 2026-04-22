@@ -18,7 +18,7 @@
 | HL-6 | Concept acquisition follows a four-stage sequence — and can stall at stage two |
 | HL-7 | The motivation engine runs on perceived progress, not on inputs |
 | HL-8 | Learners advance on multiple tracks with rapid changeovers — not in single-file sequence |
-| HL-9 | Retention decays without retrieval — and the rate is measurable |
+| HL-9 | Retention decays without retrieval |
 | HL-10 | Difficulty signals are readable before they become articulable |
 | HL-11 | The coherence of these principles suggests a universal model |
 

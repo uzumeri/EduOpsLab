@@ -18,6 +18,8 @@ Apply three core operations management principles to reframe how education works
 
 The repo houses the **intellectual framework**, **working demo applications**, and **writing** (Substack drafts) that tie them together.
 
+The narrative arc, editorial principles, and known content gaps for `framework/ideas.md` and any derived ebook are in [`framework/editorial-brief.md`](framework/editorial-brief.md). This brief governs *what* to write; GEMINI.md governs *how* to manage the files.
+
 ---
 
 ## Lineage: A Deeper View (ADV) Tracking System
@@ -81,10 +83,11 @@ EduOpsLab/
 ├── README.md                          ← project overview + framework summary
 │
 ├── framework/                         ← the intellectual foundation
-│   ├── co-production-model.md         ← teaching as co-production (not delivery)
-│   ├── constraint-analysis.md         ← teacher time as bottleneck / TOC application
-│   ├── flow-vs-batch.md               ← variable learning rates, bucket brigade analogy
-│   └── ai-implications.md             ← where AI fits under this framework
+│   ├── ideas.md                       ← canonical lab notes (primary document)
+│   ├── ideas-index.md                 ← auto-generated entry index
+│   ├── editorial-brief.md             ← narrative arc and editorial principles
+│   ├── ideas.pdf                      ← PDF export of ideas.md
+│   └── demos.md                       ← guide to the demo applications
 │
 ├── apps/                              ← demo web applications
 │   ├── confusion-engine/              ← "What confused you?" homework system
