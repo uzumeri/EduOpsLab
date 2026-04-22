@@ -112,20 +112,10 @@
 | AP-2 | The apprenticeship's feedback loop is immediate and real |
 | AP-3 | The apprenticeship fails at scale because the master-to-apprentice ratio collapses |
 | AP-4 | The goal is not to replicate the master — it is to replicate the conditions |
-
-### 4b. Content Microservices
-
-*Preface only — CM entries moved to Appendix I.*
-
-### 4c. Process Microservices
-
-*Preface only — PM entries moved to Appendix I.*
-
-### 4d. Micro-Process Tool Design
-
-*Preface only — MP entries moved to Appendix I.*
+| AP-5 | Scaling flow requires two layers of shareable modular infrastructure |
 
 ---
+
 
 ## 5. External Forces Adding Even More Stress
 

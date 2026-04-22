@@ -25,9 +25,7 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [3c. Skills & Staffing](#3c-skills--staffing)
 4. [Teaching in a Flow](#4-teaching-in-a-flow)
    - [4a. Apprenticeship Model is Ideal — And Hard](#4a-apprenticeship-model-is-ideal--and-hard)
-   - [4b. Content Microservices](#4b-content-microservices)
-   - [4c. Process Microservices](#4c-process-microservices)
-   - [4d. Micro-Process Tool Design](#4d-micro-process-tool-design)
+   - [AP-5. Scaling flow requires two layers of shareable modular infrastructure](#ap-5-scaling-flow-requires-two-layers-of-shareable-modular-infrastructure)
 5. [External Forces Adding Even More Stress](#5-external-forces-adding-even-more-stress)
 6. [AI Promises and Threats](#6-ai-promises-and-threats)
    - [6a. Where AI Belongs](#6a-where-ai-belongs)
@@ -413,17 +411,17 @@ The natural institutional response to "the apprenticeship works" is "we need mor
 
 ---
 
-### 4b. Content Microservices
+### AP-5. Scaling flow requires two layers of shareable modular infrastructure
 
-*Bounded learning interactions — mini-activities, prompts, check-ins, targeted assessments — that individualize instruction. A content microservice is designed to work standalone, without the scaffolding of a surrounding lecture, so it can be matched to an individual learner's current position rather than delivered to the whole class on a fixed schedule. The library model changes the economics: each unit is built once, shared across classrooms, and refined over time, so Year-2+ marginal cost approaches zero for covered topics. The [Workload Calculator → Prep Overhead tab](https://uzumeri.github.io/EduOpsLab/apps/workload-calculator/) models these economics. → See Appendix I: CM-1 through CM-6 for design detail.*
+The apprenticeship works but does not scale (AP-3) because every interaction is custom-built by one expert for one learner in real time. Flow at institutional scale requires that same modularity principle applied to two distinct infrastructure layers, each independently shareable across classrooms and grade levels.
 
-### 4c. Process Microservices
+**Content microservices** are bounded, reusable learning interactions — mini-activities, prompts, check-ins, targeted assessments — designed to work standalone without the scaffolding of a surrounding lecture. Because each unit is self-contained, it can be matched to an individual learner’s current position rather than delivered to the whole class on a fixed schedule. The library model changes the economics: build once, share across classrooms, Year-2+ marginal cost approaches zero. This is what makes the condition AP-4 calls for — “the right worked example available at the moment the learner needs it” — achievable at scale.
 
-*Classroom operating procedures — group formation rules, discussion protocols, peer review structures, entry/exit routines — that govern how the learning environment runs. Distinct from content microservices (→ CM-1), but sharing the same library economics: a small number of proven designs covers the vast majority of instructional contexts, and shared adoption compounds across grade-level progressions as students arrive pre-trained in familiar procedures. No working demo yet; the Goal Templates feature in [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the closest analogue. → See Appendix I: PM-1 through PM-3 for design detail.*
+**Process microservices** are shared classroom operating procedures — group formation rules, discussion protocols, peer review structures, entry/exit routines — that govern how the learning environment runs. Like content units, they benefit from library accumulation: a small number of proven designs covers the vast majority of instructional contexts. Shared adoption produces a compounding network effect as students arrive pre-trained in familiar procedures, reducing teacher setup cost to near-zero for covered interactions.
 
-### 4d. Micro-Process Tool Design
+Both types are governed by the same design constraint: the transaction cost of the tool that carries or implements a microservice must be lower than the cognitive cost of not using it. If the tool demands a context switch away from instruction, it reimports batch overhead in a different form. The [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/)’s 4-tap micro-observation flow — completable during a natural pause between student interactions — is the reference implementation of this constraint applied to process observation.
 
-*Both content microservices and process microservices require tools that can be operated inside the natural flow of instruction — not in separate sessions, not on a clipboard, not as a context switch away from teaching. The governing principle is that the transaction cost of using the tool must be lower than the cognitive cost of not using it. [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the reference implementation: a 4-tap micro-observation fits into a pause between interactions. → See Appendix I: MP-1 through MP-4 for design principles.*
+The design specifications for both layers, and for the tools that implement them, are in Appendix I (CM-1–CM-6, PM-1–PM-3, MP-1–MP-4). → AP-4, CM-1, PM-1, MP-1, ES-3, AI-5
 
 
 ## 5. External Forces Adding Even More Stress
