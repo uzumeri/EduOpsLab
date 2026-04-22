@@ -23,7 +23,6 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [3a. The Quality and Control Problem](#3a-the-quality-and-control-problem)
    - [3b. Teaching Workload Asymmetry](#3b-teaching-workload-asymmetry)
    - [3c. Skills & Staffing](#3c-skills--staffing)
-
 4. [Teaching in a Flow](#4-teaching-in-a-flow)
    - [4a. Apprenticeship Model is Ideal — And Hard](#4a-apprenticeship-model-is-ideal--and-hard)
    - [4b. Content Microservices](#4b-content-microservices)
@@ -34,9 +33,19 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [6a. Where AI Belongs](#6a-where-ai-belongs)
    - [6b. Where AI Undermines Teaching](#6b-where-ai-undermines-teaching)
 7. [The Time to Pivot is Now](#7-the-time-to-pivot-is-now)
-
 8. [What Can Be Done Now](#8-what-can-be-done-now)
+
+**Appendices**
+
 - [Appendix I — Tool and Method Compendium](#appendix-i--tool-and-method-compendium)
+  - [How to Read This Compendium](#how-to-read-this-compendium)
+  - [Institution-Level Tools](#institution-level-tools)
+  - [Teacher-Level Tools](#teacher-level-tools)
+  - [Design Frameworks](#design-frameworks)
+    - [Content Microservice Design (CM-1–CM-6)](#content-microservice-design-cm)
+    - [Process Microservice Design (PM-1–PM-3)](#process-microservice-design-pm)
+    - [Micro-Process Tool Design Principles (MP-1–MP-4)](#micro-process-tool-design-principles-mp)
+  - [Student-Level Tools](#student-level-tools)
 - [Appendix II — Prior Work](#appendix-ii--prior-work)
 
 ---
