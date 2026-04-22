@@ -24,7 +24,6 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [3b. Teaching Workload Asymmetry](#3b-teaching-workload-asymmetry)
    - [3c. Skills & Staffing](#3c-skills--staffing)
 4. [Teaching in a Flow](#4-teaching-in-a-flow)
-   - [4a. Apprenticeship Model is Ideal — And Hard](#4a-apprenticeship-model-is-ideal--and-hard)
    - [AP-5. Scaling flow requires two layers of shareable modular infrastructure](#ap-5-scaling-flow-requires-two-layers-of-shareable-modular-infrastructure)
 5. [External Forces Adding Even More Stress](#5-external-forces-adding-even-more-stress)
 6. [AI Promises and Threats](#6-ai-promises-and-threats)
@@ -387,11 +386,8 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ## 4. Teaching in a Flow
 
-*The sections above diagnose the failure modes of the current system and the constraints that hold it in place. This section sketches the alternative — what a deliberately designed flow-based teaching system would require. It is imagined in the sense that it does not yet exist at scale. The apprenticeship exists, and has always existed, as a proof of principle. The question is whether its operating logic can be scaled without being destroyed.*
+*The sections above diagnose the failure modes of the current system and the constraints that hold it in place. This section sketches the alternative — what a deliberately designed flow-based teaching system would require. It is imagined in the sense that it does not yet exist at scale. The apprenticeship exists, and has always existed, as a proof of principle — it is humanity’s oldest and most effective teaching technology. Understanding why it works, and precisely why it breaks at scale, is the foundation for understanding what a scalable alternative must provide. The question this section answers is whether the apprenticeship’s operating logic can be scaled without being destroyed.*
 
-### 4a. Apprenticeship Model is Ideal — And Hard
-
-*The apprenticeship is humanity's oldest and most effective teaching technology. Understanding why it works — and precisely why it breaks at scale — is the foundation for understanding what a scalable alternative must provide.*
 
 ### AP-1. The apprenticeship works because it is structurally co-productive
 

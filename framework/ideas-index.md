@@ -104,8 +104,6 @@
 
 ## 4. Teaching in a Flow
 
-### 4a. Apprenticeship Model is Ideal — And Hard
-
 | ID | Title |
 |---|---|
 | AP-1 | The apprenticeship works because it is structurally co-productive |
@@ -113,6 +111,7 @@
 | AP-3 | The apprenticeship fails at scale because the master-to-apprentice ratio collapses |
 | AP-4 | The goal is not to replicate the master — it is to replicate the conditions |
 | AP-5 | Scaling flow requires two layers of shareable modular infrastructure |
+
 
 ---
 
