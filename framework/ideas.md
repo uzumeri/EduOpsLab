@@ -33,7 +33,7 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [6a. Where AI Belongs](#6a-where-ai-belongs)
    - [6b. Where AI Undermines Teaching](#6b-where-ai-undermines-teaching)
 7. [The Time to Pivot is Now](#7-the-time-to-pivot-is-now)
-8. [What Can Be Done Now](#8-what-can-be-done-now)
+   - [7c. What Can Be Done Now](#7c-what-can-be-done-now)
 
 **Appendices**
 
@@ -636,7 +636,7 @@ The model does not need to be sophisticated. A spreadsheet that estimates time a
 
 
 
-## 8. What Can Be Done Now
+### 7c. What Can Be Done Now
 
 *The operational imperative named in §7 is not a distant aspiration — it is a design program that can begin immediately, within existing institutional structures, without waiting for the structural reorganization that would be ideal but is unlikely at scale. This section closes the analytical arc by naming the two available responses. The practical toolkit for Option B is in Appendix I.*
 

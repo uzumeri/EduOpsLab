@@ -183,11 +183,9 @@
 | OI-3 | The institutions that build operational infrastructure will survive |
 | OI-4 | You cannot design a teaching system without a workload model |
 
----
+### 7c. What Can Be Done Now
 
-## 8. What Can Be Done Now
-
-*Bridge section — closes the analytical arc and introduces the tool compendium.*
+*Closes the analytical arc: Options A (structural) and B (operational). Introduces Appendix I.*
 
 | Tool | [C/H/A] | Institution | Teacher | Student | Primary ref |
 |---|---|:---:|:---:|:---:|---|
