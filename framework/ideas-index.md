@@ -61,6 +61,8 @@
 | FE-2 | The learning map replaces the course syllabus as the organizing document |
 | FE-3 | Challenge calibration is the teacher's highest-value real-time decision |
 | FE-4 | Flow does not require eliminating group instruction — it requires making it optional |
+| AP-1 | The apprenticeship works because it is structurally co-productive |
+| AP-2 | The apprenticeship's feedback loop is immediate and real |
 
 ---
 
@@ -119,8 +121,6 @@
 
 | ID | Title |
 |---|---|
-| AP-1 | The apprenticeship works because it is structurally co-productive |
-| AP-2 | The apprenticeship's feedback loop is immediate and real |
 | AP-3 | The apprenticeship fails at scale because the master-to-apprentice ratio collapses |
 | AP-4 | The goal is not to replicate the master — it is to replicate the conditions |
 | AP-5 | Scaling flow requires two layers of shareable modular infrastructure |

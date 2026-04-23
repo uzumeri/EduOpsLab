@@ -245,11 +245,11 @@ The curriculum is the most visible constraint on a batch system's ability to res
 
 ### 2c. Flow Would Work Better
 
-*Flow-based teaching already exists — in tutorials, studio critiques, flight instruction, apprenticeships, and one-on-one coaching. This subsection describes its operating logic as a contrast case: what distinguishes it from batch in kind rather than just in tempo, and what it requires at the system level. The diagnostic value is establishing the target before §3 names what stands in the way of reaching it at scale, and before §5 works through the design logic for getting there.*
+*Flow-based teaching already exists — in tutorials, studio critiques, flight instruction, apprenticeships, and one-on-one coaching. This subsection describes its operating logic as a contrast case: what distinguishes it from batch in kind rather than just in tempo, and what it requires at the system level. AP-1 and AP-2 examine the apprenticeship as the clearest existing proof of concept. The diagnostic value is establishing the target — and proving the target is real — before §3 and §4 name what stands in the way, and before §5 works through the design logic for getting there.*
 
 ### FE-1. Flow teaching is not batch teaching done faster
 
-The natural response to learning that "flow is better than batch" is to imagine accelerating the batch — moving faster through the same syllabus, giving more frequent quizzes, offering more office hours. None of that is flow. Flow teaching changes the unit of production: from cohort-syllabus to individual-trajectory. Every student has a current position on a learning map; the system's job is to move each student forward from their actual position, not to advance the batch clock. The infrastructure requirements are therefore different in kind, not just in degree: content organized for individual routing rather than class-wide delivery, allocation systems that match learner to unit rather than unit to schedule, observation tools that track individual trajectories rather than cohort progress. Flow is an operating model, not a pacing choice. The clearest existing proof that all of its conditions can work simultaneously is the apprenticeship — which is why §5 uses it as the foundation for understanding what flow-based teaching requires and how to scale it. → HL-1, HL-8, CM-1, AP-1, AP-2
+The natural response to learning that "flow is better than batch" is to imagine accelerating the batch — moving faster through the same syllabus, giving more frequent quizzes, offering more office hours. None of that is flow. Flow teaching changes the unit of production: from cohort-syllabus to individual-trajectory. Every student has a current position on a learning map; the system's job is to move each student forward from their actual position, not to advance the batch clock. The infrastructure requirements are therefore different in kind, not just in degree: content organized for individual routing rather than class-wide delivery, allocation systems that match learner to unit rather than unit to schedule, observation tools that track individual trajectories rather than cohort progress. Flow is an operating model, not a pacing choice. The clearest existing proof that all of its conditions can work simultaneously is the apprenticeship — AP-1 and AP-2 below examine why it works; AP-3 in §5 explains the precise mechanism by which it fails at scale. → HL-1, HL-8, CM-1
 
 ### FE-2. The learning map replaces the course syllabus as the organizing document
 
@@ -262,6 +262,14 @@ In both batch and flow settings, there is a teacher and a student. The differenc
 ### FE-4. Flow does not require eliminating group instruction — it requires making it optional
 
 A common objection to flow teaching is that it destroys the social and collaborative dimensions of learning — that individualizing routing means learners never interact. This is false. Group instruction, class discussion, collaborative problem-solving, and peer teaching are all compatible with a flow model; they become optional activities that learners are routed toward when appropriate, rather than mandatory time-slots that everyone occupies simultaneously regardless of fit. A student stuck on concept A does not benefit from a group seminar on concept D. A student who has mastered A through E is well-positioned to co-teach a peer still on B — and the act of teaching is itself a high-value learning activity (→ CP-6). The flow model does not eliminate collective learning; it eliminates the batch contract that couples every student's pace to every other student's position. → HL-1, CP-6, BE-1
+### AP-1. The apprenticeship works because it is structurally co-productive
+
+In an apprenticeship, co-production is not a pedagogical choice — it is a physical requirement. You cannot weld for someone. You cannot fly for them. You cannot cook for them. The apprentice must perform the work; the master can only guide the performance. This means every apprenticeship is automatically running the correct production model: the student is a necessary factor input. The defect of the delivery model — that it can be completed without the student's active cognitive participation — is structurally impossible in an apprenticeship. What makes the apprenticeship the baseline for any theory of effective teaching is not that it is old, but that it cannot be corrupted in the specific way that classroom delivery is routinely corrupted. → CP-1, HL-2
+
+### AP-2. The apprenticeship's feedback loop is immediate and real
+
+The weld holds or it doesn't. The soufflé rises or it doesn't. The landing was smooth or it wasn't. Apprenticeship feedback is generated by the work itself, not by a test administered weeks after production. This means the signal arrives at the moment the learner can use it: the confusion is still active, the physical memory of the process is still present, the emotional connection to the outcome is still fresh. The CP-8 co-production defect is close to structurally impossible in a well-run apprenticeship: the wrong model fails visibly, in real time, before it can be consolidated as a habit. → HL-1, CP-8, CP-9
+
 
 ---
 
@@ -425,18 +433,10 @@ These two effects — intrinsic acceleration risk and extrinsic environmental ac
 
 ## 5. Scaling the Flow Model
 
-*The sections above diagnose the failure modes of the current system and the constraints that hold it in place. This section sketches the alternative — what a deliberately designed flow-based teaching system would require. It is imagined in the sense that it does not yet exist at scale. The apprenticeship exists, and has always existed, as a proof of principle — it is humanity’s oldest and most effective teaching technology. Understanding why it works, and precisely why it breaks at scale, is the foundation for understanding what a scalable alternative must provide. The question this section answers is whether the apprenticeship’s operating logic can be scaled without being destroyed.*
+*§2c established that flow-based teaching works — the apprenticeship (AP-1, AP-2) is its clearest proof of principle. The constraint that blocks scaling is geometric: AP-3 names it. This section works from that constraint forward — identifying what the apprenticeship’s operating logic requires that institutional delivery cannot provide at scale, and designing the infrastructure that can replicate those conditions without replicating the master-to-apprentice ratio.*
 
 *This question is now worth asking seriously in a way it was not a decade ago. Two changes have shifted the calculus. First, AI capabilities — described in §6 — can now handle the allocation, monitoring, and routing tasks that previously required direct expert attention for every individual learner, making one-to-one responsiveness achievable without one-to-one staffing. Second, the operational tools described in Appendix I make the transition tractable within existing institutional structures, without waiting for the structural reorganisation that would be ideal. Neither change makes scaling easy. Both make it reasonable to try.*
 
-
-### AP-1. The apprenticeship works because it is structurally co-productive
-
-In an apprenticeship, co-production is not a pedagogical choice — it is a physical requirement. You cannot weld for someone. You cannot fly for them. You cannot cook for them. The apprentice must perform the work; the master can only guide the performance. This means every apprenticeship is automatically running the correct production model: the student is a necessary factor input. The defect of the delivery model — that it can be completed without the student's active cognitive participation — is structurally impossible in an apprenticeship. What makes the apprenticeship the baseline for any theory of effective teaching is not that it is old, but that it cannot be corrupted in the specific way that classroom delivery is routinely corrupted. → CP-1, HL-2
-
-### AP-2. The apprenticeship's feedback loop is immediate and real
-
-The weld holds or it doesn't. The soufflé rises or it doesn't. The landing was smooth or it wasn't. Apprenticeship feedback is generated by the work itself, not by a test administered weeks after production. This means the signal arrives at the moment the learner can use it: the confusion is still active, the physical memory of the process is still present, the emotional connection to the outcome is still fresh. The CP-8 co-production defect is close to structurally impossible in a well-run apprenticeship: the wrong model fails visibly, in real time, before it can be consolidated as a habit. → HL-1, CP-8, CP-9
 
 ### AP-3. The apprenticeship fails at scale because the master-to-apprentice ratio collapses
 
