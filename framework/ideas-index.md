@@ -64,7 +64,7 @@
 
 ---
 
-## 3. How Education is Managed
+## 3. The Constraints That Hold the System in Place
 
 ### 3a. The Quality and Control Problem
 

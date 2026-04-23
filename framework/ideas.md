@@ -19,7 +19,7 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [2a. Co-Production](#2a-co-production)
    - [2b. A Legacy of Batch Education](#2b-a-legacy-of-batch-education)
    - [2c. When Education Flows More Smoothly](#2c-when-education-flows-more-smoothly)
-3. [How Education is Managed](#3-how-education-is-managed)
+3. [The Constraints That Hold the System in Place](#3-the-constraints-that-hold-the-system-in-place)
    - [3a. The Quality and Control Problem](#3a-the-quality-and-control-problem)
    - [3b. Teaching Workload Asymmetry](#3b-teaching-workload-asymmetry)
    - [3c. Skills & Staffing](#3c-skills--staffing)
@@ -265,7 +265,7 @@ A common objection to flow teaching is that it destroys the social and collabora
 
 ---
 
-## 3. How Education is Managed
+## 3. The Constraints That Hold the System in Place
 
 *Every production system requires two things: a means of knowing whether it is producing what it should, and the operational capacity to act on that knowledge. This section addresses both dimensions. §3a is the control architecture — the feedback mechanisms, quality processes, and observation tools that let a teaching system detect whether it is working and correct course when it isn't. §3b and §3c name the structural constraints that limit the system's capacity to act on what its control mechanisms reveal: teacher time, expertise availability, and physical infrastructure. Understanding those constraints is not a counsel of despair — it is the prerequisite for designing interventions that can actually work inside them.*
 
