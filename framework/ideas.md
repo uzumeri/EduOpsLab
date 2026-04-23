@@ -23,7 +23,7 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [3a. The Quality and Control Problem](#3a-the-quality-and-control-problem)
    - [3b. Teaching Workload Asymmetry](#3b-teaching-workload-asymmetry)
    - [3c. Skills & Staffing](#3c-skills--staffing)
-4. [External Forces Adding Even More Stress](#4-external-forces-adding-even-more-stress)
+4. [New External Forces Add More Stress](#4-new-external-forces-add-more-stress)
 5. [Scaling the Flow Model](#5-scaling-the-flow-model)
 6. [AI Promises and Threats](#6-ai-promises-and-threats)
    - [6a. Where AI Belongs](#6a-where-ai-belongs)
@@ -383,7 +383,7 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ---
 
-## 4. External Forces Adding Even More Stress
+## 4. New External Forces Add More Stress
 
 *The internal constraints named in §3 do not exist in isolation. The external environment that defines what a teaching system must deliver has been under growing pressure, independent of AI, for decades. These entries describe that pressure — forces that compound the internal constraints: making an already-strained system harder to run, harder to reform, and more urgently in need of the response §5 sketches.*
 

@@ -102,7 +102,7 @@
 
 
 
-## 4. External Forces Adding Even More Stress
+## 4. New External Forces Add More Stress
 
 | ID | Title |
 |---|---|
