@@ -41,7 +41,6 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
   - [Design Frameworks](#design-frameworks)
     - [Content Microservice Design (CM-1–CM-6)](#content-microservice-design-cm)
     - [Process Microservice Design (PM-1–PM-3)](#process-microservice-design-pm)
-    - [Micro-Process Tool Design Principles (MP-1–MP-4)](#micro-process-tool-design-principles-mp)
   - [Student-Level Tools](#student-level-tools)
 - [Appendix II — Prior Work](#appendix-ii--prior-work)
 
@@ -308,6 +307,8 @@ Education has two measurement points: test the outputs (standardized exams) and 
 
 A teacher observes a student struggling with fractions at 10:15 AM. By 3:00 PM, the insight has faded to an impression. By Friday, it's gone. Multiply by 25 students and 180 days. Teachers are expert observers whose insights degrade to noise because there is no capture mechanism that fits inside the production process. → QC-1
 
+The design response is a division of labor: the teacher provides the high-value micro-judgment (a 4-tap observation, a friction signal, a rubric rating) during a natural pause in instruction; the machine handles everything downstream — accumulation, trend analysis, report generation, attention equity monitoring. The teacher should never synthesize — that is the machine’s job. This division is the design principle behind any lightweight capture tool, and it is what makes the capture mechanism fit inside the production process rather than interrupting it. → TC-2, AP-5, QC-4
+
 ### QC-6. The four resistance factors
 
 Every institutional attempt to move beyond standardized testing toward more frequent, individualized assessment runs into four compounding forces: (1) teacher workload — measuring more often means more work, (2) differing student needs — individualization multiplies the effort, (3) budgets — schools can't afford new infrastructure, (4) class size — larger classes mean less time per student. Each force is individually documented in the teacher-workload and assessment-barrier literature. The analysis of their compounding interaction — and the conclusion that they collectively make the status quo the only viable option under current tools — is the author's observation.
@@ -457,7 +458,7 @@ The apprenticeship works but does not scale (AP-3) because every interaction is 
 
 Both types are governed by the same design constraint: the transaction cost of the tool that carries or implements a microservice must be lower than the cognitive cost of not using it. If the tool demands a context switch away from instruction, it reimports batch overhead in a different form. The [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/)’s 4-tap micro-observation flow — completable during a natural pause between student interactions — is the reference implementation of this constraint applied to process observation.
 
-The design specifications for both layers, and for the tools that implement them, are in Appendix I (CM-1–CM-6, PM-1–PM-3, MP-1–MP-4). → AP-4, CM-1, PM-1, MP-1, ES-3, AI-5
+The design specifications for both layers, and for the tools that implement them, are in Appendix I (CM-1–CM-6, PM-1–PM-3). → AP-4, CM-1, PM-1, ES-3, AI-5
 
 
 ## 6. AI Promises and Threats
@@ -695,8 +696,7 @@ Entries are organized by stakeholder — who has the authority to adopt and oper
 | CE-1 ConfusionEngine | [H] | | ✓ | ✓ | HL-5, QC-3 |
 | OT-1 ObservationTracker | [H] | | ✓ | | QC-4, QC-5, QC-7 |
 | CM-1–CM-6 Content Microservice Design | [C/H] | ✓ | ✓ | | §4b |
-| PM-1–PM-3 Process Microservice Design | [C] | ✓ | ✓ | | §4c |
-| MP-1–MP-4 Micro-Process Tool Design | [C/H] | | ✓ | | §4d |
+| PM-1–PM-3 Process Microservice Design | [C] | ✓ | ✓ | | §5 |
 
 *This table will expand as entries are added.*
 
@@ -778,7 +778,7 @@ Entries are organized by stakeholder — who has the authority to adopt and oper
 
 
 
-**Problem addressed:** Teaching is a dead-reckoning system (QC-1) — the teacher navigates on accumulated judgment rather than real-time measurement. The observations that feed that judgment are continuous during instruction but almost never captured: they fade to impressions within hours (QC-5). Process observation is the alternative to output-only measurement (QC-4), but it requires infrastructure for capturing micro-judgments during the natural flow of instruction rather than in a separate assessment session. The four resistance factors (QC-6) — workload, differing student needs, budgets, class size — defeat every heavyweight observation approach. The solution is to make the transaction cost of recording an observation lower than the cognitive cost of skipping it (MP-1).
+**Problem addressed:** Teaching is a dead-reckoning system (QC-1) — the teacher navigates on accumulated judgment rather than real-time measurement. The observations that feed that judgment are continuous during instruction but almost never captured: they fade to impressions within hours (QC-5). Process observation is the alternative to output-only measurement (QC-4), but it requires infrastructure for capturing micro-judgments during the natural flow of instruction rather than in a separate assessment session. The four resistance factors (QC-6) — workload, differing student needs, budgets, class size — defeat every heavyweight observation approach. The solution is to make the transaction cost of recording an observation lower than the cognitive cost of skipping it (AP-5).
 
 
 
@@ -794,7 +794,7 @@ Entries are organized by stakeholder — who has the authority to adopt and oper
 
 
 
-**Cross-references:** → QC-1, QC-4, QC-5, QC-6, QC-7, MP-1, MP-2, MP-3, HL-10, AI-7, AI-8
+**Cross-references:** → QC-1, QC-4, QC-5, QC-6, QC-7, HL-10, AI-7, AI-8
 
 
 
@@ -859,25 +859,6 @@ When a student encounters a familiar classroom procedure in a new class — "gro
 
 ---
 
-### Micro-Process Tool Design Principles (MP)
-
-*Design principles governing any educational micro-tool — whether it carries content or manages classroom procedures. These entries support §4d. [ObservationTracker](https://uzumeri.github.io/EduOpsLab/apps/observation-tracker/) is the reference implementation.*
-
-#### MP-1. Transaction cost must be lower than cognitive cost
-
-The core design principle for educational micro-tools: the transaction cost of using the tool must be lower than the cognitive cost of not using it. If the tool demands a context switch — open laptop, navigate to app, fill out form — it's a batch interrupt that steals time from the production process. The tool must disappear into the workflow.
-
-#### MP-2. Teachers contribute micro-judgments; machines aggregate
-
-The division of labor: the teacher provides the high-value micro-input (a 4-tap observation, a friction signal, a rubric rating) during a natural pause in instruction. The machine handles everything downstream — accumulation, trend analysis, report generation, attention equity monitoring. The teacher should never synthesize — that's the machine's job.
-
-#### MP-3. Tools must fit inside the teacher's flow
-
-Education occurs as a flow process, not batch. Moving to flow without clobbering the instructor requires that teaching tools be reduced in scale to micro-processes — interactions a teacher can use wherever and whenever appropriate, without context-switching away from the act of teaching.
-
-#### MP-4. The rubric as shared language
-
-Structured criteria (rubrics) serve as the bridge between subjective teacher observation and analyzable data. They make observation replicable across observers, defensible in stakeholder meetings, and comparable across time. Define once at the class level, customize per student. → QC-7
 
 ---
 ### Student-Level Tools

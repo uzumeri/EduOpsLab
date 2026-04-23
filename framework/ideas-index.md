@@ -210,10 +210,6 @@
 | PM-1 | Process procedures are also suitable for library accumulation | Process Microservices |
 | PM-2 | The library is a service, not a dictate | Process Microservices |
 | PM-3 | Student familiarity with shared procedures compounds across the grade-level progression | Process Microservices |
-| MP-1 | Transaction cost must be lower than cognitive cost | Micro-Process Tool Design |
-| MP-2 | Teachers contribute micro-judgments; machines aggregate | Micro-Process Tool Design |
-| MP-3 | Tools must fit inside the teacher's flow | Micro-Process Tool Design |
-| MP-4 | The rubric as shared language | Micro-Process Tool Design |
 
 ---
 
