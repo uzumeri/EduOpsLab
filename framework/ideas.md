@@ -387,6 +387,8 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 *The sections above diagnose the failure modes of the current system and the constraints that hold it in place. This section sketches the alternative — what a deliberately designed flow-based teaching system would require. It is imagined in the sense that it does not yet exist at scale. The apprenticeship exists, and has always existed, as a proof of principle — it is humanity’s oldest and most effective teaching technology. Understanding why it works, and precisely why it breaks at scale, is the foundation for understanding what a scalable alternative must provide. The question this section answers is whether the apprenticeship’s operating logic can be scaled without being destroyed.*
 
+*This question is now worth asking seriously in a way it was not a decade ago. Two changes have shifted the calculus. First, AI capabilities — described in §6 — can now handle the allocation, monitoring, and routing tasks that previously required direct expert attention for every individual learner, making one-to-one responsiveness achievable without one-to-one staffing. Second, the operational tools described in Appendix I make the transition tractable within existing institutional structures, without waiting for the structural reorganisation that would be ideal. Neither change makes scaling easy. Both make it reasonable to try.*
+
 
 ### AP-1. The apprenticeship works because it is structurally co-productive
 
