@@ -14,7 +14,7 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
 
 ## Contents
 
-1. [How Humans Learn](#1-how-humans-learn)
+1. [How Humans Want to Learn](#1-how-humans-want-to-learn)
 2. [How Education Operates](#2-how-education-operates)
    - [2a. Co-Production](#2a-co-production)
    - [2b. The Batch Legacy](#2b-the-batch-legacy)
@@ -46,7 +46,7 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
 
 ---
 
-## 1. How Humans Learn
+## 1. How Humans Want to Learn
 
 *Before examining what education systems do and how they might be reformed, we need to agree on what the human learning process actually requires. The entries below are not theoretical claims from the education research literature — they are observable properties of how humans acquire skill and knowledge, consistent across age, domain, and institutional setting. Every teaching system either accommodates these properties or works against them. Most work against them. The reader is invited to test each observation against their own experience of learning something they chose to learn — a sport, a language, a musical instrument, cooking, a craft. If these observations ring true in that context, the question that follows is: why does formal education violate most of them?*
 

@@ -6,7 +6,7 @@
 
 ---
 
-## 1. How Humans Learn
+## 1. How Humans Want to Learn
 
 | ID | Title |
 |---|---|
