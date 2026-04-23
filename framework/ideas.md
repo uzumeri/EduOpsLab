@@ -23,7 +23,7 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [3a. The Quality and Control Problem](#3a-the-quality-and-control-problem)
    - [3b. Teaching Workload Asymmetry](#3b-teaching-workload-asymmetry)
    - [3c. Skills & Staffing](#3c-skills--staffing)
-4. [Teaching in a Flow](#4-teaching-in-a-flow)
+4. [Scaling the Flow Model](#4-scaling-the-flow-model)
 5. [External Forces Adding Even More Stress](#5-external-forces-adding-even-more-stress)
 6. [AI Promises and Threats](#6-ai-promises-and-threats)
    - [6a. Where AI Belongs](#6a-where-ai-belongs)
@@ -383,7 +383,7 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ---
 
-## 4. Teaching in a Flow
+## 4. Scaling the Flow Model
 
 *The sections above diagnose the failure modes of the current system and the constraints that hold it in place. This section sketches the alternative — what a deliberately designed flow-based teaching system would require. It is imagined in the sense that it does not yet exist at scale. The apprenticeship exists, and has always existed, as a proof of principle — it is humanity’s oldest and most effective teaching technology. Understanding why it works, and precisely why it breaks at scale, is the foundation for understanding what a scalable alternative must provide. The question this section answers is whether the apprenticeship’s operating logic can be scaled without being destroyed.*
 

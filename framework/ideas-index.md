@@ -102,7 +102,7 @@
 
 
 
-## 4. Teaching in a Flow
+## 4. Scaling the Flow Model
 
 | ID | Title |
 |---|---|
