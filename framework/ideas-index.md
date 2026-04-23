@@ -14,13 +14,12 @@
 | HL-2 | Flow teaching has always existed \u2014 under many names |
 | HL-3 | Learning requires doing — not receiving |
 | HL-4 | Feedback must arrive at the point of work — not weeks later |
-| HL-5 | Confusion is a higher state of knowledge than ignorance |
-| HL-6 | Concept acquisition follows a four-stage sequence — and can stall at stage two |
-| HL-7 | The motivation engine runs on perceived progress, not on inputs |
-| HL-8 | Learners advance on multiple tracks with rapid changeovers — not in single-file sequence |
-| HL-9 | Retention decays without retrieval |
-| HL-10 | Difficulty signals are readable before they become articulable |
-| HL-11 | The coherence of these principles suggests a universal model |
+| HL-5 | Concept acquisition follows a four-stage sequence — and can stall at stage two |
+| HL-6 | The motivation engine runs on perceived progress, not on inputs |
+| HL-7 | Learners advance on multiple tracks with rapid changeovers — not in single-file sequence |
+| HL-8 | Retention decays without retrieval |
+| HL-9 | Difficulty signals are readable before they become articulable |
+| HL-10 | The coherence of these principles suggests a universal model |
 
 ---
 
@@ -229,4 +228,4 @@
 ---
 
 *Source: `framework/ideas.md` — update this index whenever new entries are added.*
-*Last updated: 2026-04-21 — §1 restructured: HL-3 (doing), HL-4 (feedback), HL-7 (retention/forgetting) added; HL-3/HL-6 merged; resequenced HL-1–HL-11*
+*Last updated: 2026-04-21 — §1 restructured: HL-3 (doing), HL-4 (feedback), HL-6 (retention/forgetting) added; HL-3/HL-5 merged; resequenced HL-1–HL-10*
