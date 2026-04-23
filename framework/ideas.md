@@ -23,8 +23,8 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
    - [3a. The Quality and Control Problem](#3a-the-quality-and-control-problem)
    - [3b. Teaching Workload Asymmetry](#3b-teaching-workload-asymmetry)
    - [3c. Skills & Staffing](#3c-skills--staffing)
-4. [Scaling the Flow Model](#4-scaling-the-flow-model)
-5. [External Forces Adding Even More Stress](#5-external-forces-adding-even-more-stress)
+4. [External Forces Adding Even More Stress](#4-external-forces-adding-even-more-stress)
+5. [Scaling the Flow Model](#5-scaling-the-flow-model)
 6. [AI Promises and Threats](#6-ai-promises-and-threats)
    - [6a. Where AI Belongs](#6a-where-ai-belongs)
    - [6b. Where AI Undermines Teaching](#6b-where-ai-undermines-teaching)
@@ -245,11 +245,11 @@ The curriculum is the most visible constraint on a batch system's ability to res
 
 ### 2c. Flow Would Work Better
 
-*Flow-based teaching already exists — in tutorials, studio critiques, flight instruction, apprenticeships, and one-on-one coaching. This subsection describes its operating logic as a contrast case: what distinguishes it from batch in kind rather than just in tempo, and what it requires at the system level. The diagnostic value is establishing the target before §3 names what stands in the way of reaching it at scale, and before §4 works through the design logic for getting there.*
+*Flow-based teaching already exists — in tutorials, studio critiques, flight instruction, apprenticeships, and one-on-one coaching. This subsection describes its operating logic as a contrast case: what distinguishes it from batch in kind rather than just in tempo, and what it requires at the system level. The diagnostic value is establishing the target before §3 names what stands in the way of reaching it at scale, and before §5 works through the design logic for getting there.*
 
 ### FE-1. Flow teaching is not batch teaching done faster
 
-The natural response to learning that "flow is better than batch" is to imagine accelerating the batch — moving faster through the same syllabus, giving more frequent quizzes, offering more office hours. None of that is flow. Flow teaching changes the unit of production: from cohort-syllabus to individual-trajectory. Every student has a current position on a learning map; the system's job is to move each student forward from their actual position, not to advance the batch clock. The infrastructure requirements are therefore different in kind, not just in degree: content organized for individual routing rather than class-wide delivery, allocation systems that match learner to unit rather than unit to schedule, observation tools that track individual trajectories rather than cohort progress. Flow is an operating model, not a pacing choice. The clearest existing proof that all of its conditions can work simultaneously is the apprenticeship — which is why §4 uses it as the foundation for understanding what flow-based teaching requires and how to scale it. → HL-1, HL-8, CM-1, AP-1, AP-2
+The natural response to learning that "flow is better than batch" is to imagine accelerating the batch — moving faster through the same syllabus, giving more frequent quizzes, offering more office hours. None of that is flow. Flow teaching changes the unit of production: from cohort-syllabus to individual-trajectory. Every student has a current position on a learning map; the system's job is to move each student forward from their actual position, not to advance the batch clock. The infrastructure requirements are therefore different in kind, not just in degree: content organized for individual routing rather than class-wide delivery, allocation systems that match learner to unit rather than unit to schedule, observation tools that track individual trajectories rather than cohort progress. Flow is an operating model, not a pacing choice. The clearest existing proof that all of its conditions can work simultaneously is the apprenticeship — which is why §5 uses it as the foundation for understanding what flow-based teaching requires and how to scale it. → HL-1, HL-8, CM-1, AP-1, AP-2
 
 ### FE-2. The learning map replaces the course syllabus as the organizing document
 
@@ -285,7 +285,7 @@ Dead reckoning: the navigator applies a known heading at a known speed from a kn
 
 Teaching has historically operated as a dead-reckoning system. The teacher was the unit of both production and feedback — reading the room, noticing which students were lost, remembering that last year's fraction explanation failed and this year's works. The loop was real; it was simply invisible to anyone outside the teacher's head. And the institution had little reason to question whether the destination itself was still correct — because for most of education's institutional history, the destination was stable.
 
-That era is closing. The pressures described in §5 mean that individual teachers can no longer be the sole stewards of navigational accuracy. A skilled teacher running an excellent classroom loop can detect that students aren't learning what is being taught. Only a system-level feedback architecture can detect whether what is being taught still points toward a target that is still there. A teacher flying by instruments can be trusted to navigate. A system flying blind cannot be trusted at all. → CP-8, QC-2, EF-3, EF-6, QC-4, OI-2
+That era is closing. The pressures described in §4 mean that individual teachers can no longer be the sole stewards of navigational accuracy. A skilled teacher running an excellent classroom loop can detect that students aren't learning what is being taught. Only a system-level feedback architecture can detect whether what is being taught still points toward a target that is still there. A teacher flying by instruments can be trusted to navigate. A system flying blind cannot be trusted at all. → CP-8, QC-2, EF-3, EF-6, QC-4, OI-2
 
 ### QC-2. Teaching foundational concepts is a special process — and must be validated at the process level
 
@@ -319,7 +319,7 @@ The design response to the four resistance factors: fit measurement into natural
 
 QC-1 describes dead reckoning at the classroom level. There is an institutional-level version. When the pace of external change was slow, exception-based supervision and teacher-level delegation (→ BE-7) was defensible: teachers adapted individually, the system drifted gradually, corrections were periodic and affordable.
 
-The external forces in §5 — knowledge balkanization, economic realignment, and AI-driven acceleration — now require changes at a depth and speed that classroom delegation cannot absorb. Curriculum obsolescence outpaces individual discovery. AI introduces failure modes (→ §6b) that require institution-wide policy, not individual teacher judgment calls. Quality deficits (→ QC-2, QC-3) require system-level detection. Exception-based supervision, calibrated for a stable world, is now the primary structural obstacle to institutional adaptation — and every demand for institutional change lands, in practice, on the teacher, compounding the constraint described in TC-6. → BE-7, QC-1, TC-6, EF-3, EF-6
+The external forces in §4 — knowledge balkanization, economic realignment, and AI-driven acceleration — now require changes at a depth and speed that classroom delegation cannot absorb. Curriculum obsolescence outpaces individual discovery. AI introduces failure modes (→ §6b) that require institution-wide policy, not individual teacher judgment calls. Quality deficits (→ QC-2, QC-3) require system-level detection. Exception-based supervision, calibrated for a stable world, is now the primary structural obstacle to institutional adaptation — and every demand for institutional change lands, in practice, on the teacher, compounding the constraint described in TC-6. → BE-7, QC-1, TC-6, EF-3, EF-6
 
 ---
 
@@ -383,7 +383,45 @@ A consulting firm that builds a methodology library partially encodes the senior
 
 ---
 
-## 4. Scaling the Flow Model
+## 4. External Forces Adding Even More Stress
+
+*The internal constraints named in §3 do not exist in isolation. The external environment that defines what a teaching system must deliver has been under growing pressure, independent of AI, for decades. These entries describe that pressure — forces that compound the internal constraints: making an already-strained system harder to run, harder to reform, and more urgently in need of the response §5 sketches.*
+
+### EF-1. Knowledge is exploding and balkanizing simultaneously
+
+The total volume of human knowledge grows faster than any individual can track — that much is commonly observed. The more consequential pressure is structural: as knowledge grows, it fractures into narrower and deeper silos. The polymath who ranged confidently across domains was already a historical oddity by the mid-twentieth century; today, adjacent subspecialties within a single field have diverged so far that neighboring researchers often cannot evaluate each other's work. What this means for curriculum design is specific: there is no stable "body of knowledge" from which a committee can draft a defensible program. There is a collection of contested, rapidly evolving fragments, each with its own community of practice, its own credential, and its own half-life.
+
+### EF-2. Society and the economy are realigning at accelerating pace
+
+Old disciplines lose economic relevance; new ones emerge faster than institutions can credential them. The lag between a skill becoming valuable and a university curriculum recognizing it was historically measured in decades. It is now measured in years and shrinking. Entire fields — cybersecurity, machine learning operations, synthetic biology — went from nonexistent to critical infrastructure faster than any institution designed for decade-span planning cycles could respond. The reverse is equally true: disciplines that were once core to graduate and professional programs have contracted or disappeared entirely. The labor market has not waited for the education system to catch up, and there is no reason to expect it to start. → EF-1
+
+### EF-3. Topic importance is buffeted by both forces simultaneously
+
+The volatility of any given topic's importance is the compound effect of knowledge balkanization and economic realignment operating at the same time in different directions. A discipline can be internally rich — deep specialist community, active research front — while economically marginal; or technically shallow while economically critical right now. The intersection is unstable by construction. A curriculum calibrated for the intersection at one point in time drifts away from it — not because the curriculum deteriorated, but because the target moved. This creates a structural variant of the co-production delayed-defect problem at the institutional level: a degree program teaching the right things for the world of five years ago is not wrong in any narrow sense. It is teaching toward a target that is no longer there. → CP-8, EF-1, EF-2
+
+### EF-4. Batch systems cannot keep pace; flow systems have a structural advantage
+
+Batch education requires curriculum committees, approval cycles, faculty hiring, textbook publication, and course redesign — a governance architecture calibrated to a world where the right thing to teach was stable for a generation. Responding to a clear labor market signal at year one, a batch institution may not produce graduates trained in the new discipline until year seven or eight. Flow systems respond faster because the unit of change is a learner's trajectory, not a cohort syllabus — a new content microservice can be deployed in weeks, not years. Flow does not guarantee the system keeps pace; the velocity of external change may exceed even the fastest institutional response. But flow always has a structural advantage over batch in this race, because it eliminates the batch lag entirely. The question is not whether flow beats batch at this — it does, categorically. The question is whether anything can close the gap at all. → BE-1, HL-1, CM-1, EF-2, EF-3
+
+### EF-5. Flow's advantage is architectural, not merely operational
+
+The margin flow holds over batch in responding to external change is not about teachers working harder or administrators reacting faster. It is architectural. In a batch system, the smallest unit that can be changed is the course or the syllabus — a committee decision requiring faculty assignment, textbook selection, and scheduling coordination. In a flow system built on content microservices, the smallest unit that can be changed is a single bounded interaction — a worked example, an assessment item, a guided exercise — which can be deployed, revised, or retired without touching anything else in the program. This difference in granularity creates a radically different *system learning rate*: how fast the institution can incorporate new knowledge into what it teaches. When a new skill becomes urgently valuable, a batch institution waits until an entire course is redesigned; a flow institution can put a first microservice in front of learners in weeks and expand coverage as the field matures. The architecture doesn't guarantee the system keeps pace — but it removes the structural floor that prevents batch from going faster, no matter how much goodwill exists. → EF-4, CM-1, CM-2, BE-4
+
+### EF-6. These pressures define the threshold AI must help the system cross
+
+No operational improvement within the current institutional configuration closes the gap between the speed of external change and the speed of curriculum response. The gap is structural, not managerial — it cannot be managed away by better committees or faster approvals. AI enters this context as a potential infrastructure for changing what response speed is possible: from cohort-years to individual-months.
+
+But AI operates on this problem in two distinct, and sometimes opposing, directions.
+
+The first is **intrinsic**: AI deployed *within* the teaching system can accelerate the system's adaptive capacity — faster library contribution, faster content deployment, faster individual trajectory adjustment. The same AI, however, can also accelerate movement in the wrong direction: teaching faster toward an obsolete target, scaling misconceptions more efficiently, or making a bad curriculum cheaper to sustain. Speed without direction is not an advantage; the architectural gain of EF-5 does not help if the granular units being deployed are pointed the wrong way.
+
+The second is **extrinsic**: AI is not only a tool the teaching system might use — it is also one of the primary forces driving EF-1, EF-2, and EF-3 faster. AI is generating new knowledge domains, collapsing old ones, and accelerating economic realignment at a pace that was not imaginable a decade ago. The external environment the teaching system must track is moving faster partly because AI is moving it. The system is trying to close a gap with a tool that is simultaneously widening the gap from the other side.
+
+These two effects — intrinsic acceleration risk and extrinsic environmental acceleration — are analytically distinct and require different responses. The rest of this framework addresses both, but separately. → EF-4, EF-5, BE-8, AI-3, AID-3, OI-1
+
+---
+
+## 5. Scaling the Flow Model
 
 *The sections above diagnose the failure modes of the current system and the constraints that hold it in place. This section sketches the alternative — what a deliberately designed flow-based teaching system would require. It is imagined in the sense that it does not yet exist at scale. The apprenticeship exists, and has always existed, as a proof of principle — it is humanity’s oldest and most effective teaching technology. Understanding why it works, and precisely why it breaks at scale, is the foundation for understanding what a scalable alternative must provide. The question this section answers is whether the apprenticeship’s operating logic can be scaled without being destroyed.*
 
@@ -420,44 +458,6 @@ Both types are governed by the same design constraint: the transaction cost of t
 
 The design specifications for both layers, and for the tools that implement them, are in Appendix I (CM-1–CM-6, PM-1–PM-3, MP-1–MP-4). → AP-4, CM-1, PM-1, MP-1, ES-3, AI-5
 
-
-## 5. External Forces Adding Even More Stress
-
-*The sections above describe the mechanics of teaching as a production process — how it works, where it fails, what tools can improve it, and why the current configuration is hard to change. Those mechanics do not exist in a vacuum. The external environment that defines what a teaching system must deliver has been under growing pressure, independent of AI, for decades. These entries describe that pressure — the forces that make an already-strained system harder to run and harder to reform.*
-
-### EF-1. Knowledge is exploding and balkanizing simultaneously
-
-The total volume of human knowledge grows faster than any individual can track — that much is commonly observed. The more consequential pressure is structural: as knowledge grows, it fractures into narrower and deeper silos. The polymath who ranged confidently across domains was already a historical oddity by the mid-twentieth century; today, adjacent subspecialties within a single field have diverged so far that neighboring researchers often cannot evaluate each other's work. What this means for curriculum design is specific: there is no stable "body of knowledge" from which a committee can draft a defensible program. There is a collection of contested, rapidly evolving fragments, each with its own community of practice, its own credential, and its own half-life.
-
-### EF-2. Society and the economy are realigning at accelerating pace
-
-Old disciplines lose economic relevance; new ones emerge faster than institutions can credential them. The lag between a skill becoming valuable and a university curriculum recognizing it was historically measured in decades. It is now measured in years and shrinking. Entire fields — cybersecurity, machine learning operations, synthetic biology — went from nonexistent to critical infrastructure faster than any institution designed for decade-span planning cycles could respond. The reverse is equally true: disciplines that were once core to graduate and professional programs have contracted or disappeared entirely. The labor market has not waited for the education system to catch up, and there is no reason to expect it to start. → EF-1
-
-### EF-3. Topic importance is buffeted by both forces simultaneously
-
-The volatility of any given topic's importance is the compound effect of knowledge balkanization and economic realignment operating at the same time in different directions. A discipline can be internally rich — deep specialist community, active research front — while economically marginal; or technically shallow while economically critical right now. The intersection is unstable by construction. A curriculum calibrated for the intersection at one point in time drifts away from it — not because the curriculum deteriorated, but because the target moved. This creates a structural variant of the co-production delayed-defect problem at the institutional level: a degree program teaching the right things for the world of five years ago is not wrong in any narrow sense. It is teaching toward a target that is no longer there. → CP-8, EF-1, EF-2
-
-### EF-4. Batch systems cannot keep pace; flow systems have a structural advantage
-
-Batch education requires curriculum committees, approval cycles, faculty hiring, textbook publication, and course redesign — a governance architecture calibrated to a world where the right thing to teach was stable for a generation. Responding to a clear labor market signal at year one, a batch institution may not produce graduates trained in the new discipline until year seven or eight. Flow systems respond faster because the unit of change is a learner's trajectory, not a cohort syllabus — a new content microservice can be deployed in weeks, not years. Flow does not guarantee the system keeps pace; the velocity of external change may exceed even the fastest institutional response. But flow always has a structural advantage over batch in this race, because it eliminates the batch lag entirely. The question is not whether flow beats batch at this — it does, categorically. The question is whether anything can close the gap at all. → BE-1, HL-1, CM-1, EF-2, EF-3
-
-### EF-5. Flow's advantage is architectural, not merely operational
-
-The margin flow holds over batch in responding to external change is not about teachers working harder or administrators reacting faster. It is architectural. In a batch system, the smallest unit that can be changed is the course or the syllabus — a committee decision requiring faculty assignment, textbook selection, and scheduling coordination. In a flow system built on content microservices, the smallest unit that can be changed is a single bounded interaction — a worked example, an assessment item, a guided exercise — which can be deployed, revised, or retired without touching anything else in the program. This difference in granularity creates a radically different *system learning rate*: how fast the institution can incorporate new knowledge into what it teaches. When a new skill becomes urgently valuable, a batch institution waits until an entire course is redesigned; a flow institution can put a first microservice in front of learners in weeks and expand coverage as the field matures. The architecture doesn't guarantee the system keeps pace — but it removes the structural floor that prevents batch from going faster, no matter how much goodwill exists. → EF-4, CM-1, CM-2, BE-4
-
-### EF-6. These pressures define the threshold AI must help the system cross
-
-No operational improvement within the current institutional configuration closes the gap between the speed of external change and the speed of curriculum response. The gap is structural, not managerial — it cannot be managed away by better committees or faster approvals. AI enters this context as a potential infrastructure for changing what response speed is possible: from cohort-years to individual-months.
-
-But AI operates on this problem in two distinct, and sometimes opposing, directions.
-
-The first is **intrinsic**: AI deployed *within* the teaching system can accelerate the system's adaptive capacity — faster library contribution, faster content deployment, faster individual trajectory adjustment. The same AI, however, can also accelerate movement in the wrong direction: teaching faster toward an obsolete target, scaling misconceptions more efficiently, or making a bad curriculum cheaper to sustain. Speed without direction is not an advantage; the architectural gain of EF-5 does not help if the granular units being deployed are pointed the wrong way.
-
-The second is **extrinsic**: AI is not only a tool the teaching system might use — it is also one of the primary forces driving EF-1, EF-2, and EF-3 faster. AI is generating new knowledge domains, collapsing old ones, and accelerating economic realignment at a pace that was not imaginable a decade ago. The external environment the teaching system must track is moving faster partly because AI is moving it. The system is trying to close a gap with a tool that is simultaneously widening the gap from the other side.
-
-These two effects — intrinsic acceleration risk and extrinsic environmental acceleration — are analytically distinct and require different responses. The rest of this framework addresses both, but separately. → EF-4, EF-5, BE-8, AI-3, AID-3, OI-1
-
----
 
 ## 6. AI Promises and Threats
 
@@ -637,7 +637,7 @@ The model does not need to be sophisticated. A spreadsheet that estimates time a
 
 ### Two Categories of Response
 
-Faced with the convergent pressures described in §5 and the AI risks named in §6, institutions have two categories of response available to them. Neither is sufficient alone; both are necessary.
+Faced with the convergent pressures described in §4 and the AI risks named in §6, institutions have two categories of response available to them. Neither is sufficient alone; both are necessary.
 
 **Option A — Structural reorganization.** Replace the batch model with a genuinely flow-based institutional architecture: individualized pacing, mastery-based progression, shared content libraries, AI-managed scheduling. This is the right long-run direction. It requires simultaneous changes to staffing models, union contracts, physical infrastructure, assessment systems, accreditation requirements, and parent expectations. Most institutions cannot execute this transformation in the near term. Those that can should.
 

@@ -102,7 +102,20 @@
 
 
 
-## 4. Scaling the Flow Model
+## 4. External Forces Adding Even More Stress
+
+| ID | Title |
+|---|---|
+| EF-1 | Knowledge is exploding and balkanizing simultaneously |
+| EF-2 | Society and the economy are realigning at accelerating pace |
+| EF-3 | Topic importance is buffeted by both forces simultaneously |
+| EF-4 | Batch systems cannot keep pace; flow systems have a structural advantage |
+| EF-5 | Flow's advantage is architectural, not merely operational |
+| EF-6 | These pressures define the threshold AI must help the system cross |
+
+---
+
+## 5. Scaling the Flow Model
 
 | ID | Title |
 |---|---|
@@ -115,19 +128,6 @@
 
 ---
 
-
-## 5. External Forces Adding Even More Stress
-
-| ID | Title |
-|---|---|
-| EF-1 | Knowledge is exploding and balkanizing simultaneously |
-| EF-2 | Society and the economy are realigning at accelerating pace |
-| EF-3 | Topic importance is buffeted by both forces simultaneously |
-| EF-4 | Batch systems cannot keep pace; flow systems have a structural advantage |
-| EF-5 | Flow's advantage is architectural, not merely operational |
-| EF-6 | These pressures define the threshold AI must help the system cross |
-
----
 
 ## 6. AI Promises and Threats
 
