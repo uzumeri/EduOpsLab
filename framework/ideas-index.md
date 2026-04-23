@@ -131,33 +131,36 @@
 
 ## 6. AI Promises and Threats
 
-### 6a. Where AI Belongs
+*Cross-tier entries (before subsections): AID-9, AI-1, AI-3, AID-8*
+
+### 6a. AI at the Institutional Level
 
 | ID | Title |
 |---|---|
-| AI-1 | Don't clone the teacher |
 | AI-2 | The four value points for AI in education |
-| AI-3 | AI changes the production function |
-| AI-4 | AI as the permanent senior partner |
 | AI-5 | AI solves the allocation problem |
 | AI-6 | AI manages the library infrastructure for both content and process microservices |
+| AI-9 | AI as logistics infrastructure for practitioner access |
+| AID-3 | AI makes batch teaching cheaper and entrenches it |
+| AID-6 | AI-generated content corrupts the library |
+| AID-7 | AI can industrialize misconception planting at scale |
+
+### 6b. AI at the Teacher Level
+
+| ID | Title |
+|---|---|
+| AI-4 | AI as the permanent senior partner |
 | AI-7 | AI as latent defect inspector |
 | AI-8 | AI captures expert knowledge before it walks out the door |
-| AI-9 | AI as logistics infrastructure for practitioner access |
+| AID-5 | AI atrophies the teacher's expert knowledge |
 
-### 6b. Where AI Undermines Teaching
+### 6c. AI at the Student Level
 
 | ID | Title |
 |---|---|
 | AID-1 | AI can perform the student's co-production input |
 | AID-2 | AI accelerates and deepens the confidence defect |
-| AID-3 | AI makes batch teaching cheaper and entrenches it |
 | AID-4 | AI collapses productive confusion into a search query |
-| AID-5 | AI atrophies the teacher's expert knowledge |
-| AID-6 | AI-generated content corrupts the library |
-| AID-7 | AI can industrialize misconception planting at scale |
-| AID-8 | AI-mediated flow is not co-production — and can substitute synthesized voices for practitioner credibility |
-| AID-9 | AI controllability follows a gradient: institution → teacher → student |
 | AID-10 | The tempo of student-side AI adoption outpaces institutional countermeasures |
 | AID-11 | Defending against student AI use requires operational maturity that most institutions do not yet possess |
 

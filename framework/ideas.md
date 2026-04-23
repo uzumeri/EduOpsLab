@@ -26,8 +26,9 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
 4. [New External Forces Add More Stress](#4-new-external-forces-add-more-stress)
 5. [Scaling the Flow Model](#5-scaling-the-flow-model)
 6. [AI Promises and Threats](#6-ai-promises-and-threats)
-   - [6a. Where AI Belongs](#6a-where-ai-belongs)
-   - [6b. Where AI Undermines Teaching](#6b-where-ai-undermines-teaching)
+   - [6a. AI at the Institutional Level](#6a-ai-at-the-institutional-level)
+   - [6b. AI at the Teacher Level](#6b-ai-at-the-teacher-level)
+   - [6c. AI at the Student Level](#6c-ai-at-the-student-level)
 7. [The Time to Pivot is Now](#7-the-time-to-pivot-is-now)
    - [7c. What Can Be Done Now](#7c-what-can-be-done-now)
 
@@ -461,27 +462,44 @@ The design specifications for both layers, and for the tools that implement them
 
 ## 6. AI Promises and Threats
 
-*Every section above this one describes a problem or a solution mechanism. This section addresses how AI fits into those mechanisms — and how it undermines them. The relationship between the two subsections is not a balanced pro-and-con. It is an arms race with an asymmetric cost structure. Offensive uses of AI — students outsourcing cognitive work, institutions paving the batch model with AI efficiency gains, vendors filling libraries with plausible-but-shallow content — are cheap, decentralized, and require no institutional coordination. Defensive uses — concept-forcing problem generation, behavioral signature monitoring, library quality control, process validation — are more expensive, require institutional design, and depend on active curation. Left to drift, offense wins. Not from malice: from the gradient of least resistance.*
 
-### 6a. Where AI Belongs
+*AI is not a single force in the teaching system. The same underlying capability — a language model that can generate explanations, evaluate responses, or simulate understanding — produces different outcomes depending on who deploys it and for what purpose. A global “good vs. bad” classification breaks down immediately: the same AI that solves the allocation problem for an institution (→ AI-5) can simultaneously entrench the batch model it is supposedly helping to reform (→ AID-3). The entries below are therefore organized by deployment tier, as established by AID-9: institutional (most controllable), teacher (reviewed only by exception), and student (least controllable, hardest to observe). Three entries cut across all three tiers and are placed before the subsections.*
 
-*AI as infrastructure that makes the co-production model, the library model, the process validation model, and the expert-scaling model operationally achievable at scale.*
+
+### AID-9. AI controllability follows a gradient: institution → teacher → student
+
+The AID entries above describe failure modes as if AI were a single force. In practice, AI enters the teaching system through three distinct deployment channels, and the institution's ability to detect, control, and correct AI-induced failures differs sharply across them.
+
+**Institutional deployment** — AI used for scheduling, library curation, process monitoring, resource allocation — is the most controllable. The institution selects the tools, defines the scope, reviews the outputs, and can disable anything that misbehaves. The failure modes are real (AID-3's cowpath paving, AID-6's library corruption) but they operate on institutional timescales and are subject to institutional review. If an AI scheduling tool entrenches batch logistics, a committee can reverse the decision. This is conventional technology governance.
+
+**Teacher deployment** — AI used by individual teachers to reduce workload: auto-grading, lesson generation, student communication, rubric application. This is riskier because it operates inside the teacher's professional judgment, which the institution reviews only by exception (→ BE-7). Most teachers will use AI responsibly, as they use any professional tool. Some will be tempted by shortcuts — accepting AI-generated assessments without review, using AI lecture outlines that flatten the pedagogical nuance they would have added manually, allowing AI to mediate student interactions that previously built the teacher's own expert map (→ AID-5). These failures are detectable by institutional review if the institution has the observational infrastructure to conduct it — but most do not, precisely because BE-7's delegation model assumed review was unnecessary.
+
+**Student deployment** — AI used by students to complete work, resolve confusion, produce artifacts, and simulate understanding. This is the least controllable channel by a wide margin. Students are numerous, individually motivated, operating outside institutional observation for most of their study time, and under no institutional obligation to disclose their AI use. The institution cannot disable student AI access; it can only design assessments and processes that remain valid despite it. The failure modes in this channel (AID-1, AID-2, AID-4) are the hardest to detect, the hardest to counter, and the most damaging to the co-production process — because they operate at the precise point where the student's cognitive input is supposed to occur. → BE-7, AID-1, AID-2, AID-4, AID-5, QC-8
 
 ### AI-1. Don't clone the teacher
 
 The dominant narrative positions AI as a better content delivery system — smarter lectures, more responsive tutoring. This operates inside the product delivery model. AI designed under co-production asks a different question: where in the production process does AI have the highest marginal value? → CP-1
 
-### AI-2. The four value points for AI in education
-
-AI designed under the co-production model does four things: (1) manages input quality — ensuring students arrive prepared, (2) reduces co-production friction — helping students articulate confusion they can't express, (3) recycles output as input — closing the feedback loop between student state and teacher adaptation, (4) monitors co-production quality — not student performance, but whether the joint process is running.
-
 ### AI-3. AI changes the production function
 
 The most powerful argument for AI in education is not "AI tutors students." It's that AI changes the production function of teaching — the relationship between inputs and outputs — unlocking methods previously ruled out by arithmetic. If AI handles 80% of routine interactions, the teacher's constrained time targets the 20% where human presence has the highest marginal value. The most precise expression of this: TC-2 shows that five minutes of individualized attention per student is two and a half hours of teacher time with thirty students — and that arithmetic is what makes individualized teaching impossible at scale under the current model. AI is the mechanism that inverts this: monitoring all students simultaneously, delivering individualized responses to all simultaneously, without adding to teacher load. → TC-2
 
-### AI-4. AI as the permanent senior partner
+### AID-8. AI-mediated flow is not co-production — and can substitute synthesized voices for practitioner credibility
 
-In a growing consulting firm, quality is maintained — imperfectly — by the senior partner review: the moment where expert judgment is applied to junior work before it reaches the client. The review is rate-limiting. The senior partner can review only so much. This is TC-1 restated for consulting: the expert's time is the binding constraint on quality, not on throughput. AI that can evaluate student engagement in real time, flag emerging confusion, surface relevant library units, and recommend teacher interventions is the structural equivalent of a permanent senior partner review that never sleeps, never bills, and operates simultaneously across every practitioner. The supervision function — keeping practitioner quality above a threshold without requiring an expert to be present — is decoupled from human expert time. This is the precise mechanism underlying AI-3's claim that AI changes the production function: it changes which parts of the process require human expert judgment and which can be executed by an expert system trained on accumulated expert decisions. → AI-3, TC-1, ES-1
+Two failure modes converge here. First, even flow-based teaching is vulnerable: a student with a dedicated AI tutor receives individualized content at their own pace, which satisfies HL-1's flow condition superficially. But the AI is a delivery system; the student is again a receiver, not a co-producer. HL-2's apprenticeship requires a human master because source credibility, tacit judgment, and the social dimension of confusion expression cannot be synthesized. Flow without co-production is faster batch, not apprenticeship. Second, CP-7 establishes practitioner authority as structurally non-substitutable — a student's reception of identical information differs based on whether the source has skin in the game. AI-simulated practitioners (or AI-summarized practitioner perspectives presented as primary) break this mechanism, and institutions under cost pressure have an obvious temptation to substitute the cheap simulation for the expensive human. The pedagogical consequence is invisible on the budget line. → HL-1, HL-2, CP-7, AI-9
+
+
+---
+
+### 6a. AI at the Institutional Level
+
+
+*The institution deploys AI as infrastructure: scheduling, content library management, practitioner logistics, and system-level monitoring. This is the most governable tier — the institution selects the tools, defines scope, reviews outputs, and can reverse decisions that misbehave. The promise is genuine: AI can solve allocation and curation problems that defeated human scheduling. The structural risk is entrenchment — AI that makes batch operations cheaper and faster locks in the batch model at precisely the moment institutions should be questioning it.*
+
+
+### AI-2. The four value points for AI in education
+
+AI designed under the co-production model does four things: (1) manages input quality — ensuring students arrive prepared, (2) reduces co-production friction — helping students articulate confusion they can't express, (3) recycles output as input — closing the feedback loop between student state and teacher adaptation, (4) monitors co-production quality — not student performance, but whether the joint process is running.
 
 ### AI-5. AI solves the allocation problem
 
@@ -498,6 +516,48 @@ A shared library of content and process microservices only sustains its value if
 - **Cross-school pattern detection**: when the same informal practice is independently invented in multiple classrooms, AI can identify the convergence, confirm effectiveness across contexts, and accelerate library entry.
 
 The library without AI is a filing cabinet. The library with AI is a living system that improves with every adoption and every deviation. → CM-1, PM-1
+
+### AI-9. AI as logistics infrastructure for practitioner access
+
+CP-7 establishes that practitioner authority is an irreducible co-production input (→ CP-7): source credibility changes how students receive identical information in a way that AI-synthesized perspective cannot replicate. What AI can do is restructure the economics of access.
+
+The friction that makes practitioner involvement rare is logistical: matching the right practitioner to the right course at the right conceptual moment, briefing them on where students currently are, preparing students to use the session productively, and following up afterward. Each of these steps is currently absorbed by the individual instructor — which is why practitioner involvement is rare. It depends on the instructor having a relevant personal network, the time to activate it, and the administrative capacity to manage the coordination.
+
+AI changes each of these:
+
+- **Matching**: AI can search practitioner databases, professional networks, and institutional repositories to identify practitioners whose experience maps to a specific course topic, student level, and conceptual moment — without requiring the instructor to personally know the right person. The same logistics that make a campus VP visit rare are irrelevant when the ask is a one-hour remote session identified by AI.
+- **Student preparation**: AI can generate briefing materials, background summaries, and preparatory questions so students arrive at a practitioner session capable of asking substantive questions rather than absorbing generic orientation — multiplying the productive density of the session.
+- **Aggregation at scale**: A single practitioner session, once recorded and processed, can be decomposed into structured library entries — specific claims, worked examples, credibility-grounded observations — that persist beyond the session and are retrievable for future courses. The practitioner's contribution is captured rather than lost. (→ ES-5, AI-8)
+- **Follow-up synthesis**: AI can summarize practitioner perspectives across multiple sessions, detecting convergence and divergence, and flagging where practitioner experience departs from established theory — converting individual sessions into a running empirical record.
+
+The fixed limit remains: AI cannot transfer the practitioner's credibility to the student. The change in receptivity that comes from knowing the speaker has skin in the game is not a synthesis problem — it is structural. What AI changes is the economic feasibility of getting real practitioners in front of real students at scale. → CP-7, TC-1, ES-1, ES-4
+
+---
+
+### AID-3. AI makes batch teaching cheaper and entrenches it
+
+AI dramatically reduces the operating cost of the batch model: auto-graded assessments, LLM-generated lectures, AI office hours, rubric scoring at scale. Each reduction makes the batch configuration more economically defensible and postpones the flow-based transition the document argues toward. This is the precise inverse of AI-3: the same production-function change can be deployed to reinforce the old function instead of unlocking the new one. ES-1's quality dilution becomes masked rather than corrected — average quality per student-hour continues to decay, but the symptoms (grading delay, class size strain, adjunct overload) are absorbed by AI cheaply enough that institutional pressure to restructure evaporates. The cowpath gets paved. → AI-3, BE-4, ES-1
+
+### AID-6. AI-generated content corrupts the library
+
+CM-3 and ES-3 argue the library works because each entry is a real expert decision made once and deployed many times. AI lowers the marginal cost of producing content that *resembles* expert-designed micro-units without the hard-won knowledge of where students get stuck. AI-6's usage analytics do not rescue this: students and teachers may adopt AI-generated units because they are smoother, more forgiving, and easier to complete — selecting for low friction rather than for learning outcome. The ES-1 dilution mechanism reappears inside the library: the fix becomes the failure. Distinguishing expert-derived entries from AI-generated ones becomes an editorial problem the original design did not anticipate. Active curatorial oversight — the library quality-control function described in AI-6 — is the countermeasure, but it is an ongoing operational cost, not a one-time fix. → CM-3, ES-3, AI-6
+
+### AID-7. AI can industrialize misconception planting at scale
+
+AI-7 proposes AI as latent defect inspector. The inverse is equally available and structurally cheaper: an AI tutor trained on mixed-quality text transmits whatever conceptual errors its corpus contains — the Aristotelian force model, fractions-as-pies, the confident-but-wrong reasoning patterns of popular explainers. The CP-8 co-production defect was historically bounded by the number of wrong teachers. That bound is removed. The same AI deployed across millions of students plants the same defect uniformly, at no individual's fault, detectable only years later when the cohort encounters problems that translation cannot solve. This is a special-process failure (→ QC-2) operating at industrial scale with no inspection mechanism yet designed for it. The QC-2 process-validation response — inspection of the AI tutor's output by curriculum-certified reviewers, applying the same discipline to AI-generated instruction that industry applies to any special process — is the appropriate countermeasure, and it is expensive. → CP-8, CP-9, AI-7
+
+
+---
+
+### 6b. AI at the Teacher Level
+
+
+*Teacher-level AI operates inside professional judgment, visible to the institution only when something goes visibly wrong. The promise is significant: AI as a permanent senior partner, a latent defect inspector, and a vehicle for capturing the tacit expertise that otherwise retires with the expert. The risk is expert atrophy — when AI handles the diagnostic and relational work that develops teacher knowledge over time, it does not merely reduce workload; it degrades the very competence that made the teacher valuable.*
+
+
+### AI-4. AI as the permanent senior partner
+
+In a growing consulting firm, quality is maintained — imperfectly — by the senior partner review: the moment where expert judgment is applied to junior work before it reaches the client. The review is rate-limiting. The senior partner can review only so much. This is TC-1 restated for consulting: the expert's time is the binding constraint on quality, not on throughput. AI that can evaluate student engagement in real time, flag emerging confusion, surface relevant library units, and recommend teacher interventions is the structural equivalent of a permanent senior partner review that never sleeps, never bills, and operates simultaneously across every practitioner. The supervision function — keeping practitioner quality above a threshold without requiring an expert to be present — is decoupled from human expert time. This is the precise mechanism underlying AI-3's claim that AI changes the production function: it changes which parts of the process require human expert judgment and which can be executed by an expert system trained on accumulated expert decisions. → AI-3, TC-1, ES-1
 
 ### AI-7. AI as latent defect inspector
 
@@ -522,26 +582,18 @@ ES-5 names the problem: the senior professor's 30-year map of student confusion 
 
 The cumulative effect: the ES-3 solution — a methodology library that encodes senior judgment so less-experienced practitioners can deploy it — becomes achievable in education for the first time, because extraction cost drops from "retire and hope someone wrote it down" to a structured, AI-assisted conversation. → ES-5, ES-3, AI-6
 
-### AI-9. AI as logistics infrastructure for practitioner access
+### AID-5. AI atrophies the teacher's expert knowledge
 
-CP-7 establishes that practitioner authority is an irreducible co-production input (→ CP-7): source credibility changes how students receive identical information in a way that AI-synthesized perspective cannot replicate. What AI can do is restructure the economics of access.
+ES-5 describes the senior professor whose 30-year map of student confusion points is irreplaceable precisely because it was built by watching thousands of students struggle and resolve specific concepts. If AI mediates student confusion — intercepting questions, providing first-response explanations, flagging only escalations — the teacher no longer observes the struggle. The expert knowledge AI-8 proposed to extract does not accumulate in the first place. Teachers become curators of AI outputs rather than developers of pedagogical judgment. The library's primary asset — the document's strongest scaling mechanism — stops growing at the cohort level. The problem appears solved while the capacity to produce solutions quietly exits. This failure mode may not have a cost-effective countermeasure: once the observation pipeline is broken, the knowledge stops accumulating, and there is no shortcut to rebuilding thirty years of pattern-matching. → ES-5, AI-8, TC-2
 
-The friction that makes practitioner involvement rare is logistical: matching the right practitioner to the right course at the right conceptual moment, briefing them on where students currently are, preparing students to use the session productively, and following up afterward. Each of these steps is currently absorbed by the individual instructor — which is why practitioner involvement is rare. It depends on the instructor having a relevant personal network, the time to activate it, and the administrative capacity to manage the coordination.
-
-AI changes each of these:
-
-- **Matching**: AI can search practitioner databases, professional networks, and institutional repositories to identify practitioners whose experience maps to a specific course topic, student level, and conceptual moment — without requiring the instructor to personally know the right person. The same logistics that make a campus VP visit rare are irrelevant when the ask is a one-hour remote session identified by AI.
-- **Student preparation**: AI can generate briefing materials, background summaries, and preparatory questions so students arrive at a practitioner session capable of asking substantive questions rather than absorbing generic orientation — multiplying the productive density of the session.
-- **Aggregation at scale**: A single practitioner session, once recorded and processed, can be decomposed into structured library entries — specific claims, worked examples, credibility-grounded observations — that persist beyond the session and are retrievable for future courses. The practitioner's contribution is captured rather than lost. (→ ES-5, AI-8)
-- **Follow-up synthesis**: AI can summarize practitioner perspectives across multiple sessions, detecting convergence and divergence, and flagging where practitioner experience departs from established theory — converting individual sessions into a running empirical record.
-
-The fixed limit remains: AI cannot transfer the practitioner's credibility to the student. The change in receptivity that comes from knowing the speaker has skin in the game is not a synthesis problem — it is structural. What AI changes is the economic feasibility of getting real practitioners in front of real students at scale. → CP-7, TC-1, ES-1, ES-4
 
 ---
 
-### 6b. Where AI Undermines Teaching
+### 6c. AI at the Student Level
 
-*The entries above describe AI used to strengthen co-production, flow, and library accumulation. The same technology, deployed without that framing — or deployed under economic pressure that rewards cheaper operation over better learning — inverts most of the mechanisms the document argues for. Each entry below maps to a specific section it undoes. The countermeasure architecture must be explicitly designed and actively maintained, or it will not exist. Some countermeasures described below are well-specified and achievable; some are expensive; and AID-5 (teacher expertise atrophy) may not yet have a cost-effective countermeasure at all. Naming this asymmetry honestly is more useful than implying that every harm has a matching solution.*
+
+*Student-level AI is the least controllable channel. Students are numerous, individually motivated, operating outside institutional observation for most of their study time, and under no institutional obligation to disclose their AI use. The institution cannot disable student AI access; it can only design assessments and processes that remain valid despite it. The failure modes here — AID-1, AID-2, AID-4 — are the hardest to detect, hardest to counter, and most damaging to the co-production process: they operate at the precise point where the student’s cognitive work is supposed to occur.*
+
 
 ### AID-1. AI can perform the student's co-production input
 
@@ -551,39 +603,9 @@ CP-1 establishes the student as a necessary production input. AI hands the stude
 
 QC-3 describes the Dunning-Kruger student who passes assessments while holding a wrong mental model. AI-assisted students can pass assessments holding no model at all — the model is in the AI. CP-9's false-confidence defect is a first-order failure; AI-mediated answer production is a zero-order failure: there was no encoding to inspect. The student's confidence, already miscalibrated in the standard QC-3 case, is now detached from any cognitive work whatsoever. The conventional countermeasure — show your reasoning — is simultaneously degraded, because AI produces plausible reasoning chains on demand. The teacher cannot read the worked solution for a defect that was never planted because nothing was built. → CP-9, QC-3, HL-6
 
-### AID-3. AI makes batch teaching cheaper and entrenches it
-
-AI dramatically reduces the operating cost of the batch model: auto-graded assessments, LLM-generated lectures, AI office hours, rubric scoring at scale. Each reduction makes the batch configuration more economically defensible and postpones the flow-based transition the document argues toward. This is the precise inverse of AI-3: the same production-function change can be deployed to reinforce the old function instead of unlocking the new one. ES-1's quality dilution becomes masked rather than corrected — average quality per student-hour continues to decay, but the symptoms (grading delay, class size strain, adjunct overload) are absorbed by AI cheaply enough that institutional pressure to restructure evaporates. The cowpath gets paved. → AI-3, BE-4, ES-1
-
 ### AID-4. AI collapses productive confusion into a search query
 
 HL-6's stage-three productive confusion requires the student to sit with a model failure long enough to notice the boundary. CP-6's design challenge was to make confusion expression safe and socially rewarding. AI resolves any question faster than confusion can be felt — eliminating the friction that generates the cognitive state the learning process depends on. The stage-two-to-three transition, already rare under batch conditions, becomes structurally unreachable when the uncomfortable interval it requires is abolished on demand. The student does not become confused because the confusion is dissolved before it forms. This is the most pedagogically damaging failure mode because it is the most invisible: the student reports feeling fine, the teacher sees fluent output, and the DK zone deepens without either party detecting the failure. → HL-6, CP-6, QC-3
-
-### AID-5. AI atrophies the teacher's expert knowledge
-
-ES-5 describes the senior professor whose 30-year map of student confusion points is irreplaceable precisely because it was built by watching thousands of students struggle and resolve specific concepts. If AI mediates student confusion — intercepting questions, providing first-response explanations, flagging only escalations — the teacher no longer observes the struggle. The expert knowledge AI-8 proposed to extract does not accumulate in the first place. Teachers become curators of AI outputs rather than developers of pedagogical judgment. The library's primary asset — the document's strongest scaling mechanism — stops growing at the cohort level. The problem appears solved while the capacity to produce solutions quietly exits. This failure mode may not have a cost-effective countermeasure: once the observation pipeline is broken, the knowledge stops accumulating, and there is no shortcut to rebuilding thirty years of pattern-matching. → ES-5, AI-8, TC-2
-
-### AID-6. AI-generated content corrupts the library
-
-CM-3 and ES-3 argue the library works because each entry is a real expert decision made once and deployed many times. AI lowers the marginal cost of producing content that *resembles* expert-designed micro-units without the hard-won knowledge of where students get stuck. AI-6's usage analytics do not rescue this: students and teachers may adopt AI-generated units because they are smoother, more forgiving, and easier to complete — selecting for low friction rather than for learning outcome. The ES-1 dilution mechanism reappears inside the library: the fix becomes the failure. Distinguishing expert-derived entries from AI-generated ones becomes an editorial problem the original design did not anticipate. Active curatorial oversight — the library quality-control function described in AI-6 — is the countermeasure, but it is an ongoing operational cost, not a one-time fix. → CM-3, ES-3, AI-6
-
-### AID-7. AI can industrialize misconception planting at scale
-
-AI-7 proposes AI as latent defect inspector. The inverse is equally available and structurally cheaper: an AI tutor trained on mixed-quality text transmits whatever conceptual errors its corpus contains — the Aristotelian force model, fractions-as-pies, the confident-but-wrong reasoning patterns of popular explainers. The CP-8 co-production defect was historically bounded by the number of wrong teachers. That bound is removed. The same AI deployed across millions of students plants the same defect uniformly, at no individual's fault, detectable only years later when the cohort encounters problems that translation cannot solve. This is a special-process failure (→ QC-2) operating at industrial scale with no inspection mechanism yet designed for it. The QC-2 process-validation response — inspection of the AI tutor's output by curriculum-certified reviewers, applying the same discipline to AI-generated instruction that industry applies to any special process — is the appropriate countermeasure, and it is expensive. → CP-8, CP-9, AI-7
-
-### AID-8. AI-mediated flow is not co-production — and can substitute synthesized voices for practitioner credibility
-
-Two failure modes converge here. First, even flow-based teaching is vulnerable: a student with a dedicated AI tutor receives individualized content at their own pace, which satisfies HL-1's flow condition superficially. But the AI is a delivery system; the student is again a receiver, not a co-producer. HL-2's apprenticeship requires a human master because source credibility, tacit judgment, and the social dimension of confusion expression cannot be synthesized. Flow without co-production is faster batch, not apprenticeship. Second, CP-7 establishes practitioner authority as structurally non-substitutable — a student's reception of identical information differs based on whether the source has skin in the game. AI-simulated practitioners (or AI-summarized practitioner perspectives presented as primary) break this mechanism, and institutions under cost pressure have an obvious temptation to substitute the cheap simulation for the expensive human. The pedagogical consequence is invisible on the budget line. → HL-1, HL-2, CP-7, AI-9
-
-### AID-9. AI controllability follows a gradient: institution → teacher → student
-
-The AID entries above describe failure modes as if AI were a single force. In practice, AI enters the teaching system through three distinct deployment channels, and the institution's ability to detect, control, and correct AI-induced failures differs sharply across them.
-
-**Institutional deployment** — AI used for scheduling, library curation, process monitoring, resource allocation — is the most controllable. The institution selects the tools, defines the scope, reviews the outputs, and can disable anything that misbehaves. The failure modes are real (AID-3's cowpath paving, AID-6's library corruption) but they operate on institutional timescales and are subject to institutional review. If an AI scheduling tool entrenches batch logistics, a committee can reverse the decision. This is conventional technology governance.
-
-**Teacher deployment** — AI used by individual teachers to reduce workload: auto-grading, lesson generation, student communication, rubric application. This is riskier because it operates inside the teacher's professional judgment, which the institution reviews only by exception (→ BE-7). Most teachers will use AI responsibly, as they use any professional tool. Some will be tempted by shortcuts — accepting AI-generated assessments without review, using AI lecture outlines that flatten the pedagogical nuance they would have added manually, allowing AI to mediate student interactions that previously built the teacher's own expert map (→ AID-5). These failures are detectable by institutional review if the institution has the observational infrastructure to conduct it — but most do not, precisely because BE-7's delegation model assumed review was unnecessary.
-
-**Student deployment** — AI used by students to complete work, resolve confusion, produce artifacts, and simulate understanding. This is the least controllable channel by a wide margin. Students are numerous, individually motivated, operating outside institutional observation for most of their study time, and under no institutional obligation to disclose their AI use. The institution cannot disable student AI access; it can only design assessments and processes that remain valid despite it. The failure modes in this channel (AID-1, AID-2, AID-4) are the hardest to detect, the hardest to counter, and the most damaging to the co-production process — because they operate at the precise point where the student's cognitive input is supposed to occur. → BE-7, AID-1, AID-2, AID-4, AID-5, QC-8
 
 ### AID-10. The tempo of student-side AI adoption outpaces institutional countermeasures
 
@@ -598,6 +620,9 @@ If the institution wants to mount effective defenses against the student-side fa
 This infrastructure cannot be built reactively. Each component requires design, implementation, teacher training, and institutional commitment — work that itself loads the binding constraint (→ TC-1, TC-6). An institution that begins building after the damage is visible is building for the cohort after next, not for the one currently being lost. The institutions that will navigate AI successfully are those that possess — or are actively building — operational maturity before the crisis arrives. This is not a prediction about which institutions will adopt AI most enthusiastically. It is a prediction about which institutions have the quality-management infrastructure to survive AI's presence in their students' hands whether they adopt it or not. → QC-4, AI-5, AI-6, AI-7, AI-8, CM-6, TC-1, TC-6, OI-1, OI-2
 
 ---
+
+---
+
 
 ## 7. The Time to Pivot is Now
 
