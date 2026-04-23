@@ -17,8 +17,8 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
 1. [How Humans Learn](#1-how-humans-learn)
 2. [How Education Operates](#2-how-education-operates)
    - [2a. Co-Production](#2a-co-production)
-   - [2b. A Legacy of Batch Education](#2b-a-legacy-of-batch-education)
-   - [2c. When Education Flows More Smoothly](#2c-when-education-flows-more-smoothly)
+   - [2b. The Batch Legacy](#2b-the-batch-legacy)
+   - [2c. Flow Would Work Better](#2c-flow-would-work-better)
 3. [The Constraints That Hold the System in Place](#3-the-constraints-that-hold-the-system-in-place)
    - [3a. The Quality and Control Problem](#3a-the-quality-and-control-problem)
    - [3b. Teaching Workload Asymmetry](#3b-teaching-workload-asymmetry)
@@ -205,7 +205,7 @@ The limit is the same as CP-10's: some peer environments — particularly those 
 
 ---
 
-### 2b. A Legacy of Batch Education
+### 2b. The Batch Legacy
 
 *School as it actually runs: a batch production system that imposes a single schedule on learners with radically different needs and rates. The following entries describe what that produces.*
 
@@ -243,7 +243,7 @@ The curriculum is the most visible constraint on a batch system's ability to res
 
 ---
 
-### 2c. When Education Flows More Smoothly
+### 2c. Flow Would Work Better
 
 *Flow-based teaching already exists — in tutorials, studio critiques, flight instruction, apprenticeships, and one-on-one coaching. This subsection describes its operating logic as a contrast case: what distinguishes it from batch in kind rather than just in tempo, and what it requires at the system level. The diagnostic value is establishing the target before §3 names what stands in the way of reaching it at scale, and before §4 works through the design logic for getting there.*
 

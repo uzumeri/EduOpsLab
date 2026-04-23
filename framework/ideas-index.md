@@ -40,7 +40,7 @@
 | CP-8 | The co-production defect is delayed — and invisible at the point of production |
 | CP-9 | The student who passed the test has rational grounds for concluding they understood |
 
-### 2b. A Legacy of Batch Education
+### 2b. The Batch Legacy
 
 | ID | Title |
 |---|---|
@@ -53,7 +53,7 @@
 | BE-7 | The batch model delegates total management authority to the classroom teacher |
 | BE-8 | Physical infrastructure locks batch systems into the batch model |
 
-### 2c. When Education Flows More Smoothly
+### 2c. Flow Would Work Better
 
 | ID | Title |
 |---|---|
