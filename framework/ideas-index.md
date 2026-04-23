@@ -11,7 +11,7 @@
 | ID | Title |
 |---|---|
 | HL-1 | Learning is flow by default |
-| HL-2 | The apprenticeship is the oldest and best teaching model |
+| HL-2 | Flow teaching has always existed \u2014 under many names |
 | HL-3 | Learning requires doing — not receiving |
 | HL-4 | Feedback must arrive at the point of work — not weeks later |
 | HL-5 | Confusion is a higher state of knowledge than ignorance |

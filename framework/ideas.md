@@ -52,11 +52,21 @@ Mustafa Uzumeri's canonical collection of personal observations, design principl
 
 ### HL-1. Learning is flow by default
 
-Humans learn in continuous flow when left to their own devices. Watch a toddler learn to walk, a teenager learn guitar, an adult learn to cook. They iterate at their own pace — fail, adjust, try again. Nobody tells them "we're moving on to running now, whether you can walk or not." The conditions that produce deep learning — challenge calibrated to ability, immediate feedback, clear goals, sense of progress — are the same conditions Csikszentmihalyi identified as producing flow state. This is not a coincidence. Learning and flow are the same process observed from different angles. Batch scheduling systematically destroys all four conditions. Flow-based teaching creates them by default. School is the environment where we deliberately break this. → BE-1
+Humans learn in continuous flow when left to their own devices. Watch a toddler learn to walk, a teenager learn guitar, an adult learn to cook. They iterate at their own pace — fail, adjust, try again. Nobody tells them "we're moving on to running now, whether you can walk or not." The conditions that produce deep learning — challenge calibrated to ability, immediate feedback, clear goals, sense of progress — are the same conditions Csikszentmihalyi identified as producing flow state. This is not a coincidence. Learning and flow are the same process observed from different angles.
 
-### HL-2. The apprenticeship is the oldest and best teaching model
+The same structure appears wherever formal teaching works: the Socratic teacher who follows the student's own reasoning, the music teacher who waits for the student to find the note, the flight instructor who scales the challenge to what this student can handle today. In every case, the student's capability gets a vote on the pace. What changes is the domain; what doesn't change is the structure.
 
-One master, one apprentice. Challenge scaled to the learner's current level. Immediate, tangible feedback — the weld holds or it doesn't, the soufflé rises or it doesn't. Co-production is mandatory: you can't weld for someone. The master adjusts to the apprentice, not the other way around. No batching — you move when you're ready. Every apprenticeship, every master class, every residency, every flight lesson that has ever produced mastery operates in flow. → ES-2
+Batch scheduling systematically destroys all four conditions. Flow-based teaching creates them by default. School is the environment where we deliberately break this. → BE-1
+
+### HL-2. Flow teaching has always existed — under many names
+
+The Socratic dialogue, the private music lesson, the flight lesson, the studio critique, the tutorial, the apprenticeship, and the self-guided learner working through a problem at their own pace — these are not different methods. They are the same process observed in different domains. What they share: the student's current capability gets a vote on the pace; challenge is calibrated to the learner's actual position, not a cohort schedule; feedback arrives when the learner can use it; co-production is required — the student must perform.
+
+A teacher or coach may raise the challenge slightly above the student's current level to maintain productive tension. What they cannot do is outrun the student's actual capability without losing the learning signal. The pace is negotiated, not imposed.
+
+The apprenticeship is the most widely recognized form of this class because it makes the co-production requirement physically obvious — you cannot weld for someone, you cannot fly for them. But the Socratic teacher can only draw out what is already present in the student's reasoning; the music teacher cannot play for the student. The mechanism is identical. Only the domain changes.
+
+Every institution that has ever scaled up has encountered the same temptation: assemble the individuals into a batch and teach to the group. Every one of the flow conditions is then systematically violated. → ES-2, AP-1, AP-2
 
 ### HL-3. Learning requires doing — not receiving
 
