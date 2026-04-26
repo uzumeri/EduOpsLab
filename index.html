@@ -4,85 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduOpsLab — Education as Operations</title>
+    <meta name="description" content="Working proofs of concept for treating education as an operations system. ConfusionEngine, ObservationTracker, and Workload Calculator — grounded in operations management.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: #0b0b12; color: #e4e4f0;
-            min-height: 100vh; display: flex; flex-direction: column;
-            align-items: center; justify-content: center; padding: 32px;
-            background: radial-gradient(ellipse at 50% 20%, rgba(99,102,241,0.08) 0%, transparent 60%),
-                        radial-gradient(ellipse at 80% 80%, rgba(16,185,129,0.06) 0%, transparent 50%),
-                        #0b0b12;
-        }
-        .container { max-width: 680px; width: 100%; text-align: center; }
-        h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
-        .tagline { color: #8892a8; font-size: 1.05rem; margin-bottom: 8px; line-height: 1.6; }
-        .subtitle { color: #525e74; font-size: 0.88rem; margin-bottom: 40px; }
-        .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+        .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: var(--space-2xl); }
         @media (max-width: 800px) { .cards { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
         .card {
-            background: #131721; border: 1px solid #1c2233;
-            border-radius: 14px; padding: 28px 20px;
-            text-decoration: none; color: #e4e4f0;
+            background: var(--edu-panel); border: 1px solid var(--edu-border);
+            border-radius: var(--radius-md); padding: 28px 20px;
+            text-decoration: none; color: var(--edu-text);
             transition: all 250ms ease; text-align: left;
         }
-        .card:hover { border-color: rgba(99,102,241,0.4); transform: translateY(-3px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+        .card:hover { border-color: var(--edu-border-hover); transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3); color: var(--edu-text); }
         .card-icon { font-size: 2.2rem; margin-bottom: 12px; }
         .card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
-        .card p { font-size: 0.85rem; color: #8892a8; line-height: 1.5; }
+        .card p { font-size: 0.85rem; color: var(--edu-silver); line-height: 1.5; }
         .card .card-tag {
             display: inline-block; margin-top: 12px; padding: 3px 10px;
             border-radius: 10px; font-size: 0.72rem; font-weight: 600;
             text-transform: uppercase; letter-spacing: 0.4px;
         }
-        .card.tag-indigo .card-tag { background: rgba(99,102,241,0.15); color: #818cf8; }
-        .card.tag-teal .card-tag { background: rgba(16,185,129,0.15); color: #10b981; }
-        .card.tag-amber .card-tag { background: rgba(249,115,22,0.15); color: #fb923c; }
-        .footer { color: #525e74; font-size: 0.78rem; line-height: 1.8; }
-        .footer a { color: #818cf8; text-decoration: none; }
-        .footer a:hover { text-decoration: underline; }
+        .card.tag-indigo .card-tag { background: var(--edu-indigo-glow); color: var(--edu-indigo-light); }
+        .card.tag-teal .card-tag { background: var(--edu-teal-glow); color: var(--edu-teal); }
+        .card.tag-amber .card-tag { background: var(--edu-amber-glow); color: var(--edu-amber); }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎓 EduOpsLab</h1>
-        <p class="tagline">Teaching is co-production. These demos show what happens when you design the process that way.</p>
-        <p class="subtitle">Working proofs of concept — grounded in operations management, not wishful thinking.</p>
-        <div class="cards">
-            <a class="card tag-indigo" href="apps/confusion-engine/index.html">
-                <div class="card-icon">🤔</div>
-                <h2>ConfusionEngine</h2>
-                <p>University homework system. Students reveal confusion; the teacher walks in knowing where to focus. AI-assisted grading closes the loop.</p>
-                <span class="card-tag">University · Co-Production</span>
-            </a>
-            <a class="card tag-teal" href="apps/observation-tracker/index.html">
-                <div class="card-icon">👁️</div>
-                <h2>ObservationTracker</h2>
-                <p>IEP progress tracking in seconds. Capture observations on a phone during class. AI writes the progress reports from raw teacher insights.</p>
-                <span class="card-tag">K-12 Special Ed · Flow</span>
-            </a>
-            <a class="card tag-amber" href="apps/workload-calculator/index.html">
-                <div class="card-icon">⚖️</div>
-                <h2>Workload Calculator</h2>
-                <p>Run the arithmetic of teacher workload. See what each extra minute per student costs — and how micro-process tools recover the time.</p>
-                <span class="card-tag">Constraint Analysis</span>
-            </a>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">🎓 Edu<span>OpsLab</span></a>
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+                <li><a href="lineage.html" class="nav__link">Lineage</a></li>
+                <li><a href="framework/ideas.pdf" class="nav__link">Framework</a></li>
+            </ul>
         </div>
-        <div class="footer">
-            <p>Both apps run entirely in your browser — no backend, no account needed.</p>
-            <p>Click <strong>"Load Demo"</strong> inside either app to see realistic sample data.</p>
-            <p style="margin-top:12px;">
-                📄 <a href="framework/ideas.pdf">Framework (ideas.pdf)</a> &nbsp;·&nbsp;
-                📋 <a href="framework/demos.pdf">Demos guide (demos.pdf)</a>
-            </p>
-            <p style="margin-top:8px;">© 2026 Mustafa Uzumeri · <a href="https://github.com/uzumeri/EduOpsLab">Source on GitHub</a></p>
+    </nav>
+
+    <!-- Hero -->
+    <header class="page-hero">
+        <div class="container" style="text-align: center;">
+            <h1>🎓 EduOpsLab</h1>
+            <p class="tagline">Teaching is co-production. These demos show what happens when you design the process that way.</p>
+            <p class="subtitle">Working proofs of concept — grounded in operations management, not wishful thinking.</p>
         </div>
-    </div>
+    </header>
+
+    <!-- Demo Cards -->
+    <main class="section">
+        <div class="container">
+            <div class="cards">
+                <a class="card tag-indigo" href="apps/confusion-engine/index.html">
+                    <div class="card-icon">🤔</div>
+                    <h2>ConfusionEngine</h2>
+                    <p>University homework system. Students reveal confusion; the teacher walks in knowing where to focus. AI-assisted grading closes the loop.</p>
+                    <span class="card-tag">University · Co-Production</span>
+                </a>
+                <a class="card tag-teal" href="apps/observation-tracker/index.html">
+                    <div class="card-icon">👁️</div>
+                    <h2>ObservationTracker</h2>
+                    <p>IEP progress tracking in seconds. Capture observations on a phone during class. AI writes the progress reports from raw teacher insights.</p>
+                    <span class="card-tag">K-12 Special Ed · Flow</span>
+                </a>
+                <a class="card tag-amber" href="apps/workload-calculator/index.html">
+                    <div class="card-icon">⚖️</div>
+                    <h2>Workload Calculator</h2>
+                    <p>Run the arithmetic of teacher workload. See what each extra minute per student costs — and how micro-process tools recover the time.</p>
+                    <span class="card-tag">Constraint Analysis</span>
+                </a>
+            </div>
+
+            <div class="footer" style="border-top: none; padding-top: 0;">
+                <p>All apps run entirely in your browser — no backend, no account needed.</p>
+                <p>Click <strong>"Load Demo"</strong> inside either app to see realistic sample data.</p>
+                <p style="margin-top:12px;">
+                    📄 <a href="framework/ideas.pdf">Framework (ideas.pdf)</a> &nbsp;·&nbsp;
+                    📋 <a href="framework/demos.pdf">Demos guide (demos.pdf)</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Mustafa Uzumeri · <a href="https://github.com/uzumeri/EduOpsLab">Source on GitHub</a></p>
+        </div>
+    </footer>
+
 </body>
 </html>

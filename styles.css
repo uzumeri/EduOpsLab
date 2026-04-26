@@ -1,0 +1,415 @@
+/* Copyright (c) 2026 Mustafa Uzumeri. All rights reserved. */
+
+/* ============================================
+   EduOpsLab Design System
+   ============================================ */
+
+:root {
+  /* Core palette — dark academic */
+  --edu-midnight: #0b0b12;
+  --edu-dark: #111620;
+  --edu-panel: #131721;
+  --edu-border: #1c2233;
+  --edu-border-hover: rgba(99, 102, 241, 0.4);
+  --edu-muted: #525e74;
+  --edu-silver: #8892a8;
+  --edu-cloud: #c0c8d8;
+  --edu-text: #e4e4f0;
+  --edu-white: #ffffff;
+
+  /* Accents */
+  --edu-indigo: #6366f1;
+  --edu-indigo-light: #818cf8;
+  --edu-indigo-glow: rgba(99, 102, 241, 0.15);
+  --edu-teal: #10b981;
+  --edu-teal-glow: rgba(16, 185, 129, 0.15);
+  --edu-amber: #f97316;
+  --edu-amber-glow: rgba(249, 115, 22, 0.15);
+
+  /* Typography */
+  --font-body: 'Inter', -apple-system, system-ui, sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Layout */
+  --max-width: 900px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 150ms var(--ease-out);
+  --transition-med: 300ms var(--ease-out);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+/* --- Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--edu-midnight);
+  color: var(--edu-text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--edu-white);
+}
+
+a {
+  color: var(--edu-indigo-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--edu-white);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Navigation --- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: var(--space-md) 0;
+  background: rgba(11, 11, 18, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--edu-border);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.nav__logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--edu-white);
+}
+
+.nav__logo span {
+  color: var(--edu-indigo-light);
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-lg);
+  list-style: none;
+}
+
+.nav__link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--edu-silver);
+  transition: color var(--transition-fast);
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: var(--edu-white);
+}
+
+/* Mobile nav */
+@media (max-width: 640px) {
+  .nav__links { gap: var(--space-md); }
+  .nav__link { font-size: 0.8rem; }
+}
+
+/* --- Container --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+/* --- Page Hero --- */
+.page-hero {
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 20%, var(--edu-indigo-glow) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 80%, var(--edu-teal-glow) 0%, transparent 50%),
+              var(--edu-midnight);
+}
+
+.page-hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  margin-bottom: var(--space-sm);
+}
+
+.page-hero .tagline {
+  color: var(--edu-silver);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto var(--space-sm);
+}
+
+.page-hero .subtitle {
+  color: var(--edu-muted);
+  font-size: 0.88rem;
+}
+
+/* --- Timeline --- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  position: relative;
+  margin: var(--space-2xl) 0;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--edu-border);
+}
+
+/* Era group */
+.timeline__item {
+  position: relative;
+  background: var(--edu-panel);
+  border: 1px solid var(--edu-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: calc(-2rem - 7px);
+  top: 1.5rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--edu-muted);
+  border: 2px solid var(--edu-midnight);
+  z-index: 2;
+}
+
+/* Era colors */
+.timeline__item--teaching         { border-left: 4px solid var(--edu-indigo); }
+.timeline__item--teaching::before { background: var(--edu-indigo); }
+.timeline__item--teaching .timeline__badge { background: var(--edu-indigo-glow); color: var(--edu-indigo-light); }
+
+.timeline__item--elearning         { border-left: 4px solid var(--edu-teal); }
+.timeline__item--elearning::before { background: var(--edu-teal); }
+.timeline__item--elearning .timeline__badge { background: var(--edu-teal-glow); color: var(--edu-teal); }
+
+.timeline__item--adv         { border-left: 4px solid var(--edu-amber); }
+.timeline__item--adv::before { background: var(--edu-amber); }
+.timeline__item--adv .timeline__badge { background: var(--edu-amber-glow); color: var(--edu-amber); }
+
+/* Era header */
+.timeline__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.timeline__badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.timeline__date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--edu-silver);
+}
+
+/* --- Expandable Entry Cards --- */
+.timeline__entry {
+  border: 1px solid var(--edu-border);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-sm);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.timeline__entry:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__entry:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.timeline__entry[open] {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.timeline__entry-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.timeline__entry-header::-webkit-details-marker { display: none; }
+.timeline__entry-header::marker { display: none; content: ''; }
+
+.timeline__entry-year {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  min-width: 5.5em;
+  flex-shrink: 0;
+}
+
+.timeline__item--teaching .timeline__entry-year  { color: var(--edu-indigo-light); }
+.timeline__item--elearning .timeline__entry-year { color: var(--edu-teal); }
+.timeline__item--adv .timeline__entry-year       { color: var(--edu-amber); }
+
+.timeline__entry-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--edu-white);
+  flex: 1;
+}
+
+.timeline__entry-chevron {
+  font-size: 0.75rem;
+  color: var(--edu-muted);
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.timeline__entry[open] .timeline__entry-chevron {
+  transform: rotate(90deg);
+}
+
+.timeline__entry-body {
+  padding: 0 var(--space-lg) var(--space-lg);
+  animation: entryReveal 300ms var(--ease-out);
+}
+
+@keyframes entryReveal {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.timeline__figure {
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--edu-border);
+  background: var(--edu-white);
+  padding: var(--space-sm);
+}
+
+.timeline__figure img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
+.timeline__entry-body p {
+  font-size: 0.9375rem;
+  color: var(--edu-silver);
+  line-height: 1.8;
+}
+
+/* --- Section --- */
+.section {
+  padding: var(--space-3xl) 0;
+}
+
+.section__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--edu-indigo-light);
+  margin-bottom: var(--space-md);
+}
+
+.section__title {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin-bottom: var(--space-md);
+}
+
+.section__desc {
+  font-size: 1rem;
+  color: var(--edu-silver);
+  max-width: 650px;
+  line-height: 1.8;
+}
+
+/* --- Footer --- */
+.footer {
+  border-top: 1px solid var(--edu-border);
+  padding: var(--space-2xl) 0;
+  text-align: center;
+  color: var(--edu-muted);
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+.footer a {
+  color: var(--edu-indigo-light);
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .timeline__entry-header {
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+  }
+  .timeline__entry-year { min-width: auto; }
+  .timeline__figure img { max-height: 250px; }
+}
