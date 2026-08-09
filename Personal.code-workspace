@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../AWSCalls"
+		},
+		{
+			"path": "../EmailExtractors"
+		},
+		{
+			"path": "../VicPersonalBlog"
+		},
+		{
+			"path": "../MCalls"
+		},
+		{
+			"path": "../HomeLabDesign"
+		},
+		{
+			"path": "../Personal"
+		},
+		{
+			"path": "../PersonalBusiness"
+		},
+		{
+			"path": "../S3BatchDown"
+		}
+	]
+}
